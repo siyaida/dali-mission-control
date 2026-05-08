@@ -24,11 +24,21 @@
 **Demo Gate:** Sunday 2026-05-10
 **Status:** 🟢 ALL SPRINTS SHIPPED — Phase 2: Intake Ecosystem WIP
 
+### Canonical Sites (Agent Team Rebuild)
+
+| Site | Repo | Audience | URL |
+|------|------|----------|-----|
+| **Institutional Marketing** | jic-marketing-website | JIC leadership, students, corporate partners | https://jic-marketing-website.netlify.app |
+| **Lead Generation** | jic-gw-leads-website | Saudi engineers (B2C) + HR/L&D (B2B) | https://jic-gw-leads-website.netlify.app |
+| **Digital Ecosystem** | jic-gw-ecosystem-website | JIC/GW leadership, partnership stakeholders | https://jic-gw-ecosystem-website.netlify.app |
+
+**Features:** Multipage (5 pages each), bilingual (AR + EN), localStorage language toggle, external CSS/JS, glassmorphism, scroll animations, particle effects, gradient meshes, typewriter headlines, real content, mobile drawers, form validation.
+
 - ✅ Sprint #1: Battle Card (EN + AR)
 - ✅ Sprint #2: Top-50 Anchor Employers
 - ✅ Sprint #3: Objection Playbook
 - ✅ Sprint #4: 120 Message Templates
-- ✅ Sprint #5: Landing Page (Astro + demo)
+- ✅ Sprint #5: Landing Page (3 canonical sites rebuilt)
 - ✅ Sprint #6: CRM Schema
 - ✅ Sprint #7: n8n Workflows
 - ✅ Sprint #8: Info-Session Script
@@ -38,10 +48,6 @@
 - ✅ Sprint #12: KPI Dashboard Spec
 
 **Blocker:** [Issue #1](https://github.com/siyaida/dali-mission-control/issues/1) — Human action needed on WhatsApp Business API + Cal.com
-
-**Live URLs:**
-- Landing: https://dali-mission-control.netlify.app/missions/jic-gw-engineering-management/landing/
-- Demo: https://dali-mission-control.netlify.app/missions/jic-gw-engineering-management/landing/demo/
 
 ---
 
@@ -99,14 +105,18 @@
 |------|-----|-----------|--------|
 | dali-mission-control | https://github.com/siyaida/dali-mission-control | 2026-05-09 04:54 | 🟢 |
 | program-launchpad | https://github.com/siyaida/program-launchpad | 2026-05-09 05:10 | 🟢 |
+| jic-marketing-website | https://github.com/siyaida/jic-marketing-website | 2026-05-09 | 🟢 |
+| jic-gw-leads-website | https://github.com/siyaida/jic-gw-leads-website | 2026-05-09 | 🟢 |
+| jic-gw-ecosystem-website | https://github.com/siyaida/jic-gw-ecosystem-website | 2026-05-09 | 🟢 |
 
 ## Sites
 
 | Site | URL | Status |
 |------|-----|--------|
 | Mission Control | https://dali-mission-control.netlify.app | 🟢 Live |
-| JIC Landing | https://dali-mission-control.netlify.app/missions/jic-gw-engineering-management/landing/ | 🟢 Live |
-| JIC Demo | https://dali-mission-control.netlify.app/missions/jic-gw-engineering-management/landing/demo/ | 🟢 Live |
+| JIC Marketing | https://jic-marketing-website.netlify.app | 🟢 Live |
+| JIC Lead Gen | https://jic-gw-leads-website.netlify.app | 🟢 Live |
+| JIC Ecosystem | https://jic-gw-ecosystem-website.netlify.app | 🟢 Live |
 | Program Launchpad | https://program-launchpad.netlify.app | 🟢 Live |
 
 ## Sprint Velocity
