@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 01 — JIC × GW Engineering Management</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            border-bottom: 2px solid #C9A227;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1 { font-size: 2rem; color: #C9A227; }
+        .subtitle { color: #888; font-size: 0.9rem; }
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: #141414;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .card h3 {
+            color: #C9A227;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .online { color: #00ff88; }
+        .section { margin-bottom: 2rem; }
+        .section h2 {
+            color: #C9A227;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .sprint-list { list-style: none; }
+        .sprint-list li {
+            background: #141414;
+            border-left: 3px solid;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0 4px 4px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sprint-list .complete { border-left-color: #00ff88; }
+        .sprint-list .progress { border-left-color: #ff6b35; }
+        .sprint-list .queued { border-left-color: #555; }
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .badge-complete { background: #00ff8820; color: #00ff88; }
+        .badge-progress { background: #ff6b3520; color: #ff6b35; }
+        .badge-queued { background: #55555520; color: #888; }
+        a { color: #C9A227; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .blocker-box {
+            background: #ff6b3510;
+            border: 1px solid #ff6b35;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .blocker-box h3 { color: #ff6b35; margin-bottom: 0.5rem; }
+        footer {
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Mission 01</h1>
+            <p class="subtitle">JIC × GW Engineering Management — Kingdom-wide Enrollment Engine</p>
+        </header>
+
+        <div class="status-grid">
+            <div class="card">
+                <h3>Mission Status</h3>
+                <p class="online">● ACTIVE</p>
+                <p class="timestamp">11/12 sprints shipped</p>
+            </div>
+            <div class="card">
+                <h3>North Star</h3>
+                <p>Paid enrollments in Cohort 1</p>
+                <p class="timestamp">Kingdom-wide</p>
+            </div>
+            <div class="card">
+                <h3>Demo Gate</h3>
+                <p>Sunday 2026-05-10</p>
+                <p class="timestamp">~40 hours remaining</p>
+            </div>
+            <div class="card">
+                <h3>🔑 Blockers</h3>
+                <p><a href="https://github.com/siyaida/dali-mission-control/issues/1">14 items need human input</a></p>
+                <p class="timestamp">Sprint #4 in progress</p>
+            </div>
+        </div>
+
+        <div class="blocker-box">
+            <h3>🔑 NEED FROM HUMAN — Mission 01</h3>
+            <p>14-item provisioning checklist requires your input to unlock Phase 2:</p>
+            <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                <li>WhatsApp Business API / WAHA instance</li>
+                <li>Email domain + SMTP</li>
+                <li>VPS / hosting for self-hosted stack</li>
+                <li>Cal.com account</li>
+                <li>Ad accounts (Google + Meta + Snap + TikTok)</li>
+                <li>GW tuition cost, SACM/MoE recognition, HRDF eligibility</li>
+                <li>And 8 more...</li>
+            </ul>
+            <p style="margin-top: 0.5rem;"><a href="https://github.com/siyaida/dali-mission-control/issues/1">View full checklist →</a></p>
+        </div>
+
+        <div class="section">
+            <h2>⚔️ Sprint Board</h2>
+            <ul class="sprint-list">
+                <li class="complete">
+                    <span>⚔️ Sprint #1 — Battle Card (EN + AR)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>🏢 Sprint #2 — Top-50 Anchor Employers (CSV + MD)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>🛡️ Sprint #3 — Objection Playbook (25 × counter, EN + AR)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="progress">
+                    <span>💬 Sprint #4 — 120 Outbound Message Templates</span>
+                    <span class="badge badge-progress">🔄 IN PROGRESS</span>
+                </li>
+                <li class="complete">
+                    <span>🌐 Sprint #5 — Landing Page (Astro, AR-first, RTL)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>🗄️ Sprint #6 — CRM Schema (EspoCRM + Twenty)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>⚙️ Sprint #7 — n8n Workflow JSONs (3 workflows)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>🎬 Sprint #8 — Info-Session Script + 6 Storyboards</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>🤝 Sprint #9 — Corporate Sponsorship MOU Template</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>📊 Sprint #10 — Lead Magnet: "Saudi Engineering Leadership Index 2026"</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>📢 Sprint #11 — Paid-Ads Creative Brief (4 platforms, regional)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+                <li class="complete">
+                    <span>📈 Sprint #12 — KPI Dashboard Spec (Plausible + PostHog + Metabase)</span>
+                    <span class="badge badge-complete">✅ SHIPPED</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔗 Quick Links</h2>
+            <div class="card">
+                <p><a href="https://siyaida.github.io/dali-mission-control/missions/jic-gw-engineering-management/landing/">🌐 Live Landing Page</a></p>
+                <p><a href="https://siyaida.github.io/dali-mission-control/missions/jic-gw-engineering-management/landing/demo/">🎬 Demo Tour (/demo)</a></p>
+                <p><a href="https://github.com/siyaida/dali-mission-control/tree/main/missions/jic-gw-engineering-management">📁 Mission Repo Folder</a></p>
+                <p><a href="https://github.com/siyaida/dali-mission-control/issues/1">🔑 Blocker Issue (#1)</a></p>
+                <p><a href="https://github.com/siyaida/dali-mission-control/blob/main/missions/jic-gw-engineering-management/DEPLOY.md">📖 DEPLOY.md</a></p>
+                <p><a href="https://github.com/siyaida/dali-mission-control/blob/main/missions/jic-gw-engineering-management/PORTABILITY.md">📦 PORTABILITY.md</a></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built by JIC Washington (OpenClaw, kimi/k2p6) | Repo: <a href="https://github.com/siyaida/dali-mission-control">siyaida/dali-mission-control</a></p>
+            <p>Last updated: 2026-05-09 02:25 UTC</p>
+        </footer>
+    </div>
+</body>
+</html>
