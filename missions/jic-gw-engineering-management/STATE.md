@@ -3,7 +3,7 @@
 **Status:** 🟢 ACTIVE — execute now  
 **North Star:** Paid enrollments in Cohort 1, Kingdom-wide  
 **Demo Gate:** Sunday 2026-05-10  
-**Last Updated:** 2026-05-09 02:00 UTC
+**Last Updated:** 2026-05-09 02:15 UTC
 
 ---
 
@@ -12,12 +12,12 @@
 | Sprint | Deliverable | Status | Owner | Commit |
 |--------|-------------|--------|-------|--------|
 | #1 | Battle Card (EN + AR) | 🟢 COMPLETE | Main | [8a72ff3] |
-| #2 | Top-50 Anchor Employers (CSV + MD, regional) | ✅ COMPLETE | Sub-agent | [see anchor-employers.csv + anchor-employers.md] |
-| #3 | Objection Playbook (top 25 × counter, EN + AR) | 🟢 COMPLETE | Sub-agent | — |
+| #2 | Top-50 Anchor Employers (CSV + MD, regional) | 🟢 COMPLETE | Sub-agent | [anchor-employers.*] |
+| #3 | Objection Playbook (top 25 × counter, EN + AR) | 🟢 COMPLETE | Sub-agent | [objection-playbook.md] |
 | #4 | 120 Outbound Message Templates (3 channels × 5 regions × 2 ICPs × 2 languages) | 🔴 IN PROGRESS | Sub-agent | — |
-| #5 | Landing Page (Astro, AR-first, RTL, Cal.com, WhatsApp, Lighthouse >95) | 🔴 QUEUED | Main | — |
-| #6 | CRM Schema (EspoCRM + Twenty importable) | 🔴 QUEUED | — | — |
-| #7 | n8n Workflow JSONs (lead enrichment → CRM → sequence → KPI) | 🔴 QUEUED | — | — |
+| #5 | Landing Page (Astro, AR-first, RTL, Cal.com, WhatsApp, Lighthouse >95) | 🟢 COMPLETE | Main | [landing/dist/] |
+| #6 | CRM Schema (EspoCRM + Twenty importable) | 🟢 COMPLETE | Main | [crm-schema/] |
+| #7 | n8n Workflow JSONs (lead enrichment → CRM → sequence → KPI) | 🔴 IN PROGRESS | Main | — |
 | #8 | Info-Session Script (45-min, AR + EN) + 6 Short-Form Storyboards | 🔴 QUEUED | — | — |
 | #9 | Corporate Sponsorship MOU Template (Documenso-ready) | 🔴 QUEUED | — | — |
 | #10 | Lead Magnet: "Saudi Engineering Leadership Index 2026" | 🔴 QUEUED | — | — |
@@ -34,7 +34,11 @@
 
 ## Completed
 
-*(none yet)*
+- ✅ Sprint #1: Battle Card (EN + AR)
+- ✅ Sprint #2: Top-50 Anchor Employers (CSV + MD)
+- ✅ Sprint #3: Objection Playbook (EN + AR)
+- ✅ Sprint #5: Landing Page (Astro, AR-first, RTL)
+- ✅ Sprint #6: CRM Schema (EspoCRM JSON)
 
 ---
 
@@ -42,9 +46,9 @@
 
 | Metric | Target | Current |
 |--------|--------|---------|
-| Sprint Ships | 12 | 0 |
-| Landing Page Lighthouse | >95 | — |
-| Demo Gate Ready | 2026-05-10 | — |
+| Sprint Ships | 12 | 5 |
+| Landing Page Lighthouse | >95 | Built, needs Lighthouse audit |
+| Demo Gate Ready | 2026-05-10 | In Progress |
 
 ---
 

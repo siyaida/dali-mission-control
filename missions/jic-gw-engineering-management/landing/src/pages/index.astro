@@ -1,0 +1,300 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lang = Astro.url.searchParams.get('lang') || 'ar';
+const isAR = lang === 'ar';
+
+const t = {
+  ar: {
+    nav: { program: 'البرنامج', why: 'لماذا الآن', employers: 'الشركات', apply: 'التقديم' },
+    hero: {
+      badge: '🎓 مسار حصري على مستوى المملكة',
+      headline: 'ماجستير إدارة الهندسة',
+      subhead: 'من جامعة جورج واشنطن — عبر الإنترنت، دوام جزئي، وأنت تعمل',
+      cta_primary: 'احجز جلسة استشارية',
+      cta_secondary: 'تحدث معنا عبر واتساب',
+      trust: 'الدفعة الأولى تبدأ قريباً — أماكن محدودة'
+    },
+    logos: { label: 'بشراكة استراتيجية مع' },
+    problem: {
+      headline: 'المهندس الكبير عالق. المشروع الضخم ينتظر.',
+      body: 'رؤية 2030 تحتاج قادة هندسة — ليس فقط مهندسين. نيوم، البحر الأحمر، روشن، القدية، العلا... كلها تحتاج مديرين يفهمون التقنية والأعمال.',
+      stat1: '400,000+',
+      stat1_label: 'وحدة سكنية تحتاج مديري مشاريع',
+      stat2: '4 مليون',
+      stat2_label: 'وظيفة تصنيعية مستهدفة',
+      stat3: '$25B+',
+      stat3_label: 'استثمارات البنية التحتية'
+    },
+    solution: {
+      headline: 'حلّق بدون أن تترك مكتبك',
+      body: 'برنامج GW MS Engineering Management مصمم للمهندسين العاملين السعوديين. دوام جزئي. عبر الإنترنت. نفس الشهادة التي يحصل عليها الطلاب في واشنطن العاصمة.',
+      features: [
+        { icon: '📡', title: '100% عبر الإنترنت', desc: 'دراسة من أي مدينة في المملكة' },
+        { icon: '⏰', title: 'دوام جزئي', desc: 'استمر في عملك أثناء الدراسة' },
+        { icon: '🌐', title: 'شبكة عالمية', desc: 'تواصل مع خريجي GW حول العالم' },
+        { icon: '🏆', title: 'R1 جامعة بحثية', desc: 'تصنيف Carnegie للجامعات البحثية' },
+        { icon: '📜', title: 'شهادة أمريكية', desc: 'معترف بها عالمياً في المقاولات والتصنيع' },
+        { icon: '🤝', title: 'دعم JIC محلي', desc: 'قبول مبسط + مرافقة عربية' }
+      ]
+    },
+    icps: {
+      headline: 'لمن هذا البرنامج؟',
+      profiles: [
+        { name: 'المهندس الكبير العالق', desc: '10+ سنوات تقنية، توقفت ترقياتك. تحتاج شهادة للانتقال إلى الإدارة.' },
+        { name: 'متسلق المشاريع الضخمة', desc: 'تريد قيادة في نيوم أو البحر الأحمر أو القدية. تحتاج الشهادة التي تفتح الأبواب.' },
+        { name: 'الانتقال العسكري-المدني', desc: 'خلفية هندسة دفاعية، تريد الدخول للقطاع الخاص بثقة وشهادة.' },
+        { name: 'وارث العائلة التجارية', desc: 'متوقع تولي الشركة العائلية. تحتاج التدريب الإداري الرسمي.' },
+        { name: 'القائدة التقنية النسائية', desc: 'تريد كسر السقف الزجاجي في الهندسة السعودية بشهادة عالمية.' }
+      ]
+    },
+    employers: {
+      headline: 'أفضل 50 شركة سعودية تبحث عن هذه الشهادة',
+      cta: 'اطلب عرض الشركات'
+    },
+    cta: {
+      headline: 'الدفعة الأولى تبدأ قريباً',
+      body: 'امتلك حقوق الحصريّة. لا تدع فرصة رؤية 2030 تمر دونك.',
+      cta: 'احجز جلسة استشارية مجانية',
+      whatsapp: 'أو تحدث معنا عبر واتساب'
+    },
+    footer: {
+      copyright: '© 2026 Jeddah International College × George Washington University',
+      links: 'الخصوصية | الشروط | التواصل'
+    }
+  },
+  en: {
+    nav: { program: 'Program', why: 'Why Now', employers: 'Employers', apply: 'Apply' },
+    hero: {
+      badge: '🎓 Kingdom-wide Exclusive Pathway',
+      headline: 'M.S. in Engineering Management',
+      subhead: 'From George Washington University — Online, part-time, while you work',
+      cta_primary: 'Book a Consultation',
+      cta_secondary: 'Chat on WhatsApp',
+      trust: 'Cohort 1 starts soon — Limited seats'
+    },
+    logos: { label: 'In strategic partnership with' },
+    problem: {
+      headline: 'The Senior Engineer Is Stuck. The Giga-Project Is Waiting.',
+      body: 'Vision 2030 needs engineering leaders — not just engineers. NEOM, Red Sea, Roshn, Qiddiya, AlUla... all need managers who understand both tech and business.',
+      stat1: '400,000+',
+      stat1_label: 'housing units need project managers',
+      stat2: '4 million',
+      stat2_label: 'manufacturing jobs targeted',
+      stat3: '$25B+',
+      stat3_label: 'infrastructure investments'
+    },
+    solution: {
+      headline: 'Level Up Without Leaving Your Desk',
+      body: 'The GW MS in Engineering Management is built for working Saudi engineers. Part-time. Online. The same degree students earn in Washington, D.C.',
+      features: [
+        { icon: '📡', title: '100% Online', desc: 'Study from any city in the Kingdom' },
+        { icon: '⏰', title: 'Part-Time', desc: 'Keep working while you earn your degree' },
+        { icon: '🌐', title: 'Global Network', desc: 'Connect with GW alumni worldwide' },
+        { icon: '🏆', title: 'R1 Research University', desc: 'Carnegie Classification top tier' },
+        { icon: '📜', title: 'U.S. Credential', desc: 'Globally recognized in contracting & manufacturing' },
+        { icon: '🤝', title: 'JIC Local Support', desc: 'Streamlined admissions + Arabic-speaking advising' }
+      ]
+    },
+    icps: {
+      headline: 'Who Is This For?',
+      profiles: [
+        { name: 'The Stuck Senior Engineer', desc: '10+ years technical, promotions stalled. You need a credential to move into management.' },
+        { name: 'The Giga-Project Climber', desc: 'You want to lead at NEOM, Red Sea, or Qiddiya. You need the degree that opens doors.' },
+        { name: 'Military-to-Civilian Pivot', desc: 'Defense engineering background. You want to enter the private sector with confidence and credentials.' },
+        { name: 'The Family-Business Heir', desc: 'Expected to take over the family contracting firm. You need formal management training.' },
+        { name: 'The Female Tech Leader', desc: 'You want to break the glass ceiling in Saudi engineering with a global credential.' }
+      ]
+    },
+    employers: {
+      headline: 'Top 50 Saudi Employers Are Looking For This Credential',
+      cta: 'Request Corporate Pricing'
+    },
+    cta: {
+      headline: 'Cohort 1 Starts Soon',
+      body: 'Exclusivity is your moat. Do not let Vision 2030 pass you by.',
+      cta: 'Book a Free Consultation',
+      whatsapp: 'Or chat with us on WhatsApp'
+    },
+    footer: {
+      copyright: '© 2026 Jeddah International College × George Washington University',
+      links: 'Privacy | Terms | Contact'
+    }
+  }
+};
+
+const copy = isAR ? t.ar : t.en;
+const otherLang = isAR ? 'en' : 'ar';
+const otherLabel = isAR ? 'English' : 'العربية';
+---
+
+<Layout>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+          <span class="text-xl font-bold text-gw-blue">GW</span>
+          <span class="text-gray-300">×</span>
+          <span class="text-xl font-bold text-jic-gold">JIC</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+          <a href="#program" class="text-gray-600 hover:text-gw-blue transition">{copy.nav.program}</a>
+          <a href="#why" class="text-gray-600 hover:text-gw-blue transition">{copy.nav.why}</a>
+          <a href="#employers" class="text-gray-600 hover:text-gw-blue transition">{copy.nav.employers}</a>
+          <a href="?lang={otherLang}" class="text-sm font-medium text-gw-blue hover:underline">{otherLabel}</a>
+          <a href="#apply" class="bg-gw-blue text-white px-5 py-2 rounded-lg hover:bg-gw-blue/90 transition font-medium">
+            {copy.nav.apply}
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="inline-block bg-jic-gold/10 text-jic-gold px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+        {copy.hero.badge}
+      </span>
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        {copy.hero.headline}
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        {copy.hero.subhead}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a href="#apply" class="bg-gw-blue text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gw-blue/90 transition shadow-lg">
+          {copy.hero.cta_primary}
+        </a>
+        <a href="https://wa.me/" target="_blank" class="bg-green-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-green-600 transition flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          {copy.hero.cta_secondary}
+        </a>
+      </div>
+      <p class="text-sm text-gray-500">{copy.hero.trust}</p>
+    </div>
+  </section>
+
+  <!-- Partner Logos -->
+  <section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-sm text-gray-500 mb-6 uppercase tracking-wider">{copy.logos.label}</p>
+      <div class="flex justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+        <div class="text-3xl font-bold text-gw-blue">GEORGE WASHINGTON UNIVERSITY</div>
+        <div class="text-3xl font-bold text-jic-gold">Jeddah International College</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section id="why" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">{copy.problem.headline}</h2>
+      <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+        {copy.problem.body}
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-8 rounded-2xl text-center">
+          <div class="text-4xl font-bold text-gw-blue mb-2">{copy.problem.stat1}</div>
+          <div class="text-gray-600">{copy.problem.stat1_label}</div>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-2xl text-center">
+          <div class="text-4xl font-bold text-jic-gold mb-2">{copy.problem.stat2}</div>
+          <div class="text-gray-600">{copy.problem.stat2_label}</div>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-2xl text-center">
+          <div class="text-4xl font-bold text-gw-blue mb-2">{copy.problem.stat3}</div>
+          <div class="text-gray-600">{copy.problem.stat3_label}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution / Features -->
+  <section id="program" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">{copy.solution.headline}</h2>
+      <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+        {copy.solution.body}
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {copy.solution.features.map(f => (
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="text-3xl mb-4">{f.icon}</div>
+            <h3 class="text-lg font-semibold mb-2">{f.title}</h3>
+            <p class="text-gray-600 text-sm">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ICPs -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">{copy.icps.headline}</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {copy.icps.profiles.map((p, i) => (
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-100">
+            <div class="w-10 h-10 bg-gw-blue/10 rounded-lg flex items-center justify-center text-gw-blue font-bold mb-4">
+              {i + 1}
+            </div>
+            <h3 class="text-lg font-semibold mb-2">{p.name}</h3>
+            <p class="text-gray-600 text-sm">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Employers -->
+  <section id="employers" class="py-20 px-4 sm:px-6 lg:px-8 bg-jic-dark text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">{copy.employers.headline}</h2>
+      <p class="text-lg text-gray-300 mb-8">
+        NEOM · Red Sea Global · Roshn · Diriyah · Qiddiya · AlUla · Aramco · SABIC · Maaden · SAMI · PIF Portfolio
+      </p>
+      <a href="#apply" class="inline-block bg-jic-gold text-jic-dark px-8 py-4 rounded-xl text-lg font-semibold hover:bg-jic-gold/90 transition">
+        {copy.employers.cta}
+      </a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="apply" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">{copy.cta.headline}</h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        {copy.cta.body}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <!-- Cal.com placeholder -->
+        <a href="https://cal.com/jic-gw-consultation" target="_blank" class="bg-gw-blue text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gw-blue/90 transition shadow-lg">
+          {copy.cta.cta}
+        </a>
+        <a href="https://wa.me/" target="_blank" class="bg-green-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-green-600 transition flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          {copy.cta.whatsapp}
+        </a>
+      </div>
+      <!-- Placeholder for Cal.com embed -->
+      <div class="mt-8 p-4 bg-gray-100 rounded-lg text-gray-500 text-sm">
+        [Cal.com scheduling embed — configure with your Cal.com username]
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-4 bg-jic-dark text-gray-400 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex justify-center items-center gap-4 mb-4">
+        <span class="text-xl font-bold text-white">GW</span>
+        <span>×</span>
+        <span class="text-xl font-bold text-jic-gold">JIC</span>
+      </div>
+      <p class="mb-4">{copy.footer.copyright}</p>
+      <p class="text-sm">{copy.footer.links}</p>
+    </div>
+  </footer>
+</Layout>

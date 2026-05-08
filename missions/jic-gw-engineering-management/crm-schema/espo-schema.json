@@ -1,0 +1,109 @@
+{
+  "name": "JIC-GW-Lead-Schema",
+  "version": "1.0",
+  "description": "CRM schema for JIC × GW Engineering Management lead tracking",
+  "entities": [
+    {
+      "name": "Lead",
+      "fields": [
+        { "name": "firstName", "type": "varchar", "required": true, "label": "First Name / الاسم الأول" },
+        { "name": "lastName", "type": "varchar", "required": true, "label": "Last Name / اسم العائلة" },
+        { "name": "email", "type": "email", "required": true, "label": "Email / البريد" },
+        { "name": "phone", "type": "phone", "label": "Phone / الجوال" },
+        { "name": "whatsapp", "type": "phone", "label": "WhatsApp / واتساب" },
+        { "name": "company", "type": "varchar", "label": "Company / الشركة" },
+        { "name": "jobTitle", "type": "varchar", "label": "Job Title / المسمى الوظيفي" },
+        { "name": "yearsExperience", "type": "int", "label": "Years Experience / سنوات الخبرة" },
+        { "name": "region", "type": "enum", "options": ["Central", "Western", "Eastern", "Northwest", "South"], "label": "Region / المنطقة" },
+        { "name": "city", "type": "varchar", "label": "City / المدينة" },
+        { "name": "icpSegment", "type": "enum", "options": ["Stuck Senior Engineer", "Giga-Project Climber", "Military-to-Civilian", "Family-Business Heir", "Female Tech Leader", "HR/L&D", "Government/HRDF", "Chamber/Association"], "label": "ICP Segment / الشريحة" },
+        { "name": "source", "type": "enum", "options": ["Landing Page", "WhatsApp", "LinkedIn", "Email", "Referral", "Event", "Ad", "Organic"], "label": "Source / المصدر" },
+        { "name": "channel", "type": "enum", "options": ["B2C", "B2B"], "label": "Channel / القناة" },
+        { "name": "status", "type": "enum", "options": ["New", "Contacted", "Qualified", "Consultation Booked", "Applied", "Enrolled", "Lost", "Nurture"], "label": "Status / الحالة" },
+        { "name": "priority", "type": "enum", "options": ["High", "Medium", "Low"], "label": "Priority / الأولوية" },
+        { "name": "assignedTo", "type": "varchar", "label": "Assigned To / المسؤول" },
+        { "name": "lastContactDate", "type": "date", "label": "Last Contact / آخر تواصل" },
+        { "name": "nextActionDate", "type": "date", "label": "Next Action / الخطوة التالية" },
+        { "name": "nextActionType", "type": "enum", "options": ["Call", "Email", "WhatsApp", "LinkedIn", "Meeting", "Follow-up"], "label": "Next Action Type / نوع الخطوة" },
+        { "name": "notes", "type": "text", "label": "Notes / ملاحظات" },
+        { "name": "languagePreference", "type": "enum", "options": ["AR", "EN", "Both"], "label": "Language / اللغة المفضلة" },
+        { "name": "engagementScore", "type": "int", "label": "Engagement Score / درجة التفاعل" },
+        { "name": "calBookingUrl", "type": "url", "label": "Cal.com Booking / رابط الحجز" },
+        { "name": "tuitionInterest", "type": "enum", "options": ["Self-funded", "Employer-sponsored", "HRDF", "Scholarship", "Uncertain"], "label": "Funding / التمويل" },
+        { "name": "employerSponsorship", "type": "bool", "label": "Employer Sponsorship / رعاية صاحب العمل" },
+        { "name": "gigaProjectInterest", "type": "varchar", "label": "Giga-Project Interest / اهتمام بالمشاريع الضخمة" },
+        { "name": "createdAt", "type": "datetime", "label": "Created / تاريخ الإنشاء" },
+        { "name": "updatedAt", "type": "datetime", "label": "Updated / تاريخ التحديث" }
+      ]
+    },
+    {
+      "name": "Company",
+      "fields": [
+        { "name": "name", "type": "varchar", "required": true, "label": "Company Name / اسم الشركة" },
+        { "name": "nameAr", "type": "varchar", "label": "Name (AR) / الاسم العربي" },
+        { "name": "sector", "type": "enum", "options": ["Energy", "Manufacturing", "Construction", "Defense", "Technology", "Tourism", "Logistics", "Public Sector", "Other"], "label": "Sector / القطاع" },
+        { "name": "region", "type": "enum", "options": ["Central", "Western", "Eastern", "Northwest", "South"], "label": "Region / المنطقة" },
+        { "name": "city", "type": "varchar", "label": "City / المدينة" },
+        { "name": "employeeCount", "type": "int", "label": "Employees / عدد الموظفين" },
+        { "name": "gigaProject", "type": "varchar", "label": "Giga-Project / المشروع الضخمة" },
+        { "name": "decisionMakerRole", "type": "varchar", "label": "Decision Maker / صانع القرار" },
+        { "name": "hrContact", "type": "varchar", "label": "HR Contact / تواصل الموارد البشرية" },
+        { "name": "status", "type": "enum", "options": ["Target", "Contacted", "Meeting Scheduled", "Proposal Sent", "Contracted", "Lost"], "label": "Status / الحالة" },
+        { "name": "priority", "type": "enum", "options": ["Tier 1", "Tier 2", "Tier 3"], "label": "Priority / الأولوية" },
+        { "name": "sponsorshipInterest", "type": "bool", "label": "Sponsorship Interest / اهتمام بالرعاية" },
+        { "name": "cohortSize", "type": "int", "label": "Cohort Size / حجم الدفعة" },
+        { "name": "notes", "type": "text", "label": "Notes / ملاحظات" }
+      ]
+    },
+    {
+      "name": "Activity",
+      "fields": [
+        { "name": "leadId", "type": "varchar", "required": true, "label": "Lead ID" },
+        { "name": "type", "type": "enum", "options": ["Email Sent", "WhatsApp Sent", "Call Made", "Meeting Held", "LinkedIn Message", "Ad Click", "Page View", "Form Submit", "Cal Booking", "Status Change"], "label": "Activity Type / نوع النشاط" },
+        { "name": "channel", "type": "enum", "options": ["Email", "WhatsApp", "LinkedIn", "Phone", "In-Person", "Web"], "label": "Channel / القناة" },
+        { "name": "direction", "type": "enum", "options": ["Inbound", "Outbound"], "label": "Direction / الاتجاه" },
+        { "name": "subject", "type": "varchar", "label": "Subject / الموضوع" },
+        { "name": "content", "type": "text", "label": "Content / المحتوى" },
+        { "name": "status", "type": "enum", "options": ["Pending", "Sent", "Delivered", "Read", "Replied", "Bounced", "Failed"], "label": "Status / الحالة" },
+        { "name": "scheduledAt", "type": "datetime", "label": "Scheduled / مجدول" },
+        { "name": "sentAt", "type": "datetime", "label": "Sent / تم الإرسال" },
+        { "name": "openedAt", "type": "datetime", "label": "Opened / تم الفتح" },
+        { "name": "repliedAt", "type": "datetime", "label": "Replied / تم الرد" },
+        { "name": "metadata", "type": "json", "label": "Metadata / بيانات إضافية" }
+      ]
+    },
+    {
+      "name": "KPI",
+      "fields": [
+        { "name": "date", "type": "date", "required": true, "label": "Date / التاريخ" },
+        { "name": "metric", "type": "enum", "options": ["Leads", "MQLs", "SQLs", "Consultations", "Applications", "Enrollments", "Revenue", "CAC", "LTV"], "label": "Metric / المؤشر" },
+        { "name": "value", "type": "float", "label": "Value / القيمة" },
+        { "name": "region", "type": "enum", "options": ["Central", "Western", "Eastern", "Northwest", "South", "Kingdom-wide"], "label": "Region / المنطقة" },
+        { "name": "channel", "type": "enum", "options": ["B2C", "B2B"], "label": "Channel / القناة" },
+        { "name": "source", "type": "varchar", "label": "Source / المصدر" },
+        { "name": "campaign", "type": "varchar", "label": "Campaign / الحملة" },
+        { "name": "notes", "type": "text", "label": "Notes / ملاحظات" }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "name": "Lead Pipeline",
+      "entity": "Lead",
+      "filters": { "status": ["New", "Contacted", "Qualified", "Consultation Booked", "Applied"] },
+      "columns": ["firstName", "lastName", "company", "region", "icpSegment", "status", "priority", "nextActionDate"]
+    },
+    {
+      "name": "Enrollment Tracker",
+      "entity": "Lead",
+      "filters": { "status": ["Applied", "Enrolled"] },
+      "columns": ["firstName", "lastName", "company", "region", "status", "tuitionInterest", "createdAt"]
+    },
+    {
+      "name": "B2B Targets",
+      "entity": "Company",
+      "filters": { "status": ["Target", "Contacted", "Meeting Scheduled", "Proposal Sent"] },
+      "columns": ["name", "sector", "region", "status", "priority", "sponsorshipInterest", "cohortSize"]
+    }
+  ]
+}

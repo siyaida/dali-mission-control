@@ -1,0 +1,25 @@
+---
+const lang = Astro.url.searchParams.get('lang') || 'ar';
+const isRTL = lang === 'ar';
+---
+<!DOCTYPE html>
+<html lang={lang} dir={isRTL ? 'rtl' : 'ltr'}>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={isRTL 
+      ? "ماجستير إدارة الهندسة من جامعة جورج واشنطن — مسار حصري عبر كلية جدة الدولية"
+      : "GW M.S. in Engineering Management — Exclusive Kingdom-wide pathway via Jeddah International College"} />
+    <title>{isRTL ? "ماجستير إدارة الهندسة — GW × JIC" : "M.S. Engineering Management — GW × JIC"}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif; }
+        [dir="rtl"] body { font-family: 'Noto Sans Arabic', 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+    <slot />
+</body>
+</html>

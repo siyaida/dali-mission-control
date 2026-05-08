@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lang = Astro.url.searchParams.get('lang') || 'ar';
+const isAR = lang === 'ar';
+
+const t = {
+  ar: {
+    title: 'جولة تفاعلية — GW × JIC',
+    headline: 'كيف يعمل نظام التسجيل',
+    steps: [
+      { num: '01', title: 'الصفحة المقصودة', desc: 'المهندم يزور الصفحة، يقرأ قيمة العرض، ويحجز جلسة استشارية عبر Cal.com أو واتساب.' },
+      { num: '02', title: 'CRM — إدارة العلاقات', desc: 'Lead يدخل EspoCRM أو Twenty تلقائياً. مُخصص، مقسّم regionally، مع تتبع المصدر.' },
+      { num: '03', title: 'n8n — سير العمل', desc: 'أتمتة: إثراء Lead → إرسال welcome sequence → تذكير بالمواعيد → capture KPI.' },
+      { num: '04', title: 'تحليلات — Analytics', desc: 'Plausible + PostHog + Metabase. نعرف أي قناة تجلب enrollments، وأي region تحتاج دفعة.' },
+      { num: '05', title: 'نقل — Portability', desc: 'كل شيء مفتوح المصدر. استضفه على أي VPS. انقله من Kimi. استمر بغيرنا.' }
+    ],
+    cta: 'ابدأ الآن',
+    back: '← العودة للصفحة الرئيسية'
+  },
+  en: {
+    title: 'Interactive Tour — GW × JIC',
+    headline: 'How the Enrollment Engine Works',
+    steps: [
+      { num: '01', title: 'The Landing Page', desc: 'Engineer visits, reads the value prop, books a consultation via Cal.com or WhatsApp.' },
+      { num: '02', title: 'CRM — Lead Management', desc: 'Lead enters EspoCRM or Twenty automatically. Tagged, regionally segmented, source-tracked.' },
+      { num: '03', title: 'n8n — Workflow Automation', desc: 'Lead enrichment → Welcome sequence → Appointment reminders → KPI capture. All automated.' },
+      { num: '04', title: 'Analytics — Performance', desc: 'Plausible + PostHog + Metabase. We know which channel drives enrollments, which region needs a push.' },
+      { num: '05', title: 'Portability — Freedom', desc: 'Everything is open source. Host on any VPS. Migrate from Kimi. Keep running without us.' }
+    ],
+    cta: 'Get Started',
+    back: '← Back to Landing Page'
+  }
+};
+
+const copy = isAR ? t.ar : t.en;
+const otherLang = isAR ? 'en' : 'ar';
+---
+
+<Layout>
+  <div class="min-h-screen bg-gradient-to-b from-jic-dark via-jic-dark to-gray-900 text-white">
+    <!-- Header -->
+    <header class="p-4 flex justify-between items-center border-b border-white/10">
+      <a href="?lang={lang}" class="text-white/60 hover:text-white">{copy.back}</a>
+      <a href="?lang={otherLang}" class="text-sm text-jic-gold hover:underline">{isAR ? 'English' : 'العربية'}</a>
+    </header>
+
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto px-4 py-16 text-center">
+      <span class="text-jic-gold text-sm font-semibold tracking-wider uppercase mb-4 block">GW × JIC Demo Tour</span>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">{copy.headline}</h1>
+      <p class="text-lg text-gray-400 mb-8">
+        3-minute self-running tour. Siyaida walks JIC leadership through this without the bot live.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="max-w-4xl mx-auto px-4 pb-20">
+      <div class="space-y-8">
+        {copy.steps.map((step, i) => (
+          <div class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-jic-gold/50 transition">
+            <div class="flex-shrink-0 w-14 h-14 bg-jic-gold/20 rounded-xl flex items-center justify-center text-jic-gold font-bold text-xl">
+              {step.num}
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+              <p class="text-gray-400">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="../" class="inline-block bg-jic-gold text-jic-dark px-8 py-4 rounded-xl text-lg font-semibold hover:bg-jic-gold/90 transition">
+          {copy.cta}
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
