@@ -592,9 +592,9 @@ body::before {
   <div class="status-bar-left">
     <div class="status-indicator">AGENT ONLINE</div>
     <span style="color:var(--text-muted)">|</span>
-    <span style="color:var(--text-secondary)">2 Active Missions</span>
+    <span style="color:var(--text-secondary)">3 Active Missions</span>
     <span style="color:var(--text-muted)">|</span>
-    <span style="color:var(--text-secondary)">17/17 Sprints Shipped</span>
+    <span style="color:var(--text-secondary)">23/30 Sprints Shipped</span>
   </div>
   <div class="status-bar-right">
     Last update: 2026-05-09 04:52 UTC
@@ -618,15 +618,15 @@ body::before {
   <!-- Stats -->
   <div class="stats-row">
     <div class="stat-box reveal reveal-delay-1">
-      <div class="stat-value">2</div>
+      <div class="stat-value">3</div>
       <div class="stat-label">Active Missions</div>
     </div>
     <div class="stat-box reveal reveal-delay-2">
-      <div class="stat-value">17</div>
+      <div class="stat-value">23</div>
       <div class="stat-label">Sprints Shipped</div>
     </div>
     <div class="stat-box reveal reveal-delay-3">
-      <div class="stat-value">6</div>
+      <div class="stat-value">7</div>
       <div class="stat-label">True Blockers</div>
     </div>
     <div class="stat-box reveal reveal-delay-4">
@@ -717,6 +717,90 @@ body::before {
         <a href="https://dali-mission-control.netlify.app/missions/jic-gw-engineering-management/landing/" target="_blank">🌐 Landing Live →</a>
         <a href="https://github.com/siyaida/dali-mission-control/tree/main/missions/jic-gw-engineering-management" target="_blank">📁 Repo →</a>
         <a href="https://github.com/siyaida/dali-mission-control/issues/1" target="_blank">🔑 Blockers →</a>
+      </div>
+    </div>
+
+    <!-- Mission 03 -->
+    <div class="mission-card reveal reveal-delay-3">
+      <div class="mission-header">
+        <span class="mission-number">Mission 03</span>
+        <span class="mission-status active">● BOOTSTRAP</span>
+      </div>
+      <h2>Cross-Agent Operations</h2>
+      <p class="desc">Documentation + tooling so any KimiClaw instance can operate the full Dali system end-to-end without asking "what do I do?"</p>
+      
+      <div class="progress-section">
+        <div class="progress-header">
+          <span class="progress-label">Bootstrap Progress</span>
+          <span class="progress-value">6/7 sprints</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:86%"></div>
+        </div>
+      </div>
+      
+      <div class="sprint-board">
+        <div class="sprint-item">
+          <div class="sprint-icon done">✓</div>
+          <div class="sprint-info">
+            <span class="name">Boot Sequence</span>
+            <span class="meta">AGENT-BOOT.md • 10-min protocol</span>
+          </div>
+          <span class="sprint-badge done">DONE</span>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-icon done">✓</div>
+          <div class="sprint-info">
+            <span class="name">State Machine</span>
+            <span class="meta">Root STATE.md • Mission lifecycle</span>
+          </div>
+          <span class="sprint-badge done">DONE</span>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-icon done">✓</div>
+          <div class="sprint-info">
+            <span class="name">Sprint Templates</span>
+            <span class="meta">Standardized 6-section template</span>
+          </div>
+          <span class="sprint-badge done">DONE</span>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-icon done">✓</div>
+          <div class="sprint-info">
+            <span class="name">Blocker Protocol</span>
+            <span class="meta">Escalation flow • 30-min rule</span>
+          </div>
+          <span class="sprint-badge done">DONE</span>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-icon done">✓</div>
+          <div class="sprint-info">
+            <span class="name">Communication Standard</span>
+            <span class="meta">Terse updates • State tags</span>
+          </div>
+          <span class="sprint-badge done">DONE</span>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-icon done">✓</div>
+          <div class="sprint-info">
+            <span class="name">Dashboard Integration</span>
+            <span class="meta">Mission card • Auto-stats</span>
+          </div>
+          <span class="sprint-badge done">DONE</span>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-icon pending">⏳</div>
+          <div class="sprint-info">
+            <span class="name">Test Flight</span>
+            <span class="meta">Fresh clone • 10-min validation</span>
+          </div>
+          <span class="sprint-badge pending">QUEUED</span>
+        </div>
+      </div>
+      
+      <div class="mission-links">
+        <a href="https://github.com/siyaida/dali-mission-control/tree/main/missions/cross-agent-operations" target="_blank">📁 Repo →</a>
+        <a href="https://github.com/siyaida/dali-mission-control/issues/3" target="_blank">🔑 Blockers →</a>
       </div>
     </div>
 
@@ -836,7 +920,7 @@ body::before {
     </div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;">
       <span style="color:var(--success)">●</span> Agent Online · 
-      <span style="color:var(--accent)">●</span> 2 Missions Active
+      <span style="color:var(--accent)">●</span> 3 Missions Active
     </div>
   </footer>
 
