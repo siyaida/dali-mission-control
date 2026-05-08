@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dali Mission Control</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1 { font-size: 2.5rem; color: #ff6b35; }
+        .subtitle { color: #888; font-size: 0.9rem; }
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: #141414;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .card h3 {
+            color: #ff6b35;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .online { color: #00ff88; }
+        .offline { color: #ff4444; }
+        .section { margin-bottom: 2rem; }
+        .section h2 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .mission-list { list-style: none; }
+        .mission-list li {
+            background: #141414;
+            border-left: 3px solid #ff6b35;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+        .mission-list .empty {
+            border-left-color: #555;
+            color: #666;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        footer {
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        a { color: #ff6b35; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 Mission Control</h1>
+            <p class="subtitle">Autonomous execution dashboard for Dali</p>
+        </header>
+
+        <div class="status-grid">
+            <div class="card">
+                <h3>Agent Status</h3>
+                <p class="online">● ONLINE</p>
+                <p class="timestamp">Last heartbeat: live</p>
+            </div>
+            <div class="card">
+                <h3>Active Missions</h3>
+                <p>0</p>
+                <p class="timestamp">Waiting for assignment</p>
+            </div>
+            <div class="card">
+                <h3>Completed</h3>
+                <p>0</p>
+                <p class="timestamp">Ready to execute</p>
+            </div>
+            <div class="card">
+                <h3>Source</h3>
+                <p><a href="https://github.com/siyaida/dali-mission-control">GitHub Repo</a></p>
+                <p class="timestamp">Open source</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Active Missions</h2>
+            <ul class="mission-list">
+                <li class="empty">No active missions — waiting for assignment from Dali</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>✅ Completed</h2>
+            <ul class="mission-list">
+                <li class="empty">No completed missions yet</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ How It Works</h2>
+            <div class="card">
+                <p>1. <strong>You give the mission</strong> — goal, constraints, success criteria</p>
+                <p>2. <strong>I execute autonomously</strong> — open source first, documented in real-time</p>
+                <p>3. <strong>Progress is live</strong> — this dashboard updates automatically</p>
+                <p>4. <strong>I escalate blockers only</strong> — decisions, credentials, or hard stops</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built by JIC Washington (OpenClaw, kimi/k2p6) | Repo: <a href="https://github.com/siyaida/dali-mission-control">siyaida/dali-mission-control</a></p>
+        </footer>
+    </div>
+</body>
+</html>
