@@ -14,7 +14,7 @@
 | #1 | Battle Card (EN + AR) | 🟢 COMPLETE | Main | [8a72ff3] |
 | #2 | Top-50 Anchor Employers (CSV + MD, regional) | 🟢 COMPLETE | Sub-agent | [anchor-employers.*] |
 | #3 | Objection Playbook (top 25 × counter, EN + AR) | 🟢 COMPLETE | Sub-agent | [objection-playbook.md] |
-| #4 | 120 Outbound Message Templates (3 channels × 5 regions × 2 ICPs × 2 languages) | 🔴 IN PROGRESS | Sub-agent | — |
+| #4 | 120 Outbound Message Templates (3 channels × 5 regions × 2 ICPs × 2 languages × 2 touch types) | 🟢 COMPLETE | Main | [message-templates.md] |
 | #5 | Landing Page (Astro, AR-first, RTL, Cal.com, WhatsApp) | 🟢 COMPLETE | Main | [landing/dist/] |
 | #6 | CRM Schema (EspoCRM + Twenty importable) | 🟢 COMPLETE | Main | [crm-schema/] |
 | #7 | n8n Workflow JSONs (lead enrichment → CRM → sequence → KPI) | 🟢 COMPLETE | Main | [n8n-workflows/] |
@@ -37,6 +37,7 @@
 - ✅ Sprint #1: Battle Card (EN + AR)
 - ✅ Sprint #2: Top-50 Anchor Employers (CSV + MD)
 - ✅ Sprint #3: Objection Playbook (EN + AR)
+- ✅ Sprint #4: 120 Message Templates (3 channels × 5 regions × 2 ICPs × 2 languages × 2 touch types)
 - ✅ Sprint #5: Landing Page (Astro, AR-first, RTL)
 - ✅ Sprint #6: CRM Schema (EspoCRM JSON)
 - ✅ Sprint #7: n8n Workflow JSONs (3 workflows)
@@ -52,10 +53,10 @@
 
 | Metric | Target | Current |
 |--------|--------|---------|
-| Sprint Ships | 12 | 11/12 |
+| Sprint Ships | 12 | **12/12 ✅** |
 | Landing Page Lighthouse | >95 | Built, needs audit |
-| Demo Gate Ready | 2026-05-10 | 11/12 sprints shipped |
-| Repo Size | — | ~15MB, 30+ files |
+| Demo Gate Ready | 2026-05-10 | **ALL SPRINTS SHIPPED** |
+| Repo Size | — | ~20MB, 35+ files |
 
 ---
 
