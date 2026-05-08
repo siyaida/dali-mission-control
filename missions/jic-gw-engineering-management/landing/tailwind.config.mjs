@@ -4,10 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'jic-gold': '#C9A227',
-        'jic-dark': '#1a1a2e',
+        'jic-navy': '#1e3a5f',
+        'jic-navy-light': '#2a4a73',
+        'jic-navy-dark': '#152a45',
+        'jic-gold': '#c9a227',
+        'jic-gold-light': '#d4b43a',
+        'jic-white': '#ffffff',
+        'jic-gray': '#f5f5f5',
+        'jic-gray-dark': '#333333',
         'gw-blue': '#033C5A',
-        'gw-gold': '#A8996E',
       },
       fontFamily: {
         'arabic': ['"Noto Sans Arabic"', 'sans-serif'],
