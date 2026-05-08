@@ -1,0 +1,73 @@
+{
+  "name": "Multi-Channel Nurture Sequence",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "seconds": 3600
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "resource": "contact",
+        "options": {},
+        "filters": {
+          "status": ["New", "Contacted", "Qualified"]
+        }
+      },
+      "id": "fetch-leads",
+      "name": "Fetch Leads from CRM",
+      "type": "n8n-nodes-base.espocrm",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const leads = $input.all();\nconst now = new Date();\n\nreturn leads.map(lead => {\n  const lastContact = new Date(lead.json.lastContactDate || lead.json.createdAt);\n  const daysSince = Math.floor((now - lastContact) / (1000 * 60 * 60 * 24));\n  \n  let action = null;\n  let channel = lead.json.languagePreference === 'AR' ? 'WhatsApp' : 'Email';\n  \n  // Day 0: Welcome (already sent by Workflow 01)\n  // Day 1: Value-add content\n  if (daysSince === 1) {\n    action = 'SEND_CONTENT';\n  }\n  // Day 3: Social proof\n  else if (daysSince === 3) {\n    action = 'SEND_SOCIAL_PROOF';\n  }\n  // Day 7: Scarcity / urgency\n  else if (daysSince === 7) {\n    action = 'SEND_URGENCY';\n  }\n  // Day 14: Re-engagement or consultation push\n  else if (daysSince === 14) {\n    action = 'SEND_CONSULTATION';\n  }\n  // Day 21: Final nudge\n  else if (daysSince === 21) {\n    action = 'SEND_FINAL';\n  }\n  \n  return {\n    json: {\n      ...lead.json,\n      daysSinceContact: daysSince,\n      nextAction: action,\n      channel: channel,\n      processedAt: now.toISOString()\n    }\n  };\n}).filter(l => l.json.nextAction !== null);"
+      },
+      "id": "sequence-logic",
+      "name": "Sequence Logic",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem"
+      },
+      "id": "switch-channel",
+      "name": "Switch: Channel",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [850, 300]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [[{"node": "Fetch Leads from CRM", "type": "main", "index": 0}]]
+    },
+    "Fetch Leads from CRM": {
+      "main": [[{"node": "Sequence Logic", "type": "main", "index": 0}]]
+    },
+    "Sequence Logic": {
+      "main": [[{"node": "Switch: Channel", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": []
+}

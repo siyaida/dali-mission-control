@@ -1,0 +1,72 @@
+{
+  "name": "KPI Capture + Dashboard Feed",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Aggregate KPIs from CRM data\nconst leads = $input.all();\n\nconst today = new Date().toISOString().split('T')[0];\n\n// Count by status\nconst statusCounts = {};\nconst regionCounts = {};\nconst channelCounts = {};\nconst sourceCounts = {};\n\nleads.forEach(lead => {\n  const s = lead.json.status;\n  const r = lead.json.region;\n  const c = lead.json.channel;\n  const src = lead.json.source;\n  \n  statusCounts[s] = (statusCounts[s] || 0) + 1;\n  regionCounts[r] = (regionCounts[r] || 0) + 1;\n  channelCounts[c] = (channelCounts[c] || 0) + 1;\n  sourceCounts[src] = (sourceCounts[src] || 0) + 1;\n});\n\nconst kpis = [\n  { metric: 'Leads', value: leads.length, region: 'Kingdom-wide', date: today, channel: 'All', source: 'All' },\n  { metric: 'MQLs', value: (statusCounts['Qualified'] || 0) + (statusCounts['Consultation Booked'] || 0), region: 'Kingdom-wide', date: today, channel: 'All', source: 'All' },\n  { metric: 'SQLs', value: statusCounts['Consultation Booked'] || 0, region: 'Kingdom-wide', date: today, channel: 'All', source: 'All' },\n  { metric: 'Applications', value: statusCounts['Applied'] || 0, region: 'Kingdom-wide', date: today, channel: 'All', source: 'All' },\n  { metric: 'Enrollments', value: statusCounts['Enrolled'] || 0, region: 'Kingdom-wide', date: today, channel: 'All', source: 'All' }\n];\n\n// Add regional breakdown\nObject.entries(regionCounts).forEach(([region, count]) => {\n  kpis.push({ metric: 'Leads', value: count, region, date: today, channel: 'All', source: 'All' });\n});\n\n// Add channel breakdown\nObject.entries(channelCounts).forEach(([channel, count]) => {\n  kpis.push({ metric: 'Leads', value: count, region: 'Kingdom-wide', date: today, channel, source: 'All' });\n});\n\n// Add source breakdown (top 5)\nObject.entries(sourceCounts)\n  .sort((a, b) => b[1] - a[1])\n  .slice(0, 5)\n  .forEach(([source, count]) => {\n    kpis.push({ metric: 'Leads', value: count, region: 'Kingdom-wide', date: today, channel: 'All', source });\n  });\n\nreturn kpis.map(kpi => ({ json: kpi }));"
+      },
+      "id": "aggregate-kpis",
+      "name": "Aggregate KPIs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "resource": "contact"
+      },
+      "id": "save-kpi-crm",
+      "name": "Save KPI to CRM",
+      "type": "n8n-nodes-base.espocrm",
+      "typeVersion": 1,
+      "position": [650, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://metabase:3000/api/card",
+        "headers": {
+          "X-Metabase-Session": "={{ $credentials.metabaseToken }}"
+        }
+      },
+      "id": "push-metabase",
+      "name": "Push to Metabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [650, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://plausible:8000/api/event",
+        "body": {
+          "name": "kpi_snapshot",
+          "url": "http://mission-control/kpi",
+          "domain": "jic-gw-engineering-management"
+        }
+      },
+      "id": "push-plausible",
+      "name": "Push to Plausible",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [850, 300]
+    }
+  ],
+  "connections": {
+    "Aggregate KPIs": {
+      "main": [
+        [{"node": "Save KPI to CRM", "type": "main", "index": 0}],
+        [{"node": "Push to Metabase", "type": "main", "index": 0}]
+      ]
+    },
+    "Save KPI to CRM": {
+      "main": [[{"node": "Push to Plausible", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": []
+}

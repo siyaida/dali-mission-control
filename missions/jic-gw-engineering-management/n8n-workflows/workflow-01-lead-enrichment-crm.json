@@ -1,0 +1,82 @@
+{
+  "name": "Lead Enrichment → CRM",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "trigger-webhook",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "webhookId": "lead-capture"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse incoming lead data\nconst lead = $input.first().json;\n\n// Enrich: generate engagement score\nlet score = 0;\nif (lead.company) score += 10;\nif (lead.yearsExperience > 5) score += 15;\nif (lead.gigaProjectInterest) score += 20;\nif (lead.employerSponsorship) score += 25;\n\n// Determine priority\nlet priority = 'Low';\nif (score >= 50) priority = 'High';\nelse if (score >= 30) priority = 'Medium';\n\n// Set next action based on ICP\nlet nextAction = 'Email';\nif (lead.icpSegment === 'HR/L&D') nextAction = 'LinkedIn';\nif (lead.channel === 'B2B') nextAction = 'Phone';\n\nreturn [{\n  json: {\n    ...lead,\n    engagementScore: score,\n    priority: priority,\n    nextActionType: nextAction,\n    enrichedAt: new Date().toISOString(),\n    status: 'New'\n  }\n}];"
+      },
+      "id": "enrich-lead",
+      "name": "Enrich Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "resource": "contact",
+        "additionalFields": {}
+      },
+      "id": "create-crm",
+      "name": "Create CRM Lead",
+      "type": "n8n-nodes-base.espocrm",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Welcome to GW Engineering Management — JIC",
+        "text": "Dear {{ $json.firstName }},\n\nThank you for your interest in the GW M.S. in Engineering Management.\n\nYour application ID: {{ $json.id }}\n\nNext steps:\n1. Book a consultation: [Cal.com link]\n2. Review the program: https://emse.engineering.gwu.edu/ms-engineering-management\n3. WhatsApp us: [WA link]\n\nBest,\nJIC Admissions Team"
+      },
+      "id": "send-welcome",
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [850, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://waha:3000/api/sendText",
+        "body": {
+          "chatId": "={{ $json.whatsapp }}",
+          "text": "أهلاً {{ $json.firstName }}! شكراً لاهتمامك بماجستير إدارة الهندسة من GW. احجز جلستك الاستشارية: [Cal.com]"
+        }
+      },
+      "id": "send-whatsapp",
+      "name": "Send WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [850, 400]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [[{"node": "Enrich Lead", "type": "main", "index": 0}]]
+    },
+    "Enrich Lead": {
+      "main": [[{"node": "Create CRM Lead", "type": "main", "index": 0}]]
+    },
+    "Create CRM Lead": {
+      "main": [
+        [{"node": "Send Welcome Email", "type": "main", "index": 0}],
+        [{"node": "Send WhatsApp", "type": "main", "index": 0}]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": []
+}
