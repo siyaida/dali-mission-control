@@ -1,0 +1,40 @@
+[build]
+  command = "echo 'Static site — no build needed'"
+  publish = "docs"
+
+[[redirects]]
+  from = "/missions/*"
+  to = "/missions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/demo"
+  to = "/missions/jic-gw-engineering-management/landing/demo/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/intake/*"
+  to = "/missions/jic-gw-engineering-management/intake/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[functions]
+  directory = "netlify/functions"
+
+[context.deploy-preview]
+  command = "echo 'Preview build — static'"
+
+[context.branch-deploy]
+  command = "echo 'Branch deploy — static'"
