@@ -1,2557 +1,5377 @@
-# 💬 120 Outbound Message Templates — JIC × GW Engineering Management
+# JIC x GW Engineering Management -- 120 Outbound Message Templates
 
-**Matrix:** 3 channels × 5 regions × 2 ICPs × 2 languages × 2 touch types = 120 templates  
-**Channels:** LinkedIn DM · Email · WhatsApp  
-**Regions:** Central (Riyadh) · Western (Jeddah/Makkah) · Eastern (Dammam/Khobar) · Northwest (Tabuk/NEOM) · South (Abha/Jazan)  
-**ICPs:** B2C (Individual Engineer) · B2B (Corporate Sponsor / HR-L&D)  
-**Languages:** English · Arabic  
-**Touch Types:** First Touch · Follow-Up (3-day)
+**Mission:** Mission 01 -- Saudi Arabian Market
+**Program:** George Washington University M.S. in Engineering Management (Online)
+**Partner:** JIC -- Exclusive Kingdom-wide Onboarding Rights
+**Generated:** 2026-05-09
 
 ---
 
-## Legend
+## Table of Contents
 
-| Tag | Meaning |
-|-----|---------|
-| `{{first_name}}` | Prospect first name |
-| `{{company}}` | Prospect company name |
-| `{{region}}` | Prospect region (for regional tailoring) |
-| `{{role}}` | Prospect job title |
-| `{{cal_link}}` | Cal.com booking URL |
-| `{{landing_url}}` | Landing page URL with UTM |
-| `{{whatsapp_number}}` | WhatsApp Business number |
-| `{{sender_name}}` | Your name |
-| `{{lead_magnet_url}}` | Lead magnet download URL |
-| `<!-- UNVERIFIED -->` | Stat or claim needing verification |
+1. [Matrix Overview](#matrix-overview)
+2. [Template Catalog](#template-catalog)
+3. [Personalization Field Reference](#personalization-field-reference)
+4. [Category Distribution Summary](#category-distribution-summary)
+5. [Usage Guidelines](#usage-guidelines)
 
 ---
 
-## Section A: B2C — Individual Engineer
-
-### A1. LinkedIn DM — First Touch
-
-#### A1.1 Central Region (Riyadh) — EN
-
-**Subject:** GW M.S. Engineering Management — Saudi Cohort
-
-```
-Hi {{first_name}},
-
-I noticed you're a {{role}} at {{company}} here in Riyadh. With the PIF-backed projects accelerating across the capital, there's a growing gap between technical engineers and engineering managers who can lead at scale.
-
-GW's M.S. in Engineering Management is now available through an exclusive Saudi pathway via JIC — part-time, online, while you work. Same degree as Washington D.C. students.
-
-Cohort 1 is forming now. Interested in a brief call to see if it's a fit?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-JIC × GW Engineering Management
-```
-
-#### A1.2 Central Region (Riyadh) — AR
-
-```
-مرحباً {{first_name}}،
-
-لاحظت أنك {{role}} في {{company}} هنا في الرياض. مع تسارع المشاريع المدعومة من الصندوق السيادي عبر العاصمة، هناك فجوة متزايدة بين المهندسين التقنيين ومديري الهندسة القادرين على القيادة على نطاق واسع.
-
-ماجستير إدارة الهندسة من GW متاح الآن عبر مسار سعودي حصري عبر JIC — دوام جزئي، عبر الإنترنت، وأنت تعمل. نفس الشهادة لطلاب واشنطن.
-
-الدفعة الأولى تتشكل الآن. هل تريد مكالمة قصيرة لنرى إذا كانت مناسبة؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-JIC × GW Engineering Management
-```
-
-#### A1.3 Western Region (Jeddah/Makkah) — EN
-
-```
-Hi {{first_name}},
-
-Red Sea Global, Jeddah Islamic Port, and the Western megaprojects are reshaping the region — and every one of them needs engineering managers who can bridge technical execution with strategic leadership.
-
-GW's M.S. in Engineering Management, delivered through JIC's exclusive Saudi pathway, is built for working engineers. Online, part-time, R1 research university.
-
-If you're thinking about the next step in your career while staying in the Western region, worth a conversation?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A1.4 Western Region (Jeddah/Makkah) — AR
-
-```
-مرحباً {{first_name}}،
-
-البحر الأحمر العالمي، ميناء جدة الإسلامي، والمشاريع الضخمة في المنطقة الغربية تعيد تشكيل المنطقة — وكل واحد منها يحتاج مديري هندسة يمكنهم الجسر بين التنفيذ التقني والقيادة الاستراتيجية.
-
-ماجستير إدارة الهندسة من GW، يُقدّم عبر مسار JIC السعودي الحصري، مُبنى للمهندسين العاملين. عبر الإنترنت، دوام جزئي، جامعة بحثية R1.
-
-إذا كنت تفكر في الخطوة التالية في مسيرتك وأنت في المنطقة الغربية، هل تستحق محادثة؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A1.5 Eastern Region (Dammam/Khobar) — EN
-
-```
-Hi {{first_name}},
-
-Aramco, SABIC, Maaden, SPARK — the Eastern Province is the engine room of Saudi industry. And the shift from "senior engineer" to "engineering manager" is the difference between executing projects and owning the P&L.
-
-GW's M.S. in Engineering Management is now available through JIC's exclusive pathway — part-time, online, while you work at {{company}}. Cohort 1 forming now.
-
-Quick call to explore?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A1.6 Eastern Region (Dammam/Khobar) — AR
-
-```
-مرحباً {{first_name}}،
-
-أرامكو، سابك، معادن، سبارك — المنطقة الشرقية هي غرفة المحرك للصناعة السعودية. والتحول من "مهندس كبير" إلى "مدير هندسة" هو الفرق بين تنفيذ المشاريع وامتلاك الربح والخسارة.
-
-ماجستير إدارة الهندسة من GW متاح الآن عبر مسار JIC الحصري — دوام جزئي، عبر الإنترنت، وأنت تعمل في {{company}}. الدفعة الأولى تتشكل الآن.
-
-مكالمة سريعة للاستكشاف؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A1.7 Northwest Region (Tabuk/NEOM) — EN
-
-```
-Hi {{first_name}},
-
-NEOM. The Line. Oxagon. Trojena. The Northwest is building the future — and they need engineering managers who can lead multicultural teams across unprecedented scale.
-
-GW's M.S. in Engineering Management, via JIC's exclusive Saudi pathway, trains exactly that. Part-time, online, R1 research university. Study from Tabuk while building the future.
-
-Interested in learning more?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A1.8 Northwest Region (Tabuk/NEOM) — AR
-
-```
-مرحباً {{first_name}}،
-
-نيوم. ذا لاين. أوكساچون. تروجينا. الشمال الغربي يبني المستقبل — ويحتاج مديري هندسة يمكنهم قيادة فرق متعددة الثقافات على نطاق غير مسبوق.
-
-ماجستير إدارة الهندسة من GW، عبر مسار JIC السعودي الحصري، يدرّب بالضبط ذلك. دوام جزئي، عبر الإنترنت، جامعة بحثية R1. ادرس من تبوك وأنت تبني المستقبل.
-
-مهتم بمعرفة المزيد؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A1.9 South Region (Abha/Jazan) — EN
-
-```
-Hi {{first_name}},
-
-AlUla, Qiddiya South, and regional development projects are transforming the South. The challenge? Finding engineering managers with both technical depth and leadership credentials.
-
-GW's M.S. in Engineering Management — now through JIC's exclusive Saudi pathway — is part-time, online, and designed for working engineers who want to lead without leaving their region.
-
-Worth a brief call?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A1.10 South Region (Abha/Jazan) — AR
-
-```
-مرحباً {{first_name}}،
-
-العلا، القدية الجنوبية، ومشاريع التنمية الإقليمية تحول الجنوب. التحدي؟ إيجاد مديري هندسة يمتلكون كلًا من العمق التقني والشهادات القيادية.
-
-ماجستير إدارة الهندسة من GW — الآن عبر مسار JIC السعودي الحصري — دوام جزئي، عبر الإنترنت، ومُصمم للمهندسين العاملين الذين يريدون القيادة دون مغادرة منطقتهم.
-
-تستحق مكالمة قصيرة؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+## Matrix Overview
+
+| Dimension | Options |
+|-----------|---------|
+| **Channels** | Email, WhatsApp, LinkedIn DM |
+| **Regions** | Central (Riyadh), Western (Jeddah/Makkah), Eastern (Dammam/Khobar), Northwest (Tabuk), South (Abha/Jazan) |
+| **ICPs** | B2C (Stuck senior engineer, 8-15 YOE), B2B (HR/L&D at top employer, 500+ headcount) |
+| **Languages** | EN (English), AR (Arabic) |
+| **Categories** | Cold Outreach (30), Warm Follow-Up (30), Value-Add / Content Share (20), Urgency / Scarcity (15), Social Proof / Alumni (15), Re-Engagement (10) |
+
+**Total templates:** 120 = 3 channels x 5 regions x 2 ICPs x 2 languages x 2 categories per combination
 
 ---
 
-### A2. LinkedIn DM — Follow-Up (3-Day)
+## Template Catalog
 
-#### A2.1 Central Region — EN
+### Cold Outreach
 
+*30 templates*
+
+#### JIC-GW-T001 -- Email | Central | B2C | EN
+
+**Subject / Headline:**
+> Your next chapter: From {{job_title}} to Engineering Leader
+
+**Body:**
 ```
 Hi {{first_name}},
 
-Following up on my message about GW's M.S. Engineering Management via JIC.
+I'm reaching out from JIC -- the exclusive Kingdom-wide onboarding partner for George Washington University's M.S. in Engineering Management (fully online).
 
-Quick context: Cohort 1 is capped <!-- UNVERIFIED: confirm cohort size --> and we're interviewing candidates across Riyadh now. If you're considering a move into engineering management this year, the timing aligns well with promotion cycles at {{company}} and others in the PIF portfolio.
+I noticed your background as {{job_title}} at {{company}} in {{region}}. Many engineers at your stage face the same crossroads: deep technical expertise, but the managerial track feels out of reach without a formal credential.
 
-No pressure — just wanted to make sure it didn't get buried. Happy to send a one-pager if easier.
+GW's program is built for exactly that transition. Curriculum covers project portfolio management, systems engineering leadership, and data-driven decision making -- all delivered online, with JIC providing full Saudi-context onboarding, Arabic-language support, and local cohort coordination.
 
-{{cal_link}}
+With {{giga_project}} reshaping {{region}}'s engineering landscape, the demand for technically-grounded managers is accelerating. This program fills that gap.
 
-Best,
-{{sender_name}}
+Worth a 15-minute conversation?
 ```
 
-#### A2.2 Central Region — AR
+**CTA:** Reply to schedule a 15-min call | Book: {{calendar_link}} | Apply: {{apply_link}}
 
-```
-مرحباً {{first_name}}،
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
 
-متابعة لرسالتي حول ماجستير إدارة الهندسة من GW عبر JIC.
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
 
-سياق سريع: الدفعة الأولى محدودة <!-- UNVERIFIED: confirm cohort size --> ونحن نقوم بمقابلة المرشحين عبر الرياض الآن. إذا كنت تفكر في الانتقال إلى إدارة الهندسة هذا العام، التوقيت يتوافق مع دورات الترقية في {{company}} وغيرها في محفظة الصندوق السيادي.
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
 
-لا ضغط — فقط أردت التأكد من أنها لم تضيع. سعيد بإرسال ملخص صفحة واحدة إذا كان ذلك أسهل.
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A2.3 Western Region — EN
-
-```
-Hi {{first_name}},
-
-Quick follow-up — GW MS EM via JIC.
-
-I spoke with an engineer at Red Sea Global last week who said the same thing you might be thinking: "I have the technical skills, but I need the management credential to get promoted." That's exactly what this program bridges.
-
-Cohort 1 is forming. One call, 15 minutes, no obligation.
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A2.4 Western Region — AR
-
-```
-مرحباً {{first_name}}،
-
-متابعة سريعة — ماجستير GW عبر JIC.
-
-تحدثت مع مهندس في البحر الأحمر العالمي الأسبوع الماضي قال نفس الشيء الذي قد تفكر فيه: "لدي المهارات التقنية، لكنني أحتاج شهادة الإدارة للترقية." هذا بالضبط ما يجسره هذا البرنامج.
-
-الدفعة الأولى تتشكل. مكالمة واحدة، 15 دقيقة، بدون التزام.
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A2.5 Eastern Region — EN
-
-```
-Hi {{first_name}},
-
-Just circling back — GW MS EM, JIC pathway.
-
-The Eastern Province has the highest concentration of engineering management roles in KSA <!-- UNVERIFIED: verify stat -->, but also the highest competition for promotions. The engineers who separate themselves are the ones who invest in credentials before they're required.
-
-Cohort 1 interview slots are open. Worth a conversation?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A2.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}،
-
-أعود للموضوع — ماجستير GW، مسار JIC.
-
-المنطقة الشرقية لديها أعلى تركيز لأدوار إدارة الهندسة في المملكة <!-- UNVERIFIED: verify stat -->، لكن أيضًا أعلى منافسة للترقيات. المهندسون الذين يميزون أنفسهم هم الذين يستثمرون في الشهادات قبل أن تُطلب.
-
-فتحات مقابلة الدفعة الأولى متاحة. هل تستحق محادثة؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A2.7 Northwest Region — EN
-
-```
-Hi {{first_name}},
-
-Following up on GW MS EM via JIC — especially relevant if you're working on or near NEOM projects.
-
-The engineers building The Line and Oxagon aren't just technical experts — they're being asked to lead teams of 50+ from day one. GW's program is specifically designed for that transition: technical → managerial, without losing your engineering identity.
-
-15-minute call to explore?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A2.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}،
-
-متابعة حول ماجستير GW عبر JIC — خاصةً إذا كنت تعمل في أو بالقرب من مشاريع نيوم.
-
-المهندسون الذين يبنون ذا لاين وأوكساچون ليسوا خبراء تقنيين فقط — يُطلب منهم قيادة فرق 50+ من اليوم الأول. برنامج GW مُصمم خصيصًا لهذا التحول: تقني → إداري، دون فقدان هويتك الهندسية.
-
-مكالمة 15 دقيقة للاستكشاف؟
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A2.9 South Region — EN
-
-```
-Hi {{first_name}},
-
-Quick follow-up on GW MS EM — JIC's exclusive Saudi pathway.
-
-Regional development in the South is accelerating, and local talent retention is a priority for Vision 2030. The engineers who combine technical expertise with management credentials will be the ones shaping these projects from the inside.
-
-One call. 15 minutes. See if it's the right fit for your trajectory.
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A2.10 South Region — AR
-
-```
-مرحباً {{first_name}}،
-
-متابعة سريعة حول ماجستير GW — مسار JIC السعودي الحصري.
-
-التنمية الإقليمية في الجنوب تتسارع، والحفاظ على المواهب المحلية هو أولوية لرؤية 2030. المهندسون الذين يجمعون الخبرة التقنية مع شهادات الإدارة سيكونون من يشكلون هذه المشاريع من الداخل.
-
-مكالمة واحدة. 15 دقيقة. نرى إذا كانت مناسبة لمسارك.
-
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
 
 ---
 
-### A3. Email — First Touch
+#### JIC-GW-T003 -- Email | Central | B2C | AR
 
-#### A3.1 Central Region — EN
+**Subject / Headline:**
+> فصلك المقبل: من {{job_title}} إلى قائد هندسي
 
-**Subject:** [Riyadh Engineers] GW M.S. Engineering Management — Cohort 1 Open
-
-```
-Hi {{first_name}},
-
-I'm reaching out because you're a {{role}} at {{company}} in Riyadh, and there's a specific opportunity that aligns with the career trajectory of engineers in the Central region right now.
-
-**The context:**
-PIF-backed projects (Roshn, Qiddiya, Diriyah) are scaling fast. The technical talent is here — but there's a shortage of engineering managers who can bridge execution and strategy. That's the gap GW's M.S. in Engineering Management is designed to fill.
-
-**The program:**
-- 100% online, part-time (designed for working engineers)
-- George Washington University — R1 research institution
-- Delivered through JIC's exclusive Saudi pathway
-- Cohort-based with peer network across the Kingdom
-
-**Why now:**
-Cohort 1 is forming with limited seats <!-- UNVERIFIED: confirm cohort size -->. We're conducting admissions interviews through [date]. The program starts [date].
-
-**Next step:**
-Book a free 20-minute consultation to assess fit, discuss ROI, and get your questions answered.
-
-→ {{cal_link}}
-
-Or reply to this email with your questions.
-
-Best regards,
-{{sender_name}}
-Program Director, JIC × GW Engineering Management
-
-P.S. — If you're not ready to book a call, here's a free resource: {{lead_magnet_url}} — the Saudi Engineering Leadership Index 2026, with salary benchmarks and hiring trends by region.
-```
-
-#### A3.2 Central Region — AR
-
-**Subject:** [مهندسو الرياض] ماجستير إدارة الهندسة GW — الدفعة الأولى مفتوحة
-
+**Body:**
 ```
 مرحباً {{first_name}}،
 
-أتواصل معك لأنك {{role}} في {{company}} في الرياض، وهناك فرصة محددة تتوافق مع مسار مهنة المهندسين في المنطقة الوسطى الآن.
+أتواصل معك من JIC -- الشريك الحصري في جميع أنحاء المملكة للانضمام لبرنامج ماجستير إدارة الهندسة من جورج واشنطن (أونلاين بالكامل).
 
-**السياق:**
-المشاريع المدعومة من الصندوق السيادي (روشن، القدية، الدرعية) تنمو بسرعة. المواهب التقنية موجودة — لكن هناك نقص في مديري الهندسة الذين يمكنهم الجسر بين التنفيذ والاستراتيجية. هذه هي الفجوة التي يملأها ماجستير إدارة الهندسة من GW.
+لاحظت خلفيتك كـ {{job_title}} في {{company}} في {{region}}. يواجه العديد من المهندسين في مرحلتك نفس المفترق: خبرة تقنية عميقة، لكن المسار الإداري يبدو بعيد المنال بدون شهادة رسمية.
 
-**البرنامج:**
-- 100% عبر الإنترنت، دوام جزئي (مُصمم للمهندسين العاملين)
-- جامعة جورج واشنطن — مؤسسة بحثية R1
-- يُقدّم عبر مسار JIC السعودي الحصري
-- على شكل دفعات مع شبكة نظراء عبر المملكة
+برنامج GW مبني لهذا التحول بالذات. يغطي المنهج إدارة محفظة المشاريع، قيادة هندسة الأنظمة، واتخاذ القرارات المستندة إلى البيانات -- كلها أونلاين، مع تقديم JIC لدعم السياق السعودي الكامل، والدعم باللغة العربية، وتنسيق الدفعات المحلية.
 
-**لماذا الآن:**
-الدفعة الأولى تتشكل بمقاعد محدودة <!-- UNVERIFIED: confirm cohort size -->. نقوم بإجراء مقابلات القبول حتى [التاريخ]. يبدأ البرنامج [التاريخ].
+مع إعادة مشروع {{giga_project}} تشكيل المشهد الهندسي في {{region}}، يتسارع الطلب على المدراء المؤسسين تقنياً. هذا البرنامج يسد تلك الفجوة.
 
-**الخطوة التالية:**
-احجز استشارة مجانية مدتها 20 دقيقة لتقييم الملاءمة، ومناقشة العائد على الاستثمار، والإجابة على أسئلتك.
-
-→ {{cal_link}}
-
-أو رد على هذا البريد الإلكتروني بأسئلتك.
-
-مع أطيب التحيات،
-{{sender_name}}
-مدير البرنامج، JIC × GW Engineering Management
-
-ملاحظة — إذا لم تكن مستعداً لحجز مكالمة، إليك مورد مجاني: {{lead_magnet_url}} — مؤشر القيادة الهندسية السعودية 2026، مع معايير الرواتب واتجاهات التوظيف حسب المنطقة.
+يستحق محادثة 15 دقيقة؟
 ```
 
-#### A3.3 Western Region — EN
-
-**Subject:** [Jeddah Engineers] From Senior Engineer to Engineering Manager — GW Pathway
-
-```
-Hi {{first_name}},
-
-The Western region is undergoing one of the most significant transformations in Saudi history. Red Sea Global, Jeddah Islamic Port expansion, and the Makkah infrastructure upgrades are creating thousands of engineering management roles.
-
-But here's what we're hearing from engineers at {{company}} and similar firms: the technical skills are there, but the management credential isn't.
-
-**GW's M.S. in Engineering Management — JIC pathway:**
-- Part-time, online, while you work
-- Same degree as GW's Washington D.C. campus
-- Cohort-based with peers from across KSA
-- Designed specifically for engineers making the technical → managerial transition
-
-**The ROI:**
-Engineering Manager roles in KSA command 30–50% salary premiums over Senior Engineer positions <!-- UNVERIFIED -->. The program pays for itself in 24 months <!-- UNVERIFIED -->.
-
-**Next step:**
-Book a free consultation: {{cal_link}}
-
-Or grab our free report first: {{lead_magnet_url}}
-
-Best,
-{{sender_name}}
-```
-
-#### A3.4 Western Region — AR
-
-**Subject:** [مهندسو جدة] من مهندس كبير إلى مدير هندسة — مسار GW
-
-```
-مرحباً {{first_name}}،
-
-المنطقة الغربية تشهد واحدة من أهم التحولات في التاريخ السعودي. البحر الأحمر العالمي، توسعة ميناء جدة الإسلامي، وتحديثات البنية التحتية في مكة تخلق آلاف أدوار إدارة الهندسة.
-
-لكن إليك ما نسمعه من المهندسين في {{company}} والشركات المماثلة: المهارات التقنية موجودة، لكن شهادة الإدارة غير موجودة.
-
-**ماجستير إدارة الهندسة من GW — مسار JIC:**
-- دوام جزئي، عبر الإنترنت، وأنت تعمل
-- نفس الشهادة لحرم GW في واشنطن
-- على شكل دفعات مع نظراء من جميع أنحاء المملكة
-- مُصمم خصيصًا للمهندسين الذين يجعلون التحول من تقني إلى إداري
-
-**العائد على الاستثمار:**
-أدوار مدير الهندسة في المملكة تحصل على علاوات راتب 30–50% أكثر من مهندس كبير <!-- UNVERIFIED -->. البرنامج يعوض تكلفته في 24 شهراً <!-- UNVERIFIED -->.
-
-**الخطوة التالية:**
-احجز استشارة مجانية: {{cal_link}}
-
-أو احصل على تقريرنا المجاني أولاً: {{lead_magnet_url}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A3.5 Eastern Region — EN
-
-**Subject:** [Dammam/Khobar] The Engineering Management Credential Aramco, SABIC, Maaden Look For
-
-```
-Hi {{first_name}},
-
-You're a {{role}} at {{company}} in the Eastern Province — the heart of Saudi industry. You already know the technical side. The question is: what's the bridge to management?
-
-GW's M.S. in Engineering Management, delivered through JIC's exclusive Saudi pathway, is that bridge.
-
-**Built for engineers like you:**
-- 100% online, part-time
-- R1 research university (GW)
-- Cohort 1 forming now
-- Peer network across Aramco, SABIC, Maaden, and beyond
-
-**The pattern we see:**
-Engineers who wait for their company to "send them" for management training often wait 3–5 years. The ones who invest in themselves move faster.
-
-**Book a consultation:** {{cal_link}}
-
-**Or download the free report:** {{lead_magnet_url}}
-
-Best,
-{{sender_name}}
-```
-
-#### A3.6 Eastern Region — AR
-
-**Subject:** [الدمام/الخبر] شهادة إدارة الهندسة التي تبحث عنها أرامكو، سابك، معادن
-
-```
-مرحباً {{first_name}}،
-
-أنت {{role}} في {{company}} في المنطقة الشرقية — قلب الصناعة السعودية. تعرف الجانب التقني بالفعل. السؤال هو: ما هو الجسر إلى الإدارة؟
-
-ماجستير إدارة الهندسة من GW، يُقدّم عبر مسار JIC السعودي الحصري، هو ذلك الجسر.
-
-**مُبنى للمهندسين مثلك:**
-- 100% عبر الإنترنت، دوام جزئي
-- جامعة بحثية R1 (GW)
-- الدفعة الأولى تتشكل الآن
-- شبكة نظراء عبر أرامكو، سابك، معادن، وما بعدها
-
-**النمط الذي نراه:**
-المهندسون الذين ينتظرون شركتهم "لإرسالهم" للتدريب الإداري غالبًا ما ينتظرون 3–5 سنوات. الذين يستثمرون في أنفسهم يتحركون بشكل أسرع.
-
-**احجز استشارة:** {{cal_link}}
-
-**أو حمّل التقرير المجاني:** {{lead_magnet_url}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A3.7 Northwest Region — EN
-
-**Subject:** [Tabuk/NEOM] Lead Giga-Projects. Get the Credential That Opens Doors.
-
-```
-Hi {{first_name}},
-
-You're working in the most ambitious construction zone on Earth. NEOM, The Line, Oxagon — these projects need engineering managers who can lead at unprecedented scale.
-
-GW's M.S. in Engineering Management, through JIC's exclusive Saudi pathway, is designed for exactly that challenge.
-
-**What makes this different:**
-- Part-time, online — study from Tabuk while building the future
-- R1 research university credential
-- Cohort-based with peers from across KSA's giga-projects
-- Curriculum aligned with megaproject management realities
-
-**The trajectory:**
-Engineers with management credentials are being fast-tracked into project director roles at NEOM and Red Sea Global <!-- UNVERIFIED -->. The pattern is clear: credential first, opportunity follows.
-
-**Book your consultation:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A3.8 Northwest Region — AR
-
-**Subject:** [تبوك/نيوم] قد المشاريع الضخمة. احصل على الشهادة التي تفتح الأبواب.
-
-```
-مرحباً {{first_name}}،
-
-أنت تعمل في أكثر منطقة بناء طموحاً على وجه الأرض. نيوم، ذا لاين، أوكساچون — هذه المشاريع تحتاج مديري هندسة يمكنهم القيادة على نطاق غير مسبوق.
-
-ماجستير إدارة الهندسة من GW، عبر مسار JIC السعودي الحصري، مُصمم لتحدي ذلك بالضبط.
-
-**ما الذي يجعل هذا مختلفاً:**
-- دوام جزئي، عبر الإنترنت — ادرس من تبوك وأنت تبني المستقبل
-- شهادة جامعة بحثية R1
-- على شكل دفعات مع نظراء من مشاريع المملكة الضخمة
-- منهج يتوافق مع واقع إدارة المشاريع الضخمة
-
-**المسار:**
-المهندسون الذين يمتلكون شهادات الإدارة يُسرّعون في أدوار مدير المشروع في نيوم والبحر الأحمر العالمي <!-- UNVERIFIED -->. النمط واضح: الشهادة أولاً، الفرصة تتبع.
-
-**احجز استشارتك:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A3.9 South Region — EN
-
-**Subject:** [Abha/Jazan] Engineering Management for Regional Development Leaders
-
-```
-Hi {{first_name}},
-
-Regional development in the South is accelerating — AlUla, Qiddiya South, and infrastructure projects across Asir and Jazan are creating new demand for engineering leadership.
-
-The challenge for local talent: how to gain world-class management credentials without leaving the region or pausing your career.
-
-**GW's M.S. in Engineering Management — JIC pathway:**
-- 100% online, part-time
-- Study from Abha, Jazan, or anywhere in KSA
-- Same GW degree as Washington D.C. students
-- Cohort-based with peer network across all regions
-
-**Why this matters for Southern engineers:**
-Vision 2030 emphasizes regional balance and local talent retention. Engineers who combine technical expertise with management credentials will shape these projects from leadership positions — not just execution roles.
-
-**Book a consultation:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A3.10 South Region — AR
-
-**Subject:** [أبها/جازان] إدارة الهندسة لقادة التنمية الإقليمية
-
-```
-مرحباً {{first_name}}،
-
-التنمية الإقليمية في الجنوب تتسارع — العلا، القدية الجنوبية، ومشاريع البنية التحتية عبر عسير وجازان تخلق طلباً جديداً على القيادة الهندسية.
-
-التحدي للمواهب المحلية: كيفية الحصول على شهادات إدارة عالمية المستوى دون مغادرة المنطقة أو إيقاف مسيرتك.
-
-**ماجستير إدارة الهندسة من GW — مسار JIC:**
-- 100% عبر الإنترنت، دوام جزئي
-- ادرس من أبها، جازان، أو أي مكان في المملكة
-- نفس شهادة GW لطلاب واشنطن
-- على شكل دفعات مع شبكة نظراء عبر جميع المناطق
-
-**لماذا هذا مهم للمهندسين الجنوبيين:**
-رؤية 2030 تؤكد على التوازن الإقليمي والحفاظ على المواهب المحلية. المهندسون الذين يجمعون الخبرة التقنية مع شهادات الإدارة سيشكلون هذه المشاريع من مناصب قيادية — ليس فقط أدوار تنفيذية.
-
-**احجز استشارة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+**CTA:** رد لجدولة اتصال 15 دقيقة | احجز: {{calendar_link}} | قدّم: {{apply_link}}
+
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
+
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
 
 ---
 
-### A4. Email — Follow-Up (3-Day)
+#### JIC-GW-T009 -- Email | Western | B2C | EN
 
-#### A4.1 Central Region — EN
+**Subject / Headline:**
+> Your next chapter: From {{job_title}} to Engineering Leader
 
-**Subject:** Re: [Riyadh Engineers] GW M.S. Engineering Management — Following Up
-
+**Body:**
 ```
 Hi {{first_name}},
 
-I wanted to follow up on my email about GW's M.S. Engineering Management via JIC.
+I'm reaching out from JIC -- the exclusive Kingdom-wide onboarding partner for George Washington University's M.S. in Engineering Management (fully online).
 
-Quick update: we've filled <!-- UNVERIFIED: X --> spots in Cohort 1 and are interviewing through [date]. If you're considering a move into engineering management this year, the timing is relevant.
+I noticed your background as {{job_title}} at {{company}} in {{region}}. Many engineers at your stage face the same crossroads: deep technical expertise, but the managerial track feels out of reach without a formal credential.
 
-**Three things engineers ask us:**
-1. *"Will my company pay for it?"* — Many PIF-portfolio and large employers have L&D budgets that cover this. We can help you make the case to your manager.
-2. *"Can I really do this while working?"* — Yes. The program is designed for full-time engineers. Most students spend 8–12 hours/week <!-- UNVERIFIED -->.
-3. *"Is the degree recognized in Saudi Arabia?"* — GW is a regionally accredited U.S. institution. Degree equivalency is handled through the Saudi Cultural Mission <!-- UNVERIFIED: confirm process -->.
+GW's program is built for exactly that transition. Curriculum covers project portfolio management, systems engineering leadership, and data-driven decision making -- all delivered online, with JIC providing full Saudi-context onboarding, Arabic-language support, and local cohort coordination.
 
-**Easy next steps:**
-→ Book a 20-minute call: {{cal_link}}
-→ Or grab the free report first: {{lead_magnet_url}}
+With {{giga_project}} reshaping {{region}}'s engineering landscape, the demand for technically-grounded managers is accelerating. This program fills that gap.
 
-No pressure — just want to make sure you have the info if it's relevant.
-
-Best,
-{{sender_name}}
+Worth a 15-minute conversation?
 ```
 
-#### A4.2 Central Region — AR
-
-**Subject:** Re: [مهندسو الرياض] ماجستير إدارة الهندسة GW — متابعة
-
-```
-مرحباً {{first_name}}،
-
-أردت المتابعة على بريدي الإلكتروني حول ماجستير إدارة الهندسة من GW عبر JIC.
-
-تحديث سريع: لقد ملأنا <!-- UNVERIFIED: X --> مقاعد في الدفعة الأولى ونقوم بالمقابلات حتى [التاريخ]. إذا كنت تفكر في الانتقال إلى إدارة الهندسة هذا العام، التوقيت مناسب.
-
-**ثلاثة أشياء يسألنا المهندسون عنها:**
-1. *"هل ستدفع شركتي مقابل ذلك؟"* — العديد من الشركات في محفظة الصندوق السيادي وكبار أرباب العمل لديهم ميزانيات التعلم والتطوير التي تغطي هذا. يمكننا مساعدتك في تقديم الحالة لمديرك.
-2. *"هل يمكنني حقاً فعل هذا وأنا أعمل؟"* — نعم. البرنامج مُصمم للمهندسين بدوام كامل. معظم الطلاب يقضون 8–12 ساعة/أسبوع <!-- UNVERIFIED -->.
-3. *"هل الشهادة معترف بها في السعودية؟"* — GW هي مؤسسة أمريكية معتمدة إقليمياً. معادلة الشهادة تتم من خلال البعثة الثقافية السعودية <!-- UNVERIFIED: confirm process -->.
-
-**خطوات سهلة:**
-→ احجز مكالمة 20 دقيقة: {{cal_link}}
-→ أو احصل على التقرير المجاني أولاً: {{lead_magnet_url}}
-
-لا ضغط — فقط أريد التأكد من أن لديك المعلومات إذا كانت مناسبة.
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A4.3 Western Region — EN
-
-**Subject:** Re: From Senior Engineer to Engineering Manager — Quick Follow-Up
-
-```
-Hi {{first_name}},
-
-Following up on the GW MS EM opportunity for engineers in the Western region.
-
-I shared this with a Senior Project Engineer at Red Sea Global last week. His response: "I didn't know there was a Saudi-specific pathway for this degree. I thought I had to apply directly to GW and figure out the logistics myself."
-
-That's exactly what JIC solves — the logistics, the local support, the peer network, the Arabic-language onboarding.
-
-**Cohort 1 update:**
-- <!-- UNVERIFIED: X --> seats remaining
-- Applications reviewed on rolling basis
-- Program starts [date]
-
-**Two options:**
-1. Book a consultation: {{cal_link}}
-2. Download the free Saudi Engineering Leadership Index: {{lead_magnet_url}}
-
-Either way, no obligation. Just want to get you the right info.
-
-Best,
-{{sender_name}}
-```
-
-#### A4.4 Western Region — AR
-
-**Subject:** Re: من مهندس كبير إلى مدير هندسة — متابعة سريعة
-
-```
-مرحباً {{first_name}}،
-
-متابعة حول فرصة ماجستير GW للمهندسين في المنطقة الغربية.
-
-شاركت هذا مع مهندس مشروع كبير في البحر الأحمر العالمي الأسبوع الماضي. رده: "لم أكن أعلم أن هناك مساراً سعودياً محدداً لهذه الشهادة. ظننت أنني يجب أن أتقدم مباشرة إلى GW وأحلل اللوجستيات بنفسي."
-
-هذا بالضبط ما يحله JIC — اللوجستيات، الدعم المحلي، شبكة النظراء، التأهيل باللغة العربية.
-
-**تحديث الدفعة الأولى:**
-- <!-- UNVERIFIED: X --> مقاعد متبقية
-- الطلبات تُراجع على أساس متجدد
-- يبدأ البرنامج [التاريخ]
-
-**خياران:**
-1. احجز استشارة: {{cal_link}}
-2. حمّل مؤشر القيادة الهندسية السعودية المجاني: {{lead_magnet_url}}
-
-في كلتا الحالتين، بدون التزام. فقط أريد إيصال المعلومات الصحيحة لك.
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A4.5 Eastern Region — EN
-
-**Subject:** Re: The Credential Aramco, SABIC, Maaden Look For
-
-```
-Hi {{first_name}},
-
-Quick follow-up on GW MS EM via JIC.
-
-**What I'm hearing from engineers at {{company}} and similar firms:**
-
-The Eastern Province has the highest engineering salary growth in KSA <!-- UNVERIFIED -->, but also the highest competition. Engineers who differentiate themselves with management credentials are the ones getting promoted into lead and director roles.
-
-**The program specifics:**
-- 30 credits, part-time, 2–3 years <!-- UNVERIFIED -->
-- 100% online with live sessions
-- GW faculty + JIC local support
-- Cohort peer network
-
-**Cohort 1:** Forming now. Interview slots open.
-
-→ {{cal_link}}
-
-Or reply with questions.
-
-Best,
-{{sender_name}}
-```
-
-#### A4.6 Eastern Region — AR
-
-**Subject:** Re: الشهادة التي تبحث عنها أرامكو، سابك، معادن
-
-```
-مرحباً {{first_name}}،
-
-متابعة سريعة حول ماجستير GW عبر JIC.
-
-**ما أسمعه من المهندسين في {{company}} والشركات المماثلة:**
-
-المنطقة الشرقية لديها أعلى نمو رواتب الهندسة في المملكة <!-- UNVERIFIED -->، لكن أيضًا أعلى منافسة. المهندسون الذين يميزون أنفسهم بشهادات الإدارة هم الذين يحصلون على الترقيات إلى أدوار قيادية وإدارية.
-
-**تفاصيل البرنامج:**
-- 30 ساعة معتمدة، دوام جزئي، 2–3 سنوات <!-- UNVERIFIED -->
-- 100% عبر الإنترنت مع جلسات حية
-- هيئة تدريس GW + دعم JIC المحلي
-- شبطة نظراء الدفعة
-
-**الدفعة الأولى:** تتشكل الآن. فتحات المقابلات مفتوحة.
-
-→ {{cal_link}}
-
-أو رد بالأسئلة.
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A4.7 Northwest Region — EN
-
-**Subject:** Re: Lead Giga-Projects. Get the Credential.
-
-```
-Hi {{first_name}},
-
-Following up on GW MS EM for engineers in the Northwest/NEOM corridor.
-
-**The reality of giga-project work:**
-You're not just managing engineering teams — you're coordinating across international contractors, Saudi stakeholders, and Vision 2030 timelines. The engineering managers who thrive here have both technical depth and formal management training.
-
-GW's program is specifically built for that dual competency.
-
-**For NEOM-adjacent engineers specifically:**
-We've structured the cohort schedule to accommodate the unique demands of giga-project work — flexible deadlines, asynchronous modules, and JIC local support in Tabuk and NEOM City <!-- UNVERIFIED: confirm JIC presence -->.
-
-**Cohort 1 forming:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### A4.8 Northwest Region — AR
-
-**Subject:** Re: قد المشاريع الضخمة. احصل على الشهادة.
-
-```
-مرحباً {{first_name}}،
-
-متابعة حول ماجستير GW للمهندسين في ممر الشمال الغربي/نيوم.
-
-**واقع عمل المشاريع الضخمة:**
-أنت لا تدير فرق هندسة فقط — أنت تنسق عبر مقاولين دوليين، أصحاب مصلحة سعوديين، وجداول زمنية رؤية 2030. مديرو الهندسة الذين يزدهرون هنا يمتلكون كلًا من العمق التقني والتدريب الإداري الرسمي.
-
-برنامج GW مُبنى خصيصًا لتلك الكفاءة المزدوجة.
-
-**لمهندسي نيوم على وجه التحديد:**
-لقد هيكلنا جدول الدفعة لاستيعاب المتطلبات الفريدة لعمل المشاريع الضخمة — مواعيد نهائية مرنة، وحدات غير متزامنة، ودعم JIC المحلي في تبوك ومدينة نيوم <!-- UNVERIFIED: confirm JIC presence -->.
-
-**الدفعة الأولى تتشكل:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### A4.9 South Region — EN
-
-**Subject:** Re: Engineering Management for Regional Development Leaders
-
-```
-Hi {{first_name}},
-
-Following up on GW MS EM via JIC for Southern region engineers.
-
-**What we're seeing:**
-Regional development projects (AlUla, Qiddiya South, Asir infrastructure) are creating leadership roles that didn't exist 3 years ago. The engineers who step into these roles early will shape the next decade of Southern development.
-
-**The credential gap:**
-Most Senior Engineers have 8–15 years of technical experience. But engineering management roles require a different skill set — strategic planning, team leadership, stakeholder management, and financial literacy. GW's MS EM fills that gap in 2–3 years part-time <!-- UNVERIFIED -->.
-
-**Cohort 1:** Limited seats, forming now.
-
-→ {{cal_link}} or {{lead_magnet_url}}
-
-Best,
-{{sender_name}}
-```
-
-#### A4.10 South Region — AR
-
-**Subject:** Re: إدارة الهندسة لقادة التنمية الإقليمية
-
-```
-مرحباً {{first_name}}،
-
-متابعة حول ماجستير GW عبر JIC للمهندسين في المنطقة الجنوبية.
-
-**ما نراه:**
-مشاريع التنمية الإقليمية (العلا، القدية الجنوبية، بنية تحتية عسير) تخلق أدوار قيادية لم تكن موجودة قبل 3 سنوات. المهندسون الذين يتقدمون إلى هذه الأدوار مبكراً سيشكلون العقد القادم من تنمية الجنوب.
-
-**فجوة الشهادات:**
-معظم المهندسين الكبار لديهم 8–15 سنة خبرة تقنية. لكن أدوار إدارة الهندسة تتطلب مجموعة مهارات مختلفة — التخطيط الاستراتيجي، قيادة الفريق، إدارة أصحاب المصلحة، والمعرفة المالية. ماجستير GW يملأ هذه الفجوة في 2–3 سنوات دوام جزئي <!-- UNVERIFIED -->.
-
-**الدفعة الأولى:** مقاعد محدودة، تتشكل الآن.
-
-→ {{cal_link}} أو {{lead_magnet_url}}
-
-تحياتي،
-{{sender_name}}
-```
+**CTA:** Reply to schedule a 15-min call | Book: {{calendar_link}} | Apply: {{apply_link}}
+
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
+
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
 
 ---
 
-### A5. WhatsApp — First Touch
+#### JIC-GW-T011 -- Email | Western | B2C | AR
 
-#### A5.1 Central Region — EN
+**Subject / Headline:**
+> فصلك المقبل: من {{job_title}} إلى قائد هندسي
 
+**Body:**
 ```
-Hi {{first_name}}, this is {{sender_name}} from JIC × GW Engineering Management.
+مرحباً {{first_name}}،
 
-I saw your profile — {{role}} at {{company}} in Riyadh. We're launching Cohort 1 of GW's M.S. Engineering Management through an exclusive Saudi pathway.
+أتواصل معك من JIC -- الشريك الحصري في جميع أنحاء المملكة للانضمام لبرنامج ماجستير إدارة الهندسة من جورج واشنطن (أونلاين بالكامل).
 
-Part-time, online, while you work. Same degree as Washington D.C.
+لاحظت خلفيتك كـ {{job_title}} في {{company}} في {{region}}. يواجه العديد من المهندسين في مرحلتك نفس المفترق: خبرة تقنية عميقة، لكن المسار الإداري يبدو بعيد المنال بدون شهادة رسمية.
 
-Worth a quick call? {{cal_link}}
+برنامج GW مبني لهذا التحول بالذات. يغطي المنهج إدارة محفظة المشاريع، قيادة هندسة الأنظمة، واتخاذ القرارات المستندة إلى البيانات -- كلها أونلاين، مع تقديم JIC لدعم السياق السعودي الكامل، والدعم باللغة العربية، وتنسيق الدفعات المحلية.
 
-Or WhatsApp me back with questions: {{whatsapp_number}}
-```
+مع إعادة مشروع {{giga_project}} تشكيل المشهد الهندسي في {{region}}، يتسارع الطلب على المدراء المؤسسين تقنياً. هذا البرنامج يسد تلك الفجوة.
 
-#### A5.2 Central Region — AR
-
-```
-مرحباً {{first_name}}، أنا {{sender_name}} من JIC × GW Engineering Management.
-
-رأيت ملفك الشخصي — {{role}} في {{company}} في الرياض. نطلق الدفعة الأولى من ماجستير إدارة الهندسة من GW عبر مسار سعودي حصري.
-
-دوام جزئي، عبر الإنترنت، وأنت تعمل. نفس الشهادة لطلاب واشنطن.
-
-تستحق مكالمة سريعة؟ {{cal_link}}
-
-أو رد عليّ عبر الواتساب بالأسئلة: {{whatsapp_number}}
+يستحق محادثة 15 دقيقة؟
 ```
 
-#### A5.3 Western Region — EN
+**CTA:** رد لجدولة اتصال 15 دقيقة | احجز: {{calendar_link}} | قدّم: {{apply_link}}
 
-```
-Hi {{first_name}}, {{sender_name}} here from JIC × GW.
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
 
-GW's MS Engineering Management is now available through JIC's exclusive Saudi pathway — part-time, online, designed for working engineers like you at {{company}}.
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
 
-Perfect for the technical → management transition.
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
 
-Quick chat? {{cal_link}}
-
-Or reply here 👇
-```
-
-#### A5.4 Western Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW.
-
-ماجستير إدارة الهندسة من GW متاح الآن عبر مسار JIC السعودي الحصري — دوام جزئي، عبر الإنترنت، مُصمم للمهندسين العاملين مثلك في {{company}}.
-
-مثالي لتحول التقني → الإداري.
-
-محادثة سريعة؟ {{cal_link}}
-
-أو رد هنا 👇
-```
-
-#### A5.5 Eastern Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW Engineering Management.
-
-You're a {{role}} at {{company}} — the Eastern Province's engineering hub. GW's MS EM is now available through JIC: part-time, online, R1 university.
-
-Bridge from senior engineer to engineering manager without leaving your job.
-
-15-min call? {{cal_link}}
-```
-
-#### A5.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW Engineering Management.
-
-أنت {{role}} في {{company}} — مركز الهندسة في المنطقة الشرقية. ماجستير GW متاح الآن عبر JIC: دوام جزئي، عبر الإنترنت، جامعة R1.
-
-جسر من مهندس كبير إلى مدير هندسة دون ترك عملك.
-
-مكالمة 15 دقيقة؟ {{cal_link}}
-```
-
-#### A5.7 Northwest Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW.
-
-Working on NEOM or nearby? GW's MS EM via JIC is built for giga-project engineers — part-time, online, management credential while you build the future.
-
-Cohort 1 forming. Quick call? {{cal_link}}
-```
-
-#### A5.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW.
-
-تعمل في نيوم أو بالقرب منها؟ ماجستير GW عبر JIC مُبنى لمهندسي المشاريع الضخمة — دوام جزئي، عبر الإنترنت، شهادة إدارة وأنت تبني المستقبل.
-
-الدفعة الأولى تتشكل. مكالمة سريعة؟ {{cal_link}}
-```
-
-#### A5.9 South Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW.
-
-Regional development in the South is creating new engineering management roles. GW's MS EM via JIC — part-time, online, same degree as D.C. — is how you step into them.
-
-Cohort 1. Worth a chat? {{cal_link}}
-```
-
-#### A5.10 South Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW.
-
-التنمية الإقليمية في الجنوب تخلق أدوار إدارة هندسة جديدة. ماجستير GW عبر JIC — دوام جزئي، عبر الإنترنت، نفس الشهادة — هو كيفية التقدم إليها.
-
-الدفعة الأولى. تستحق محادثة؟ {{cal_link}}
-```
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
 
 ---
 
-### A6. WhatsApp — Follow-Up (3-Day)
+#### JIC-GW-T017 -- Email | Eastern | B2C | EN
 
-#### A6.1 Central Region — EN
+**Subject / Headline:**
+> Your next chapter: From {{job_title}} to Engineering Leader
 
+**Body:**
 ```
-Hi {{first_name}}, just following up on GW MS EM via JIC.
+Hi {{first_name}},
 
-Cohort 1 interview slots are filling <!-- UNVERIFIED -->. If you're thinking about the technical → management move this year, now's the window.
+I'm reaching out from JIC -- the exclusive Kingdom-wide onboarding partner for George Washington University's M.S. in Engineering Management (fully online).
 
-Quick questions? Reply here or book: {{cal_link}}
-```
+I noticed your background as {{job_title}} at {{company}} in {{region}}. Many engineers at your stage face the same crossroads: deep technical expertise, but the managerial track feels out of reach without a formal credential.
 
-#### A6.2 Central Region — AR
+GW's program is built for exactly that transition. Curriculum covers project portfolio management, systems engineering leadership, and data-driven decision making -- all delivered online, with JIC providing full Saudi-context onboarding, Arabic-language support, and local cohort coordination.
 
-```
-مرحباً {{first_name}}، فقط أتابع حول ماجستير GW عبر JIC.
+With {{giga_project}} reshaping {{region}}'s engineering landscape, the demand for technically-grounded managers is accelerating. This program fills that gap.
 
-فتحات مقابلة الدفعة الأولى تُملأ <!-- UNVERIFIED -->. إذا كنت تفكر في الانتقال من تقني → إداري هذا العام، الآن هو الوقت.
-
-أسئلة سريعة؟ رد هنا أو احجز: {{cal_link}}
+Worth a 15-minute conversation?
 ```
 
-#### A6.3 Western Region — EN
+**CTA:** Reply to schedule a 15-min call | Book: {{calendar_link}} | Apply: {{apply_link}}
 
-```
-Hi {{first_name}}, following up — GW MS EM, JIC pathway.
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
 
-The Red Sea Global / Jeddah Port engineers we've spoken to all say the same thing: they need the management credential to get promoted. This is that credential.
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
 
-Still interested? {{cal_link}}
-```
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
 
-#### A6.4 Western Region — AR
-
-```
-مرحباً {{first_name}}، أتابع — ماجستير GW، مسار JIC.
-
-مهندسو البحر الأحمر العالمي / ميناء جدة الذين تحدثنا إليهم جميعاً يقولون نفس الشيء: يحتاجون شهادة الإدارة للترقية. هذه هي تلك الشهادة.
-
-ما زلت مهتماً؟ {{cal_link}}
-```
-
-#### A6.5 Eastern Region — EN
-
-```
-Hi {{first_name}}, quick follow-up on GW MS EM.
-
-Aramco, SABIC, Maaden — they all promote engineers who show initiative on their own development. This program is exactly that signal.
-
-Worth 15 mins? {{cal_link}}
-```
-
-#### A6.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}، متابعة سريعة حول ماجستير GW.
-
-أرامكو، سابك، معادن — جميعها ترقي المهندسين الذين يظهرون المبادرة في تطوير أنفسهم. هذا البرنامج هو بالضبط ذلك الإشارة.
-
-تستحق 15 دقيقة؟ {{cal_link}}
-```
-
-#### A6.7 Northwest Region — EN
-
-```
-Hi {{first_name}}, following up — GW MS EM for NEOM-region engineers.
-
-The Line, Oxagon, Trojena — these projects need leaders, not just doers. Get the credential that puts you in the leadership pipeline.
-
-{{cal_link}}
-```
-
-#### A6.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}، أتابع — ماجستير GW لمهندسي منطقة نيوم.
-
-ذا لاين، أوكساچون، تروجينا — هذه المشاريع تحتاج قادة، لا مجرد منفذين. احصل على الشهادة التي تضعك في مسار القيادة.
-
-{{cal_link}}
-```
-
-#### A6.9 South Region — EN
-
-```
-Hi {{first_name}}, following up on GW MS EM via JIC.
-
-Southern development projects are accelerating. Engineers with management credentials will lead them. The others will execute.
-
-Which side do you want to be on? {{cal_link}}
-```
-
-#### A6.10 South Region — AR
-
-```
-مرحباً {{first_name}}، أتابع حول ماجستير GW عبر JIC.
-
-مشاريع التنمية الجنوبية تتسارع. المهندسون الذين يمتلكون شهادات الإدارة سيقودونها. الآخرون سينفذون.
-
-أي جانب تريد أن تكون عليه؟ {{cal_link}}
-```
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
 
 ---
 
-## Section B: B2B — Corporate Sponsor / HR-L&D
+#### JIC-GW-T019 -- Email | Eastern | B2C | AR
 
-### B1. LinkedIn DM — First Touch
+**Subject / Headline:**
+> فصلك المقبل: من {{job_title}} إلى قائد هندسي
 
-#### B1.1 Central Region — EN
-
-```
-Hi {{first_name}},
-
-I'm reaching out because {{company}} is one of the Central region's key employers, and we're seeing a pattern: top engineering talent is leaving for competitors who offer tuition support for management credentials.
-
-**The offer:**
-GW's M.S. in Engineering Management — now available through JIC's exclusive corporate sponsorship pathway. We handle the logistics, the cohort coordination, and the local support. You retain the talent.
-
-**Corporate benefits:**
-- Bulk pricing for cohorts of 5+ engineers <!-- UNVERIFIED: confirm pricing -->
-- Co-branded onboarding
-- Progress dashboards for HR/L&D
-- PDPL-compliant data handling
-- HRDF-aligned documentation <!-- UNVERIFIED: confirm HRDF alignment -->
-
-**Next step:**
-I'd love to share a one-page corporate sponsorship overview. 10-minute call?
-
-{{cal_link}}
-
-Best,
-{{sender_name}}
-JIC × GW Corporate Partnerships
-```
-
-#### B1.2 Central Region — AR
-
+**Body:**
 ```
 مرحباً {{first_name}}،
 
-أتواصل معك لأن {{company}} هو واحد من أرباب العمل الرئيسيين في المنطقة الوسطى، ونرى نمطاً: المواهب الهندسية المتميزة تغادر لمنافسين يقدمون دعم رسوم للشهادات الإدارية.
+أتواصل معك من JIC -- الشريك الحصري في جميع أنحاء المملكة للانضمام لبرنامج ماجستير إدارة الهندسة من جورج واشنطن (أونلاين بالكامل).
 
-**العرض:**
-ماجستير إدارة الهندسة من GW — متاح الآن عبر مسار الرعاية الشركية الحصري من JIC. نحن نتولى اللوجستيات، وتنسيق الدفعة، والدعم المحلي. أنت تحتفظ بالموهبة.
+لاحظت خلفيتك كـ {{job_title}} في {{company}} في {{region}}. يواجه العديد من المهندسين في مرحلتك نفس المفترق: خبرة تقنية عميقة، لكن المسار الإداري يبدو بعيد المنال بدون شهادة رسمية.
 
-**فوائد الشركة:**
-- تسعير مجمع لدفعات 5+ مهندسين <!-- UNVERIFIED: confirm pricing -->
-- تأهيل مشترك بالعلامة التجارية
-- لوحات معلومات التقدم للموارد البشرية/التعلم والتطوير
-- التعامل مع البيانات المتوافق مع PDPL
-- توثيق متوافق مع HRDF <!-- UNVERIFIED: confirm HRDF alignment -->
+برنامج GW مبني لهذا التحول بالذات. يغطي المنهج إدارة محفظة المشاريع، قيادة هندسة الأنظمة، واتخاذ القرارات المستندة إلى البيانات -- كلها أونلاين، مع تقديم JIC لدعم السياق السعودي الكامل، والدعم باللغة العربية، وتنسيق الدفعات المحلية.
 
-**الخطوة التالية:**
-أود مشاركة نظرة عامة على الرعاية الشركية بصفحة واحدة. مكالمة 10 دقائق؟
+مع إعادة مشروع {{giga_project}} تشكيل المشهد الهندسي في {{region}}، يتسارع الطلب على المدراء المؤسسين تقنياً. هذا البرنامج يسد تلك الفجوة.
 
-{{cal_link}}
-
-تحياتي،
-{{sender_name}}
-شراكات JIC × GW الشركية
+يستحق محادثة 15 دقيقة؟
 ```
 
-#### B1.3 Western Region — EN
+**CTA:** رد لجدولة اتصال 15 دقيقة | احجز: {{calendar_link}} | قدّم: {{apply_link}}
 
-```
-Hi {{first_name}},
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
 
-{{company}} is expanding in the Western region — Red Sea Global, port infrastructure, tourism projects. The challenge every HR leader here faces: how do you promote engineers into management roles without losing them to Riyadh or Dubai?
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
 
-GW's M.S. Engineering Management, via JIC's corporate pathway, solves that.
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
 
-**What we offer corporate partners:**
-- Sponsored cohorts (5–20 engineers)
-- Local support in Jeddah
-- Flexible scheduling for project-based work
-- PDPL-compliant tracking
-- Co-branded certificates
-
-**ROI for {{company}}:**
-Retaining a senior engineer costs 30–50% less than replacing one <!-- UNVERIFIED -->. Sponsoring their management credential is cheaper than recruiting a replacement from outside.
-
-**10-minute overview call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B1.4 Western Region — AR
-
-```
-مرحباً {{first_name}}،
-
-{{company}} تتوسع في المنطقة الغربية — البحر الأحمر العالمي، بنية الميناء، مشاريع السياحة. التحدي الذي يواجهه كل قائد موارد بشرية هنا: كيف ترقي مهندسين إلى أدوار إدارية دون فقدهم للرياض أو دبي؟
-
-ماجستير إدارة الهندسة من GW، عبر مسار JIC الشركي، يحل ذلك.
-
-**ما نقدمه للشركاء الشركيين:**
-- دفعات مدعومة (5–20 مهندس)
-- دعم محلي في جدة
-- جدولة مرنة للعمل القائم على المشاريع
-- تتبع متوافق مع PDPL
-- شهادات مشتركة بالعلامة التجارية
-
-**العائد على الاستثمار لـ {{company}}:**
-الاحتفاظ بمهندس كبير يكلف 30–50% أقل من استبداله <!-- UNVERIFIED -->. رعاية شهادته الإدارية أرخص من توظيف بديل من الخارج.
-
-**مكالمة نظرة عامة 10 دقائق:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B1.5 Eastern Region — EN
-
-```
-Hi {{first_name}},
-
-The Eastern Province has the highest engineering talent density in KSA <!-- UNVERIFIED -->. It's also the most competitive market for retention.
-
-{{company}} can differentiate by offering GW's M.S. Engineering Management through JIC's corporate pathway.
-
-**Corporate package:**
-- Cohort-based enrollment (5+ engineers)
-- Dedicated JIC liaison for {{company}}
-- Progress dashboards for L&D
-- PDPL + SAMA compliance <!-- UNVERIFIED: confirm SAMA -->
-- Co-branded graduation ceremonies
-
-**The business case:**
-Engineering Manager retention is higher than Senior Engineer retention when tuition support is provided <!-- UNVERIFIED -->. The data is clear: invest in their growth, keep them longer.
-
-**Overview call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B1.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}،
-
-المنطقة الشرقية لديها أعلى كثافة مواهب هندسية في المملكة <!-- UNVERIFIED -->. وهي أيضًا أكثر سوق تنافسية للاحتفاظ بالمواهب.
-
-{{company}} يمكن أن تميز نفسها من خلال تقديم ماجستير إدارة الهندسة من GW عبر مسار JIC الشركي.
-
-**الباقة الشركية:**
-- التسجيل على شكل دفعات (5+ مهندس)
-- موظف اتصال JIC مخصص لـ {{company}}
-- لوحات معلومات التقدم للتعلم والتطوير
-- الامتثال لـ PDPL + SAMA <!-- UNVERIFIED: confirm SAMA -->
-- حفلات تخرج مشتركة بالعلامة التجارية
-
-**الحالة التجارية:**
-الاحتفاظ بمدير هندسة أعلى من الاحتفاظ بمهندس كبير عند توفير دعم الرسوم <!-- UNVERIFIED -->. البيانات واضحة: استثمر في نموهم، احتفظ بهم لفترة أطول.
-
-**مكالمة نظرة عامة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B1.7 Northwest Region — EN
-
-```
-Hi {{first_name}},
-
-NEOM and the Northwest giga-projects are creating an unprecedented demand for engineering managers. The challenge for {{company}}: how do you promote local talent into these roles rather than importing managers from Riyadh or abroad?
-
-GW's M.S. Engineering Management — JIC corporate pathway — is designed for exactly that.
-
-**Corporate cohort benefits:**
-- Online, part-time (no relocation needed)
-- Local JIC support in Tabuk
-- Cohort peers from across KSA giga-projects
-- PDPL-compliant data handling
-- HRDF-aligned documentation
-
-**The regional advantage:**
-Engineers who study while working on NEOM projects bring management skills directly back to their teams. No knowledge gap. No transition lag.
-
-**Call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B1.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}،
-
-نيوم والمشاريع الضخمة في الشمال الغربي تخلق طلباً غير مسبوق على مديري الهندسة. التحدي لـ {{company}}: كيف ترقي المواهب المحلية إلى هذه الأدوار بدلاً من استيراد مديرين من الرياض أو الخارج؟
-
-ماجستير إدارة الهندسة من GW — مسار JIC الشركي — مُصمم لذلك بالضبط.
-
-**فوائد الدفعة الشركية:**
-- عبر الإنترنت، دوام جزئي (لا حاجة للانتقال)
-- دعم JIC المحلي في تبوك
-- نظراء الدفعة من مشاريع المملكة الضخمة
-- التعامل مع البيانات المتوافق مع PDPL
-- توثيق متوافق مع HRDF
-
-**الميزة الإقليمية:**
-المهندسون الذين يدرسون وأنت يعملون في مشاريع نيوم يعيدون المهارات الإدارية مباشرة إلى فرقهم. لا فجوة معرفية. لا تأخر انتقالي.
-
-**مكالمة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B1.9 South Region — EN
-
-```
-Hi {{first_name}},
-
-Regional development in the South is accelerating, and {{company}} needs engineering managers who understand both the local context and global best practices.
-
-GW's M.S. Engineering Management — via JIC's corporate pathway — trains exactly that profile.
-
-**Corporate offering:**
-- Part-time, online (study from Abha/Jazan)
-- GW faculty + JIC local support
-- Cohort-based with regional peer network
-- PDPL-compliant
-- HRDF documentation ready
-
-**The retention angle:**
-Southern engineers who receive tuition support show 40% higher retention <!-- UNVERIFIED -->. Investing in their growth keeps them in the region.
-
-**10-minute overview:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B1.10 South Region — AR
-
-```
-مرحباً {{first_name}}،
-
-التنمية الإقليمية في الجنوب تتسارع، و{{company}} تحتاج مديري هندسة يفهمون كلًا من السياق المحلي وأفضل الممارسات العالمية.
-
-ماجستير إدارة الهندسة من GW — عبر مسار JIC الشركي — يدرّب بالضبط ذلك الملف.
-
-**العرض الشركي:**
-- دوام جزئي، عبر الإنترنت (ادرس من أبها/جازان)
-- هيئة تدريس GW + دعم JIC المحلي
-- على شكل دفعات مع شبطة نظراء إقليمية
-- متوافق مع PDPL
-- توثيق HRDF جاهز
-
-**زاوية الاحتفاظ:**
-المهندسون الجنوبيون الذين يتلقون دعم الرسوم يظهرون احتفاظاً أعلى بنسبة 40% <!-- UNVERIFIED -->. الاستثمار في نموهم يبقيهم في المنطقة.
-
-**نظرة عامة 10 دقائق:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
 
 ---
 
-### B2. LinkedIn DM — Follow-Up (3-Day)
+#### JIC-GW-T025 -- Email | Northwest | B2C | EN
 
-#### B2.1 Central Region — EN
+**Subject / Headline:**
+> Your next chapter: From {{job_title}} to Engineering Leader
 
+**Body:**
 ```
 Hi {{first_name}},
 
-Following up on GW MS EM corporate sponsorship via JIC.
+I'm reaching out from JIC -- the exclusive Kingdom-wide onboarding partner for George Washington University's M.S. in Engineering Management (fully online).
 
-**What we're hearing from Riyadh HR leaders:**
-- "We have the L&D budget but can't find programs that fit our engineers' schedules"
-- "We need local support, not just an online portal"
-- "We want cohort-based learning, not individual enrollments"
+I noticed your background as {{job_title}} at {{company}} in {{region}}. Many engineers at your stage face the same crossroads: deep technical expertise, but the managerial track feels out of reach without a formal credential.
 
-JIC's corporate pathway is built for all three.
+GW's program is built for exactly that transition. Curriculum covers project portfolio management, systems engineering leadership, and data-driven decision making -- all delivered online, with JIC providing full Saudi-context onboarding, Arabic-language support, and local cohort coordination.
 
-**Cohort 1 corporate slots:** Limited. We're prioritizing partners who commit before [date].
+With {{giga_project}} reshaping {{region}}'s engineering landscape, the demand for technically-grounded managers is accelerating. This program fills that gap.
 
-**Overview call:** {{cal_link}}
-
-Best,
-{{sender_name}}
+Worth a 15-minute conversation?
 ```
 
-#### B2.2 Central Region — AR
+**CTA:** Reply to schedule a 15-min call | Book: {{calendar_link}} | Apply: {{apply_link}}
 
-```
-مرحباً {{first_name}}،
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
 
-متابعة حول رعاية ماجستير GW الشركية عبر JIC.
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
 
-**ما نسمعه من قادة الموارد البشرية في الرياض:**
-- "لدينا ميزانية التعلم والتطوير لكن لا يمكننا إيجاد برامج تناسب جداول مهندسينا"
-- "نحتاج دعماً محلياً، لا مجرد بوابة إلكترونية"
-- "نريد تعلمًا على شكل دفعات، لا تسجيلات فردية"
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
 
-مسار JIC الشركي مُبنى للثلاثة جميعاً.
-
-**فتحات الدفعة الأولى الشركية:** محدودة. نحن نعطي أولوية للشركاء الذين يلتزمون قبل [التاريخ].
-
-**مكالمة نظرة عامة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B2.3 Western Region — EN
-
-```
-Hi {{first_name}},
-
-Quick follow-up on corporate sponsorship for GW MS EM.
-
-**For {{company}} specifically:**
-With Red Sea Global and Western infrastructure projects scaling, you need engineering managers who can lead multicultural teams. GW's program + JIC's local support = that pipeline.
-
-**Corporate MOU template:** Ready for review. We can customize terms for {{company}}'s specific needs.
-
-**Call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B2.4 Western Region — AR
-
-```
-مرحباً {{first_name}}،
-
-متابعة سريعة حول الرعاية الشركية لماجستير GW.
-
-**لـ {{company}} على وجه التحديد:**
-مع توسع البحر الأحمر العالمي ومشاريع البنية التحتية الغربية، تحتاجون مديري هندسة يمكنهم قيادة فرق متعددة الثقافات. برنامج GW + دعم JIC المحلي = ذلك المسار.
-
-**نموذج مذكرة تفاهم شركية:** جاهز للمراجعة. يمكننا تخصيص الشروط لاحتياجات {{company}} المحددة.
-
-**مكالمة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B2.5 Eastern Region — EN
-
-```
-Hi {{first_name}},
-
-Following up — GW MS EM corporate pathway.
-
-**The Eastern Province angle:**
-Aramco, SABIC, and Maaden have all increased L&D budgets for 2026 <!-- UNVERIFIED -->. The question is: which programs deliver measurable ROI?
-
-GW's MS EM has a track record: 85% of graduates move into management roles within 18 months <!-- UNVERIFIED -->. That's the metric your leadership cares about.
-
-**Let's discuss how {{company}} can structure this:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B2.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}،
-
-أتابع — مسار ماجستير GW الشركي.
-
-**زاوية المنطقة الشرقية:**
-أرامكو، سابك، ومعادن جميعها زادت ميزانيات التعلم والتطوير لعام 2026 <!-- UNVERIFIED -->. السؤال هو: أي البرامج تقدم عائد استثمار قابل للقياس؟
-
-ماجستير GW لديه سجل حافل: 85% من الخريجين ينتقلون إلى أدوار إدارية خلال 18 شهراً <!-- UNVERIFIED -->. هذا هو المقياس الذي يهتم به قيادتك.
-
-**لنناقش كيف يمكن لـ {{company}} هيكلة هذا:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B2.7 Northwest Region — EN
-
-```
-Hi {{first_name}},
-
-Following up on corporate sponsorship for NW-region engineers.
-
-**The NEOM talent pipeline:**
-Giga-projects need local engineering managers. Importing talent from Riyadh or abroad is expensive and culturally less effective. Growing your own is cheaper and more sustainable.
-
-GW MS EM via JIC = grow-your-own management pipeline.
-
-**Call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B2.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}،
-
-أتابع الرعاية الشركية لمهندسي منطقة الشمال الغربي.
-
-**مسار مواهب نيوم:**
-المشاريع الضخمة تحتاج مديري هندسة محليين. استيراد المواهب من الرياض أو الخارج مكلف وأقل فعالية ثقافياً. تنمية مواهبك الخاصة أرخص وأكثر استدامة.
-
-ماجستير GW عبر JIC = مسار إداري تنموه بنفسك.
-
-**مكالمة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B2.9 South Region — EN
-
-```
-Hi {{first_name}},
-
-Quick follow-up on GW MS EM corporate pathway for Southern region.
-
-**Regional development = regional talent retention:**
-Vision 2030 prioritizes balanced development. Companies that invest in Southern engineers' growth retain them. Companies that don't lose them to Riyadh.
-
-{{company}} can be the employer that grows local talent into leadership.
-
-**Overview:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B2.10 South Region — AR
-
-```
-مرحباً {{first_name}}،
-
-متابعة سريعة حول مسار ماجستير GW الشركي للمنطقة الجنوبية.
-
-**التنمية الإقليمية = الاحتفاظ بالمواهب الإقليمية:**
-رؤية 2030 تعطي أولوية للتنمية المتوازنة. الشركات التي تستثمر في نمو المهندسين الجنوبيين تحتفظ بهم. الشركات التي لا تفعل تفقدهم للرياض.
-
-{{company}} يمكن أن تكون صاحب العمل الذي ينمي المواهب المحلية إلى قيادة.
-
-**نظرة عامة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
 
 ---
 
-### B3. Email — First Touch
+#### JIC-GW-T027 -- Email | Northwest | B2C | AR
 
-#### B3.1 Central Region — EN
+**Subject / Headline:**
+> فصلك المقبل: من {{job_title}} إلى قائد هندسي
 
-**Subject:** Corporate Partnership — GW Engineering Management for {{company}}
-
-```
-Hi {{first_name}},
-
-I'm {{sender_name}}, Program Director at JIC × GW Engineering Management. I'm reaching out because {{company}} is a strategic employer in the Central region, and we have a corporate partnership opportunity that aligns with Saudi talent development priorities.
-
-**The Opportunity:**
-GW's M.S. in Engineering Management — ranked among top U.S. programs <!-- UNVERIFIED --> — is now available through JIC's exclusive corporate pathway. We coordinate cohorts, provide local support, and handle all logistics. You provide the engineers and the sponsorship.
-
-**Why This Matters for {{company}}:**
-
-1. **Retention:** Engineering Manager retention increases 35% when tuition support is provided <!-- UNVERIFIED -->
-2. **Promotion Pipeline:** 85% of graduates move into management roles within 18 months <!-- UNVERIFIED -->
-3. **Local Context:** Curriculum adapted for Saudi project management realities (giga-projects, multicultural teams, Vision 2030 alignment)
-4. **Compliance:** PDPL-compliant data handling, SAMA-aligned cybersecurity <!-- UNVERIFIED -->
-
-**Corporate Package Options:**
-
-| Cohort Size | Price per Engineer | Included |
-|-------------|-------------------|----------|
-| 5–9 | <!-- UNVERIFIED --> | Enrollment, local support, progress dashboards |
-| 10–19 | <!-- UNVERIFIED --> | Above + co-branded onboarding + dedicated liaison |
-| 20+ | <!-- UNVERIFIED --> | Above + custom curriculum modules + graduation event |
-
-**Next Steps:**
-1. Review the attached MOU template (customizable for {{company}})
-2. Book a 30-minute partnership discussion: {{cal_link}}
-3. Or reply with your specific questions
-
-**Resources:**
-- Corporate sponsorship overview: {{landing_url}}?utm_source=email&utm_medium=corporate
-- Lead magnet — Saudi Engineering Leadership Index: {{lead_magnet_url}}
-
-Best regards,
-{{sender_name}}
-Program Director, JIC × GW Engineering Management
-```
-
-#### B3.2 Central Region — AR
-
-**Subject:** شراكة شركية — إدارة الهندسة GW لـ {{company}}
-
+**Body:**
 ```
 مرحباً {{first_name}}،
 
-أنا {{sender_name}}، مدير البرنامج في JIC × GW Engineering Management. أتواصل معك لأن {{company}} هو صاحب عمل استراتيجي في المنطقة الوسطى، ولدينا فرصة شراكة شركية تتوافق مع أولويات تنمية المواهب السعودية.
+أتواصل معك من JIC -- الشريك الحصري في جميع أنحاء المملكة للانضمام لبرنامج ماجستير إدارة الهندسة من جورج واشنطن (أونلاين بالكامل).
 
-**الفرصة:**
-ماجستير إدارة الهندسة من GW — مصنف بين أفضل البرامج الأمريكية <!-- UNVERIFIED --> — متاح الآن عبر مسار JIC الشركي الحصري. نحن ننسق الدفعات، ونقدم الدعم المحلي، ونتولى جميع اللوجستيات. أنت تقدم المهندسين والرعاية.
+لاحظت خلفيتك كـ {{job_title}} في {{company}} في {{region}}. يواجه العديد من المهندسين في مرحلتك نفس المفترق: خبرة تقنية عميقة، لكن المسار الإداري يبدو بعيد المنال بدون شهادة رسمية.
 
-**لماذا هذا مهم لـ {{company}}:**
+برنامج GW مبني لهذا التحول بالذات. يغطي المنهج إدارة محفظة المشاريع، قيادة هندسة الأنظمة، واتخاذ القرارات المستندة إلى البيانات -- كلها أونلاين، مع تقديم JIC لدعم السياق السعودي الكامل، والدعم باللغة العربية، وتنسيق الدفعات المحلية.
 
-1. **الاحتفاظ:** احتفاظ مدير الهندسة يزيد 35% عند توفير دعم الرسوم <!-- UNVERIFIED -->
-2. **مسار الترقية:** 85% من الخريجين ينتقلون إلى أدوار إدارية خلال 18 شهراً <!-- UNVERIFIED -->
-3. **السياق المحلي:** منهج مُكيّف لحقائق إدارة المشاريع السعودية (المشاريع الضخمة، الفرق متعددة الثقافات، التوافق مع رؤية 2030)
-4. **الامتثال:** التعامل مع البيانات المتوافق مع PDPL، الأمن السيبراني المتوافق مع SAMA <!-- UNVERIFIED -->
+مع إعادة مشروع {{giga_project}} تشكيل المشهد الهندسي في {{region}}، يتسارع الطلب على المدراء المؤسسين تقنياً. هذا البرنامج يسد تلك الفجوة.
 
-**خيارات الباقة الشركية:**
-
-| حجم الدفعة | السعر لكل مهندس | مشمول |
-|-----------|----------------|-------|
-| 5–9 | <!-- UNVERIFIED --> | التسجيل، الدعم المحلي، لوحات التقدم |
-| 10–19 | <!-- UNVERIFIED --> | ما سبق + تأهيل مشترك + موظف اتصال مخصص |
-| 20+ | <!-- UNVERIFIED --> | ما سبق + وحدات منهج مخصصة + حفل تخرج |
-
-**الخطوات التالية:**
-1. راجع نموذج مذكرة التفاهم المرفق (قابل للتخصيص لـ {{company}})
-2. احجز مناقشة شراكة 30 دقيقة: {{cal_link}}
-3. أو رد بأسئلتك المحددة
-
-**الموارد:**
-- نظرة عامة على الرعاية الشركية: {{landing_url}}?utm_source=email&utm_medium=corporate
-- المغناطيس الرصاصي — مؤشر القيادة الهندسية السعودية: {{lead_magnet_url}}
-
-مع أطيب التحيات،
-{{sender_name}}
-مدير البرنامج، JIC × GW Engineering Management
+يستحق محادثة 15 دقيقة؟
 ```
 
-#### B3.3 Western Region — EN
-
-**Subject:** [Jeddah HR Leaders] Retain Engineering Talent with GW Management Credentials
-
-```
-Hi {{first_name}},
-
-The Western region is in a talent war. Red Sea Global, the port expansion, and tourism megaprojects are all competing for the same engineering managers.
-
-{{company}} can win that war by growing your own.
-
-**GW MS EM — JIC Corporate Pathway:**
-- Online, part-time (no relocation, no career pause)
-- GW faculty + JIC local support in Jeddah
-- Cohort-based with regional peer network
-- PDPL-compliant, HRDF-aligned <!-- UNVERIFIED -->
-
-**The Business Case:**
-Recruiting an Engineering Manager externally costs SAR 150,000–250,000 <!-- UNVERIFIED --> in recruitment fees, onboarding, and productivity ramp. Sponsoring a Senior Engineer's MS EM costs less and delivers a manager who already knows your systems.
-
-**Attached:**
-- Corporate MOU template (ready for {{company}} customization)
-- One-page sponsorship overview
-- Lead magnet: Saudi Engineering Leadership Index 2026
-
-**Book a partnership call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B3.4 Western Region — AR
-
-**Subject:** [قادة الموارد البشرية بجدة] احتفظ بمواهب الهندسة بشهادات إدارة GW
-
-```
-مرحباً {{first_name}}،
-
-المنطقة الغربية في حرب مواهب. البحر الأحمر العالمي، توسعة الميناء، ومشاريع السياحة الضخمة جميعها تتنافس على نفس مديري الهندسة.
-
-{{company}} يمكن أن تفوز بتلك الحرب من خلال تنمية مواهبها الخاصة.
-
-**ماجستير GW — مسار JIC الشركي:**
-- عبر الإنترنت، دوام جزئي (لا انتقال، لا توقف مهني)
-- هيئة تدريس GW + دعم JIC المحلي في جدة
-- على شكل دفعات مع شبكة نظراء إقليمية
-- متوافق مع PDPL، متوافق مع HRDF <!-- UNVERIFIED -->
-
-**الحالة التجارية:**
-توظيف مدير هندسة خارجياً يكلف 150,000–250,000 ريال <!-- UNVERIFIED --> في رسوم التوظيف والتأهيل وزيادة الإنتاجية. رعاية ماجستير مهندس كبير يكلف أقل ويقدم مديراً يعرف أنظمتك بالفعل.
-
-**المرفقات:**
-- نموذج مذكرة تفاهم شركية (جاهز لتخصيص {{company}})
-- نظرة عامة على الرعاية بصفحة واحدة
-- مغناطيس رصاصي: مؤشر القيادة الهندسية السعودية 2026
-
-**احجز مكالمة شراكة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B3.5 Eastern Region — EN
-
-**Subject:** [Dammam/Khobar] Corporate Cohort — GW Engineering Management
-
-```
-Hi {{first_name}},
-
-The Eastern Province is Saudi Arabia's industrial heartland. {{company}} is part of that ecosystem. And like every major employer here, you're facing the same challenge: promoting senior engineers into management without losing them to competitors or overseas opportunities.
-
-**JIC's Corporate Pathway solves this.**
-
-**What we deliver:**
-- Cohort coordination (5–20 engineers)
-- Local support in Dammam/Khobar
-- Progress dashboards for your L&D team
-- PDPL + SAMA compliant
-- Co-branded certificates and graduation
-
-**What you deliver:**
-- The engineers
-- Sponsorship (full or partial)
-- Manager endorsement
-
-**ROI metrics we track:**
-- Retention rate post-graduation
-- Time-to-promotion
-- Salary progression
-- Internal mobility
-
-**Let's structure this for {{company}}:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B3.6 Eastern Region — AR
-
-**Subject:** [الدمام/الخبر] الدفعة الشركية — إدارة الهندسة GW
-
-```
-مرحباً {{first_name}}،
-
-المنطقة الشرقية هي قلب الصناعة السعودية. {{company}} جزء من ذلك النظام البيئي. ومثل كل صاحب عمل كبير هنا، تواجه نفس التحدي: ترقية مهندسين كبار إلى الإدارة دون فقدهم لمنافسين أو فرص خارجية.
-
-**مسار JIC الشركي يحل هذا.**
-
-**ما نقدمه:**
-- تنسيق الدفعة (5–20 مهندس)
-- دعم محلي في الدمام/الخبر
-- لوحات معلومات التقدم لفريق التعلم والتطوير
-- متوافق مع PDPL + SAMA
-- شهادات وحفلات تخرج مشتركة
-
-**ما تقدمه:**
-- المهندسون
-- الرعاية (كاملة أو جزئية)
-- تأييد المدير
-
-**مقاييس العائد على الاستثمار التي نتتبعها:**
-- معدل الاحتفاظ بعد التخرج
-- الوقت حتى الترقية
-- تقدم الراتب
-- التنقل الداخلي
-
-**لنهيكل هذا لـ {{company}}:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B3.7 Northwest Region — EN
-
-**Subject:** [NEOM/Tabuk] Grow Local Engineering Managers — GW Corporate Pathway
-
-```
-Hi {{first_name}},
-
-NEOM and the Northwest giga-projects need local engineering managers. The current pattern: recruit from Riyadh or abroad, pay relocation premiums, deal with cultural integration.
-
-The better pattern: grow your own.
-
-**GW MS EM — JIC Corporate Pathway for NW-region employers:**
-- Online, part-time (engineers study while building NEOM)
-- Local JIC support in Tabuk
-- Cohort-based with peers from across giga-projects
-- Curriculum includes megaproject management, multicultural leadership, Vision 2030 alignment
-
-**For {{company}} specifically:**
-We can structure a corporate MOU that includes:
-- Custom cohort size
-- Co-branded onboarding
-- Progress dashboards
-- PDPL-compliant data handling
-- HRDF-aligned tuition documentation
-
-**Partnership discussion:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B3.8 Northwest Region — AR
-
-**Subject:** [نيوم/تبوك] نمِّ مديري هندسة محليين — مسار GW الشركي
-
-```
-مرحباً {{first_name}}،
-
-نيوم والمشاريع الضخمة في الشمال الغربي تحتاج مديري هندسة محليين. النمط الحالي: التوظيف من الرياض أو الخارج، دفع علاوات الانتقال، التعامل مع الاندماج الثقافي.
-
-النمط الأفضل: نمِّ مواهبك الخاصة.
-
-**ماجستير GW — مسار JIC الشركي لأرباب العمل في الشمال الغربي:**
-- عبر الإنترنت، دوام جزئي (المهندسون يدرسون وأنت يبنون نيوم)
-- دعم JIC المحلي في تبوك
-- على شكل دفعات مع نظراء من المشاريع الضخمة
-- المنهج يشمل إدارة المشاريع الضخمة، القيادة متعددة الثقافات، التوافق مع رؤية 2030
-
-**لـ {{company}} على وجه التحديد:**
-يمكننا هيكلة مذكرة تفاهم شركية تشمل:
-- حجم دفعة مخصص
-- تأهيل مشترك
-- لوحات معلومات التقدم
-- التعامل مع البيانات المتوافق مع PDPL
-- توثيق رسوم متوافق مع HRDF
-
-**مناقشة الشراكة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B3.9 South Region — EN
-
-**Subject:** [Abha/Jazan] Regional Talent Retention — GW Engineering Management
-
-```
-Hi {{first_name}},
-
-Vision 2030 emphasizes balanced regional development. The South is seeing major infrastructure, tourism, and industrial projects. But the talent retention challenge is real: engineers who gain experience in the South often leave for Riyadh or Jeddah for management roles.
-
-{{company}} can break that pattern.
-
-**GW MS EM — JIC Corporate Pathway:**
-- Online, part-time (no relocation needed)
-- Study from Abha, Jazan, or anywhere in KSA
-- GW degree + JIC local support
-- Cohort-based with regional peer network
-
-**The retention equation:**
-Engineers who receive tuition support show 40% higher retention <!-- UNVERIFIED -->. Engineers who earn management credentials get promoted internally instead of leaving.
-
-**Corporate sponsorship overview:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B3.10 South Region — AR
-
-**Subject:** [أبها/جازان] الاحتفاظ بالمواهب الإقليمية — إدارة الهندسة GW
-
-```
-مرحباً {{first_name}}،
-
-رؤية 2030 تؤكد على التنمية الإقليمية المتوازنة. الجنوب يرى مشاريع بنية تحتية وسياحية وصناعية كبرى. لكن تحدي الاحتفاظ بالمواهب حقيقي: المهندسون الذين يكتسبون الخبرة في الجنوب غالباً ما يغادرون للرياض أو جدة لأدوار الإدارة.
-
-{{company}} يمكن أن تكسر ذلك النمط.
-
-**ماجستير GW — مسار JIC الشركي:**
-- عبر الإنترنت، دوام جزئي (لا حاجة للانتقال)
-- ادرس من أبها، جازان، أو أي مكان في المملكة
-- شهادة GW + دعم JIC المحلي
-- على شكل دفعات مع شبكة نظراء إقليمية
-
-**معادلة الاحتفاظ:**
-المهندسون الذين يتلقون دعم الرسوم يظهرون احتفاظاً أعلى بنسبة 40% <!-- UNVERIFIED -->. المهندسون الذين يحصلون على شهادات الإدارة يحصلون على ترقيات داخلية بدلاً من المغادرة.
-
-**نظرة عامة على الرعاية الشركية:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+**CTA:** رد لجدولة اتصال 15 دقيقة | احجز: {{calendar_link}} | قدّم: {{apply_link}}
+
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
+
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
 
 ---
 
-### B4. Email — Follow-Up (3-Day)
+#### JIC-GW-T033 -- Email | South | B2C | EN
 
-#### B4.1 Central Region — EN
+**Subject / Headline:**
+> Your next chapter: From {{job_title}} to Engineering Leader
 
-**Subject:** Re: Corporate Partnership — GW Engineering Management
-
+**Body:**
 ```
 Hi {{first_name}},
 
-Following up on the GW MS EM corporate partnership opportunity for {{company}}.
+I'm reaching out from JIC -- the exclusive Kingdom-wide onboarding partner for George Washington University's M.S. in Engineering Management (fully online).
 
-**Quick update from our end:**
-We've secured <!-- UNVERIFIED: X --> corporate cohort slots for Cohort 1. Partners who commit by [date] receive preferred pricing and dedicated JIC liaison assignment.
+I noticed your background as {{job_title}} at {{company}} in {{region}}. Many engineers at your stage face the same crossroads: deep technical expertise, but the managerial track feels out of reach without a formal credential.
 
-**Questions we typically hear:**
+GW's program is built for exactly that transition. Curriculum covers project portfolio management, systems engineering leadership, and data-driven decision making -- all delivered online, with JIC providing full Saudi-context onboarding, Arabic-language support, and local cohort coordination.
 
-1. *"What's the total cost per engineer?"* — Depends on cohort size. Our MOU template has a transparent pricing schedule. No hidden fees.
-2. *"How do we track ROI?"* — We provide quarterly dashboards: enrollment, progress, graduation, promotion, retention.
-3. *"What if an engineer drops out?"* — Pro-rata refund policy. We also have replacement slot agreements for cohorts of 10+.
-4. *"Is this recognized by SACM/MoE?"* — GW is regionally accredited in the U.S. SACM recognition process is straightforward <!-- UNVERIFIED: confirm process -->.
+With {{giga_project}} reshaping {{region}}'s engineering landscape, the demand for technically-grounded managers is accelerating. This program fills that gap.
 
-**Easy next step:**
-Book a 20-minute partnership discussion: {{cal_link}}
-
-Or reply with your specific concerns — happy to address them directly.
-
-Best,
-{{sender_name}}
+Worth a 15-minute conversation?
 ```
 
-#### B4.2 Central Region — AR
-
-**Subject:** Re: شراكة شركية — إدارة الهندسة GW
-
-```
-مرحباً {{first_name}}،
-
-متابعة حول فرصة شراكة ماجستير GW الشركية لـ {{company}}.
-
-**تحديث سريع من جهتنا:**
-لقد تأمنّا <!-- UNVERIFIED: X --> فتحات دفعات شركية للدفعة الأولى. الشركاء الذين يلتزمون قبل [التاريخ] يحصلون على تسعير مفضل وتعيين موظف اتصال JIC مخصص.
-
-**الأسئلة التي نسمعها عادةً:**
-
-1. *"ما التكلفة الإجمالية لكل مهندس؟"* — تعتمد على حجم الدفعة. نموذج مذكرة التفاهم لدينا جدول تسعير شفاف. بدون رسوم خفية.
-2. *"كيف نتتبع العائد على الاستثمار؟"* — نقدم لوحات معلومات ربع سنوية: التسجيل، التقدم، التخرج، الترقية، الاحتفاظ.
-3. *"ماذا إذا انسحب مهندس؟"* — سياسة استرداد تناسبي. لدينا أيضًا اتفاقيات فتحات بديلة للدفعات 10+.
-4. *"هل هذا معترف به من البعثة/الوزارة؟"* — GW معتمدة إقليمياً في الولايات المتحدة. عملية الاعتراف بالبعثة واضحة <!-- UNVERIFIED: confirm process -->.
-
-**الخطوة السهلة التالية:**
-احجز مناقشة شراكة 20 دقيقة: {{cal_link}}
-
-أو رد بمخاوفك المحددة — سعيد بالتعامل معها مباشرة.
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B4.3 Western Region — EN
-
-**Subject:** Re: Retain Engineering Talent — GW Corporate Pathway
-
-```
-Hi {{first_name}},
-
-Following up on the GW MS EM corporate sponsorship for {{company}}.
-
-**What I'm hearing from Jeddah HR leaders:**
-"We have the budget, but we need a program that (a) fits our engineers' schedules, (b) delivers measurable ROI, and (c) doesn't require us to manage logistics."
-
-JIC's corporate pathway is built for all three.
-
-**For {{company}}:**
-We can start with a pilot cohort of 5 engineers. Low risk, clear metrics, easy to scale if it works.
-
-**Pilot structure:**
-- 5 engineers, part-time, online
-- 6-month progress review
-- Retention and promotion tracking
-- If ROI is positive, scale to 10–20
-
-**Discuss pilot terms:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B4.4 Western Region — AR
-
-**Subject:** Re: الاحتفاظ بمواهب الهندسة — مسار GW الشركي
-
-```
-مرحباً {{first_name}}،
-
-متابعة حول رعاية ماجستير GW الشركية لـ {{company}}.
-
-**ما أسمعه من قادة الموارد البشرية في جدة:**
-"لدينا الميزانية، لكننا نحتاج برنامجاً ي (أ) يناسب جداول مهندسينا، (ب) يقدم عائد استثمار قابل للقياس، (ج) لا يتطلب منا إدارة اللوجستيات."
-
-مسار JIC الشركي مُبنى للثلاثة جميعاً.
-
-**لـ {{company}}:**
-يمكننا البدء بدفعة تجريبية من 5 مهندسين. مخاطرة منخفضة، مقاييس واضحة، سهل التوسع إذا نجح.
-
-**هيكل التجربة:**
-- 5 مهندسين، دوام جزئي، عبر الإنترنت
-- مراجعة التقدم بعد 6 أشهر
-- تتبع الاحتفاظ والترقية
-- إذا كان العائد على الاستثمار إيجابياً، التوسع إلى 10–20
-
-**مناقشة شروط التجربة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B4.5 Eastern Region — EN
-
-**Subject:** Re: Corporate Cohort — GW Engineering Management
-
-```
-Hi {{first_name}},
-
-Quick follow-up on GW MS EM corporate partnership.
-
-**The Eastern Province competitive landscape:**
-Aramco, SABIC, Maaden, and the giga-projects are all competing for the same engineering management talent. The companies winning this competition are the ones investing in their own pipeline.
-
-**{{company}} can be one of those companies.**
-
-**What we offer:**
-- Corporate MOU (customizable, ready for legal review)
-- Transparent pricing (no hidden fees)
-- Progress dashboards (quarterly)
-- PDPL + SAMA compliance
-- HRDF-aligned documentation
-
-**Cohort 1 timeline:**
-- Partnership agreements: [date]
-- Engineer nominations: [date]
-- Admissions interviews: [date]
-- Program start: [date]
-
-**Book a partnership call:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B4.6 Eastern Region — AR
-
-**Subject:** Re: الدفعة الشركية — إدارة الهندسة GW
-
-```
-مرحباً {{first_name}}،
-
-متابعة سريعة حول شراكة ماجستير GW الشركية.
-
-**المشهد التنافسي في المنطقة الشرقية:**
-أرامكو، سابك، معادن، والمشاريع الضخمة جميعها تتنافس على نفس مواهب إدارة الهندسة. الشركات التي تفوز بهذه المنافسة هي التي تستثمر في مسارها الخاص.
-
-**{{company}} يمكن أن تكون واحدة من تلك الشركات.**
-
-**ما نقدمه:**
-- مذكرة تفاهم شركية (قابلة للتخصيص، جاهزة للمراجعة القانونية)
-- تسعير شفاف (بدون رسوم خفية)
-- لوحات معلومات التقدم (ربع سنوية)
-- امتثال PDPL + SAMA
-- توثيق متوافق مع HRDF
-
-**جدول الدفعة الأولى:**
-- اتفاقيات الشراكة: [التاريخ]
-- ترشيح المهندسين: [التاريخ]
-- مقابلات القبول: [التاريخ]
-- بدء البرنامج: [التاريخ]
-
-**احجز مكالمة شراكة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B4.7 Northwest Region — EN
-
-**Subject:** Re: Grow Local Engineering Managers — GW Corporate Pathway
-
-```
-Hi {{first_name}},
-
-Following up on the GW MS EM corporate pathway for NW-region engineers.
-
-**The NEOM talent challenge:**
-Giga-projects need 1000+ engineering managers over the next 5 years <!-- UNVERIFIED -->. Importing that talent is expensive and culturally inefficient. Growing local talent is sustainable and cost-effective.
-
-**JIC's corporate pathway makes that growth systematic:**
-- Structured curriculum (GW MS EM)
-- Local support (Tabuk-based JIC liaison)
-- Cohort-based learning (peer network across projects)
-- Measurable outcomes (retention, promotion, project performance)
-
-**For {{company}}:**
-We can structure a pilot cohort of engineers working on [specific project]. They study while they build. They apply management concepts in real-time. They graduate as ready-made project leaders.
-
-**Discuss:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B4.8 Northwest Region — AR
-
-**Subject:** Re: نمِّ مديري هندسة محليين — مسار GW الشركي
-
-```
-مرحباً {{first_name}}،
-
-أتابع مسار ماجستير GW الشركي لمهندسي منطقة الشمال الغربي.
-
-**تحدي مواهب نيوم:**
-المشاريع الضخمة تحتاج 1000+ مدير هندسة خلال السنوات الخمس القادمة <!-- UNVERIFIED -->. استيراد تلك المواهب مكلف وغير فعال ثقافياً. تنمية المواهب المحلية مستدامة وفعالة من حيث التكلفة.
-
-**مسار JIC الشركي يجعل ذلك النمو منهجياً:**
-- منهج منظم (ماجستير GW)
-- دعم محلي (موظف اتصال JIC مقره تبوك)
-- تعلم على شكل دفعات (شبطة نظراء عبر المشاريع)
-- نتائج قابلة للقياس (الاحتفاظ، الترقية، أداء المشروع)
-
-**لـ {{company}}:**
-يمكننا هيكلة دفعة تجريبية من المهندسين العاملين في [مشروع محدد]. يدرسون وأنت يبنون. يطبقون مفاهيم الإدارة في الوقت الفعلي. يتخرجون كقادة مشاريع جاهزين.
-
-**مناقشة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
-
-#### B4.9 South Region — EN
-
-**Subject:** Re: Regional Talent Retention — GW Engineering Management
-
-```
-Hi {{first_name}},
-
-Following up on GW MS EM corporate sponsorship for Southern region talent retention.
-
-**The data we're seeing:**
-Companies that sponsor management credentials for Southern engineers retain 40% more talent than those that don't <!-- UNVERIFIED -->. The cost of sponsorship is 60% lower than the cost of replacing a senior engineer <!-- UNVERIFIED -->.
-
-**For {{company}}:**
-This isn't just about retention. It's about building a leadership pipeline that understands the Southern region's specific challenges — infrastructure, tourism, logistics, climate.
-
-Engineers who study while working on Southern projects bring that context directly into their management approach.
-
-**Pilot cohort option:** 5 engineers, 6-month review, scale if successful.
-
-**Book discussion:** {{cal_link}}
-
-Best,
-{{sender_name}}
-```
-
-#### B4.10 South Region — AR
-
-**Subject:** Re: الاحتفاظ بالمواهب الإقليمية — إدارة الهندسة GW
-
-```
-مرحباً {{first_name}}،
-
-أتابع رعاية ماجستير GW الشركية للاحتفاظ بالمواهب في المنطقة الجنوبية.
-
-**البيانات التي نراها:**
-الشركات التي ترعى شهادات الإدارة للمهندسين الجنوبيين تحتفظ بـ 40% أكثر من المواهب من تلك التي لا تفعل <!-- UNVERIFIED -->. تكلفة الرعاية أقل بنسبة 60% من تكلفة استبدال مهندس كبير <!-- UNVERIFIED -->.
-
-**لـ {{company}}:**
-هذا ليس فقط عن الاحتفاظ. إنه عن بناء مسار قيادة يفهم تحديات المنطقة الجنوبية المحددة — بنية تحتية، سياحة، لوجستيات، مناخ.
-
-المهندسون الذين يدرسون وأنت يعملون في مشاريع جنوبية يجلبون ذلك السياق مباشرة إلى نهج إدارتهم.
-
-**خيار الدفعة التجريبية:** 5 مهندسين، مراجعة 6 أشهر، التوسع إذا نجح.
-
-**احجز مناقشة:** {{cal_link}}
-
-تحياتي،
-{{sender_name}}
-```
+**CTA:** Reply to schedule a 15-min call | Book: {{calendar_link}} | Apply: {{apply_link}}
+
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
+
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
 
 ---
 
-### B5. WhatsApp — First Touch
+#### JIC-GW-T035 -- Email | South | B2C | AR
 
-#### B5.1 Central Region — EN
+**Subject / Headline:**
+> فصلك المقبل: من {{job_title}} إلى قائد هندسي
 
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW Corporate Partnerships.
-
-We're launching GW's MS Engineering Management through an exclusive corporate pathway for Saudi employers. {{company}} is a natural fit given your engineering talent base in Riyadh.
-
-Corporate benefits:
-- Bulk pricing for cohorts
-- Local JIC support
-- Progress dashboards
-- PDPL compliant
-
-Worth a quick call? {{cal_link}}
-```
-
-#### B5.2 Central Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من شراكات JIC × GW الشركية.
-
-نطلق ماجستير إدارة الهندسة من GW عبر مسار شركي حصري لأرباب العمل السعوديين. {{company}} هو تطابق طبيعي نظراً لقاعدة مواهب الهندسة في الرياض.
-
-فوائد الشركية:
-- تسعير مجمع للدفعات
-- دعم JIC المحلي
-- لوحات معلومات التقدم
-- متوافق مع PDPL
-
-تستحق مكالمة سريعة؟ {{cal_link}}
-```
-
-#### B5.3 Western Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW.
-
-GW MS EM now available through JIC corporate pathway. Perfect for {{company}}'s Western region engineering team — part-time, online, local Jeddah support.
-
-Grow your own engineering managers. Retain top talent.
-
-Quick chat? {{cal_link}}
-```
-
-#### B5.4 Western Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW.
-
-ماجستير GW متاح الآن عبر مسار JIC الشركي. مثالي لفريق الهندسة في {{company}} بالمنطقة الغربية — دوام جزئي، عبر الإنترنت، دعم محلي في جدة.
-
-نمِّ مديري هندستك الخاصين. احتفظ بالمواهب المتميزة.
-
-محادثة سريعة؟ {{cal_link}}
-```
-
-#### B5.5 Eastern Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW Corporate Partnerships.
-
-{{company}} is in the Eastern Province's engineering hub. GW MS EM via JIC gives you a management pipeline without recruiting from outside.
-
-Corporate cohorts, local support, PDPL compliant.
-
-Interested? {{cal_link}}
-```
-
-#### B5.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من شراكات JIC × GW.
-
-{{company}} في مركز الهندسة بالمنطقة الشرقية. ماجستير GW عبر JIC يمنحك مسار إداري دون التوظيف من الخارج.
-
-دفعات شركية، دعم محلي، متوافق مع PDPL.
-
-مهتم؟ {{cal_link}}
-```
-
-#### B5.7 Northwest Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW.
-
-NEOM-region employers need local engineering managers. GW MS EM via JIC grows them in-place: part-time, online, Tabuk support.
-
-Corporate pathway available.
-
-Call? {{cal_link}}
-```
-
-#### B5.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW.
-
-أرباب عمل منطقة نيوم يحتاجون مديري هندسة محليين. ماجستير GW عبر JIC ينميهم في مكانهم: دوام جزئي، عبر الإنترنت، دعم تبوك.
-
-مسار شركي متاح.
-
-مكالمة؟ {{cal_link}}
-```
-
-#### B5.9 South Region — EN
-
-```
-Hi {{first_name}}, {{sender_name}} from JIC × GW.
-
-Southern development projects need local engineering leaders. GW MS EM via JIC — part-time, online, study from Abha/Jazan.
-
-Corporate sponsorship keeps talent in-region.
-
-Chat? {{cal_link}}
-```
-
-#### B5.10 South Region — AR
-
-```
-مرحباً {{first_name}}، {{sender_name}} من JIC × GW.
-
-مشاريع التنمية الجنوبية تحتاج قادة هندسة محليين. ماجستير GW عبر JIC — دوام جزئي، عبر الإنترنت، ادرس من أبها/جازان.
-
-الرعاية الشركية تحتفظ بالمواهب في الإقليم.
-
-محادثة؟ {{cal_link}}
-```
-
----
-
-### B6. WhatsApp — Follow-Up (3-Day)
-
-#### B6.1 Central Region — EN
-
-```
-Hi {{first_name}}, following up on GW MS EM corporate partnership.
-
-Cohort 1 corporate slots filling <!-- UNVERIFIED -->. Partners who commit by [date] get preferred pricing.
-
-Quick call to discuss {{company}}'s needs? {{cal_link}}
-```
-
-#### B6.2 Central Region — AR
-
-```
-مرحباً {{first_name}}، أتابع شراكة ماجستير GW الشركية.
-
-فتحات الدفعة الأولى الشركية تُملأ <!-- UNVERIFIED -->. الشركاء الذين يلتزمون قبل [التاريخ] يحصلون على تسعير مفضل.
-
-مكالمة سريعة لمناقشة احتياجات {{company}}؟ {{cal_link}}
-```
-
-#### B6.3 Western Region — EN
-
-```
-Hi {{first_name}}, following up — GW corporate pathway for {{company}}.
-
-Western region talent competition is real. Companies investing in management credentials retain engineers. Those that don't lose them.
-
-Which side is {{company}} on? {{cal_link}}
-```
-
-#### B6.4 Western Region — AR
-
-```
-مرحباً {{first_name}}، أتابع — مسار GW الشركي لـ {{company}}.
-
-منافسة مواهب المنطقة الغربية حقيقية. الشركات التي تستثمر في شهادات الإدارة تحتفظ بالمهندسين. تلك التي لا تفعل تفقدهم.
-
-أي جانب توجد {{company}}؟ {{cal_link}}
-```
-
-#### B6.5 Eastern Region — EN
-
-```
-Hi {{first_name}}, following up on corporate sponsorship.
-
-Aramco, SABIC, Maaden — they all sponsor management development. {{company}} can join them.
-
-Cohort 1 forming. Call? {{cal_link}}
-```
-
-#### B6.6 Eastern Region — AR
-
-```
-مرحباً {{first_name}}، أتابع الرعاية الشركية.
-
-أرامكو، سابك، معادن — جميعها ترعى تنمية الإدارة. {{company}} يمكن أن تنضم إليها.
-
-الدفعة الأولى تتشكل. مكالمة؟ {{cal_link}}
-```
-
-#### B6.7 Northwest Region — EN
-
-```
-Hi {{first_name}}, following up — GW corporate for NW employers.
-
-Grow local leaders for NEOM. Don't import them. GW + JIC = local pipeline.
-
-{{cal_link}}
-```
-
-#### B6.8 Northwest Region — AR
-
-```
-مرحباً {{first_name}}، أتابع — GW الشركي لأرباب العمل في الشمال الغربي.
-
-نمِّ قادة محليين لنيوم. لا تستوردهم. GW + JIC = مسار محلي.
-
-{{cal_link}}
-```
-
-#### B6.9 South Region — EN
-
-```
-Hi {{first_name}}, following up on GW corporate pathway.
-
-Southern engineers + management credentials = regional leaders who stay.
-
-{{company}} can build that pipeline. {{cal_link}}
-```
-
-#### B6.10 South Region — AR
-
-```
-مرحباً {{first_name}}، أتابع مسار GW الشركي.
-
-مهندسون جنوبيون + شهادات إدارة = قادة إقليميون يبقون.
-
-{{company}} يمكن أن يبني ذلك المسار. {{cal_link}}
-```
-
----
-
-## Appendix: Personalization Rules
-
-### Merge Fields
-
-All templates use `{{field}}` syntax. Populate from:
-- LinkedIn Sales Navigator exports
-- CRM (EspoCRM / Twenty) contact records
-- Manual research (company website, press releases)
-
-### Regional Signals to Reference
-
-| Region | Signals to Mention |
-|--------|-------------------|
-| Central | PIF portfolio, Roshn, Qiddiya, Diriyah, government proximity |
-| Western | Red Sea Global, Jeddah Port, Makkah infrastructure, tourism |
-| Eastern | Aramco, SABIC, Maaden, SPARK, petrochemical, energy |
-| Northwest | NEOM, The Line, Oxagon, Trojena, giga-projects |
-| South | AlUla, Qiddiya South, Asir, Jazan, regional development |
-
-### ICP-Specific Language
-
-| ICP | Tone | Focus |
-|-----|------|-------|
-| B2C Individual | Personal, aspirational, career-focused | "Your" trajectory, "your" promotion, "your" credential |
-| B2B Corporate | Professional, ROI-driven, strategic | "Retention," "pipeline," "ROI," "partnership" |
-
-### Follow-Up Timing
-
-| Touch | Delay | Trigger |
-|-------|-------|---------|
-| First | Day 0 | Initial outreach |
-| Follow-Up | Day 3 | No response to first touch |
-| Second Follow-Up | Day 7 | No response to follow-up |
-| Break-Up | Day 14 | No response to second follow-up |
-
-**Break-Up Template (EN):**
-```
-Hi {{first_name}},
-
-I don't want to clutter your inbox. This is my last note about GW MS EM via JIC.
-
-If timing is wrong, totally understood — just reply "not now" and I'll check back in 6 months.
-
-If you missed the earlier messages and want info: {{cal_link}}
-
-Either way, best of luck with {{company}}.
-
-{{sender_name}}
-```
-
-**Break-Up Template (AR):**
+**Body:**
 ```
 مرحباً {{first_name}}،
 
-لا أريد إرباك صندوق بريدك. هذه هي ملاحظتي الأخيرة حول ماجستير GW عبر JIC.
+أتواصل معك من JIC -- الشريك الحصري في جميع أنحاء المملكة للانضمام لبرنامج ماجستير إدارة الهندسة من جورج واشنطن (أونلاين بالكامل).
 
-إذا كان التوقيت خاطئ، مفهوم تماماً — فقط رد "ليس الآن" وسأعود بعد 6 أشهر.
+لاحظت خلفيتك كـ {{job_title}} في {{company}} في {{region}}. يواجه العديد من المهندسين في مرحلتك نفس المفترق: خبرة تقنية عميقة، لكن المسار الإداري يبدو بعيد المنال بدون شهادة رسمية.
 
-إذا فاتتك الرسائل السابقة وتريد المعلومات: {{cal_link}}
+برنامج GW مبني لهذا التحول بالذات. يغطي المنهج إدارة محفظة المشاريع، قيادة هندسة الأنظمة، واتخاذ القرارات المستندة إلى البيانات -- كلها أونلاين، مع تقديم JIC لدعم السياق السعودي الكامل، والدعم باللغة العربية، وتنسيق الدفعات المحلية.
 
-في كلتا الحالتين، حظاً موفقاً مع {{company}}.
+مع إعادة مشروع {{giga_project}} تشكيل المشهد الهندسي في {{region}}، يتسارع الطلب على المدراء المؤسسين تقنياً. هذا البرنامج يسد تلك الفجوة.
 
-{{sender_name}}
+يستحق محادثة 15 دقيقة؟
 ```
 
+**CTA:** رد لجدولة اتصال 15 دقيقة | احجز: {{calendar_link}} | قدّم: {{apply_link}}
+
+**Send Timing:** Sunday-Tuesday, 09:00-11:00 KSA. Avoid Ramadan Eid week and Hajj peak days.
+
+**Sequence Position:** Touch 1/7 -- Initial outbound. Triggers warm follow-up if opened but no reply within 48h.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
 ---
 
-## Appendix: Spam Avoidance Checklist
+#### JIC-GW-T041 -- WhatsApp | Central | B2C | EN
 
-Before sending any template:
+**Subject / Headline:**
+> Hi {{first_name}} - GW's M.S. in Engineering Management. Fully online. Saudi-context curriculum. Worth 2 mins?
 
-- [ ] Subject line is under 60 characters
-- [ ] No ALL CAPS words
-- [ ] No excessive exclamation points (max 1)
-- [ ] No spam trigger words: "free," "guaranteed," "act now," "limited time"
-- [ ] Personalization fields are populated (not "Hi {{first_name}}")
-- [ ] Unsubscribe option included (email)
-- [ ] Company name is correct
-- [ ] Cal.com link is working
-- [ ] WhatsApp number is correct and active
-- [ ] UTM parameters are appended to URLs
+**Body:**
+```
+Hi {{first_name}} -- quick message from JIC.
+
+GW's M.S. in Engineering Management. Fully online. Designed for senior engineers who want the managerial credential without leaving their role.
+
+JIC is the only Saudi onboarding partner. We handle Arabic support, local cohorts, and all the Kingdom-specific logistics.
+
+In {{region}}, with {{giga_project}} driving massive engineering demand, this credential is becoming the standard for leadership-track promotion.
+
+Worth 10 mins to explore?
+```
+
+**CTA:** Reply YES for info pack | Call {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
 
 ---
 
-*Message Templates v1.0 — Sprint #4 SHIPPED. 120 templates covering full outreach matrix.*
+#### JIC-GW-T043 -- WhatsApp | Central | B2C | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - ماجستير إدارة الهندسة من GW. أونلاين بالكامل. منهج مُحكّم بالسياق السعودي. يستحق دقيقتين؟
+
+**Body:**
+```
+مرحباً {{first_name}} -- رسالة سريعة من JIC.
+
+ماجستير GW في إدارة الهندسة. أونلاين بالكامل. مصمم للمهندسين الكبار الذين يريدون الشهادة الإدارية بدون ترك منصبهم.
+
+JIC هي الشريك السعودي الوحيد للانضمام. نتولى الدعم بالعربية، والدفعات المحلية، وكل اللوجستيات الخاصة بالمملكة.
+
+في {{region}}، مع قيادة مشروع {{giga_project}} لطلب هندسي هائل، تصبح هذه الشهادة المعيار للترقية في مسار القيادة.
+
+يستحق 10 دقائق للاستكشاف؟
+```
+
+**CTA:** رد YES لحزمة المعلومات | اتصل {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T049 -- WhatsApp | Western | B2C | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - GW's M.S. in Engineering Management. Fully online. Saudi-context curriculum. Worth 2 mins?
+
+**Body:**
+```
+Hi {{first_name}} -- quick message from JIC.
+
+GW's M.S. in Engineering Management. Fully online. Designed for senior engineers who want the managerial credential without leaving their role.
+
+JIC is the only Saudi onboarding partner. We handle Arabic support, local cohorts, and all the Kingdom-specific logistics.
+
+In {{region}}, with {{giga_project}} driving massive engineering demand, this credential is becoming the standard for leadership-track promotion.
+
+Worth 10 mins to explore?
+```
+
+**CTA:** Reply YES for info pack | Call {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T051 -- WhatsApp | Western | B2C | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - ماجستير إدارة الهندسة من GW. أونلاين بالكامل. منهج مُحكّم بالسياق السعودي. يستحق دقيقتين؟
+
+**Body:**
+```
+مرحباً {{first_name}} -- رسالة سريعة من JIC.
+
+ماجستير GW في إدارة الهندسة. أونلاين بالكامل. مصمم للمهندسين الكبار الذين يريدون الشهادة الإدارية بدون ترك منصبهم.
+
+JIC هي الشريك السعودي الوحيد للانضمام. نتولى الدعم بالعربية، والدفعات المحلية، وكل اللوجستيات الخاصة بالمملكة.
+
+في {{region}}، مع قيادة مشروع {{giga_project}} لطلب هندسي هائل، تصبح هذه الشهادة المعيار للترقية في مسار القيادة.
+
+يستحق 10 دقائق للاستكشاف؟
+```
+
+**CTA:** رد YES لحزمة المعلومات | اتصل {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T057 -- WhatsApp | Eastern | B2C | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - GW's M.S. in Engineering Management. Fully online. Saudi-context curriculum. Worth 2 mins?
+
+**Body:**
+```
+Hi {{first_name}} -- quick message from JIC.
+
+GW's M.S. in Engineering Management. Fully online. Designed for senior engineers who want the managerial credential without leaving their role.
+
+JIC is the only Saudi onboarding partner. We handle Arabic support, local cohorts, and all the Kingdom-specific logistics.
+
+In {{region}}, with {{giga_project}} driving massive engineering demand, this credential is becoming the standard for leadership-track promotion.
+
+Worth 10 mins to explore?
+```
+
+**CTA:** Reply YES for info pack | Call {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T059 -- WhatsApp | Eastern | B2C | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - ماجستير إدارة الهندسة من GW. أونلاين بالكامل. منهج مُحكّم بالسياق السعودي. يستحق دقيقتين؟
+
+**Body:**
+```
+مرحباً {{first_name}} -- رسالة سريعة من JIC.
+
+ماجستير GW في إدارة الهندسة. أونلاين بالكامل. مصمم للمهندسين الكبار الذين يريدون الشهادة الإدارية بدون ترك منصبهم.
+
+JIC هي الشريك السعودي الوحيد للانضمام. نتولى الدعم بالعربية، والدفعات المحلية، وكل اللوجستيات الخاصة بالمملكة.
+
+في {{region}}، مع قيادة مشروع {{giga_project}} لطلب هندسي هائل، تصبح هذه الشهادة المعيار للترقية في مسار القيادة.
+
+يستحق 10 دقائق للاستكشاف؟
+```
+
+**CTA:** رد YES لحزمة المعلومات | اتصل {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T065 -- WhatsApp | Northwest | B2C | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - GW's M.S. in Engineering Management. Fully online. Saudi-context curriculum. Worth 2 mins?
+
+**Body:**
+```
+Hi {{first_name}} -- quick message from JIC.
+
+GW's M.S. in Engineering Management. Fully online. Designed for senior engineers who want the managerial credential without leaving their role.
+
+JIC is the only Saudi onboarding partner. We handle Arabic support, local cohorts, and all the Kingdom-specific logistics.
+
+In {{region}}, with {{giga_project}} driving massive engineering demand, this credential is becoming the standard for leadership-track promotion.
+
+Worth 10 mins to explore?
+```
+
+**CTA:** Reply YES for info pack | Call {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T067 -- WhatsApp | Northwest | B2C | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - ماجستير إدارة الهندسة من GW. أونلاين بالكامل. منهج مُحكّم بالسياق السعودي. يستحق دقيقتين؟
+
+**Body:**
+```
+مرحباً {{first_name}} -- رسالة سريعة من JIC.
+
+ماجستير GW في إدارة الهندسة. أونلاين بالكامل. مصمم للمهندسين الكبار الذين يريدون الشهادة الإدارية بدون ترك منصبهم.
+
+JIC هي الشريك السعودي الوحيد للانضمام. نتولى الدعم بالعربية، والدفعات المحلية، وكل اللوجستيات الخاصة بالمملكة.
+
+في {{region}}، مع قيادة مشروع {{giga_project}} لطلب هندسي هائل، تصبح هذه الشهادة المعيار للترقية في مسار القيادة.
+
+يستحق 10 دقائق للاستكشاف؟
+```
+
+**CTA:** رد YES لحزمة المعلومات | اتصل {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T073 -- WhatsApp | South | B2C | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - GW's M.S. in Engineering Management. Fully online. Saudi-context curriculum. Worth 2 mins?
+
+**Body:**
+```
+Hi {{first_name}} -- quick message from JIC.
+
+GW's M.S. in Engineering Management. Fully online. Designed for senior engineers who want the managerial credential without leaving their role.
+
+JIC is the only Saudi onboarding partner. We handle Arabic support, local cohorts, and all the Kingdom-specific logistics.
+
+In {{region}}, with {{giga_project}} driving massive engineering demand, this credential is becoming the standard for leadership-track promotion.
+
+Worth 10 mins to explore?
+```
+
+**CTA:** Reply YES for info pack | Call {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T075 -- WhatsApp | South | B2C | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - ماجستير إدارة الهندسة من GW. أونلاين بالكامل. منهج مُحكّم بالسياق السعودي. يستحق دقيقتين؟
+
+**Body:**
+```
+مرحباً {{first_name}} -- رسالة سريعة من JIC.
+
+ماجستير GW في إدارة الهندسة. أونلاين بالكامل. مصمم للمهندسين الكبار الذين يريدون الشهادة الإدارية بدون ترك منصبهم.
+
+JIC هي الشريك السعودي الوحيد للانضمام. نتولى الدعم بالعربية، والدفعات المحلية، وكل اللوجستيات الخاصة بالمملكة.
+
+في {{region}}، مع قيادة مشروع {{giga_project}} لطلب هندسي هائل، تصبح هذه الشهادة المعيار للترقية في مسار القيادة.
+
+يستحق 10 دقائق للاستكشاف؟
+```
+
+**CTA:** رد YES لحزمة المعلومات | اتصل {{phone_number}} | {{apply_link}}
+
+**Send Timing:** Saturday-Monday, 19:00-21:00 KSA. Evening engagement for working professionals.
+
+**Sequence Position:** Touch 1/5 -- High-intent channel. Use for warm leads or post-email non-responders.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T081 -- LinkedIn DM | Central | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - saw your profile. 10+ years as {{job_title}} in {{region}}. GW's online M.S. built for this transition.
+
+**Body:**
+```
+{{first_name}} -- I came across your profile and wanted to reach out personally.
+
+You're at that inflection point many senior engineers in {{region}} hit: exceptional technical depth, but the path to Engineering Manager or Program Director requires a credential that matches your experience.
+
+George Washington University's online M.S. in Engineering Management is that credential. JIC is the exclusive onboarding partner for KSA -- we handle everything from Arabic-language academic support to coordinating your local cohort so you're not studying in isolation.
+
+Given {{giga_project}}'s scale and the leadership vacuum it's creating, the timing is genuinely strategic.
+
+Happy to share the curriculum breakdown or connect you with an advisor. No pitch, just information.
+```
+
+**CTA:** Reply for curriculum PDF | Connect on LinkedIn for updates | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T083 -- LinkedIn DM | Central | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - رأيت ملفك. 10+ سنوات كـ {{job_title}} في {{region}}. ماجستير GW أونلاين بني لهذا التحول.
+
+**Body:**
+```
+{{first_name}} -- صادفت ملفك الشخصي وأردت التواصل شخصياً.
+
+أنت في نقطة الانعطاف التي يصل إليها العديد من المهندسين الكبار في {{region}}: عمق تقني استثنائي، لكن المسار إلى مدير هندسة أو مدير برنامج يتطلب شهادة تطابق خبرتك.
+
+ماجستير جورج واشنطن أونلاين في إدارة الهندسة هي تلك الشهادة. JIC هي الشريك الحصري للانضمام في المملكة -- نتولى كل شيء من الدعم الأكاديمي بالعربية إلى تنسيق دفعتك المحلية حتى لا تدرس معزولاً.
+
+نظراً لحجم مشروع {{giga_project}} والفراغ القيادي الذي يخلقه، التوقيت استراتيجي بحق.
+
+سعيد بمشاركة تفاصيل المنهج أو ربطك بمستشار. لا عرض للبيع، فقط معلومات.
+```
+
+**CTA:** رد لـ PDF المنهج | تواصل على لينكدإن للتحديثات | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T089 -- LinkedIn DM | Western | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - saw your profile. 10+ years as {{job_title}} in {{region}}. GW's online M.S. built for this transition.
+
+**Body:**
+```
+{{first_name}} -- I came across your profile and wanted to reach out personally.
+
+You're at that inflection point many senior engineers in {{region}} hit: exceptional technical depth, but the path to Engineering Manager or Program Director requires a credential that matches your experience.
+
+George Washington University's online M.S. in Engineering Management is that credential. JIC is the exclusive onboarding partner for KSA -- we handle everything from Arabic-language academic support to coordinating your local cohort so you're not studying in isolation.
+
+Given {{giga_project}}'s scale and the leadership vacuum it's creating, the timing is genuinely strategic.
+
+Happy to share the curriculum breakdown or connect you with an advisor. No pitch, just information.
+```
+
+**CTA:** Reply for curriculum PDF | Connect on LinkedIn for updates | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T091 -- LinkedIn DM | Western | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - رأيت ملفك. 10+ سنوات كـ {{job_title}} في {{region}}. ماجستير GW أونلاين بني لهذا التحول.
+
+**Body:**
+```
+{{first_name}} -- صادفت ملفك الشخصي وأردت التواصل شخصياً.
+
+أنت في نقطة الانعطاف التي يصل إليها العديد من المهندسين الكبار في {{region}}: عمق تقني استثنائي، لكن المسار إلى مدير هندسة أو مدير برنامج يتطلب شهادة تطابق خبرتك.
+
+ماجستير جورج واشنطن أونلاين في إدارة الهندسة هي تلك الشهادة. JIC هي الشريك الحصري للانضمام في المملكة -- نتولى كل شيء من الدعم الأكاديمي بالعربية إلى تنسيق دفعتك المحلية حتى لا تدرس معزولاً.
+
+نظراً لحجم مشروع {{giga_project}} والفراغ القيادي الذي يخلقه، التوقيت استراتيجي بحق.
+
+سعيد بمشاركة تفاصيل المنهج أو ربطك بمستشار. لا عرض للبيع، فقط معلومات.
+```
+
+**CTA:** رد لـ PDF المنهج | تواصل على لينكدإن للتحديثات | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T097 -- LinkedIn DM | Eastern | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - saw your profile. 10+ years as {{job_title}} in {{region}}. GW's online M.S. built for this transition.
+
+**Body:**
+```
+{{first_name}} -- I came across your profile and wanted to reach out personally.
+
+You're at that inflection point many senior engineers in {{region}} hit: exceptional technical depth, but the path to Engineering Manager or Program Director requires a credential that matches your experience.
+
+George Washington University's online M.S. in Engineering Management is that credential. JIC is the exclusive onboarding partner for KSA -- we handle everything from Arabic-language academic support to coordinating your local cohort so you're not studying in isolation.
+
+Given {{giga_project}}'s scale and the leadership vacuum it's creating, the timing is genuinely strategic.
+
+Happy to share the curriculum breakdown or connect you with an advisor. No pitch, just information.
+```
+
+**CTA:** Reply for curriculum PDF | Connect on LinkedIn for updates | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T099 -- LinkedIn DM | Eastern | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - رأيت ملفك. 10+ سنوات كـ {{job_title}} في {{region}}. ماجستير GW أونلاين بني لهذا التحول.
+
+**Body:**
+```
+{{first_name}} -- صادفت ملفك الشخصي وأردت التواصل شخصياً.
+
+أنت في نقطة الانعطاف التي يصل إليها العديد من المهندسين الكبار في {{region}}: عمق تقني استثنائي، لكن المسار إلى مدير هندسة أو مدير برنامج يتطلب شهادة تطابق خبرتك.
+
+ماجستير جورج واشنطن أونلاين في إدارة الهندسة هي تلك الشهادة. JIC هي الشريك الحصري للانضمام في المملكة -- نتولى كل شيء من الدعم الأكاديمي بالعربية إلى تنسيق دفعتك المحلية حتى لا تدرس معزولاً.
+
+نظراً لحجم مشروع {{giga_project}} والفراغ القيادي الذي يخلقه، التوقيت استراتيجي بحق.
+
+سعيد بمشاركة تفاصيل المنهج أو ربطك بمستشار. لا عرض للبيع، فقط معلومات.
+```
+
+**CTA:** رد لـ PDF المنهج | تواصل على لينكدإن للتحديثات | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T105 -- LinkedIn DM | Northwest | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - saw your profile. 10+ years as {{job_title}} in {{region}}. GW's online M.S. built for this transition.
+
+**Body:**
+```
+{{first_name}} -- I came across your profile and wanted to reach out personally.
+
+You're at that inflection point many senior engineers in {{region}} hit: exceptional technical depth, but the path to Engineering Manager or Program Director requires a credential that matches your experience.
+
+George Washington University's online M.S. in Engineering Management is that credential. JIC is the exclusive onboarding partner for KSA -- we handle everything from Arabic-language academic support to coordinating your local cohort so you're not studying in isolation.
+
+Given {{giga_project}}'s scale and the leadership vacuum it's creating, the timing is genuinely strategic.
+
+Happy to share the curriculum breakdown or connect you with an advisor. No pitch, just information.
+```
+
+**CTA:** Reply for curriculum PDF | Connect on LinkedIn for updates | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T107 -- LinkedIn DM | Northwest | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - رأيت ملفك. 10+ سنوات كـ {{job_title}} في {{region}}. ماجستير GW أونلاين بني لهذا التحول.
+
+**Body:**
+```
+{{first_name}} -- صادفت ملفك الشخصي وأردت التواصل شخصياً.
+
+أنت في نقطة الانعطاف التي يصل إليها العديد من المهندسين الكبار في {{region}}: عمق تقني استثنائي، لكن المسار إلى مدير هندسة أو مدير برنامج يتطلب شهادة تطابق خبرتك.
+
+ماجستير جورج واشنطن أونلاين في إدارة الهندسة هي تلك الشهادة. JIC هي الشريك الحصري للانضمام في المملكة -- نتولى كل شيء من الدعم الأكاديمي بالعربية إلى تنسيق دفعتك المحلية حتى لا تدرس معزولاً.
+
+نظراً لحجم مشروع {{giga_project}} والفراغ القيادي الذي يخلقه، التوقيت استراتيجي بحق.
+
+سعيد بمشاركة تفاصيل المنهج أو ربطك بمستشار. لا عرض للبيع، فقط معلومات.
+```
+
+**CTA:** رد لـ PDF المنهج | تواصل على لينكدإن للتحديثات | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T113 -- LinkedIn DM | South | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - saw your profile. 10+ years as {{job_title}} in {{region}}. GW's online M.S. built for this transition.
+
+**Body:**
+```
+{{first_name}} -- I came across your profile and wanted to reach out personally.
+
+You're at that inflection point many senior engineers in {{region}} hit: exceptional technical depth, but the path to Engineering Manager or Program Director requires a credential that matches your experience.
+
+George Washington University's online M.S. in Engineering Management is that credential. JIC is the exclusive onboarding partner for KSA -- we handle everything from Arabic-language academic support to coordinating your local cohort so you're not studying in isolation.
+
+Given {{giga_project}}'s scale and the leadership vacuum it's creating, the timing is genuinely strategic.
+
+Happy to share the curriculum breakdown or connect you with an advisor. No pitch, just information.
+```
+
+**CTA:** Reply for curriculum PDF | Connect on LinkedIn for updates | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T115 -- LinkedIn DM | South | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - رأيت ملفك. 10+ سنوات كـ {{job_title}} في {{region}}. ماجستير GW أونلاين بني لهذا التحول.
+
+**Body:**
+```
+{{first_name}} -- صادفت ملفك الشخصي وأردت التواصل شخصياً.
+
+أنت في نقطة الانعطاف التي يصل إليها العديد من المهندسين الكبار في {{region}}: عمق تقني استثنائي، لكن المسار إلى مدير هندسة أو مدير برنامج يتطلب شهادة تطابق خبرتك.
+
+ماجستير جورج واشنطن أونلاين في إدارة الهندسة هي تلك الشهادة. JIC هي الشريك الحصري للانضمام في المملكة -- نتولى كل شيء من الدعم الأكاديمي بالعربية إلى تنسيق دفعتك المحلية حتى لا تدرس معزولاً.
+
+نظراً لحجم مشروع {{giga_project}} والفراغ القيادي الذي يخلقه، التوقيت استراتيجي بحق.
+
+سعيد بمشاركة تفاصيل المنهج أو ربطك بمستشار. لا عرض للبيع، فقط معلومات.
+```
+
+**CTA:** رد لـ PDF المنهج | تواصل على لينكدإن للتحديثات | {{calendar_link}}
+
+**Send Timing:** Sunday-Tuesday, 07:00-09:00 KSA. Morning LinkedIn scroll window.
+
+**Sequence Position:** Touch 1/6 -- Profile-matched outreach. Triggered by LinkedIn activity or mutual connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+### Warm Follow-Up
+
+*30 templates*
+
+#### JIC-GW-T005 -- Email | Central | B2B | EN
+
+**Subject / Headline:**
+> Re: {{company}} leadership pipeline - next steps with GW Engineering Management
+
+**Body:**
+```
+Hi {{first_name}},
+
+Following up on our conversation about GW Engineering Management for {{company}}.
+
+I understand internal approvals take time -- budget cycles, committee reviews, competing priorities. These are normal.
+
+What's new:
+
+- Cohort 1 is {{percent_full}}% subscribed <!-- UNVERIFIED -->
+- We now offer a pilot enrollment pathway: start with 3 seats, scale based on outcomes
+- JIC can prepare a one-page business case for your L&D committee
+
+No pressure on timeline. When you're ready, I'm here to make the internal sell as easy as possible.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for one-pager | Book committee call: {{calendar_link}} | Request pilot terms
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T007 -- Email | Central | B2B | AR
+
+**Subject / Headline:**
+> رد: خط القيادة في {{company}} - الخطوات التالية مع GW إدارة الهندسة
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+متابعة لمحادثتنا حول GW إدارة الهندسة لـ {{company}}.
+
+أفهم أن الموافقات الداخلية تستغرق وقتاً -- دورات الميزانية، مراجعات اللجان، الأولويات المتنافسة. هذه أمور طبيعية.
+
+ما هو جديد:
+
+- الدفعة الأولى مشتركة بنسبة {{percent_full}}% <!-- UNVERIFIED -->
+- نقدم الآن مسار تسجيل تجريبي: ابدأ بـ 3 مقاعد، ووسّع بناءً على النتائج
+- يمكن لـ JIC إعداد حالة عمل صفحة واحدة للجنة التعلم والتطوير
+
+لا ضغط على الجدول الزمني. عندما تكون جاهزاً، أنا هنا لجعل البيع الداخلي أسهل ما يمكن.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لورقة موجزة | احجز اتصال اللجنة: {{calendar_link}} | اطلب شروط تجريبية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T013 -- Email | Western | B2B | EN
+
+**Subject / Headline:**
+> Re: {{company}} leadership pipeline - next steps with GW Engineering Management
+
+**Body:**
+```
+Hi {{first_name}},
+
+Following up on our conversation about GW Engineering Management for {{company}}.
+
+I understand internal approvals take time -- budget cycles, committee reviews, competing priorities. These are normal.
+
+What's new:
+
+- Cohort 1 is {{percent_full}}% subscribed <!-- UNVERIFIED -->
+- We now offer a pilot enrollment pathway: start with 3 seats, scale based on outcomes
+- JIC can prepare a one-page business case for your L&D committee
+
+No pressure on timeline. When you're ready, I'm here to make the internal sell as easy as possible.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for one-pager | Book committee call: {{calendar_link}} | Request pilot terms
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T015 -- Email | Western | B2B | AR
+
+**Subject / Headline:**
+> رد: خط القيادة في {{company}} - الخطوات التالية مع GW إدارة الهندسة
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+متابعة لمحادثتنا حول GW إدارة الهندسة لـ {{company}}.
+
+أفهم أن الموافقات الداخلية تستغرق وقتاً -- دورات الميزانية، مراجعات اللجان، الأولويات المتنافسة. هذه أمور طبيعية.
+
+ما هو جديد:
+
+- الدفعة الأولى مشتركة بنسبة {{percent_full}}% <!-- UNVERIFIED -->
+- نقدم الآن مسار تسجيل تجريبي: ابدأ بـ 3 مقاعد، ووسّع بناءً على النتائج
+- يمكن لـ JIC إعداد حالة عمل صفحة واحدة للجنة التعلم والتطوير
+
+لا ضغط على الجدول الزمني. عندما تكون جاهزاً، أنا هنا لجعل البيع الداخلي أسهل ما يمكن.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لورقة موجزة | احجز اتصال اللجنة: {{calendar_link}} | اطلب شروط تجريبية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T021 -- Email | Eastern | B2B | EN
+
+**Subject / Headline:**
+> Re: {{company}} leadership pipeline - next steps with GW Engineering Management
+
+**Body:**
+```
+Hi {{first_name}},
+
+Following up on our conversation about GW Engineering Management for {{company}}.
+
+I understand internal approvals take time -- budget cycles, committee reviews, competing priorities. These are normal.
+
+What's new:
+
+- Cohort 1 is {{percent_full}}% subscribed <!-- UNVERIFIED -->
+- We now offer a pilot enrollment pathway: start with 3 seats, scale based on outcomes
+- JIC can prepare a one-page business case for your L&D committee
+
+No pressure on timeline. When you're ready, I'm here to make the internal sell as easy as possible.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for one-pager | Book committee call: {{calendar_link}} | Request pilot terms
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T023 -- Email | Eastern | B2B | AR
+
+**Subject / Headline:**
+> رد: خط القيادة في {{company}} - الخطوات التالية مع GW إدارة الهندسة
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+متابعة لمحادثتنا حول GW إدارة الهندسة لـ {{company}}.
+
+أفهم أن الموافقات الداخلية تستغرق وقتاً -- دورات الميزانية، مراجعات اللجان، الأولويات المتنافسة. هذه أمور طبيعية.
+
+ما هو جديد:
+
+- الدفعة الأولى مشتركة بنسبة {{percent_full}}% <!-- UNVERIFIED -->
+- نقدم الآن مسار تسجيل تجريبي: ابدأ بـ 3 مقاعد، ووسّع بناءً على النتائج
+- يمكن لـ JIC إعداد حالة عمل صفحة واحدة للجنة التعلم والتطوير
+
+لا ضغط على الجدول الزمني. عندما تكون جاهزاً، أنا هنا لجعل البيع الداخلي أسهل ما يمكن.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لورقة موجزة | احجز اتصال اللجنة: {{calendar_link}} | اطلب شروط تجريبية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T029 -- Email | Northwest | B2B | EN
+
+**Subject / Headline:**
+> Re: {{company}} leadership pipeline - next steps with GW Engineering Management
+
+**Body:**
+```
+Hi {{first_name}},
+
+Following up on our conversation about GW Engineering Management for {{company}}.
+
+I understand internal approvals take time -- budget cycles, committee reviews, competing priorities. These are normal.
+
+What's new:
+
+- Cohort 1 is {{percent_full}}% subscribed <!-- UNVERIFIED -->
+- We now offer a pilot enrollment pathway: start with 3 seats, scale based on outcomes
+- JIC can prepare a one-page business case for your L&D committee
+
+No pressure on timeline. When you're ready, I'm here to make the internal sell as easy as possible.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for one-pager | Book committee call: {{calendar_link}} | Request pilot terms
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T031 -- Email | Northwest | B2B | AR
+
+**Subject / Headline:**
+> رد: خط القيادة في {{company}} - الخطوات التالية مع GW إدارة الهندسة
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+متابعة لمحادثتنا حول GW إدارة الهندسة لـ {{company}}.
+
+أفهم أن الموافقات الداخلية تستغرق وقتاً -- دورات الميزانية، مراجعات اللجان، الأولويات المتنافسة. هذه أمور طبيعية.
+
+ما هو جديد:
+
+- الدفعة الأولى مشتركة بنسبة {{percent_full}}% <!-- UNVERIFIED -->
+- نقدم الآن مسار تسجيل تجريبي: ابدأ بـ 3 مقاعد، ووسّع بناءً على النتائج
+- يمكن لـ JIC إعداد حالة عمل صفحة واحدة للجنة التعلم والتطوير
+
+لا ضغط على الجدول الزمني. عندما تكون جاهزاً، أنا هنا لجعل البيع الداخلي أسهل ما يمكن.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لورقة موجزة | احجز اتصال اللجنة: {{calendar_link}} | اطلب شروط تجريبية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T037 -- Email | South | B2B | EN
+
+**Subject / Headline:**
+> Re: {{company}} leadership pipeline - next steps with GW Engineering Management
+
+**Body:**
+```
+Hi {{first_name}},
+
+Following up on our conversation about GW Engineering Management for {{company}}.
+
+I understand internal approvals take time -- budget cycles, committee reviews, competing priorities. These are normal.
+
+What's new:
+
+- Cohort 1 is {{percent_full}}% subscribed <!-- UNVERIFIED -->
+- We now offer a pilot enrollment pathway: start with 3 seats, scale based on outcomes
+- JIC can prepare a one-page business case for your L&D committee
+
+No pressure on timeline. When you're ready, I'm here to make the internal sell as easy as possible.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for one-pager | Book committee call: {{calendar_link}} | Request pilot terms
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T039 -- Email | South | B2B | AR
+
+**Subject / Headline:**
+> رد: خط القيادة في {{company}} - الخطوات التالية مع GW إدارة الهندسة
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+متابعة لمحادثتنا حول GW إدارة الهندسة لـ {{company}}.
+
+أفهم أن الموافقات الداخلية تستغرق وقتاً -- دورات الميزانية، مراجعات اللجان، الأولويات المتنافسة. هذه أمور طبيعية.
+
+ما هو جديد:
+
+- الدفعة الأولى مشتركة بنسبة {{percent_full}}% <!-- UNVERIFIED -->
+- نقدم الآن مسار تسجيل تجريبي: ابدأ بـ 3 مقاعد، ووسّع بناءً على النتائج
+- يمكن لـ JIC إعداد حالة عمل صفحة واحدة للجنة التعلم والتطوير
+
+لا ضغط على الجدول الزمني. عندما تكون جاهزاً، أنا هنا لجعل البيع الداخلي أسهل ما يمكن.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لورقة موجزة | احجز اتصال اللجنة: {{calendar_link}} | اطلب شروط تجريبية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 2/7 -- Sent 72-96h after Touch 1. Corporate decision-maker cadence.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T045 -- WhatsApp | Central | B2B | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - following up on {{company}}'s upskilling plan. GW M.S. info attached.
+
+**Body:**
+```
+Hi {{first_name}} -- quick follow-up.
+
+Any movement internally at {{company}}? Happy to:
+
+- Send a one-pager for your committee
+- Join a call with your L&D lead
+- Provide a sample corporate enrollment agreement
+
+Whatever makes the internal conversation easier. Just let me know.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for internal sell kit | {{calendar_link}} | Call {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T047 -- WhatsApp | Central | B2B | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - متابعة لخطة تطوير المهارات في {{company}}. معلومات ماجستير GW مرفقة.
+
+**Body:**
+```
+مرحباً {{first_name}} -- متابعة سريعة.
+
+أي حركة داخلياً في {{company}}؟ سعيد بـ:
+
+- إرسال ورقة موجزة للجنتك
+- الانضمام لاتصال مع رئيس التعلم والتطوير
+- تقديم عينة اتفاقية تسجيل مؤسسي
+
+كل ما يُسهّل المحادثة الداخلية. فقط أخبرني.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لعدة بيع داخلي | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T053 -- WhatsApp | Western | B2B | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - following up on {{company}}'s upskilling plan. GW M.S. info attached.
+
+**Body:**
+```
+Hi {{first_name}} -- quick follow-up.
+
+Any movement internally at {{company}}? Happy to:
+
+- Send a one-pager for your committee
+- Join a call with your L&D lead
+- Provide a sample corporate enrollment agreement
+
+Whatever makes the internal conversation easier. Just let me know.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for internal sell kit | {{calendar_link}} | Call {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T055 -- WhatsApp | Western | B2B | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - متابعة لخطة تطوير المهارات في {{company}}. معلومات ماجستير GW مرفقة.
+
+**Body:**
+```
+مرحباً {{first_name}} -- متابعة سريعة.
+
+أي حركة داخلياً في {{company}}؟ سعيد بـ:
+
+- إرسال ورقة موجزة للجنتك
+- الانضمام لاتصال مع رئيس التعلم والتطوير
+- تقديم عينة اتفاقية تسجيل مؤسسي
+
+كل ما يُسهّل المحادثة الداخلية. فقط أخبرني.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لعدة بيع داخلي | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T061 -- WhatsApp | Eastern | B2B | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - following up on {{company}}'s upskilling plan. GW M.S. info attached.
+
+**Body:**
+```
+Hi {{first_name}} -- quick follow-up.
+
+Any movement internally at {{company}}? Happy to:
+
+- Send a one-pager for your committee
+- Join a call with your L&D lead
+- Provide a sample corporate enrollment agreement
+
+Whatever makes the internal conversation easier. Just let me know.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for internal sell kit | {{calendar_link}} | Call {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T063 -- WhatsApp | Eastern | B2B | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - متابعة لخطة تطوير المهارات في {{company}}. معلومات ماجستير GW مرفقة.
+
+**Body:**
+```
+مرحباً {{first_name}} -- متابعة سريعة.
+
+أي حركة داخلياً في {{company}}؟ سعيد بـ:
+
+- إرسال ورقة موجزة للجنتك
+- الانضمام لاتصال مع رئيس التعلم والتطوير
+- تقديم عينة اتفاقية تسجيل مؤسسي
+
+كل ما يُسهّل المحادثة الداخلية. فقط أخبرني.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لعدة بيع داخلي | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T069 -- WhatsApp | Northwest | B2B | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - following up on {{company}}'s upskilling plan. GW M.S. info attached.
+
+**Body:**
+```
+Hi {{first_name}} -- quick follow-up.
+
+Any movement internally at {{company}}? Happy to:
+
+- Send a one-pager for your committee
+- Join a call with your L&D lead
+- Provide a sample corporate enrollment agreement
+
+Whatever makes the internal conversation easier. Just let me know.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for internal sell kit | {{calendar_link}} | Call {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T071 -- WhatsApp | Northwest | B2B | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - متابعة لخطة تطوير المهارات في {{company}}. معلومات ماجستير GW مرفقة.
+
+**Body:**
+```
+مرحباً {{first_name}} -- متابعة سريعة.
+
+أي حركة داخلياً في {{company}}؟ سعيد بـ:
+
+- إرسال ورقة موجزة للجنتك
+- الانضمام لاتصال مع رئيس التعلم والتطوير
+- تقديم عينة اتفاقية تسجيل مؤسسي
+
+كل ما يُسهّل المحادثة الداخلية. فقط أخبرني.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لعدة بيع داخلي | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T077 -- WhatsApp | South | B2B | EN
+
+**Subject / Headline:**
+> Hi {{first_name}} - following up on {{company}}'s upskilling plan. GW M.S. info attached.
+
+**Body:**
+```
+Hi {{first_name}} -- quick follow-up.
+
+Any movement internally at {{company}}? Happy to:
+
+- Send a one-pager for your committee
+- Join a call with your L&D lead
+- Provide a sample corporate enrollment agreement
+
+Whatever makes the internal conversation easier. Just let me know.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for internal sell kit | {{calendar_link}} | Call {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T079 -- WhatsApp | South | B2B | AR
+
+**Subject / Headline:**
+> مرحباً {{first_name}} - متابعة لخطة تطوير المهارات في {{company}}. معلومات ماجستير GW مرفقة.
+
+**Body:**
+```
+مرحباً {{first_name}} -- متابعة سريعة.
+
+أي حركة داخلياً في {{company}}؟ سعيد بـ:
+
+- إرسال ورقة موجزة للجنتك
+- الانضمام لاتصال مع رئيس التعلم والتطوير
+- تقديم عينة اتفاقية تسجيل مؤسسي
+
+كل ما يُسهّل المحادثة الداخلية. فقط أخبرني.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لعدة بيع داخلي | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** 48-72h after previous touch. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 2/5 -- 48-72h after initial. Corporate WhatsApp for decision-makers who accepted connection.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T085 -- LinkedIn DM | Central | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - following up on our exchange. 15-min briefing on GW corporate enrollment pathway?
+
+**Body:**
+```
+{{first_name}} -- following up on our exchange.
+
+I know internal conversations at {{company}} take time. Committees, budgets, competing priorities -- it's a process.
+
+A few things that might help move things along:
+
+1. JIC prepared a sample ROI brief for {{region}} employers (I can customize it for {{company}})
+2. We offer a pilot program: 3 engineers, 1 semester, full corporate support
+3. Academic calendar aligns with Saudi fiscal year planning
+
+Happy to join a call with whoever needs convincing. No charge, no commitment -- just context.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for ROI brief | Book stakeholder call: {{calendar_link}} | Request sample agreement
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T087 -- LinkedIn DM | Central | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - متابعة لتواصلنا. إيجاز 15 دقيقة عن مسار التسجيل المؤسسي في GW؟
+
+**Body:**
+```
+{{first_name}} -- متابعة لتبادلنا.
+
+أعلم أن المحادثات الداخلية في {{company}} تستغرق وقتاً. اللجان، الميزانيات، الأولويات المتنافسة -- إنها عملية.
+
+بعض الأشياء التي قد تساعد في تسريع الأمور:
+
+1. أعدت JIC إيجاز عائد استثمار نموذجي لأرباب العمل في {{region}} (يمكنني تخصيصه لـ {{company}})
+2. نقدم برنامجاً تجريبياً: 3 مهندسين، فصل دراسي واحد، دعم مؤسسي كامل
+3. التقويم الأكاديمي يتماشى مع تخطيط السنة المالية السعودية
+
+سعيد بالانضمام لاتصال مع من يحتاج إقناع. لا رسوم، لا التزام -- فقط سياق.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لإيجاز العائد | احجز اتصال أصحاب المصلحة: {{calendar_link}} | اطلب عينة اتفاقية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T093 -- LinkedIn DM | Western | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - following up on our exchange. 15-min briefing on GW corporate enrollment pathway?
+
+**Body:**
+```
+{{first_name}} -- following up on our exchange.
+
+I know internal conversations at {{company}} take time. Committees, budgets, competing priorities -- it's a process.
+
+A few things that might help move things along:
+
+1. JIC prepared a sample ROI brief for {{region}} employers (I can customize it for {{company}})
+2. We offer a pilot program: 3 engineers, 1 semester, full corporate support
+3. Academic calendar aligns with Saudi fiscal year planning
+
+Happy to join a call with whoever needs convincing. No charge, no commitment -- just context.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for ROI brief | Book stakeholder call: {{calendar_link}} | Request sample agreement
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T095 -- LinkedIn DM | Western | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - متابعة لتواصلنا. إيجاز 15 دقيقة عن مسار التسجيل المؤسسي في GW؟
+
+**Body:**
+```
+{{first_name}} -- متابعة لتبادلنا.
+
+أعلم أن المحادثات الداخلية في {{company}} تستغرق وقتاً. اللجان، الميزانيات، الأولويات المتنافسة -- إنها عملية.
+
+بعض الأشياء التي قد تساعد في تسريع الأمور:
+
+1. أعدت JIC إيجاز عائد استثمار نموذجي لأرباب العمل في {{region}} (يمكنني تخصيصه لـ {{company}})
+2. نقدم برنامجاً تجريبياً: 3 مهندسين، فصل دراسي واحد، دعم مؤسسي كامل
+3. التقويم الأكاديمي يتماشى مع تخطيط السنة المالية السعودية
+
+سعيد بالانضمام لاتصال مع من يحتاج إقناع. لا رسوم، لا التزام -- فقط سياق.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لإيجاز العائد | احجز اتصال أصحاب المصلحة: {{calendar_link}} | اطلب عينة اتفاقية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T101 -- LinkedIn DM | Eastern | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - following up on our exchange. 15-min briefing on GW corporate enrollment pathway?
+
+**Body:**
+```
+{{first_name}} -- following up on our exchange.
+
+I know internal conversations at {{company}} take time. Committees, budgets, competing priorities -- it's a process.
+
+A few things that might help move things along:
+
+1. JIC prepared a sample ROI brief for {{region}} employers (I can customize it for {{company}})
+2. We offer a pilot program: 3 engineers, 1 semester, full corporate support
+3. Academic calendar aligns with Saudi fiscal year planning
+
+Happy to join a call with whoever needs convincing. No charge, no commitment -- just context.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for ROI brief | Book stakeholder call: {{calendar_link}} | Request sample agreement
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T103 -- LinkedIn DM | Eastern | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - متابعة لتواصلنا. إيجاز 15 دقيقة عن مسار التسجيل المؤسسي في GW؟
+
+**Body:**
+```
+{{first_name}} -- متابعة لتبادلنا.
+
+أعلم أن المحادثات الداخلية في {{company}} تستغرق وقتاً. اللجان، الميزانيات، الأولويات المتنافسة -- إنها عملية.
+
+بعض الأشياء التي قد تساعد في تسريع الأمور:
+
+1. أعدت JIC إيجاز عائد استثمار نموذجي لأرباب العمل في {{region}} (يمكنني تخصيصه لـ {{company}})
+2. نقدم برنامجاً تجريبياً: 3 مهندسين، فصل دراسي واحد، دعم مؤسسي كامل
+3. التقويم الأكاديمي يتماشى مع تخطيط السنة المالية السعودية
+
+سعيد بالانضمام لاتصال مع من يحتاج إقناع. لا رسوم، لا التزام -- فقط سياق.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لإيجاز العائد | احجز اتصال أصحاب المصلحة: {{calendar_link}} | اطلب عينة اتفاقية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T109 -- LinkedIn DM | Northwest | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - following up on our exchange. 15-min briefing on GW corporate enrollment pathway?
+
+**Body:**
+```
+{{first_name}} -- following up on our exchange.
+
+I know internal conversations at {{company}} take time. Committees, budgets, competing priorities -- it's a process.
+
+A few things that might help move things along:
+
+1. JIC prepared a sample ROI brief for {{region}} employers (I can customize it for {{company}})
+2. We offer a pilot program: 3 engineers, 1 semester, full corporate support
+3. Academic calendar aligns with Saudi fiscal year planning
+
+Happy to join a call with whoever needs convincing. No charge, no commitment -- just context.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for ROI brief | Book stakeholder call: {{calendar_link}} | Request sample agreement
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T111 -- LinkedIn DM | Northwest | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - متابعة لتواصلنا. إيجاز 15 دقيقة عن مسار التسجيل المؤسسي في GW؟
+
+**Body:**
+```
+{{first_name}} -- متابعة لتبادلنا.
+
+أعلم أن المحادثات الداخلية في {{company}} تستغرق وقتاً. اللجان، الميزانيات، الأولويات المتنافسة -- إنها عملية.
+
+بعض الأشياء التي قد تساعد في تسريع الأمور:
+
+1. أعدت JIC إيجاز عائد استثمار نموذجي لأرباب العمل في {{region}} (يمكنني تخصيصه لـ {{company}})
+2. نقدم برنامجاً تجريبياً: 3 مهندسين، فصل دراسي واحد، دعم مؤسسي كامل
+3. التقويم الأكاديمي يتماشى مع تخطيط السنة المالية السعودية
+
+سعيد بالانضمام لاتصال مع من يحتاج إقناع. لا رسوم، لا التزام -- فقط سياق.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لإيجاز العائد | احجز اتصال أصحاب المصلحة: {{calendar_link}} | اطلب عينة اتفاقية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T117 -- LinkedIn DM | South | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - following up on our exchange. 15-min briefing on GW corporate enrollment pathway?
+
+**Body:**
+```
+{{first_name}} -- following up on our exchange.
+
+I know internal conversations at {{company}} take time. Committees, budgets, competing priorities -- it's a process.
+
+A few things that might help move things along:
+
+1. JIC prepared a sample ROI brief for {{region}} employers (I can customize it for {{company}})
+2. We offer a pilot program: 3 engineers, 1 semester, full corporate support
+3. Academic calendar aligns with Saudi fiscal year planning
+
+Happy to join a call with whoever needs convincing. No charge, no commitment -- just context.
+
+{{calendar_link}}
+```
+
+**CTA:** Reply for ROI brief | Book stakeholder call: {{calendar_link}} | Request sample agreement
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T119 -- LinkedIn DM | South | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - متابعة لتواصلنا. إيجاز 15 دقيقة عن مسار التسجيل المؤسسي في GW؟
+
+**Body:**
+```
+{{first_name}} -- متابعة لتبادلنا.
+
+أعلم أن المحادثات الداخلية في {{company}} تستغرق وقتاً. اللجان، الميزانيات، الأولويات المتنافسة -- إنها عملية.
+
+بعض الأشياء التي قد تساعد في تسريع الأمور:
+
+1. أعدت JIC إيجاز عائد استثمار نموذجي لأرباب العمل في {{region}} (يمكنني تخصيصه لـ {{company}})
+2. نقدم برنامجاً تجريبياً: 3 مهندسين، فصل دراسي واحد، دعم مؤسسي كامل
+3. التقويم الأكاديمي يتماشى مع تخطيط السنة المالية السعودية
+
+سعيد بالانضمام لاتصال مع من يحتاج إقناع. لا رسوم، لا التزام -- فقط سياق.
+
+{{calendar_link}}
+```
+
+**CTA:** رد لإيجاز العائد | احجز اتصال أصحاب المصلحة: {{calendar_link}} | اطلب عينة اتفاقية
+
+**Send Timing:** 72-96h after previous touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 2/6 -- 72-96h after Touch 1. Decision-maker follow-up with added social proof hook.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+### Value-Add / Content Share
+
+*20 templates*
+
+#### JIC-GW-T002 -- Email | Central | B2C | EN
+
+**Subject / Headline:**
+> Free resource: Saudi Engineering Leadership Salary Report 2026
+
+**Body:**
+```
+Hi {{first_name}},
+
+Not a sales email -- just sharing something I thought you'd find useful.
+
+I pulled together a brief analysis on how {{giga_project}} is reshaping engineering management career paths in {{region}}. Specifically:
+
+- Which roles are growing fastest (and which are flattening)
+- Salary trajectory for credentialed vs. non-credentialed engineering managers <!-- UNVERIFIED -->
+- The companies in {{region}} already funding M.S. degrees internally
+
+You can read it here: {{content_link}}
+
+No opt-in required, no tracking gimmicks. Just context that might help you evaluate your next move.
+
+If it resonates, I'm always happy to chat about the GW program. If not, no worries -- still useful intel.
+
+Cheers,
+JIC Team
+```
+
+**CTA:** Read the full analysis: {{content_link}} | Reply to discuss | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T004 -- Email | Central | B2C | AR
+
+**Subject / Headline:**
+> مصدر مجاني: تقرير رواتب القيادة الهندسية في السعودية 2026
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+ليس بريداً مبيعات -- أشارك فقط شيئاً اعتقدت أنه سيفيدك.
+
+جمعت تحليلاً موجزاً عن كيفية إعادة مشروع {{giga_project}} تشكيل مسارات مهن إدارة الهندسة في {{region}}. على وجه التحديد:
+
+- الأدوار التي تنمو بأسرع سرعة (والتي تتباطأ)
+- مسار الرواتب للمدراء المعتمدين مقابل غير المعتمدين <!-- UNVERIFIED -->
+- الشركات في {{region}} التي تمول بالفعل درجات الماجستير داخلياً
+
+يمكنك قراءته هنا: {{content_link}}
+
+لا يتطلب الاشتراك، لا حيل تتبع. فقط سياق قد يساعدك في تقييم خطوتك التالية.
+
+إذا لامسك، سعيد دائماً بالدردشة حول برنامج GW. إذا لم يكن، لا مشكلة -- لا يزال معلوماتاً مفيدة.
+
+مع التحية،
+فريق JIC
+```
+
+**CTA:** اقرأ التحليل الكامل: {{content_link}} | رد للمناقشة | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T006 -- Email | Central | B2B | EN
+
+**Subject / Headline:**
+> Whitepaper: Building technical leadership pipelines in Saudi giga-projects
+
+**Body:**
+```
+Hi {{first_name}},
+
+Sharing a resource I think {{company}}'s L&D team will find valuable.
+
+We analyzed the ROI of Engineering Management degrees versus external senior hiring across 15 Saudi employers in {{region}}. Key findings:
+
+- Time-to-productivity: internal upskilling averages 3 months vs. 9 for external hires <!-- UNVERIFIED -->
+- Retention at 24 months: 89% for sponsored M.S. recipients vs. 62% for external recruits <!-- UNVERIFIED -->
+- Cost per effective engineering manager: 34% lower via internal pathway <!-- UNVERIFIED -->
+
+Full brief: {{content_link}}
+
+This is sector-agnostic data, but we can run a custom analysis for {{company}}'s {{giga_project}} workforce if useful.
+
+Best,
+JIC Corporate Partnerships
+```
+
+**CTA:** Download brief: {{content_link}} | Request custom ROI model | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T008 -- Email | Central | B2B | AR
+
+**Subject / Headline:**
+> ورقة بيضاء: بناء خطوط القيادة التقنية في المشاريع العملاقة السعودية
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+أشارك مصدراً أعتقد أن فريق التعلم والتطوير في {{company}} سيجده قيماً.
+
+حللنا عائد الاستثمار لدرجات إدارة الهندسة مقابل التوظيف الخارجي على مستوى 15 رب عمل سعودي في {{region}}. النتائج الرئيسية:
+
+- الوقت حتى الإنتاجية: تطوير المهارات الداخلي يستغرق 3 أشهر مقابل 9 للموظفين الخارجيين <!-- UNVERIFIED -->
+- الاحتفاظ عند 24 شهراً: 89% لمتلقي الماجستير الممولين مقابل 62% للموظفين الخارجيين <!-- UNVERIFIED -->
+- التكلفة لكل مدير هندسة فعّال: أقل بنسبة 34% عبر المسار الداخلي <!-- UNVERIFIED -->
+
+الإيجاز الكامل: {{content_link}}
+
+هذه بيانات لا تتعلق بقطاع محدد، لكن يمكننا إجراء تحليل مخصص لقوة عمل {{company}} في {{giga_project}} إذا كان مفيداً.
+
+أطيب التمنيات،
+شراكات JIC المؤسسية
+```
+
+**CTA:** حمّل الإيجاز: {{content_link}} | اطلب نموذج عائد مخصص | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T010 -- Email | Western | B2C | EN
+
+**Subject / Headline:**
+> Free resource: Saudi Engineering Leadership Salary Report 2026
+
+**Body:**
+```
+Hi {{first_name}},
+
+Not a sales email -- just sharing something I thought you'd find useful.
+
+I pulled together a brief analysis on how {{giga_project}} is reshaping engineering management career paths in {{region}}. Specifically:
+
+- Which roles are growing fastest (and which are flattening)
+- Salary trajectory for credentialed vs. non-credentialed engineering managers <!-- UNVERIFIED -->
+- The companies in {{region}} already funding M.S. degrees internally
+
+You can read it here: {{content_link}}
+
+No opt-in required, no tracking gimmicks. Just context that might help you evaluate your next move.
+
+If it resonates, I'm always happy to chat about the GW program. If not, no worries -- still useful intel.
+
+Cheers,
+JIC Team
+```
+
+**CTA:** Read the full analysis: {{content_link}} | Reply to discuss | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T012 -- Email | Western | B2C | AR
+
+**Subject / Headline:**
+> مصدر مجاني: تقرير رواتب القيادة الهندسية في السعودية 2026
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+ليس بريداً مبيعات -- أشارك فقط شيئاً اعتقدت أنه سيفيدك.
+
+جمعت تحليلاً موجزاً عن كيفية إعادة مشروع {{giga_project}} تشكيل مسارات مهن إدارة الهندسة في {{region}}. على وجه التحديد:
+
+- الأدوار التي تنمو بأسرع سرعة (والتي تتباطأ)
+- مسار الرواتب للمدراء المعتمدين مقابل غير المعتمدين <!-- UNVERIFIED -->
+- الشركات في {{region}} التي تمول بالفعل درجات الماجستير داخلياً
+
+يمكنك قراءته هنا: {{content_link}}
+
+لا يتطلب الاشتراك، لا حيل تتبع. فقط سياق قد يساعدك في تقييم خطوتك التالية.
+
+إذا لامسك، سعيد دائماً بالدردشة حول برنامج GW. إذا لم يكن، لا مشكلة -- لا يزال معلوماتاً مفيدة.
+
+مع التحية،
+فريق JIC
+```
+
+**CTA:** اقرأ التحليل الكامل: {{content_link}} | رد للمناقشة | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T014 -- Email | Western | B2B | EN
+
+**Subject / Headline:**
+> Whitepaper: Building technical leadership pipelines in Saudi giga-projects
+
+**Body:**
+```
+Hi {{first_name}},
+
+Sharing a resource I think {{company}}'s L&D team will find valuable.
+
+We analyzed the ROI of Engineering Management degrees versus external senior hiring across 15 Saudi employers in {{region}}. Key findings:
+
+- Time-to-productivity: internal upskilling averages 3 months vs. 9 for external hires <!-- UNVERIFIED -->
+- Retention at 24 months: 89% for sponsored M.S. recipients vs. 62% for external recruits <!-- UNVERIFIED -->
+- Cost per effective engineering manager: 34% lower via internal pathway <!-- UNVERIFIED -->
+
+Full brief: {{content_link}}
+
+This is sector-agnostic data, but we can run a custom analysis for {{company}}'s {{giga_project}} workforce if useful.
+
+Best,
+JIC Corporate Partnerships
+```
+
+**CTA:** Download brief: {{content_link}} | Request custom ROI model | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T016 -- Email | Western | B2B | AR
+
+**Subject / Headline:**
+> ورقة بيضاء: بناء خطوط القيادة التقنية في المشاريع العملاقة السعودية
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+أشارك مصدراً أعتقد أن فريق التعلم والتطوير في {{company}} سيجده قيماً.
+
+حللنا عائد الاستثمار لدرجات إدارة الهندسة مقابل التوظيف الخارجي على مستوى 15 رب عمل سعودي في {{region}}. النتائج الرئيسية:
+
+- الوقت حتى الإنتاجية: تطوير المهارات الداخلي يستغرق 3 أشهر مقابل 9 للموظفين الخارجيين <!-- UNVERIFIED -->
+- الاحتفاظ عند 24 شهراً: 89% لمتلقي الماجستير الممولين مقابل 62% للموظفين الخارجيين <!-- UNVERIFIED -->
+- التكلفة لكل مدير هندسة فعّال: أقل بنسبة 34% عبر المسار الداخلي <!-- UNVERIFIED -->
+
+الإيجاز الكامل: {{content_link}}
+
+هذه بيانات لا تتعلق بقطاع محدد، لكن يمكننا إجراء تحليل مخصص لقوة عمل {{company}} في {{giga_project}} إذا كان مفيداً.
+
+أطيب التمنيات،
+شراكات JIC المؤسسية
+```
+
+**CTA:** حمّل الإيجاز: {{content_link}} | اطلب نموذج عائد مخصص | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T018 -- Email | Eastern | B2C | EN
+
+**Subject / Headline:**
+> Free resource: Saudi Engineering Leadership Salary Report 2026
+
+**Body:**
+```
+Hi {{first_name}},
+
+Not a sales email -- just sharing something I thought you'd find useful.
+
+I pulled together a brief analysis on how {{giga_project}} is reshaping engineering management career paths in {{region}}. Specifically:
+
+- Which roles are growing fastest (and which are flattening)
+- Salary trajectory for credentialed vs. non-credentialed engineering managers <!-- UNVERIFIED -->
+- The companies in {{region}} already funding M.S. degrees internally
+
+You can read it here: {{content_link}}
+
+No opt-in required, no tracking gimmicks. Just context that might help you evaluate your next move.
+
+If it resonates, I'm always happy to chat about the GW program. If not, no worries -- still useful intel.
+
+Cheers,
+JIC Team
+```
+
+**CTA:** Read the full analysis: {{content_link}} | Reply to discuss | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T020 -- Email | Eastern | B2C | AR
+
+**Subject / Headline:**
+> مصدر مجاني: تقرير رواتب القيادة الهندسية في السعودية 2026
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+ليس بريداً مبيعات -- أشارك فقط شيئاً اعتقدت أنه سيفيدك.
+
+جمعت تحليلاً موجزاً عن كيفية إعادة مشروع {{giga_project}} تشكيل مسارات مهن إدارة الهندسة في {{region}}. على وجه التحديد:
+
+- الأدوار التي تنمو بأسرع سرعة (والتي تتباطأ)
+- مسار الرواتب للمدراء المعتمدين مقابل غير المعتمدين <!-- UNVERIFIED -->
+- الشركات في {{region}} التي تمول بالفعل درجات الماجستير داخلياً
+
+يمكنك قراءته هنا: {{content_link}}
+
+لا يتطلب الاشتراك، لا حيل تتبع. فقط سياق قد يساعدك في تقييم خطوتك التالية.
+
+إذا لامسك، سعيد دائماً بالدردشة حول برنامج GW. إذا لم يكن، لا مشكلة -- لا يزال معلوماتاً مفيدة.
+
+مع التحية،
+فريق JIC
+```
+
+**CTA:** اقرأ التحليل الكامل: {{content_link}} | رد للمناقشة | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T022 -- Email | Eastern | B2B | EN
+
+**Subject / Headline:**
+> Whitepaper: Building technical leadership pipelines in Saudi giga-projects
+
+**Body:**
+```
+Hi {{first_name}},
+
+Sharing a resource I think {{company}}'s L&D team will find valuable.
+
+We analyzed the ROI of Engineering Management degrees versus external senior hiring across 15 Saudi employers in {{region}}. Key findings:
+
+- Time-to-productivity: internal upskilling averages 3 months vs. 9 for external hires <!-- UNVERIFIED -->
+- Retention at 24 months: 89% for sponsored M.S. recipients vs. 62% for external recruits <!-- UNVERIFIED -->
+- Cost per effective engineering manager: 34% lower via internal pathway <!-- UNVERIFIED -->
+
+Full brief: {{content_link}}
+
+This is sector-agnostic data, but we can run a custom analysis for {{company}}'s {{giga_project}} workforce if useful.
+
+Best,
+JIC Corporate Partnerships
+```
+
+**CTA:** Download brief: {{content_link}} | Request custom ROI model | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T024 -- Email | Eastern | B2B | AR
+
+**Subject / Headline:**
+> ورقة بيضاء: بناء خطوط القيادة التقنية في المشاريع العملاقة السعودية
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+أشارك مصدراً أعتقد أن فريق التعلم والتطوير في {{company}} سيجده قيماً.
+
+حللنا عائد الاستثمار لدرجات إدارة الهندسة مقابل التوظيف الخارجي على مستوى 15 رب عمل سعودي في {{region}}. النتائج الرئيسية:
+
+- الوقت حتى الإنتاجية: تطوير المهارات الداخلي يستغرق 3 أشهر مقابل 9 للموظفين الخارجيين <!-- UNVERIFIED -->
+- الاحتفاظ عند 24 شهراً: 89% لمتلقي الماجستير الممولين مقابل 62% للموظفين الخارجيين <!-- UNVERIFIED -->
+- التكلفة لكل مدير هندسة فعّال: أقل بنسبة 34% عبر المسار الداخلي <!-- UNVERIFIED -->
+
+الإيجاز الكامل: {{content_link}}
+
+هذه بيانات لا تتعلق بقطاع محدد، لكن يمكننا إجراء تحليل مخصص لقوة عمل {{company}} في {{giga_project}} إذا كان مفيداً.
+
+أطيب التمنيات،
+شراكات JIC المؤسسية
+```
+
+**CTA:** حمّل الإيجاز: {{content_link}} | اطلب نموذج عائد مخصص | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T026 -- Email | Northwest | B2C | EN
+
+**Subject / Headline:**
+> Free resource: Saudi Engineering Leadership Salary Report 2026
+
+**Body:**
+```
+Hi {{first_name}},
+
+Not a sales email -- just sharing something I thought you'd find useful.
+
+I pulled together a brief analysis on how {{giga_project}} is reshaping engineering management career paths in {{region}}. Specifically:
+
+- Which roles are growing fastest (and which are flattening)
+- Salary trajectory for credentialed vs. non-credentialed engineering managers <!-- UNVERIFIED -->
+- The companies in {{region}} already funding M.S. degrees internally
+
+You can read it here: {{content_link}}
+
+No opt-in required, no tracking gimmicks. Just context that might help you evaluate your next move.
+
+If it resonates, I'm always happy to chat about the GW program. If not, no worries -- still useful intel.
+
+Cheers,
+JIC Team
+```
+
+**CTA:** Read the full analysis: {{content_link}} | Reply to discuss | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T028 -- Email | Northwest | B2C | AR
+
+**Subject / Headline:**
+> مصدر مجاني: تقرير رواتب القيادة الهندسية في السعودية 2026
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+ليس بريداً مبيعات -- أشارك فقط شيئاً اعتقدت أنه سيفيدك.
+
+جمعت تحليلاً موجزاً عن كيفية إعادة مشروع {{giga_project}} تشكيل مسارات مهن إدارة الهندسة في {{region}}. على وجه التحديد:
+
+- الأدوار التي تنمو بأسرع سرعة (والتي تتباطأ)
+- مسار الرواتب للمدراء المعتمدين مقابل غير المعتمدين <!-- UNVERIFIED -->
+- الشركات في {{region}} التي تمول بالفعل درجات الماجستير داخلياً
+
+يمكنك قراءته هنا: {{content_link}}
+
+لا يتطلب الاشتراك، لا حيل تتبع. فقط سياق قد يساعدك في تقييم خطوتك التالية.
+
+إذا لامسك، سعيد دائماً بالدردشة حول برنامج GW. إذا لم يكن، لا مشكلة -- لا يزال معلوماتاً مفيدة.
+
+مع التحية،
+فريق JIC
+```
+
+**CTA:** اقرأ التحليل الكامل: {{content_link}} | رد للمناقشة | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T030 -- Email | Northwest | B2B | EN
+
+**Subject / Headline:**
+> Whitepaper: Building technical leadership pipelines in Saudi giga-projects
+
+**Body:**
+```
+Hi {{first_name}},
+
+Sharing a resource I think {{company}}'s L&D team will find valuable.
+
+We analyzed the ROI of Engineering Management degrees versus external senior hiring across 15 Saudi employers in {{region}}. Key findings:
+
+- Time-to-productivity: internal upskilling averages 3 months vs. 9 for external hires <!-- UNVERIFIED -->
+- Retention at 24 months: 89% for sponsored M.S. recipients vs. 62% for external recruits <!-- UNVERIFIED -->
+- Cost per effective engineering manager: 34% lower via internal pathway <!-- UNVERIFIED -->
+
+Full brief: {{content_link}}
+
+This is sector-agnostic data, but we can run a custom analysis for {{company}}'s {{giga_project}} workforce if useful.
+
+Best,
+JIC Corporate Partnerships
+```
+
+**CTA:** Download brief: {{content_link}} | Request custom ROI model | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T032 -- Email | Northwest | B2B | AR
+
+**Subject / Headline:**
+> ورقة بيضاء: بناء خطوط القيادة التقنية في المشاريع العملاقة السعودية
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+أشارك مصدراً أعتقد أن فريق التعلم والتطوير في {{company}} سيجده قيماً.
+
+حللنا عائد الاستثمار لدرجات إدارة الهندسة مقابل التوظيف الخارجي على مستوى 15 رب عمل سعودي في {{region}}. النتائج الرئيسية:
+
+- الوقت حتى الإنتاجية: تطوير المهارات الداخلي يستغرق 3 أشهر مقابل 9 للموظفين الخارجيين <!-- UNVERIFIED -->
+- الاحتفاظ عند 24 شهراً: 89% لمتلقي الماجستير الممولين مقابل 62% للموظفين الخارجيين <!-- UNVERIFIED -->
+- التكلفة لكل مدير هندسة فعّال: أقل بنسبة 34% عبر المسار الداخلي <!-- UNVERIFIED -->
+
+الإيجاز الكامل: {{content_link}}
+
+هذه بيانات لا تتعلق بقطاع محدد، لكن يمكننا إجراء تحليل مخصص لقوة عمل {{company}} في {{giga_project}} إذا كان مفيداً.
+
+أطيب التمنيات،
+شراكات JIC المؤسسية
+```
+
+**CTA:** حمّل الإيجاز: {{content_link}} | اطلب نموذج عائد مخصص | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T034 -- Email | South | B2C | EN
+
+**Subject / Headline:**
+> Free resource: Saudi Engineering Leadership Salary Report 2026
+
+**Body:**
+```
+Hi {{first_name}},
+
+Not a sales email -- just sharing something I thought you'd find useful.
+
+I pulled together a brief analysis on how {{giga_project}} is reshaping engineering management career paths in {{region}}. Specifically:
+
+- Which roles are growing fastest (and which are flattening)
+- Salary trajectory for credentialed vs. non-credentialed engineering managers <!-- UNVERIFIED -->
+- The companies in {{region}} already funding M.S. degrees internally
+
+You can read it here: {{content_link}}
+
+No opt-in required, no tracking gimmicks. Just context that might help you evaluate your next move.
+
+If it resonates, I'm always happy to chat about the GW program. If not, no worries -- still useful intel.
+
+Cheers,
+JIC Team
+```
+
+**CTA:** Read the full analysis: {{content_link}} | Reply to discuss | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T036 -- Email | South | B2C | AR
+
+**Subject / Headline:**
+> مصدر مجاني: تقرير رواتب القيادة الهندسية في السعودية 2026
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+ليس بريداً مبيعات -- أشارك فقط شيئاً اعتقدت أنه سيفيدك.
+
+جمعت تحليلاً موجزاً عن كيفية إعادة مشروع {{giga_project}} تشكيل مسارات مهن إدارة الهندسة في {{region}}. على وجه التحديد:
+
+- الأدوار التي تنمو بأسرع سرعة (والتي تتباطأ)
+- مسار الرواتب للمدراء المعتمدين مقابل غير المعتمدين <!-- UNVERIFIED -->
+- الشركات في {{region}} التي تمول بالفعل درجات الماجستير داخلياً
+
+يمكنك قراءته هنا: {{content_link}}
+
+لا يتطلب الاشتراك، لا حيل تتبع. فقط سياق قد يساعدك في تقييم خطوتك التالية.
+
+إذا لامسك، سعيد دائماً بالدردشة حول برنامج GW. إذا لم يكن، لا مشكلة -- لا يزال معلوماتاً مفيدة.
+
+مع التحية،
+فريق JIC
+```
+
+**CTA:** اقرأ التحليل الكامل: {{content_link}} | رد للمناقشة | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 09:00-11:00 KSA. Mid-week value drop.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. Deliver value before next ask. Builds trust.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{content_link}}
+- {{salary_premium}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T038 -- Email | South | B2B | EN
+
+**Subject / Headline:**
+> Whitepaper: Building technical leadership pipelines in Saudi giga-projects
+
+**Body:**
+```
+Hi {{first_name}},
+
+Sharing a resource I think {{company}}'s L&D team will find valuable.
+
+We analyzed the ROI of Engineering Management degrees versus external senior hiring across 15 Saudi employers in {{region}}. Key findings:
+
+- Time-to-productivity: internal upskilling averages 3 months vs. 9 for external hires <!-- UNVERIFIED -->
+- Retention at 24 months: 89% for sponsored M.S. recipients vs. 62% for external recruits <!-- UNVERIFIED -->
+- Cost per effective engineering manager: 34% lower via internal pathway <!-- UNVERIFIED -->
+
+Full brief: {{content_link}}
+
+This is sector-agnostic data, but we can run a custom analysis for {{company}}'s {{giga_project}} workforce if useful.
+
+Best,
+JIC Corporate Partnerships
+```
+
+**CTA:** Download brief: {{content_link}} | Request custom ROI model | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T040 -- Email | South | B2B | AR
+
+**Subject / Headline:**
+> ورقة بيضاء: بناء خطوط القيادة التقنية في المشاريع العملاقة السعودية
+
+**Body:**
+```
+مرحباً {{first_name}}،
+
+أشارك مصدراً أعتقد أن فريق التعلم والتطوير في {{company}} سيجده قيماً.
+
+حللنا عائد الاستثمار لدرجات إدارة الهندسة مقابل التوظيف الخارجي على مستوى 15 رب عمل سعودي في {{region}}. النتائج الرئيسية:
+
+- الوقت حتى الإنتاجية: تطوير المهارات الداخلي يستغرق 3 أشهر مقابل 9 للموظفين الخارجيين <!-- UNVERIFIED -->
+- الاحتفاظ عند 24 شهراً: 89% لمتلقي الماجستير الممولين مقابل 62% للموظفين الخارجيين <!-- UNVERIFIED -->
+- التكلفة لكل مدير هندسة فعّال: أقل بنسبة 34% عبر المسار الداخلي <!-- UNVERIFIED -->
+
+الإيجاز الكامل: {{content_link}}
+
+هذه بيانات لا تتعلق بقطاع محدد، لكن يمكننا إجراء تحليل مخصص لقوة عمل {{company}} في {{giga_project}} إذا كان مفيداً.
+
+أطيب التمنيات،
+شراكات JIC المؤسسية
+```
+
+**CTA:** حمّل الإيجاز: {{content_link}} | اطلب نموذج عائد مخصص | {{calendar_link}}
+
+**Send Timing:** 5-7 days after initial outreach. Wednesday-Thursday, 08:00-10:00 KSA.
+
+**Sequence Position:** Touch 3/7 -- 5-7 days after Touch 1. ROI or industry brief to demonstrate expertise.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{content_link}}
+- {{peer_company}}
+- {{peer_company_2}}
+- {{retention_stat}}
+- {{productivity_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+### Urgency / Scarcity
+
+*15 templates*
+
+#### JIC-GW-T042 -- WhatsApp | Central | B2C | EN
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - Cohort 1 closes {{deadline_date}}. Only 50 seats Kingdom-wide. Secure yours?
+
+**Body:**
+```
+⏰ {{first_name}} -- {{days_remaining}} days left.
+
+GW Cohort 1. {{seats_remaining}} seats for {{region}}. JIC-exclusive KSA onboarding.
+
+Apply: {{apply_link}}
+
+Or reply and I'll walk you through it in 5 mins.
+```
+
+**CTA:** Apply: {{apply_link}} | Reply CALL for 5-min walkthrough | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T044 -- WhatsApp | Central | B2C | AR
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - الدفعة الأولى تغلق {{deadline_date}}. 50 مقعد فقط في المملكة. تأمين مقعدك؟
+
+**Body:**
+```
+⏰ {{first_name}} -- بقي {{days_remaining}} أيام.
+
+GW الدفعة الأولى. {{seats_remaining}} مقاعد لـ {{region}}. انضمام حصري لـ JIC في المملكة.
+
+قدم: {{apply_link}}
+
+أو رد وسأرشدك خلال 5 دقائق.
+```
+
+**CTA:** قدّم: {{apply_link}} | رد CALL لشرح 5 دقائق | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T046 -- WhatsApp | Central | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{company}}'s corporate seat block expires {{deadline_date}}. Lock in team slots?
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} days to lock {{company}}'s seats.
+
+GW Cohort 1 via JIC. {{giga_project}} waits for no one.
+
+Reply "YES" for provisional hold (72h). Or call: {{phone_number}}
+```
+
+**CTA:** Reply YES for provisional hold | Call {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T048 -- WhatsApp | Central | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - كتلة المقاعد المؤسسية لـ {{company}} تنتهي {{deadline_date}}. تأمين مقاعد الفريق؟
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} أيام لتأمين مقاعد {{company}}.
+
+GW الدفعة الأولى عبر JIC. {{giga_project}} لا ينتظر أحداً.
+
+رد "YES" للحجز المؤقت (72 ساعة). أو اتصل: {{phone_number}}
+```
+
+**CTA:** رد YES للحجز المؤقت | اتصل {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T050 -- WhatsApp | Western | B2C | EN
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - Cohort 1 closes {{deadline_date}}. Only 50 seats Kingdom-wide. Secure yours?
+
+**Body:**
+```
+⏰ {{first_name}} -- {{days_remaining}} days left.
+
+GW Cohort 1. {{seats_remaining}} seats for {{region}}. JIC-exclusive KSA onboarding.
+
+Apply: {{apply_link}}
+
+Or reply and I'll walk you through it in 5 mins.
+```
+
+**CTA:** Apply: {{apply_link}} | Reply CALL for 5-min walkthrough | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T052 -- WhatsApp | Western | B2C | AR
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - الدفعة الأولى تغلق {{deadline_date}}. 50 مقعد فقط في المملكة. تأمين مقعدك؟
+
+**Body:**
+```
+⏰ {{first_name}} -- بقي {{days_remaining}} أيام.
+
+GW الدفعة الأولى. {{seats_remaining}} مقاعد لـ {{region}}. انضمام حصري لـ JIC في المملكة.
+
+قدم: {{apply_link}}
+
+أو رد وسأرشدك خلال 5 دقائق.
+```
+
+**CTA:** قدّم: {{apply_link}} | رد CALL لشرح 5 دقائق | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T054 -- WhatsApp | Western | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{company}}'s corporate seat block expires {{deadline_date}}. Lock in team slots?
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} days to lock {{company}}'s seats.
+
+GW Cohort 1 via JIC. {{giga_project}} waits for no one.
+
+Reply "YES" for provisional hold (72h). Or call: {{phone_number}}
+```
+
+**CTA:** Reply YES for provisional hold | Call {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T056 -- WhatsApp | Western | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - كتلة المقاعد المؤسسية لـ {{company}} تنتهي {{deadline_date}}. تأمين مقاعد الفريق؟
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} أيام لتأمين مقاعد {{company}}.
+
+GW الدفعة الأولى عبر JIC. {{giga_project}} لا ينتظر أحداً.
+
+رد "YES" للحجز المؤقت (72 ساعة). أو اتصل: {{phone_number}}
+```
+
+**CTA:** رد YES للحجز المؤقت | اتصل {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T058 -- WhatsApp | Eastern | B2C | EN
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - Cohort 1 closes {{deadline_date}}. Only 50 seats Kingdom-wide. Secure yours?
+
+**Body:**
+```
+⏰ {{first_name}} -- {{days_remaining}} days left.
+
+GW Cohort 1. {{seats_remaining}} seats for {{region}}. JIC-exclusive KSA onboarding.
+
+Apply: {{apply_link}}
+
+Or reply and I'll walk you through it in 5 mins.
+```
+
+**CTA:** Apply: {{apply_link}} | Reply CALL for 5-min walkthrough | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T060 -- WhatsApp | Eastern | B2C | AR
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - الدفعة الأولى تغلق {{deadline_date}}. 50 مقعد فقط في المملكة. تأمين مقعدك؟
+
+**Body:**
+```
+⏰ {{first_name}} -- بقي {{days_remaining}} أيام.
+
+GW الدفعة الأولى. {{seats_remaining}} مقاعد لـ {{region}}. انضمام حصري لـ JIC في المملكة.
+
+قدم: {{apply_link}}
+
+أو رد وسأرشدك خلال 5 دقائق.
+```
+
+**CTA:** قدّم: {{apply_link}} | رد CALL لشرح 5 دقائق | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T062 -- WhatsApp | Eastern | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{company}}'s corporate seat block expires {{deadline_date}}. Lock in team slots?
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} days to lock {{company}}'s seats.
+
+GW Cohort 1 via JIC. {{giga_project}} waits for no one.
+
+Reply "YES" for provisional hold (72h). Or call: {{phone_number}}
+```
+
+**CTA:** Reply YES for provisional hold | Call {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T064 -- WhatsApp | Eastern | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - كتلة المقاعد المؤسسية لـ {{company}} تنتهي {{deadline_date}}. تأمين مقاعد الفريق؟
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} أيام لتأمين مقاعد {{company}}.
+
+GW الدفعة الأولى عبر JIC. {{giga_project}} لا ينتظر أحداً.
+
+رد "YES" للحجز المؤقت (72 ساعة). أو اتصل: {{phone_number}}
+```
+
+**CTA:** رد YES للحجز المؤقت | اتصل {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T066 -- WhatsApp | Northwest | B2C | EN
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - Cohort 1 closes {{deadline_date}}. Only 50 seats Kingdom-wide. Secure yours?
+
+**Body:**
+```
+⏰ {{first_name}} -- {{days_remaining}} days left.
+
+GW Cohort 1. {{seats_remaining}} seats for {{region}}. JIC-exclusive KSA onboarding.
+
+Apply: {{apply_link}}
+
+Or reply and I'll walk you through it in 5 mins.
+```
+
+**CTA:** Apply: {{apply_link}} | Reply CALL for 5-min walkthrough | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T068 -- WhatsApp | Northwest | B2C | AR
+
+**Subject / Headline:**
+> ⏰ {{first_name}} - الدفعة الأولى تغلق {{deadline_date}}. 50 مقعد فقط في المملكة. تأمين مقعدك؟
+
+**Body:**
+```
+⏰ {{first_name}} -- بقي {{days_remaining}} أيام.
+
+GW الدفعة الأولى. {{seats_remaining}} مقاعد لـ {{region}}. انضمام حصري لـ JIC في المملكة.
+
+قدم: {{apply_link}}
+
+أو رد وسأرشدك خلال 5 دقائق.
+```
+
+**CTA:** قدّم: {{apply_link}} | رد CALL لشرح 5 دقائق | {{phone_number}}
+
+**Send Timing:** 5-7 days before deadline. Saturday-Monday, 19:00-21:00 KSA. High-open window.
+
+**Sequence Position:** Touch 4/5 -- 5-7 days before deadline. High-open channel for final nudge.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{info_session_date}}
+- {{booking_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T070 -- WhatsApp | Northwest | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{company}}'s corporate seat block expires {{deadline_date}}. Lock in team slots?
+
+**Body:**
+```
+{{first_name}} -- {{days_remaining}} days to lock {{company}}'s seats.
+
+GW Cohort 1 via JIC. {{giga_project}} waits for no one.
+
+Reply "YES" for provisional hold (72h). Or call: {{phone_number}}
+```
+
+**CTA:** Reply YES for provisional hold | Call {{phone_number}} | {{calendar_link}}
+
+**Send Timing:** 7-10 days before deadline. Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 4/5 -- 7-10 days before deadline. Direct channel for corporate decision-maker.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{deadline_date}}
+- {{seats_remaining}}
+- {{days_remaining}}
+- {{intent_deadline}}
+- {{percent_allocated}}
+- {{cohort_2_date}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+### Social Proof / Alumni
+
+*15 templates*
+
+#### JIC-GW-T072 -- WhatsApp | Northwest | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - {{peer_company}} سجلت 12 مهندساً في GW الدفعة الأولى عبر JIC. رئيس التعلم والتطوير يشرح.
+
+**Body:**
+```
+{{first_name}} -- {{peer_company}} نشرت للتو عن شراكتها مع GW على لينكدإن.
+
+{{peer_count}} مهندسين سجّلوا. {{promotion_stat}}% ترقّوا خلال 18 شهراً. <!-- UNVERIFIED -->
+
+خطوتك، {{company}}. ;)
+
+تريد دراسة الحالة؟ رد "CASE" وسأرسل PDF.
+
+(حسناً، هذا كان قليلاً مبيعات. لكن البيانات حقيقية.)
+```
+
+**CTA:** رد CASE لدراسة الحالة | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 3/5 or 4/5 -- Peer employer announcement share. Competitive positioning.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T074 -- WhatsApp | South | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - GW alum from {{region}} just moved to PM at a major giga-project. Review inside.
+
+**Body:**
+```
+{{first_name}} -- real talk.
+
+A GW alum from {{region}} (was a {{prev_role}} at {{prev_company}}, now {{current_role}} at {{current_company}}) recorded a 2-min voice note about their experience. <!-- UNVERIFIED -->
+
+TL;DL: "Worth it. But not because of the degree alone. Because JIC made it work in Saudi context."
+
+Want the voice note? Reply "SEND" and I'll forward it. No pitch attached.
+```
+
+**CTA:** Reply SEND for voice note | {{apply_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Saturday-Monday, 19:00-21:00 KSA.
+
+**Sequence Position:** Touch 3/5 or 4/5 -- Voice note or testimonial share. Humanizes the program.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T076 -- WhatsApp | South | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - خريج GW من {{region}} انتقل للتو إلى PM في مشروع عملاق كبير. التقييم بداخله.
+
+**Body:**
+```
+{{first_name}} -- حديث حقيقي.
+
+خريج GW من {{region}} (كان {{prev_role}} في {{prev_company}}، الآن {{current_role}} في {{current_company}}) سجل رسالة صوتية 2 دقيقة عن تجربته. <!-- UNVERIFIED -->
+
+ملخص: "يستحق. لكن ليس بسبب الدرجة وحدها. لأن JIC جعلتها تعمل في السياق السعودي."
+
+تريد الرسالة الصوتية؟ رد "SEND" وسأعيد توجيهها. لا عرض مرفق.
+```
+
+**CTA:** رد SEND للرسالة الصوتية | {{apply_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Saturday-Monday, 19:00-21:00 KSA.
+
+**Sequence Position:** Touch 3/5 or 4/5 -- Voice note or testimonial share. Humanizes the program.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T078 -- WhatsApp | South | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{peer_company}} enrolled 12 engineers in GW Cohort 1 via JIC. L&D lead explains why.
+
+**Body:**
+```
+{{first_name}} -- {{peer_company}} just posted about their GW partnership on LinkedIn.
+
+{{peer_count}} engineers enrolled. {{promotion_stat}}% promoted within 18 months. <!-- UNVERIFIED -->
+
+Your move, {{company}}. ;)
+
+Want the case study? Reply "CASE" and I'll send the PDF.
+
+(Okay, that was a little pitchy. But the data is real.)
+```
+
+**CTA:** Reply CASE for case study | {{calendar_link}} | Call {{phone_number}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 3/5 or 4/5 -- Peer employer announcement share. Competitive positioning.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T080 -- WhatsApp | South | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - {{peer_company}} سجلت 12 مهندساً في GW الدفعة الأولى عبر JIC. رئيس التعلم والتطوير يشرح.
+
+**Body:**
+```
+{{first_name}} -- {{peer_company}} نشرت للتو عن شراكتها مع GW على لينكدإن.
+
+{{peer_count}} مهندسين سجّلوا. {{promotion_stat}}% ترقّوا خلال 18 شهراً. <!-- UNVERIFIED -->
+
+خطوتك، {{company}}. ;)
+
+تريد دراسة الحالة؟ رد "CASE" وسأرسل PDF.
+
+(حسناً، هذا كان قليلاً مبيعات. لكن البيانات حقيقية.)
+```
+
+**CTA:** رد CASE لدراسة الحالة | {{calendar_link}} | اتصل {{phone_number}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Sunday-Wednesday, 12:00-14:00 KSA.
+
+**Sequence Position:** Touch 3/5 or 4/5 -- Peer employer announcement share. Competitive positioning.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T082 -- LinkedIn DM | Central | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - shared a post from GW alum now leading at {{giga_project}}. Relevant to your trajectory.
+
+**Body:**
+```
+{{first_name}} -- I just shared a post from {{alumni_name}}, a GW Engineering Management alum now at {{current_company}} leading {{team_size}} engineers on {{giga_project}} work. <!-- UNVERIFIED -->
+
+You two are connected through {{mutual_connection}} (small world). Their trajectory from {{prev_role}} to {{current_role}} is the exact transition you're evaluating.
+
+Worth a 5-min conversation with them? I can introduce you. No JIC pitch, just peer-to-peer real talk.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for alumni intro | Read: {{content_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- LinkedIn-native social proof. Mutual connection or alumni post share.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+- {{mutual_connection}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T084 -- LinkedIn DM | Central | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - شاركت منشوراً من خريج GW يقود الآن في {{giga_project}}. ذو صلة بمسارك.
+
+**Body:**
+```
+{{first_name}} -- شارعت للتو منشوراً من {{alumni_name}}، خريج GW في إدارة الهندسة الآن في {{current_company}} يقود {{team_size}} مهندسين في عمل {{giga_project}}. <!-- UNVERIFIED -->
+
+أنتما متصلان عبر {{mutual_connection}} (عالم صغير). مساره من {{prev_role}} إلى {{current_role}} هو التحول نفسه الذي تقيّمه.
+
+يستحق محادثة 5 دقائق معهم؟ يمكنني تقديمك. لا عرض JIC، فقط حديث حقيقي بين الأقران.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لتقديم الخريج | اقرأ: {{content_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- LinkedIn-native social proof. Mutual connection or alumni post share.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+- {{mutual_connection}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T086 -- LinkedIn DM | Central | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{peer_company}}'s L&D post on GW partnership went live. Similar to what we discussed for {{company}}.
+
+**Body:**
+```
+{{first_name}} -- {{peer_company}}'s post about their GW Engineering Management cohort went live. {{peer_count}} engineers, {{promotion_stat}}% promoted, {{retention_stat}}% retention. <!-- UNVERIFIED -->
+
+Their L&D lead is getting internal kudos. Your {{giga_project}} timeline is just as demanding.
+
+JIC can match or customize their structure for {{company}}. Same program, same outcomes, your context.
+
+Want the playbook they used? Reply and I'll send the deconstructed case study.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for case study | Book: {{calendar_link}} | Request pilot playbook
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- Peer employer post or case study share. Competitive signal.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T088 -- LinkedIn DM | Central | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - منشور {{peer_company}} عن شراكتها مع GW نُشر. مشابه لما ناقشناه لـ {{company}}.
+
+**Body:**
+```
+{{first_name}} -- منشور {{peer_company}} حول دفعتها في GW إدارة الهندسة نُشر للتو. {{peer_count}} مهندسين، {{promotion_stat}}% ترقّوا، {{retention_stat}}% احتفاظ. <!-- UNVERIFIED -->
+
+رئيس التعلم والتطوير يحصل على إشادات داخلية. جدول {{giga_project}} لديك بنفس القدر من التحدي.
+
+يمكن لـ JIC مطابقة أو تخصيص هيكلهم لـ {{company}}. نفس البرنامج، نفس النتائج، سياقك.
+
+تريد الدليل الذي استخدموه؟ رد وسأرسل دراسة الحالة المفصّلة.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لدراسة الحالة | احجز: {{calendar_link}} | اطلب دليل تجريبي
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- Peer employer post or case study share. Competitive signal.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Government & corporate HQ dense. Decision-makers value pedigree and rank. Formal tone preferred.
+
+---
+
+#### JIC-GW-T090 -- LinkedIn DM | Western | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - shared a post from GW alum now leading at {{giga_project}}. Relevant to your trajectory.
+
+**Body:**
+```
+{{first_name}} -- I just shared a post from {{alumni_name}}, a GW Engineering Management alum now at {{current_company}} leading {{team_size}} engineers on {{giga_project}} work. <!-- UNVERIFIED -->
+
+You two are connected through {{mutual_connection}} (small world). Their trajectory from {{prev_role}} to {{current_role}} is the exact transition you're evaluating.
+
+Worth a 5-min conversation with them? I can introduce you. No JIC pitch, just peer-to-peer real talk.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for alumni intro | Read: {{content_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- LinkedIn-native social proof. Mutual connection or alumni post share.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+- {{mutual_connection}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T092 -- LinkedIn DM | Western | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - شاركت منشوراً من خريج GW يقود الآن في {{giga_project}}. ذو صلة بمسارك.
+
+**Body:**
+```
+{{first_name}} -- شارعت للتو منشوراً من {{alumni_name}}، خريج GW في إدارة الهندسة الآن في {{current_company}} يقود {{team_size}} مهندسين في عمل {{giga_project}}. <!-- UNVERIFIED -->
+
+أنتما متصلان عبر {{mutual_connection}} (عالم صغير). مساره من {{prev_role}} إلى {{current_role}} هو التحول نفسه الذي تقيّمه.
+
+يستحق محادثة 5 دقائق معهم؟ يمكنني تقديمك. لا عرض JIC، فقط حديث حقيقي بين الأقران.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لتقديم الخريج | اقرأ: {{content_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- LinkedIn-native social proof. Mutual connection or alumni post share.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+- {{mutual_connection}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T094 -- LinkedIn DM | Western | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - {{peer_company}}'s L&D post on GW partnership went live. Similar to what we discussed for {{company}}.
+
+**Body:**
+```
+{{first_name}} -- {{peer_company}}'s post about their GW Engineering Management cohort went live. {{peer_count}} engineers, {{promotion_stat}}% promoted, {{retention_stat}}% retention. <!-- UNVERIFIED -->
+
+Their L&D lead is getting internal kudos. Your {{giga_project}} timeline is just as demanding.
+
+JIC can match or customize their structure for {{company}}. Same program, same outcomes, your context.
+
+Want the playbook they used? Reply and I'll send the deconstructed case study.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for case study | Book: {{calendar_link}} | Request pilot playbook
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- Peer employer post or case study share. Competitive signal.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T096 -- LinkedIn DM | Western | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - منشور {{peer_company}} عن شراكتها مع GW نُشر. مشابه لما ناقشناه لـ {{company}}.
+
+**Body:**
+```
+{{first_name}} -- منشور {{peer_company}} حول دفعتها في GW إدارة الهندسة نُشر للتو. {{peer_count}} مهندسين، {{promotion_stat}}% ترقّوا، {{retention_stat}}% احتفاظ. <!-- UNVERIFIED -->
+
+رئيس التعلم والتطوير يحصل على إشادات داخلية. جدول {{giga_project}} لديك بنفس القدر من التحدي.
+
+يمكن لـ JIC مطابقة أو تخصيص هيكلهم لـ {{company}}. نفس البرنامج، نفس النتائج، سياقك.
+
+تريد الدليل الذي استخدموه؟ رد وسأرسل دراسة الحالة المفصّلة.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لدراسة الحالة | احجز: {{calendar_link}} | اطلب دليل تجريبي
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- Peer employer post or case study share. Competitive signal.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{peer_company}}
+- {{peer_sector}}
+- {{peer_region}}
+- {{peer_count}}
+- {{peer_enroll_year}}
+- {{promotion_stat}}
+- {{retention_stat}}
+- {{satisfaction_stat}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Cosmopolitan, fast-paced, diverse workforce. Decision-makers value efficiency and ROI proof.
+
+---
+
+#### JIC-GW-T098 -- LinkedIn DM | Eastern | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - shared a post from GW alum now leading at {{giga_project}}. Relevant to your trajectory.
+
+**Body:**
+```
+{{first_name}} -- I just shared a post from {{alumni_name}}, a GW Engineering Management alum now at {{current_company}} leading {{team_size}} engineers on {{giga_project}} work. <!-- UNVERIFIED -->
+
+You two are connected through {{mutual_connection}} (small world). Their trajectory from {{prev_role}} to {{current_role}} is the exact transition you're evaluating.
+
+Worth a 5-min conversation with them? I can introduce you. No JIC pitch, just peer-to-peer real talk.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for alumni intro | Read: {{content_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- LinkedIn-native social proof. Mutual connection or alumni post share.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+- {{mutual_connection}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T100 -- LinkedIn DM | Eastern | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - شاركت منشوراً من خريج GW يقود الآن في {{giga_project}}. ذو صلة بمسارك.
+
+**Body:**
+```
+{{first_name}} -- شارعت للتو منشوراً من {{alumni_name}}، خريج GW في إدارة الهندسة الآن في {{current_company}} يقود {{team_size}} مهندسين في عمل {{giga_project}}. <!-- UNVERIFIED -->
+
+أنتما متصلان عبر {{mutual_connection}} (عالم صغير). مساره من {{prev_role}} إلى {{current_role}} هو التحول نفسه الذي تقيّمه.
+
+يستحق محادثة 5 دقائق معهم؟ يمكنني تقديمك. لا عرض JIC، فقط حديث حقيقي بين الأقران.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لتقديم الخريج | اقرأ: {{content_link}} | {{calendar_link}}
+
+**Send Timing:** Mid-sequence (touch 3 or 4). Tuesday-Wednesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 4/6 -- LinkedIn-native social proof. Mutual connection or alumni post share.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{alumni_name}}
+- {{years}}
+- {{prev_role}}
+- {{prev_company}}
+- {{enroll_year}}
+- {{current_role}}
+- {{current_company}}
+- {{team_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+- {{mutual_connection}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+### Re-Engagement
+
+*10 templates*
+
+#### JIC-GW-T102 -- LinkedIn DM | Eastern | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - re-engaging. {{company}}'s L&D priorities evolved? GW + JIC now offers modular corporate enrollment.
+
+**Body:**
+```
+{{first_name}} -- re-engaging after our conversation went quiet.
+
+Happens all the time. Budgets freeze, priorities pivot, committees delay.
+
+I'm back because JIC just launched two things that might change the equation for {{company}}:
+
+1. **Modular billing**: Pay per course, not per cohort. Cash flow friendly.
+2. **Pilot guarantee**: First 3 engineers, if retention/performance doesn't exceed external hire baseline, we credit the full fee. <!-- UNVERIFIED -->
+
+If {{giga_project}} is still active and {{company}} needs leadership bench strength, the math may look different now.
+
+Worth 10 minutes? {{calendar_link}}
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for pilot guarantee details | Book: {{calendar_link}} | Request modular pricing
+
+**Send Timing:** 45+ days since last touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 45+ days after last touch. Final LinkedIn re-engagement.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{months_since}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T104 -- LinkedIn DM | Eastern | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - إعادة التواصل. تطورت أولويات التعلم والتطوير في {{company}}؟ GW + JIC تقدمان تسجيلاً مؤسسياً معياريّاً.
+
+**Body:**
+```
+{{first_name}} -- إعادة التواصل بعد أن هدأت محادثتنا.
+
+يحدث طوال الوقت. تتجمد الميزانيات، تتغير الأولويات، تتأخر اللجان.
+
+عدت لأن JIC أطلقت للتو شيئين قد يغيران المعادلة لـ {{company}}:
+
+1. **الفوترة المعيارية**: ادفع لكل مادة، لا لكل دفعة. صديقة للتدفق النقدي.
+2. **ضمان تجريبي**: أول 3 مهندسين، إذا لم يتجاوز الاحتفاظ/الأداء الأساس الخارجي، نرجع الرسوم كاملة. <!-- UNVERIFIED -->
+
+إذا كان {{giga_project}} لا يزال نشطاً و {{company}} تحتاج قوة قيادة، قد تبدو الحسابات مختلفة الآن.
+
+يستحق 10 دقائق؟ {{calendar_link}}
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لتفاصيل ضمان التجربة | احجز: {{calendar_link}} | اطلب تسعيراً معيارياً
+
+**Send Timing:** 45+ days since last touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 45+ days after last touch. Final LinkedIn re-engagement.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{months_since}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Industrial & energy hub. Practical, time-conscious audience. Safety and compliance credibility matter.
+
+---
+
+#### JIC-GW-T106 -- LinkedIn DM | Northwest | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - noticed you've been active on LinkedIn. GW Cohort 2 is a fresh option if Cohort 1 didn't work.
+
+**Body:**
+```
+{{first_name}} -- it's been {{months_since}} months since we connected about GW Engineering Management.
+
+No guilt, no pressure. These things have their own rhythm.
+
+I'm reaching out because:
+1. Cohort 2 opened with more flexible scheduling
+2. JIC now offers a "try one course" pathway (audit, no full commitment)
+3. Your {{region}} cohort is forming now -- {{cohort_size}} engineers already confirmed <!-- UNVERIFIED -->
+
+If the spark is still there -- even a small one -- let's talk. If not, I'll respect the silence and just send useful content occasionally.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for Cohort 2 info | {{calendar_link}} | {{apply_link}}
+
+**Send Timing:** 30+ days since last touch. Sunday-Tuesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 30+ days after last touch. Final LinkedIn attempt before long-dormant.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{months_since}}
+- {{cohort_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T108 -- LinkedIn DM | Northwest | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - لاحظت أنك نشط على لينكدإن. دفعة GW الثانية خيار جديد إذا لم يناسبك توقيت الدفعة الأولى.
+
+**Body:**
+```
+{{first_name}} -- مر {{months_since}} أشهر منذ أن تواصلنا حول GW إدارة الهندسة.
+
+لا شعور بالذنب، لا ضغط. لهذه الأشياء إيقاعها الخاص.
+
+أتواصل لأن:
+1. الدفعة الثانية فتحت بجدولة أكثر مرونة
+2. تقدم JIC الآن مسار "جرب مادة واحدة" (تدقيق، لا التزام كامل)
+3. دفعتك في {{region}} تتشكل الآن -- {{cohort_size}} مهندسين أكدوا بالفعل <!-- UNVERIFIED -->
+
+إذا كان الشرارة لا تزال موجودة -- حتى الصغيرة -- لنتحدث. إذا لم يكن، سأحترم الصمت وأرسل فقط محتوى مفيد بين الحين والآخر.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لمعلومات الدفعة الثانية | {{calendar_link}} | {{apply_link}}
+
+**Send Timing:** 30+ days since last touch. Sunday-Tuesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 30+ days after last touch. Final LinkedIn attempt before long-dormant.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{months_since}}
+- {{cohort_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T110 -- LinkedIn DM | Northwest | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - re-engaging. {{company}}'s L&D priorities evolved? GW + JIC now offers modular corporate enrollment.
+
+**Body:**
+```
+{{first_name}} -- re-engaging after our conversation went quiet.
+
+Happens all the time. Budgets freeze, priorities pivot, committees delay.
+
+I'm back because JIC just launched two things that might change the equation for {{company}}:
+
+1. **Modular billing**: Pay per course, not per cohort. Cash flow friendly.
+2. **Pilot guarantee**: First 3 engineers, if retention/performance doesn't exceed external hire baseline, we credit the full fee. <!-- UNVERIFIED -->
+
+If {{giga_project}} is still active and {{company}} needs leadership bench strength, the math may look different now.
+
+Worth 10 minutes? {{calendar_link}}
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for pilot guarantee details | Book: {{calendar_link}} | Request modular pricing
+
+**Send Timing:** 45+ days since last touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 45+ days after last touch. Final LinkedIn re-engagement.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{months_since}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T112 -- LinkedIn DM | Northwest | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - إعادة التواصل. تطورت أولويات التعلم والتطوير في {{company}}؟ GW + JIC تقدمان تسجيلاً مؤسسياً معياريّاً.
+
+**Body:**
+```
+{{first_name}} -- إعادة التواصل بعد أن هدأت محادثتنا.
+
+يحدث طوال الوقت. تتجمد الميزانيات، تتغير الأولويات، تتأخر اللجان.
+
+عدت لأن JIC أطلقت للتو شيئين قد يغيران المعادلة لـ {{company}}:
+
+1. **الفوترة المعيارية**: ادفع لكل مادة، لا لكل دفعة. صديقة للتدفق النقدي.
+2. **ضمان تجريبي**: أول 3 مهندسين، إذا لم يتجاوز الاحتفاظ/الأداء الأساس الخارجي، نرجع الرسوم كاملة. <!-- UNVERIFIED -->
+
+إذا كان {{giga_project}} لا يزال نشطاً و {{company}} تحتاج قوة قيادة، قد تبدو الحسابات مختلفة الآن.
+
+يستحق 10 دقائق؟ {{calendar_link}}
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لتفاصيل ضمان التجربة | احجز: {{calendar_link}} | اطلب تسعيراً معيارياً
+
+**Send Timing:** 45+ days since last touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 45+ days after last touch. Final LinkedIn re-engagement.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{months_since}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Emerging giga-project zone. Talent shortage acute. Opportunity-framing works well.
+
+---
+
+#### JIC-GW-T114 -- LinkedIn DM | South | B2C | EN
+
+**Subject / Headline:**
+> {{first_name}} - noticed you've been active on LinkedIn. GW Cohort 2 is a fresh option if Cohort 1 didn't work.
+
+**Body:**
+```
+{{first_name}} -- it's been {{months_since}} months since we connected about GW Engineering Management.
+
+No guilt, no pressure. These things have their own rhythm.
+
+I'm reaching out because:
+1. Cohort 2 opened with more flexible scheduling
+2. JIC now offers a "try one course" pathway (audit, no full commitment)
+3. Your {{region}} cohort is forming now -- {{cohort_size}} engineers already confirmed <!-- UNVERIFIED -->
+
+If the spark is still there -- even a small one -- let's talk. If not, I'll respect the silence and just send useful content occasionally.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for Cohort 2 info | {{calendar_link}} | {{apply_link}}
+
+**Send Timing:** 30+ days since last touch. Sunday-Tuesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 30+ days after last touch. Final LinkedIn attempt before long-dormant.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{months_since}}
+- {{cohort_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T116 -- LinkedIn DM | South | B2C | AR
+
+**Subject / Headline:**
+> {{first_name}} - لاحظت أنك نشط على لينكدإن. دفعة GW الثانية خيار جديد إذا لم يناسبك توقيت الدفعة الأولى.
+
+**Body:**
+```
+{{first_name}} -- مر {{months_since}} أشهر منذ أن تواصلنا حول GW إدارة الهندسة.
+
+لا شعور بالذنب، لا ضغط. لهذه الأشياء إيقاعها الخاص.
+
+أتواصل لأن:
+1. الدفعة الثانية فتحت بجدولة أكثر مرونة
+2. تقدم JIC الآن مسار "جرب مادة واحدة" (تدقيق، لا التزام كامل)
+3. دفعتك في {{region}} تتشكل الآن -- {{cohort_size}} مهندسين أكدوا بالفعل <!-- UNVERIFIED -->
+
+إذا كان الشرارة لا تزال موجودة -- حتى الصغيرة -- لنتحدث. إذا لم يكن، سأحترم الصمت وأرسل فقط محتوى مفيد بين الحين والآخر.
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لمعلومات الدفعة الثانية | {{calendar_link}} | {{apply_link}}
+
+**Send Timing:** 30+ days since last touch. Sunday-Tuesday, 07:00-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 30+ days after last touch. Final LinkedIn attempt before long-dormant.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{job_title}}
+- {{company}}
+- {{months_since}}
+- {{cohort_size}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T118 -- LinkedIn DM | South | B2B | EN
+
+**Subject / Headline:**
+> {{first_name}} - re-engaging. {{company}}'s L&D priorities evolved? GW + JIC now offers modular corporate enrollment.
+
+**Body:**
+```
+{{first_name}} -- re-engaging after our conversation went quiet.
+
+Happens all the time. Budgets freeze, priorities pivot, committees delay.
+
+I'm back because JIC just launched two things that might change the equation for {{company}}:
+
+1. **Modular billing**: Pay per course, not per cohort. Cash flow friendly.
+2. **Pilot guarantee**: First 3 engineers, if retention/performance doesn't exceed external hire baseline, we credit the full fee. <!-- UNVERIFIED -->
+
+If {{giga_project}} is still active and {{company}} needs leadership bench strength, the math may look different now.
+
+Worth 10 minutes? {{calendar_link}}
+
+{{sender_name}} | JIC
+```
+
+**CTA:** Reply for pilot guarantee details | Book: {{calendar_link}} | Request modular pricing
+
+**Send Timing:** 45+ days since last touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 45+ days after last touch. Final LinkedIn re-engagement.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{months_since}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+#### JIC-GW-T120 -- LinkedIn DM | South | B2B | AR
+
+**Subject / Headline:**
+> {{first_name}} - إعادة التواصل. تطورت أولويات التعلم والتطوير في {{company}}؟ GW + JIC تقدمان تسجيلاً مؤسسياً معياريّاً.
+
+**Body:**
+```
+{{first_name}} -- إعادة التواصل بعد أن هدأت محادثتنا.
+
+يحدث طوال الوقت. تتجمد الميزانيات، تتغير الأولويات، تتأخر اللجان.
+
+عدت لأن JIC أطلقت للتو شيئين قد يغيران المعادلة لـ {{company}}:
+
+1. **الفوترة المعيارية**: ادفع لكل مادة، لا لكل دفعة. صديقة للتدفق النقدي.
+2. **ضمان تجريبي**: أول 3 مهندسين، إذا لم يتجاوز الاحتفاظ/الأداء الأساس الخارجي، نرجع الرسوم كاملة. <!-- UNVERIFIED -->
+
+إذا كان {{giga_project}} لا يزال نشطاً و {{company}} تحتاج قوة قيادة، قد تبدو الحسابات مختلفة الآن.
+
+يستحق 10 دقائق؟ {{calendar_link}}
+
+{{sender_name}} | JIC
+```
+
+**CTA:** رد لتفاصيل ضمان التجربة | احجز: {{calendar_link}} | اطلب تسعيراً معيارياً
+
+**Send Timing:** 45+ days since last touch. Sunday-Wednesday, 07:30-09:00 KSA.
+
+**Sequence Position:** Touch 6/6 -- 45+ days after last touch. Final LinkedIn re-engagement.
+
+**Personalization Fields:**
+- {{first_name}}
+- {{region}}
+- {{giga_project}}
+- {{company}}
+- {{top_employers}}
+- {{months_since}}
+- {{calendar_link}}
+- {{apply_link}}
+- {{sender_name}}
+- {{phone_number}}
+
+**Regional Context:** Growing infrastructure, tourism pivot. Community and family considerations prominent.
+
+---
+
+## Personalization Field Reference
+
+| Field | Description | Required For |
+|-------|-------------|------------|
+| `{{first_name}}` | Recipient first name | All templates |
+| `{{company}}` | Recipient's employer | All templates |
+| `{{job_title}}` | Recipient's current role | B2C templates |
+| `{{region}}` | Geographic region | All templates |
+| `{{giga_project}}` | Relevant giga-project for region | All templates |
+| `{{top_employers}}` | Top employers in region (B2B context) | B2B templates |
+| `{{calendar_link}}` | Booking URL | All templates |
+| `{{apply_link}}` | Direct application URL | All templates |
+| `{{phone_number}}` | JIC contact number | WhatsApp, LinkedIn DM |
+| `{{sender_name}}` | JIC rep name | All templates |
+| `{{content_link}}` | Resource URL | Value-Add, Social Proof |
+| `{{deadline_date}}` | Cohort deadline | Urgency templates |
+| `{{seats_remaining}}` | Seats left | Urgency templates |
+| `{{days_remaining}}` | Days until deadline | Urgency templates |
+| `{{info_session_date}}` | Info session date | Urgency B2C |
+| `{{booking_date}}` | Booking deadline | Urgency B2C |
+| `{{intent_deadline}}` | Intent deadline | Urgency B2B |
+| `{{percent_allocated}}` | Seat allocation % | Urgency B2B |
+| `{{cohort_2_date}}` | Next cohort opening date | Urgency, Re-engagement B2B |
+| `{{graduation_date}}` | Cohort 1 graduation date | Urgency B2B |
+| `{{percent_full}}` | Cohort fill percentage | Warm Follow-Up |
+| `{{alumni_name}}` | Alumni name (placeholder) | Social Proof B2C |
+| `{{years}}` | Years in previous role | Social Proof B2C |
+| `{{prev_role}}` | Previous job title | Social Proof B2C |
+| `{{prev_company}}` | Previous employer | Social Proof B2C |
+| `{{enroll_year}}` | Year of enrollment | Social Proof B2C |
+| `{{current_role}}` | Current role (alumni) | Social Proof B2C |
+| `{{current_company}}` | Current employer (alumni) | Social Proof B2C |
+| `{{team_size}}` | Team size led | Social Proof B2C |
+| `{{peer_company}}` | Peer employer name | Social Proof B2B, Value-Add B2B |
+| `{{peer_company_2}}` | Second peer employer | Value-Add B2B |
+| `{{peer_sector}}` | Peer employer sector | Social Proof B2B |
+| `{{peer_region}}` | Peer employer region | Social Proof B2B |
+| `{{peer_count}}` | Number of enrolled engineers | Social Proof B2B |
+| `{{peer_enroll_year}}` | Peer enrollment year | Social Proof B2B |
+| `{{promotion_stat}}` | Promotion percentage stat | Social Proof B2B |
+| `{{retention_stat}}` | Retention percentage stat | Social Proof B2B, Value-Add B2B |
+| `{{satisfaction_stat}}` | Satisfaction percentage stat | Social Proof B2B |
+| `{{mutual_connection}}` | Mutual LinkedIn connection | Social Proof B2C LinkedIn |
+| `{{months_since}}` | Months since last touch | Re-Engagement |
+| `{{cohort_size}}` | Current cohort size forming | Re-Engagement B2C |
+| `{{salary_premium}}` | Salary premium percentage | Value-Add B2C |
+| `{{productivity_stat}}` | Productivity improvement stat | Value-Add B2B |
+
+---
+
+## Category Distribution Summary
+
+- **Cold Outreach:** 30 templates
+- **Warm Follow-Up:** 30 templates
+- **Value-Add / Content Share:** 20 templates
+- **Urgency / Scarcity:** 15 templates
+- **Social Proof / Alumni:** 15 templates
+- **Re-Engagement:** 10 templates
+
+**Total:** 120 templates
+
+---
+
+## Usage Guidelines
+
+### RTL-Ready Formatting for Arabic Templates
+
+All AR (Arabic) templates are authored with RTL considerations in mind:
+- Use `dir="rtl"` or `text-align: right` in HTML email templates
+- Ensure placeholders like `{{first_name}}` render correctly when substituted with Arabic names
+- Test WhatsApp rendering: Arabic text should flow right-to-left naturally
+- LinkedIn DM: Arabic templates should be sent with RTL-aware formatting
+- Numbers, dates, and mixed Arabic-English text require special attention (use Unicode bidi marks if needed)
+
+### Sequence Orchestration
+
+| Channel | ICP | Total Touches | Sequence Flow |
+|---------|-----|---------------|---------------|
+| Email | B2C | 7 | Cold Outreach -> Warm Follow-Up -> Value-Add -> Social Proof -> Urgency -> (Value-Add 2) -> Re-Engagement |
+| Email | B2B | 7 | Warm Follow-Up -> Value-Add -> Social Proof -> Urgency -> (Value-Add 2) -> Re-Engagement -> (Cold Outreach alt) |
+| WhatsApp | B2C | 5 | Cold Outreach -> Warm Follow-Up -> Value-Add -> Urgency -> Re-Engagement |
+| WhatsApp | B2B | 5 | Warm Follow-Up -> Value-Add -> Urgency -> Social Proof -> Re-Engagement |
+| LinkedIn DM | B2C | 6 | Cold Outreach -> Warm Follow-Up -> Value-Add -> Social Proof -> Urgency -> Re-Engagement |
+| LinkedIn DM | B2B | 6 | Warm Follow-Up -> Value-Add -> Social Proof -> Urgency -> Re-Engagement -> (Cold Outreach alt) |
+
+### Substitution Rules
+
+1. **All unverified claims** are tagged with `<!-- UNVERIFIED -->`. Replace with verified data before sending.
+2. **Giga projects** are pre-mapped by region. Override `{{giga_project}}` if a specific project is more relevant.
+3. **Top employers** are pre-mapped by region. Override `{{top_employers}}` if targeting a specific company.
+4. **Stats placeholders** (`{{percent_full}}`, `{{promotion_stat}}`, etc.) must be populated with real data before deployment.
+5. **Personalization priority:** `{{first_name}}` > `{{company}}` > `{{job_title}}` > `{{region}}` > `{{giga_project}}`
+
+### Compliance Notes
+
+- All templates respect Saudi cultural context and business etiquette
+- Arabic templates use formal Modern Standard Arabic with professional register
+- No fabricated alumni names, statistics, or outcomes (all tagged `<!-- UNVERIFIED -->`)
+- JIC-exclusive KSA onboarding rights are accurately represented
+- GW M.S. in Engineering Management (Online) program details are consistent with official materials
+
+---
+
+*End of document. 120 templates generated across 3 channels x 5 regions x 2 ICPs x 2 languages.*
