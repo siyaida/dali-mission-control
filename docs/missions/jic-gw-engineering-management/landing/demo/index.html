@@ -1,3 +1,278 @@
-<!DOCTYPE html><html lang="ar" dir="rtl" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="ماجستير إدارة الهندسة من جامعة جورج واشنطن — مسار حصري عبر كلية جدة الدولية"><title>ماجستير إدارة الهندسة — GW × JIC</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/dali-mission-control/missions/jic-gw-engineering-management/landing/_astro/Layout.CG9L8mve.css"></head> <body class="bg-white text-gray-900 antialiased" data-astro-cid-sckkx6r4>  <div class="min-h-screen bg-gradient-to-b from-jic-dark via-jic-dark to-gray-900 text-white"> <!-- Header --> <header class="p-4 flex justify-between items-center border-b border-white/10"> <a href="?lang={lang}" class="text-white/60 hover:text-white">← العودة للصفحة الرئيسية</a> <a href="?lang={otherLang}" class="text-sm text-jic-gold hover:underline">English</a> </header> <!-- Hero --> <div class="max-w-4xl mx-auto px-4 py-16 text-center"> <span class="text-jic-gold text-sm font-semibold tracking-wider uppercase mb-4 block">GW × JIC Demo Tour</span> <h1 class="text-4xl md:text-5xl font-bold mb-6">كيف يعمل نظام التسجيل</h1> <p class="text-lg text-gray-400 mb-8">
-3-minute self-running tour. Siyaida walks JIC leadership through this without the bot live.
-</p> </div> <!-- Steps --> <div class="max-w-4xl mx-auto px-4 pb-20"> <div class="space-y-8"> <div class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-jic-gold/50 transition"> <div class="flex-shrink-0 w-14 h-14 bg-jic-gold/20 rounded-xl flex items-center justify-center text-jic-gold font-bold text-xl"> 01 </div> <div> <h3 class="text-xl font-semibold mb-2">الصفحة المقصودة</h3> <p class="text-gray-400">المهندم يزور الصفحة، يقرأ قيمة العرض، ويحجز جلسة استشارية عبر Cal.com أو واتساب.</p> </div> </div><div class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-jic-gold/50 transition"> <div class="flex-shrink-0 w-14 h-14 bg-jic-gold/20 rounded-xl flex items-center justify-center text-jic-gold font-bold text-xl"> 02 </div> <div> <h3 class="text-xl font-semibold mb-2">CRM — إدارة العلاقات</h3> <p class="text-gray-400">Lead يدخل EspoCRM أو Twenty تلقائياً. مُخصص، مقسّم regionally، مع تتبع المصدر.</p> </div> </div><div class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-jic-gold/50 transition"> <div class="flex-shrink-0 w-14 h-14 bg-jic-gold/20 rounded-xl flex items-center justify-center text-jic-gold font-bold text-xl"> 03 </div> <div> <h3 class="text-xl font-semibold mb-2">n8n — سير العمل</h3> <p class="text-gray-400">أتمتة: إثراء Lead → إرسال welcome sequence → تذكير بالمواعيد → capture KPI.</p> </div> </div><div class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-jic-gold/50 transition"> <div class="flex-shrink-0 w-14 h-14 bg-jic-gold/20 rounded-xl flex items-center justify-center text-jic-gold font-bold text-xl"> 04 </div> <div> <h3 class="text-xl font-semibold mb-2">تحليلات — Analytics</h3> <p class="text-gray-400">Plausible + PostHog + Metabase. نعرف أي قناة تجلب enrollments، وأي region تحتاج دفعة.</p> </div> </div><div class="flex gap-6 items-start bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-jic-gold/50 transition"> <div class="flex-shrink-0 w-14 h-14 bg-jic-gold/20 rounded-xl flex items-center justify-center text-jic-gold font-bold text-xl"> 05 </div> <div> <h3 class="text-xl font-semibold mb-2">نقل — Portability</h3> <p class="text-gray-400">كل شيء مفتوح المصدر. استضفه على أي VPS. انقله من Kimi. استمر بغيرنا.</p> </div> </div> </div> <div class="mt-12 text-center"> <a href="../" class="inline-block bg-jic-gold text-jic-dark px-8 py-4 rounded-xl text-lg font-semibold hover:bg-jic-gold/90 transition"> ابدأ الآن </a> </div> </div> </div>  </body></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GW × JIC Demo Tour — نظام التسجيل الذكي">
+<title>Demo Tour — GW × JIC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --jic-navy: #0a1628;
+    --jic-navy-light: #1a2d4a;
+    --jic-gold: #c9a227;
+    --jic-gold-light: #ddb94a;
+    --jic-dark: #060f1a;
+    --white: #ffffff;
+    --gray-100: #f5f7fa;
+    --gray-400: #9aa3b2;
+    --gray-600: #5a6478;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+    background: linear-gradient(180deg, var(--jic-dark) 0%, #0d1a2d 50%, #1a1a2e 100%);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Header */
+  .header {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .header a:hover { color: var(--white); }
+  
+  .header-lang {
+    color: var(--jic-gold) !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Hero */
+  .hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 24px 40px;
+    text-align: center;
+  }
+  
+  .hero-badge {
+    display: inline-block;
+    color: var(--jic-gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: var(--gray-400);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Steps */
+  .steps {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(10px);
+    padding: 28px;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .step:hover {
+    border-color: rgba(201,162,39,0.3);
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-2px);
+  }
+  
+  .step-num {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: rgba(201,162,39,0.15);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--jic-gold);
+    font-weight: 800;
+    font-size: 20px;
+  }
+  
+  .step-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .step-content p {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.7;
+  }
+  
+  .step-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* CTA */
+  .cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  
+  .btn-primary {
+    background: var(--jic-gold);
+    color: var(--jic-dark);
+  }
+  
+  .btn-primary:hover {
+    background: var(--jic-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(201,162,39,0.25);
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: var(--gray-600);
+    font-size: 13px;
+  }
+  
+  /* Mobile */
+  @media (max-width: 640px) {
+    .step { flex-direction: column; gap: 16px; }
+    .hero { padding: 40px 20px 30px; }
+    .steps { padding: 0 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="../">← العودة للصفحة الرئيسية</a>
+  <a href="?lang=en" class="header-lang">English</a>
+</header>
+
+<section class="hero">
+  <span class="hero-badge">GW × JIC Demo Tour</span>
+  <h1>كيف يعمل نظام التسجيل</h1>
+  <p>3-minute self-running tour. Siyaida walks JIC leadership through this without the bot live.</p>
+</section>
+
+<section class="steps">
+  <div class="step">
+    <div class="step-num">01</div>
+    <div class="step-content">
+      <span class="step-icon">🎯</span>
+      <h3>الصفحة المقصودة</h3>
+      <p>المهندم يزور الصفحة، يقرأ قيمة العرض، ويحجز جلسة استشارية عبر Cal.com أو واتساب.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">02</div>
+    <div class="step-content">
+      <span class="step-icon">🗄️</span>
+      <h3>CRM — إدارة العلاقات</h3>
+      <p>Lead يدخل EspoCRM تلقائياً. مُخصص، مقسّم regionally، مع تتبع المصدر.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">03</div>
+    <div class="step-content">
+      <span class="step-icon">⚡</span>
+      <h3>Activepieces — سير العمل</h3>
+      <p>أتمتة: إثراء Lead → إرسال welcome sequence → تذكير بالمواعيد → capture KPI.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">04</div>
+    <div class="step-content">
+      <span class="step-icon">📊</span>
+      <h3>تحليلات — Analytics</h3>
+      <p>Plausible + Metabase. نعرف أي قناة تجلب enrollments، وأي region تحتاج دفعة.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">05</div>
+    <div class="step-content">
+      <span class="step-icon">🔓</span>
+      <h3>نقل — Portability</h3>
+      <p>كل شيء مفتوح المصدر. استضفه على أي VPS. انقله من Kimi. استمر بغيرنا.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="../" class="btn btn-primary">
+      <span>ابدأ الآن</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 Jeddah International College × George Washington University
+</footer>
+
+</body>
+</html>
