@@ -12,7 +12,7 @@
 | Sprint | Deliverable | Status | Owner | Commit |
 |--------|-------------|--------|-------|--------|
 | #1 | Battle Card (EN + AR) | 🟢 COMPLETE | Main | [8a72ff3] |
-| #2 | Top-50 Anchor Employers (CSV + MD, regional) | 🔴 IN PROGRESS | Sub-agent | — |
+| #2 | Top-50 Anchor Employers (CSV + MD, regional) | ✅ COMPLETE | Sub-agent | [see anchor-employers.csv + anchor-employers.md] |
 | #3 | Objection Playbook (top 25 × counter, EN + AR) | 🟢 COMPLETE | Sub-agent | — |
 | #4 | 120 Outbound Message Templates (3 channels × 5 regions × 2 ICPs × 2 languages) | 🔴 IN PROGRESS | Sub-agent | — |
 | #5 | Landing Page (Astro, AR-first, RTL, Cal.com, WhatsApp, Lighthouse >95) | 🔴 QUEUED | Main | — |
