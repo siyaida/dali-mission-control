@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SiyadaTech — The Agent-Powered Academic Growth Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fafafa;
+    --bg-card: #ffffff;
+    --bg-elevated: #f5f5f7;
+    --border: #e5e5e8;
+    --border-hover: #d4d4d8;
+    --text-primary: #111113;
+    --text-secondary: #6b6b7b;
+    --text-muted: #9ca3af;
+    --accent: #0f172a;
+    --accent-light: #334155;
+    --accent-glow: rgba(15,23,42,0.06);
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+    --blue-glow: rgba(37,99,235,0.08);
+    --green: #059669;
+    --green-light: #10b981;
+    --green-glow: rgba(5,150,105,0.08);
+    --orange: #ea580c;
+    --orange-light: #f97316;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text-primary);
+    overflow: hidden;
+  }
+  ::selection { background: var(--blue); color:#fff; }
+
+  /* Slide System */
+  .slides-container {
+    width:100%; height:100vh;
+    position:relative; overflow:hidden;
+  }
+  .slide {
+    position:absolute; top:0; left:0; width:100%; height:100%;
+    display:flex; flex-direction:column;
+    opacity:0; pointer-events:none;
+    transform: translateX(60px);
+    transition: all 0.6s cubic-bezier(0.4,0,0.2,1);
+    padding: 80px 40px 100px;
+    overflow-y: auto;
+  }
+  .slide.active {
+    opacity:1; pointer-events:all;
+    transform: translateX(0);
+  }
+  .slide.prev {
+    opacity:0; transform: translateX(-60px);
+  }
+
+  /* Slide Content */
+  .slide-inner {
+    max-width: 1100px; margin: 0 auto;
+    width:100%; flex:1;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+
+  /* Typography */
+  h1 { font-size: clamp(36px, 4.5vw, 64px); font-weight:800; line-height:1.1; letter-spacing:-0.03em; }
+  h2 { font-size: clamp(28px, 3.5vw, 48px); font-weight:700; line-height:1.15; letter-spacing:-0.02em; }
+  h3 { font-size: clamp(20px, 2vw, 28px); font-weight:600; line-height:1.3; }
+  p { font-size: 16px; line-height:1.7; color: var(--text-secondary); }
+  .label {
+    font-family: var(--font-mono); font-size: 12px; font-weight:600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--blue); margin-bottom: 16px;
+  }
+  .big-number {
+    font-family: var(--font-mono); font-size: clamp(48px, 6vw, 80px);
+    font-weight:700; line-height:1; color: var(--blue);
+  }
+
+  /* Logo */
+  .logo {
+    display:flex; align-items:center; gap:12px;
+    position: fixed; top: 24px; left: 40px; z-index:100;
+  }
+  .logo-mark {
+    width:40px; height:40px; border-radius:10px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-mono); font-weight:700; font-size:14px; color:#fff;
+  }
+  .logo-text { font-weight:800; font-size:18px; letter-spacing:-0.02em; }
+
+  /* Controls */
+  .controls {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.9); backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    gap: 24px; padding: 16px 40px; z-index: 100;
+  }
+  .ctrl-btn {
+    width: 40px; height: 40px; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.2s; font-size: 18px;
+    color: var(--text-secondary);
+  }
+  .ctrl-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-glow); }
+  .ctrl-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .progress-bar {
+    width: 200px; height: 4px; border-radius: 2px;
+    background: var(--border); overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: var(--blue);
+    border-radius: 2px; transition: width 0.3s;
+  }
+  .slide-counter {
+    font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);
+    min-width: 60px; text-align: center;
+  }
+  .slide-dots {
+    display: flex; gap: 8px;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--border); cursor: pointer; transition: all 0.2s;
+  }
+  .dot:hover { background: var(--border-hover); }
+  .dot.active { background: var(--blue); }
+
+  /* Cards */
+  .card-grid { display: grid; gap: 20px; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px;
+    transition: all 0.3s;
+  }
+  .card:hover { border-color: var(--border-hover); box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  .card-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 16px;
+    background: var(--blue-glow); border: 1px solid rgba(37,99,235,0.15);
+  }
+  .card h3 { margin-bottom: 8px; font-size: 18px; }
+  .card p { font-size: 14px; line-height: 1.6; }
+
+  /* Comparison */
+  .compare-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .compare-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 20px; padding: 32px;
+  }
+  .compare-card.bad { border-color: #fecaca; background: #fef2f2; }
+  .compare-card.good { border-color: #bbf7d0; background: #f0fdf4; }
+  .compare-card h3 { margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .compare-card ul { list-style: none; }
+  .compare-card li {
+    padding: 8px 0; font-size: 14px; color: var(--text-secondary);
+    display: flex; align-items: flex-start; gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-card li:last-child { border-bottom: none; }
+  .compare-card .icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+  /* Stats Row */
+  .stats-row {
+    display: flex; gap: 32px; flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .stat-item { text-align: center; }
+  .stat-item .num {
+    font-family: var(--font-mono); font-size: 36px; font-weight: 700;
+    color: var(--blue);
+  }
+  .stat-item .lbl { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+  /* Process Visual */
+  .process-flow {
+    display: flex; align-items: center; gap: 0;
+    margin: 32px 0; flex-wrap: wrap; justify-content: center;
+  }
+  .process-step {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 16px 12px; min-width: 100px;
+  }
+  .process-step .step-icon {
+    width: 48px; height: 48px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 8px;
+    background: var(--bg-elevated); border: 2px solid var(--border);
+  }
+  .process-step .step-name { font-size: 12px; font-weight: 600; text-align: center; }
+  .process-step .step-tag {
+    font-size: 10px; font-family: var(--font-mono); margin-top: 4px;
+    padding: 2px 8px; border-radius: 4px;
+  }
+  .process-step.agent .step-icon { border-color: var(--green); background: var(--green-glow); }
+  .process-step.agent .step-tag { background: var(--green-glow); color: var(--green); }
+  .process-step.human .step-icon { border-color: var(--orange); background: rgba(234,88,12,0.06); }
+  .process-step.human .step-tag { background: rgba(234,88,12,0.08); color: var(--orange); }
+  .process-arrow {
+    color: var(--text-muted); font-size: 20px;
+    padding: 0 4px;
+  }
+
+  /* CTA Button */
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 12px;
+    background: var(--accent); color: #fff;
+    font-weight: 600; font-size: 15px;
+    border: none; cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 24px;
+  }
+  .cta-btn:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .cta-btn.secondary {
+    background: transparent; color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .cta-btn.secondary:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-glow); }
+
+  /* Stack Grid */
+  .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .stack-item {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; text-align: center;
+    transition: all 0.2s;
+  }
+  .stack-item:hover { border-color: var(--blue); }
+  .stack-item .stack-icon { font-size: 28px; margin-bottom: 8px; }
+  .stack-item .stack-name { font-size: 13px; font-weight: 600; }
+  .stack-item .stack-desc { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .slide { padding: 80px 20px 100px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-flow { gap: 8px; }
+    .process-step { min-width: 70px; padding: 8px; }
+    .stats-row { gap: 20px; }
+    .logo { left: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <div class="logo-mark">ST</div>
+  <div class="logo-text">SiyadaTech</div>
+</div>
+
+<div class="slides-container" id="slides">
+
+  <!-- SLIDE 1: COVER -->
+  <div class="slide active" data-index="0">
+    <div class="slide-inner" style="text-align:center;">
+      <div class="label">Presented to JIC Management</div>
+      <h1>The Future of<br>Academic Growth</h1>
+      <p style="font-size:20px; max-width:600px; margin:24px auto 0;">
+        How SiyadaTech builds autonomous growth engines for educational institutions — transforming how programs find, convert, and enroll the right students.
+      </p>
+      <div class="stats-row" style="justify-content:center; margin-top:48px;">
+        <div class="stat-item"><div class="num">2</div><div class="lbl">Weeks to launch</div></div>
+        <div class="stat-item"><div class="num">7</div><div class="lbl">Phase engine</div></div>
+        <div class="stat-item"><div class="num">12.5</div><div class="lbl">Sprints per day</div></div>
+        <div class="stat-item"><div class="num">0</div><div class="lbl">Manual hours wasted</div></div>
+      </div>
+      <div style="margin-top:40px;">
+        <button class="cta-btn" onclick="nextSlide()">Start Presentation →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: THE TRADITIONAL WAY -->
+  <div class="slide" data-index="1">
+    <div class="slide-inner">
+      <div class="label">The Problem</div>
+      <h2>How Universities<br>Normally Launch Programs</h2>
+      <div class="compare-grid" style="margin-top:32px;">
+        <div class="compare-card bad">
+          <h3>❌ Traditional Approach</h3>
+          <ul>
+            <li><span class="icon">⏱️</span> 6–18 months from concept to first enrollment</li>
+            <li><span class="icon">💰</span> $50K–200K in marketing, events, and staffing</li>
+            <li><span class="icon">🎯</span> Spray-and-pray advertising with no targeting</li>
+            <li><span class="icon">📊</span> Manual lead tracking in spreadsheets</li>
+            <li><span class="icon">🤝</span> No follow-up system — 90% of leads go cold</li>
+            <li><span class="icon">🌍</span> Generic messaging — no Saudi context</li>
+            <li><span class="icon">🔒</span> No CRM — every conversation starts from zero</li>
+          </ul>
+        </div>
+        <div class="compare-card" style="background:var(--bg); border-color:var(--border);">
+          <h3 style="color:var(--text-muted);">Result</h3>
+          <p style="font-size:15px; line-height:2; color:var(--text-secondary);">
+            Low enrollment yield.<br>
+            High cost per student.<br>
+            No data for next cohort.<br>
+            Faculty frustrated.<br>
+            Budget burned.
+          </p>
+          <div style="margin-top:20px; padding-top:20px; border-top:1px solid var(--border);">
+            <div class="big-number" style="font-size:48px; color:var(--orange);">~8%</div>
+            <div style="font-size:13px; color:var(--text-muted); margin-top:4px;">Average lead-to-enrollment rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: THE SIYADATECH WAY -->
+  <div class="slide" data-index="2">
+    <div class="slide-inner">
+      <div class="label">The Solution</div>
+      <h2>The SiyadaTech Engine</h2>
+      <p style="max-width:640px; margin-top:12px;">
+        We don't "do marketing." We build an autonomous acquisition and transformation machine — then run it for you. Every phase is instrumented, every decision is data-backed, and the system improves itself.
+      </p>
+      <div style="margin-top:40px;">
+        <div class="process-flow">
+          <div class="process-step agent"><div class="step-icon">🎯</div><div class="step-name">Attract</div><div class="step-tag">AGENT</div></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step agent"><div class="step-icon">🪝</div><div class="step-name">Capture</div><div class="step-tag">AGENT</div></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step agent"><div class="step-icon">⚖️</div><div class="step-name">Qualify</div><div class="step-tag">AGENT</div></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step agent"><div class="step-icon">🔄</div><div class="step-name">Nurture</div><div class="step-tag">AGENT</div></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step human"><div class="step-icon">🤝</div><div class="step-name">Consult</div><div class="step-tag">HUMAN</div></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step human"><div class="step-icon">✍️</div><div class="step-name">Close</div><div class="step-tag">HUMAN</div></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step agent"><div class="step-icon">🎓</div><div class="step-name">Transform</div><div class="step-tag">AGENT</div></div>
+        </div>
+      </div>
+      <div class="stats-row" style="justify-content:center; margin-top:32px;">
+        <div class="stat-item"><div class="num" style="color:var(--green);">5</div><div class="lbl">Autonomous phases</div></div>
+        <div class="stat-item"><div class="num" style="color:var(--orange);">2</div><div class="lbl">Human gates only</div></div>
+        <div class="stat-item"><div class="num" style="color:var(--blue);">24/7</div><div class="lbl">Always running</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: DEEP RESEARCH -->
+  <div class="slide" data-index="3">
+    <div class="slide-inner">
+      <div class="label">Intelligence Layer</div>
+      <h2>Deep Research Before<br>Any Campaign Starts</h2>
+      <p style="max-width:600px; margin-top:12px;">
+        We don't guess. We build a complete intelligence package for every mission — so every message, every objection handler, and every conversation is grounded in real competitive context.
+      </p>
+      <div class="card-grid" style="grid-template-columns: repeat(3, 1fr); margin-top:36px;">
+        <div class="card">
+          <div class="card-icon">🗺️</div>
+          <h3>Battle Card</h3>
+          <p>Competitive landscape mapped: KAUST, KFUPM, local diplomas, online MBAs. Pricing, positioning, differentiation — all documented.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Objection Playbook</h3>
+          <p>Every counter ready: "Too expensive" → ROI calculation. "Not accredited" → ABET explainer. "Online quality" → GW R1 credentials.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📨</div>
+          <h3>120 Message Templates</h3>
+          <p>Personalized sequences for LinkedIn, email, WhatsApp. Placeholder-ready: {{first_name}}, {{company}}, {{region}}.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>Anchor Employer Map</h3>
+          <p>Top 50 Saudi employers identified with contact paths. PIF-backed giga-projects mapped to role relevance.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎙️</div>
+          <h3>Info Session Script</h3>
+          <p>Slide-by-slide script for webinars. Q&A responses prepped. Arabic + English versions.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <h3>MOU Template</h3>
+          <p>Corporate partnership agreement ready. Customizable for HR, L&D, or talent acquisition teams.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: THE STACK -->
+  <div class="slide" data-index="4">
+    <div class="slide-inner">
+      <div class="label">Technology</div>
+      <h2>Full-Stack Infrastructure<br>Deployed in 24 Hours</h2>
+      <p style="max-width:600px; margin-top:12px;">
+        We don't send you a proposal and disappear. We deploy the entire operational stack — CRM, chat, analytics, workflows, storage — on infrastructure you control.
+      </p>
+      <div class="stack-grid" style="margin-top:36px;">
+        <div class="stack-item"><div class="stack-icon">💬</div><div class="stack-name">Chatwoot</div><div class="stack-desc">Live Chat + Inbox</div></div>
+        <div class="stack-item"><div class="stack-icon">📇</div><div class="stack-name">EspoCRM</div><div class="stack-desc">Lead Database</div></div>
+        <div class="stack-item"><div class="stack-icon">⚡</div><div class="stack-name">ActivePieces</div><div class="stack-desc">Workflow Engine</div></div>
+        <div class="stack-item"><div class="stack-icon">📊</div><div class="stack-name">Plausible</div><div class="stack-desc">Privacy Analytics</div></div>
+        <div class="stack-item"><div class="stack-icon">🪣</div><div class="stack-name">MinIO</div><div class="stack-desc">Document Storage</div></div>
+        <div class="stack-item"><div class="stack-icon">🗓️</div><div class="stack-name">Cal.com</div><div class="stack-desc">Scheduling</div></div>
+        <div class="stack-item"><div class="stack-icon">📱</div><div class="stack-name">WhatsApp</div><div class="stack-desc">Business API</div></div>
+        <div class="stack-item"><div class="stack-icon">📈</div><div class="stack-name">Uptime Kuma</div><div class="stack-desc">Monitoring</div></div>
+      </div>
+      <div style="margin-top:32px; padding:24px; background:var(--bg-elevated); border-radius:12px; border:1px solid var(--border);">
+        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+          <div style="font-family:var(--font-mono); font-size:13px; color:var(--text-muted);">INFRA</div>
+          <div style="font-size:14px; color:var(--text-secondary);">VPS · Docker Compose · 10 containers · 12 subdomains · $8/mo · Auto SSL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: RESULTS -->
+  <div class="slide" data-index="5">
+    <div class="slide-inner">
+      <div class="label">Performance</div>
+      <h2>What Takes 18 Months,<br>We Do in 2 Weeks</h2>
+      <div class="compare-grid" style="margin-top:36px;">
+        <div class="compare-card" style="border-color:#bbf7d0; background:#f0fdf4;">
+          <h3 style="color:var(--green);">✅ SiyadaTech Engine</h3>
+          <ul>
+            <li><span class="icon" style="color:var(--green);">⚡</span> <strong>2 weeks</strong> from kickoff to live system</li>
+            <li><span class="icon" style="color:var(--green);">💰</span> <strong>Zero</strong> manual ad spend guesswork</li>
+            <li><span class="icon" style="color:var(--green);">🎯</span> Every lead scored, segmented, and nurtured</li>
+            <li><span class="icon" style="color:var(--green);">📊</span> Real-time dashboard with full visibility</li>
+            <li><span class="icon" style="color:var(--green);">🤖</span> 5 autonomous phases run 24/7</li>
+            <li><span class="icon" style="color:var(--green);">🇸🇦</span> Saudi-context messaging in Arabic + English</li>
+            <li><span class="icon" style="color:var(--green);">📈</span> Each cohort improves from previous data</li>
+          </ul>
+        </div>
+        <div class="compare-card" style="border-color:#fecaca; background:#fef2f2;">
+          <h3 style="color:var(--orange);">❌ Without Us</h3>
+          <ul>
+            <li><span class="icon" style="color:var(--orange);">⏱️</span> 6–18 months to first enrollment</li>
+            <li><span class="icon" style="color:var(--orange);">💸</span> Burn budget on untested campaigns</li>
+            <li><span class="icon" style="color:var(--orange);">🎯</span> Generic messaging, low relevance</li>
+            <li><span class="icon" style="color:var(--orange);">📊</span> No tracking, no optimization</li>
+            <li><span class="icon" style="color:var(--orange);">😴</span> Leads go cold, no follow-up</li>
+            <li><span class="icon" style="color:var(--orange);">🌍</span> Western templates, poor Arabic</li>
+            <li><span class="icon" style="color:var(--orange);">🔄</span> Every cohort starts from scratch</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stats-row" style="justify-content:center; margin-top:32px;">
+        <div class="stat-item"><div class="num" style="color:var(--green);">12.5×</div><div class="lbl">Faster deployment</div></div>
+        <div class="stat-item"><div class="num" style="color:var(--green);">3–5×</div><div class="lbl">Lower cost per lead</div></div>
+        <div class="stat-item"><div class="num" style="color:var(--green);">∞</div><div class="lbl">Continuous optimization</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: FOR JIC -->
+  <div class="slide" data-index="6">
+    <div class="slide-inner">
+      <div class="label">Tailored for JIC</div>
+      <h2>Built Specifically for<br>Jeddah International College</h2>
+      <p style="max-width:600px; margin-top:12px;">
+        This isn't a generic template. The GW × JIC mission already has a full intelligence package, 3 live websites, and an operational stack ready to scale.
+      </p>
+      <div class="card-grid" style="grid-template-columns: repeat(2, 1fr); margin-top:36px;">
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3>3 Live Sites Deployed</h3>
+          <p>Marketing site, lead gen site, and ecosystem hub — all bilingual (AR+EN), mobile-optimized, and connected to the CRM.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>50 Anchor Employers Mapped</h3>
+          <p>Aramco, SABIC, NEOM, Red Sea Global — with contact strategies, role relevance, and outreach sequences.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>13 of 14 Sprints Complete</h3>
+          <p>Battle card, objection playbook, 120 message templates, MOU template, info session script, KPI dashboard — all shipped.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎓</div>
+          <h3>Academic Goal Engineered</h3>
+          <p>Every touchpoint reinforces GW credibility, ABET accreditation, and Saudi career outcomes. Not generic marketing — academic recruitment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: PARTNER WITH US -->
+  <div class="slide" data-index="7">
+    <div class="slide-inner" style="text-align:center;">
+      <div class="label">Next Step</div>
+      <h2>Partner With SiyadaTech</h2>
+      <p style="max-width:560px; margin:16px auto 0;">
+        We don't sell services. We build engines, then run them. Your faculty focuses on what they do best — we handle growth.
+      </p>
+      <div style="margin-top:40px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <button class="cta-btn" onclick="window.open('https://chat.siyada-cybersecurity.com','_blank')">💬 Live Chat</button>
+        <button class="cta-btn secondary" onclick="window.open('https://siyada-cybersecurity.com','_blank')">🎯 Mission Control</button>
+      </div>
+      <div style="margin-top:48px; padding-top:32px; border-top:1px solid var(--border);">
+        <div style="font-family:var(--font-mono); font-size:13px; color:var(--text-muted);">
+          siyada-cybersecurity.com · @siyaida · Agent: JIC Washington · Open Source
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <button class="ctrl-btn" id="btn-prev" onclick="prevSlide()">‹</button>
+  <div class="slide-counter"><span id="current">1</span> / <span id="total">8</span></div>
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:12.5%;"></div></div>
+  <div class="slide-dots" id="dots"></div>
+  <button class="ctrl-btn" id="btn-next" onclick="nextSlide()">›</button>
+</div>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+
+  function updateDots() {
+    const dots = document.getElementById('dots');
+    dots.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === current ? ' active' : '');
+      d.onclick = () => goToSlide(i);
+      dots.appendChild(d);
+    }
+  }
+
+  function goToSlide(n) {
+    if (n < 0 || n >= total) return;
+    slides[current].classList.remove('active');
+    slides[current].classList.add(n > current ? 'prev' : '');
+    current = n;
+    slides[current].classList.remove('prev');
+    slides[current].classList.add('active');
+    document.getElementById('current').textContent = current + 1;
+    document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+    document.getElementById('btn-prev').disabled = current === 0;
+    document.getElementById('btn-next').disabled = current === total - 1;
+    updateDots();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function nextSlide() { goToSlide(current + 1); }
+  function prevSlide() { goToSlide(current - 1); }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+
+  updateDots();
+</script>
+
+</body>
+</html>
