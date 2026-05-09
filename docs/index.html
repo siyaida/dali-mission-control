@@ -1,935 +1,686 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Dali Mission Control — Command Center</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg-primary: #050507;
-  --bg-secondary: #0a0b0f;
-  --bg-card: #111318;
-  --bg-elevated: #161922;
-  --border: #1e2130;
-  --border-hover: #2a2e42;
-  --text-primary: #f0f0f5;
-  --text-secondary: #8b8fa3;
-  --text-muted: #4a4e66;
-  --accent: #ff6b35;
-  --accent-light: #ff8a5c;
-  --accent-glow: rgba(255,107,53,0.15);
-  --success: #00d084;
-  --success-glow: rgba(0,208,132,0.15);
-  --warning: #ffb800;
-  --danger: #ff4757;
-  --info: #339af0;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
-  --shadow-glow: 0 0 40px var(--accent-glow);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-/* Animated background grid */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 30%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 30%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Top status bar */
-.status-bar {
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
-  padding: 8px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  position: relative;
-  z-index: 10;
-}
-
-.status-bar-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--success);
-}
-
-.status-indicator::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: var(--success);
-  border-radius: 50%;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(0,208,132,0.4); }
-  50% { opacity: 0.8; transform: scale(1.2); box-shadow: 0 0 0 6px rgba(0,208,132,0); }
-}
-
-.status-bar-right {
-  color: var(--text-muted);
-}
-
-/* Main container */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px 24px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Header */
-.header {
-  margin-bottom: 48px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.header-left h1 {
-  font-size: 40px;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -1.5px;
-  margin-bottom: 8px;
-}
-
-.header-left p {
-  color: var(--text-secondary);
-  font-size: 16px;
-  max-width: 400px;
-}
-
-.header-badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 10px 20px;
-  border-radius: var(--radius-lg);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-}
-
-.header-badge .label {
-  color: var(--text-muted);
-}
-
-.header-badge .value {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-/* Mission cards grid */
-.missions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 24px;
-  margin-bottom: 48px;
-}
-
-.mission-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: 32px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.mission-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--warning) 50%, var(--success) 100%);
-}
-
-.mission-card:hover {
-  border-color: var(--border-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.mission-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.mission-number {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent);
-  background: var(--accent-glow);
-  padding: 4px 12px;
-  border-radius: 100px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.mission-status {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.mission-status.active {
-  color: var(--success);
-}
-
-.mission-status.active::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: var(--success);
-  border-radius: 50%;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-.mission-card h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--text-primary);
-}
-
-.mission-card .desc {
-  color: var(--text-secondary);
-  font-size: 14px;
-  margin-bottom: 24px;
-  line-height: 1.6;
-}
-
-/* Progress bar */
-.progress-section {
-  margin-bottom: 20px;
-}
-
-.progress-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.progress-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.progress-value {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.progress-bar {
-  height: 6px;
-  background: var(--bg-elevated);
-  border-radius: 100px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  border-radius: 100px;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--warning) 70%, var(--success) 100%);
-  transition: width 1s ease;
-  position: relative;
-}
-
-.progress-fill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 20px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
-  border-radius: 0 100px 100px 0;
-}
-
-/* Sprint board */
-.sprint-board {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.sprint-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  background: var(--bg-elevated);
-  border-radius: var(--radius-md);
-  border: 1px solid transparent;
-  transition: all 0.2s;
-}
-
-.sprint-item:hover {
-  border-color: var(--border-hover);
-}
-
-.sprint-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.sprint-icon.done {
-  background: rgba(0,208,132,0.15);
-  color: var(--success);
-}
-
-.sprint-icon.pending {
-  background: rgba(255,107,53,0.15);
-  color: var(--accent);
-}
-
-.sprint-info {
-  flex: 1;
-}
-
-.sprint-info .name {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-primary);
-  display: block;
-}
-
-.sprint-info .meta {
-  font-size: 11px;
-  color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.sprint-badge {
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 100px;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.sprint-badge.done {
-  background: rgba(0,208,132,0.15);
-  color: var(--success);
-}
-
-.sprint-badge.pending {
-  background: rgba(255,107,53,0.15);
-  color: var(--accent);
-}
-
-/* Links */
-.mission-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.mission-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  transition: all 0.2s;
-}
-
-.mission-links a:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-glow);
-}
-
-/* Stats row */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 48px;
-}
-
-.stat-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  text-align: center;
-  transition: all 0.3s;
-}
-
-.stat-box:hover {
-  border-color: var(--border-hover);
-  transform: translateY(-2px);
-}
-
-.stat-value {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--accent);
-  font-family: 'JetBrains Mono', monospace;
-  margin-bottom: 4px;
-}
-
-.stat-label {
-  font-size: 12px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-/* Section headers */
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.section-header h2 {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--text-primary);
-}
-
-.section-header .line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
-}
-
-/* How it works */
-.how-it-works {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-bottom: 48px;
-}
-
-.step-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  position: relative;
-  transition: all 0.3s;
-}
-
-.step-card:hover {
-  border-color: var(--border-hover);
-}
-
-.step-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--accent);
-  opacity: 0.3;
-  position: absolute;
-  top: 16px;
-  right: 20px;
-}
-
-.step-card h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--text-primary);
-}
-
-.step-card p {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* Footer */
-.footer {
-  border-top: 1px solid var(--border);
-  padding-top: 32px;
-  margin-top: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  color: var(--text-muted);
-  font-size: 13px;
-}
-
-.footer a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: fade-up 0.6s ease forwards;
-}
-
-@keyframes fade-up {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  :root {
+    --bg: #0a0a0f;
+    --bg-elevated: #111118;
+    --bg-card: #14141c;
+    --bg-hover: #1a1a24;
+    --border: #1f1f2e;
+    --border-hover: #2a2a3e;
+    --text-primary: #f0f0f5;
+    --text-secondary: #8b8b9e;
+    --text-muted: #5a5a6e;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --success: #10b981;
+    --success-glow: rgba(16,185,129,0.15);
+    --warning: #f59e0b;
+    --warning-glow: rgba(245,158,11,0.15);
+    --danger: #ef4444;
+    --danger-glow: rgba(239,68,68,0.15);
+    --info: #3b82f6;
+    --info-glow: rgba(59,130,246,0.15);
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
   }
-}
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  ::selection { background: var(--accent); color:#fff; }
+  ::-webkit-scrollbar { width:6px; }
+  ::-webkit-scrollbar-track { background:var(--bg); }
+  ::-webkit-scrollbar-thumb { background:var(--border-hover); border-radius:3px; }
+  a { color:var(--accent-light); text-decoration:none; transition:color 0.2s; }
+  a:hover { color:var(--text-primary); }
+  .container { max-width:1400px; margin:0 auto; padding:0 24px; }
 
-.reveal-delay-1 { animation-delay: 0.1s; }
-.reveal-delay-2 { animation-delay: 0.2s; }
-.reveal-delay-3 { animation-delay: 0.3s; }
-.reveal-delay-4 { animation-delay: 0.4s; }
+  /* Header */
+  header {
+    position:sticky; top:0; z-index:100;
+    background:rgba(10,10,15,0.85);
+    backdrop-filter:blur(20px) saturate(1.5);
+    border-bottom:1px solid var(--border);
+  }
+  header .container {
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px; padding:0 24px;
+  }
+  .logo { display:flex; align-items:center; gap:12px; }
+  .logo-mark {
+    width:36px; height:36px; border-radius:10px;
+    background:linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-weight:700; font-size:14px; color:#fff;
+    box-shadow:0 0 20px var(--accent-glow);
+  }
+  .logo-text { font-weight:800; font-size:18px; letter-spacing:-0.02em; }
+  .logo-text span { color:var(--text-secondary); font-weight:400; font-size:13px; display:block; margin-top:-4px; }
+  nav { display:flex; gap:6px; }
+  nav a {
+    padding:8px 14px; border-radius:8px; font-size:13px; font-weight:500;
+    color:var(--text-secondary); transition:all 0.2s;
+  }
+  nav a:hover, nav a.active { background:var(--bg-card); color:var(--text-primary); }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--border-hover);
-}
+  /* Hero */
+  .hero {
+    padding:48px 0 32px;
+    border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg) 100%);
+  }
+  .hero-grid {
+    display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center;
+  }
+  .hero h1 {
+    font-size:clamp(28px, 3vw, 42px); font-weight:800; line-height:1.15;
+    letter-spacing:-0.03em; margin-bottom:12px;
+  }
+  .hero h1 .highlight { color:var(--accent-light); }
+  .hero p { color:var(--text-secondary); font-size:15px; max-width:560px; }
+  .hero-stats {
+    display:flex; gap:32px;
+  }
+  .stat {
+    text-align:center; padding:20px 24px;
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:16px; min-width:120px;
+    transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .stat:hover { transform:translateY(-2px); border-color:var(--border-hover); box-shadow:0 8px 32px rgba(0,0,0,0.3); }
+  .stat-value { font-family:var(--font-mono); font-size:32px; font-weight:700; line-height:1; margin-bottom:6px; }
+  .stat-value.success { color:var(--success); text-shadow:0 0 20px var(--success-glow); }
+  .stat-value.warning { color:var(--warning); text-shadow:0 0 20px var(--warning-glow); }
+  .stat-value.info { color:var(--accent-light); text-shadow:0 0 20px var(--accent-glow); }
+  .stat-label { font-size:12px; color:var(--text-muted); font-weight:500; letter-spacing:0.02em; text-transform:uppercase; }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .missions-grid { grid-template-columns: 1fr; }
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .header { flex-direction: column; }
-  .header-left h1 { font-size: 28px; }
-  .sprint-board { grid-template-columns: 1fr; }
-  .container { padding: 24px 16px; }
-  .status-bar { flex-direction: column; gap: 8px; }
-}
+  /* Main Grid */
+  .main-grid {
+    display:grid; grid-template-columns:repeat(12, 1fr); gap:24px;
+    padding:32px 0 48px;
+  }
+  .card {
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:16px; padding:24px;
+    transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .card:hover { border-color:var(--border-hover); box-shadow:0 8px 32px rgba(0,0,0,0.3); }
+  .card-header {
+    display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;
+  }
+  .card-title {
+    font-size:15px; font-weight:600; letter-spacing:-0.01em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .card-title .icon {
+    width:32px; height:32px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px;
+  }
+  .card-badge {
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    padding:4px 10px; border-radius:6px; text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .badge-live { background:var(--success-glow); color:var(--success); border:1px solid rgba(16,185,129,0.3); }
+  .badge-bootstrap { background:var(--warning-glow); color:var(--warning); border:1px solid rgba(245,158,11,0.3); }
+  .badge-pending { background:var(--danger-glow); color:var(--danger); border:1px solid rgba(239,68,68,0.3); }
+
+  /* Mission Cards */
+  .mission-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+  .mission-card {
+    background:var(--bg-hover); border:1px solid var(--border);
+    border-radius:12px; padding:20px;
+    transition:all 0.3s; cursor:pointer;
+  }
+  .mission-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+  .mission-card .mission-id {
+    font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-bottom:8px;
+  }
+  .mission-card .mission-name {
+    font-size:15px; font-weight:600; line-height:1.3; margin-bottom:12px;
+  }
+  .mission-card .mission-meta {
+    display:flex; align-items:center; gap:16px; font-size:12px; color:var(--text-secondary);
+  }
+  .mission-card .progress-bar {
+    width:100%; height:6px; background:var(--border); border-radius:3px; margin-top:12px; overflow:hidden;
+  }
+  .mission-card .progress-bar .fill {
+    height:100%; border-radius:3px; transition:width 1s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* Sprint List */
+  .sprint-list { display:flex; flex-direction:column; gap:8px; }
+  .sprint-item {
+    display:flex; align-items:center; gap:12px; padding:10px 14px;
+    background:var(--bg-hover); border-radius:10px; font-size:13px;
+    transition:all 0.2s;
+  }
+  .sprint-item:hover { background:var(--border); }
+  .sprint-item .sprint-status {
+    width:8px; height:8px; border-radius:50%; flex-shrink:0;
+  }
+  .sprint-item .sprint-name { flex:1; }
+  .sprint-item .sprint-num { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); }
+
+  /* System Health */
+  .health-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; }
+  .health-item {
+    display:flex; align-items:center; gap:12px; padding:14px;
+    background:var(--bg-hover); border-radius:10px;
+  }
+  .health-item .health-icon { font-size:20px; }
+  .health-item .health-info { flex:1; }
+  .health-item .health-name { font-size:13px; font-weight:500; }
+  .health-item .health-detail { font-size:11px; color:var(--text-muted); margin-top:2px; }
+  .health-item .health-status {
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    padding:3px 8px; border-radius:5px;
+  }
+
+  /* Sites Table */
+  .sites-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .sites-table th {
+    text-align:left; padding:10px 12px; color:var(--text-muted); font-weight:500; font-size:11px;
+    text-transform:uppercase; letter-spacing:0.03em; border-bottom:1px solid var(--border);
+  }
+  .sites-table td {
+    padding:10px 12px; border-bottom:1px solid var(--border);
+    vertical-align:middle;
+  }
+  .sites-table tr { transition:background 0.2s; }
+  .sites-table tr:hover { background:var(--bg-hover); }
+  .sites-table .site-link {
+    font-family:var(--font-mono); font-size:12px; color:var(--accent-light);
+  }
+  .sites-table .site-link:hover { color:var(--text-primary); }
+  .sites-table .site-desc { color:var(--text-secondary); font-size:12px; }
+  .sites-table .site-status {
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    padding:3px 10px; border-radius:5px;
+  }
+
+  /* Blocker Card */
+  .blocker-card {
+    background:linear-gradient(135deg, rgba(239,68,68,0.08) 0%, var(--bg-card) 100%);
+    border-color:rgba(239,68,68,0.3);
+  }
+  .blocker-card:hover { border-color:rgba(239,68,68,0.5); }
+
+  /* Action Buttons */
+  .btn {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; border-radius:10px; font-size:13px; font-weight:600;
+    border:1px solid var(--border); background:var(--bg-hover); color:var(--text-primary);
+    cursor:pointer; transition:all 0.2s; font-family:var(--font-sans);
+  }
+  .btn:hover { background:var(--border-hover); border-color:var(--accent); }
+  .btn-primary {
+    background:linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
+    border-color:transparent; color:#fff;
+    box-shadow:0 0 20px var(--accent-glow);
+  }
+  .btn-primary:hover { transform:translateY(-1px); box-shadow:0 4px 24px var(--accent-glow); }
+  .btn-sm { padding:6px 12px; font-size:12px; }
+
+  /* Footer */
+  footer {
+    border-top:1px solid var(--border); padding:32px 0;
+    background:var(--bg-elevated);
+  }
+  footer .container {
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  footer .footer-links { display:flex; gap:24px; }
+  footer .footer-links a { font-size:13px; color:var(--text-secondary); }
+  footer .footer-links a:hover { color:var(--text-primary); }
+
+  /* Responsive */
+  @media (max-width:1024px) {
+    .hero-grid { grid-template-columns:1fr; }
+    .mission-grid { grid-template-columns:1fr; }
+    .health-grid { grid-template-columns:1fr; }
+  }
+  @media (max-width:768px) {
+    header .container { flex-direction:column; height:auto; padding:12px 16px; gap:12px; }
+    nav { flex-wrap:wrap; justify-content:center; }
+    .hero-stats { flex-wrap:wrap; justify-content:center; }
+    .main-grid { grid-template-columns:1fr !important; }
+    .card { grid-column:1 / -1 !important; }
+    footer .container { flex-direction:column; gap:16px; text-align:center; }
+    .sites-table { font-size:11px; }
+    .sites-table th, .sites-table td { padding:8px; }
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity:0; transform:translateY(16px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  .animate-in { animation:fadeInUp 0.6s cubic-bezier(0.4,0,0.2,1) forwards; }
+  .delay-1 { animation-delay:0.1s; }
+  .delay-2 { animation-delay:0.2s; }
+  .delay-3 { animation-delay:0.3s; }
 </style>
 </head>
 <body>
 
-<!-- Status bar -->
-<div class="status-bar">
-  <div class="status-bar-left">
-    <div class="status-indicator">AGENT ONLINE</div>
-    <span style="color:var(--text-muted)">|</span>
-    <span style="color:var(--text-secondary)">3 Active Missions</span>
-    <span style="color:var(--text-muted)">|</span>
-    <span style="color:var(--text-secondary)">23/30 Sprints Shipped</span>
+<header>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">DC</div>
+      <div class="logo-text">Dali Mission Control<span>Command Center</span></div>
+    </div>
+    <nav>
+      <a href="#missions" class="active">Missions</a>
+      <a href="#sites">Sites</a>
+      <a href="https://build.siyada-cybersecurity.com">The Build</a>
+      <a href="https://process.siyada-cybersecurity.com">Process</a>
+      <a href="https://github.com/siyaida/dali-mission-control">GitHub</a>
+    </nav>
   </div>
-  <div class="status-bar-right">
-    Last update: 2026-05-09 04:52 UTC
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <h1>3 Active Missions<br><span class="highlight">25 of 35 Sprints</span> Shipped</h1>
+        <p>JIC × GW Engineering Management outreach campaign. Multi-tenant Program Launchpad. Cross-agent operations infrastructure. Running on a $8/mo VPS with 10 Docker containers and 12 subdomains.</p>
+        <div style="margin-top:20px; display:flex; gap:12px;">
+          <a href="https://process.siyada-cybersecurity.com" class="btn btn-primary">Run the Playbook</a>
+          <a href="https://github.com/siyaida/dali-mission-control/blob/main/AUDIT.md" class="btn">View Audit</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat animate-in">
+          <div class="stat-value success">25</div>
+          <div class="stat-label">Sprints</div>
+        </div>
+        <div class="stat animate-in delay-1">
+          <div class="stat-value info">12</div>
+          <div class="stat-label">Subdomains</div>
+        </div>
+        <div class="stat animate-in delay-2">
+          <div class="stat-value warning">1</div>
+          <div class="stat-label">Blocker</div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <div class="container">
+  <div class="main-grid">
 
-  <!-- Header -->
-  <header class="header reveal">
-    <div class="header-left">
-      <h1>🔥 Mission Control</h1>
-      <p>Autonomous execution dashboard for Dali. Open-source. VPS-first. Netlify-backed.</p>
+    <!-- Missions -->
+    <div class="card" style="grid-column:span 8;" id="missions">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--accent-glow);">🎯</div>
+          Active Missions
+        </div>
+        <a href="https://github.com/siyaida/dali-mission-control/blob/main/STATE.md" class="btn btn-sm">Full STATE →</a>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card animate-in">
+          <div class="mission-id">M01 — JIC × GW Engineering Management</div>
+          <div class="mission-name">Saudi employer outreach campaign for GW MS Engineering Management delivered through Jeddah International College</div>
+          <div class="mission-meta">
+            <span style="color:var(--success);">● 13/14 Sprints</span>
+            <span>3 Sites</span>
+            <span style="color:var(--danger);">1 Blocker</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:92.8%; background:var(--success);"></div></div>
+        </div>
+        <div class="mission-card animate-in delay-1">
+          <div class="mission-id">M02 — Program Launchpad</div>
+          <div class="mission-name">Multi-tenant SaaS: any (School × Program) plugs in and gets full ecosystem in 24 hours</div>
+          <div class="mission-meta">
+            <span style="color:var(--warning);">● 5/13 Sprints</span>
+            <span>1 Site</span>
+            <span style="color:var(--success);">0 Blockers</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:38.4%; background:var(--warning);"></div></div>
+        </div>
+        <div class="mission-card animate-in delay-2">
+          <div class="mission-id">M03 — Cross-Agent Operations</div>
+          <div class="mission-name">Infrastructure for agent-agnostic mission execution. Another agent clones repo, reads AGENT-BOOT.md, ships sprint in 10 min</div>
+          <div class="mission-meta">
+            <span style="color:var(--warning);">● 7/8 Sprints</span>
+            <span>7 Files</span>
+            <span style="color:var(--success);">0 Blockers</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:87.5%; background:var(--info);"></div></div>
+        </div>
+      </div>
     </div>
-    <div class="header-badge">
-      <span class="label">DEMO GATE:</span>
-      <span class="value">T+48h (Sun 2026-05-10)</span>
-    </div>
-  </header>
 
-  <!-- Stats -->
-  <div class="stats-row">
-    <div class="stat-box reveal reveal-delay-1">
-      <div class="stat-value">3</div>
-      <div class="stat-label">Active Missions</div>
+    <!-- System Health -->
+    <div class="card" style="grid-column:span 4;">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--success-glow);">🫀</div>
+          System Health
+        </div>
+        <span class="card-badge badge-live">LIVE</span>
+      </div>
+      <div class="health-grid">
+        <div class="health-item">
+          <div class="health-icon">🌐</div>
+          <div class="health-info">
+            <div class="health-name">Static Sites</div>
+            <div class="health-detail">6/6 serving</div>
+          </div>
+          <span class="health-status" style="background:var(--success-glow); color:var(--success);">OK</span>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">⚡</div>
+          <div class="health-info">
+            <div class="health-name">Dynamic Apps</div>
+            <div class="health-detail">5/6 starting</div>
+          </div>
+          <span class="health-status" style="background:var(--warning-glow); color:var(--warning);">WARM</span>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">🔒</div>
+          <div class="health-info">
+            <div class="health-name">SSL Certificates</div>
+            <div class="health-detail">Auto Let's Encrypt</div>
+          </div>
+          <span class="health-status" style="background:var(--success-glow); color:var(--success);">OK</span>
+        </div>
+        <div class="health-item">
+          <div class="health-icon">🪣</div>
+          <div class="health-info">
+            <div class="health-name">MinIO Storage</div>
+            <div class="health-detail">Starting up</div>
+          </div>
+          <span class="health-status" style="background:var(--warning-glow); color:var(--warning);">WARM</span>
+        </div>
+      </div>
+      <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
+        <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-secondary); margin-bottom:6px;">
+          <span>VPS</span><span>62.171.171.112</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-secondary); margin-bottom:6px;">
+          <span>Stack</span><span>Docker Compose · 10 containers</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-secondary);">
+          <span>Cost</span><span>$8/mo · 8GB RAM · 4 cores</span>
+        </div>
+      </div>
     </div>
-    <div class="stat-box reveal reveal-delay-2">
-      <div class="stat-value">23</div>
-      <div class="stat-label">Sprints Shipped</div>
+
+    <!-- Recent Ships -->
+    <div class="card" style="grid-column:span 4;">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--info-glow);">🚀</div>
+          Recent Ships
+        </div>
+        <span class="card-badge badge-live">TODAY</span>
+      </div>
+      <div class="sprint-list">
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--success);"></div>
+          <div class="sprint-name">Enhanced Mission Control + Process Website</div>
+          <div class="sprint-num">#14</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--success);"></div>
+          <div class="sprint-name">VPS Consolidation — Full Stack Deploy</div>
+          <div class="sprint-num">#13</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--success);"></div>
+          <div class="sprint-name">Cross-Agent Operations Infrastructure</div>
+          <div class="sprint-num">M03</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--success);"></div>
+          <div class="sprint-name">Program Launchpad Multi-Tenant Engine</div>
+          <div class="sprint-num">M02</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--success);"></div>
+          <div class="sprint-name">3 Canonical JIC Sites Rebuilt</div>
+          <div class="sprint-num">M01</div>
+        </div>
+      </div>
     </div>
-    <div class="stat-box reveal reveal-delay-3">
-      <div class="stat-value">7</div>
-      <div class="stat-label">True Blockers</div>
+
+    <!-- Blocker -->
+    <div class="card blocker-card" style="grid-column:span 4;">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--danger-glow);">🔑</div>
+          Active Blocker
+        </div>
+        <span class="card-badge badge-pending">HUMAN</span>
+      </div>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+        WhatsApp Business API + Cal.com scheduling setup needed. Requires Dali's business verification, phone number, and credentials.
+      </p>
+      <div style="display:flex; gap:8px;">
+        <a href="https://github.com/siyaida/dali-mission-control/issues/1" class="btn btn-sm">Issue #1 →</a>
+        <a href="https://process.siyada-cybersecurity.com" class="btn btn-sm">Process →</a>
+      </div>
     </div>
-    <div class="stat-box reveal reveal-delay-4">
-      <div class="stat-value">2</div>
-      <div class="stat-label">Netlify Sites Live</div>
+
+    <!-- Sprint Velocity -->
+    <div class="card" style="grid-column:span 4;">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--warning-glow);">⚡</div>
+          Sprint Velocity
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:4px;">
+            <span style="color:var(--text-secondary);">2026-05-08</span><span style="color:var(--success);">12 sprints</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:100%; background:var(--success);"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:4px;">
+            <span style="color:var(--text-secondary);">2026-05-09</span><span style="color:var(--success);">13 sprints</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:100%; background:var(--accent);"></div></div>
+        </div>
+        <div style="text-align:center; padding-top:8px; border-top:1px solid var(--border);">
+          <div style="font-family:var(--font-mono); font-size:24px; font-weight:700; color:var(--accent-light);">12.5</div>
+          <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.03em;">Sprints / Day Average</div>
+        </div>
+      </div>
     </div>
+
+    <!-- Live Sites -->
+    <div class="card" style="grid-column:span 12;" id="sites">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--accent-glow);">🌐</div>
+          Live Sites & Services
+        </div>
+        <a href="https://status.siyada-cybersecurity.com" class="btn btn-sm">Status Page →</a>
+      </div>
+      <table class="sites-table">
+        <thead>
+          <tr><th>URL</th><th>Description</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://siyada-cybersecurity.com" class="site-link">siyada-cybersecurity.com</a></td>
+            <td class="site-desc">Mission Control Dashboard</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://jic.siyada-cybersecurity.com" class="site-link">jic.*</a></td>
+            <td class="site-desc">JIC Marketing — Institutional (AR+EN)</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://leads.siyada-cybersecurity.com" class="site-link">leads.*</a></td>
+            <td class="site-desc">JIC Lead Gen — Conversion (AR+EN)</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://ecosystem.siyada-cybersecurity.com" class="site-link">ecosystem.*</a></td>
+            <td class="site-desc">JIC Ecosystem — Digital Ops</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://launchpad.siyada-cybersecurity.com" class="site-link">launchpad.*</a></td>
+            <td class="site-desc">Program Launchpad — Multi-Tenant Engine</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://build.siyada-cybersecurity.com" class="site-link">build.*</a></td>
+            <td class="site-desc">The Build Story — Documented Journey</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://process.siyada-cybersecurity.com" class="site-link">process.*</a></td>
+            <td class="site-desc">Acquisition & Transformation Machine</td>
+            <td><span class="site-status" style="background:var(--warning-glow); color:var(--warning);">● DEPLOYING</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://flows.siyada-cybersecurity.com" class="site-link">flows.*</a></td>
+            <td class="site-desc">ActivePieces — Workflow Automation</td>
+            <td><span class="site-status" style="background:var(--warning-glow); color:var(--warning);">● STARTING</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://contacts.siyada-cybersecurity.com" class="site-link">contacts.*</a></td>
+            <td class="site-desc">EspoCRM — Contact Management</td>
+            <td><span class="site-status" style="background:var(--warning-glow); color:var(--warning);">● STARTING</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://chat.siyada-cybersecurity.com" class="site-link">chat.*</a></td>
+            <td class="site-desc">Chatwoot — Live Chat</td>
+            <td><span class="site-status" style="background:var(--warning-glow); color:var(--warning);">● STARTING</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://analytics.siyada-cybersecurity.com" class="site-link">analytics.*</a></td>
+            <td class="site-desc">Plausible — Privacy Analytics</td>
+            <td><span class="site-status" style="background:var(--warning-glow); color:var(--warning);">● STARTING</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://status.siyada-cybersecurity.com" class="site-link">status.*</a></td>
+            <td class="site-desc">Uptime Kuma — Monitoring</td>
+            <td><span class="site-status" style="background:var(--success-glow); color:var(--success);">● LIVE</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://storage.siyada-cybersecurity.com" class="site-link">storage.*</a></td>
+            <td class="site-desc">MinIO — S3-Compatible Storage</td>
+            <td><span class="site-status" style="background:var(--warning-glow); color:var(--warning);">● STARTING</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Repos -->
+    <div class="card" style="grid-column:span 6;">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--info-glow);">📦</div>
+          Repositories
+        </div>
+      </div>
+      <div class="sprint-list">
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--accent);"></div>
+          <div class="sprint-name"><a href="https://github.com/siyaida/dali-mission-control">dali-mission-control</a></div>
+          <div class="sprint-num">Main</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--accent);"></div>
+          <div class="sprint-name"><a href="https://github.com/siyaida/program-launchpad">program-launchpad</a></div>
+          <div class="sprint-num">M02</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--accent);"></div>
+          <div class="sprint-name"><a href="https://github.com/siyaida/jic-marketing-website">jic-marketing-website</a></div>
+          <div class="sprint-num">M01</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--accent);"></div>
+          <div class="sprint-name"><a href="https://github.com/siyaida/jic-gw-leads-website">jic-gw-leads-website</a></div>
+          <div class="sprint-num">M01</div>
+        </div>
+        <div class="sprint-item">
+          <div class="sprint-status" style="background:var(--accent);"></div>
+          <div class="sprint-name"><a href="https://github.com/siyaida/jic-gw-ecosystem-website">jic-gw-ecosystem-website</a></div>
+          <div class="sprint-num">M01</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operating Model -->
+    <div class="card" style="grid-column:span 6;">
+      <div class="card-header">
+        <div class="card-title">
+          <div class="icon" style="background:var(--success-glow);">⚙️</div>
+          Operating Model
+        </div>
+      </div>
+      <div style="font-family:var(--font-mono); font-size:12px; line-height:2; color:var(--text-secondary);">
+        <div><span style="color:var(--accent-light);">1.</span> CREATE CLAW <span style="color:var(--text-muted);">→ spawn agent</span></div>
+        <div><span style="color:var(--accent-light);">2.</span> GIVE TOOLS <span style="color:var(--text-muted);">→ GitHub, Docker, SSH, Web, Message</span></div>
+        <div><span style="color:var(--accent-light);">3.</span> POINT TO FILES <span style="color:var(--text-muted);">→ SOUL.md, STATE.md, AGENT-BOOT.md</span></div>
+        <div><span style="color:var(--accent-light);">4.</span> AGENT EXECUTES <span style="color:var(--text-muted);">→ autonomously, updates STATE.md, pushes to GitHub</span></div>
+        <div><span style="color:var(--warning);">5.</span> HUMAN REVIEW <span style="color:var(--text-muted);">→ at gates: consult booking, pricing, final close</span></div>
+        <div><span style="color:var(--success);">6.</span> RESULTS <span style="color:var(--text-muted);">→ closed deal / follow-up scheduled / pass archived</span></div>
+      </div>
+      <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border);">
+        <a href="https://github.com/siyaida/dali-mission-control/blob/main/missions/cross-agent-operations/HUMAN-GATES.md" class="btn btn-sm">HUMAN-GATES.md →</a>
+      </div>
+    </div>
+
+    <!-- Security Banner -->
+    <div class="card" style="grid-column:span 12; background:linear-gradient(135deg, rgba(245,158,11,0.06) 0%, var(--bg-card) 100%); border-color:rgba(245,158,11,0.2);">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:600; margin-bottom:4px;">🔒 Security Audit Complete</div>
+          <div style="font-size:13px; color:var(--text-secondary);">5 critical issues identified. Secrets rotation, backups, and fail2ban needed this week. Full audit in <a href="https://github.com/siyaida/dali-mission-control/blob/main/AUDIT.md">AUDIT.md</a>.</div>
+        </div>
+        <a href="https://github.com/siyaida/dali-mission-control/blob/main/AUDIT.md" class="btn">View Audit →</a>
+      </div>
+    </div>
+
   </div>
-
-  <!-- Active Missions -->
-  <div class="section-header reveal">
-    <h2>🎯 Active Missions</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="missions-grid">
-    
-    <!-- Mission 01 -->
-    <div class="mission-card reveal reveal-delay-1">
-      <div class="mission-header">
-        <span class="mission-number">Mission 01</span>
-        <span class="mission-status active">● LIVE</span>
-      </div>
-      <h2>JIC × GW Engineering Management</h2>
-      <p class="desc">Saudi employer outreach campaign for GW MS Engineering Management delivered through Jeddah International College. Three canonical sites: institutional marketing, lead generation, and digital ecosystem. North Star: paid enrollments in Cohort 1.</p>
-      
-      <div class="progress-section">
-        <div class="progress-header">
-          <span class="progress-label">Phase 2 Progress</span>
-          <span class="progress-value">12/12 sprints</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width:100%"></div>
-        </div>
-      </div>
-      
-      <div class="sprint-board">
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Battle Card + Personas</span>
-            <span class="meta">EN+AR • Verified</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Top-50 Anchor Employers</span>
-            <span class="meta">Confidence-tagged • Public sources</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">120 Message Templates</span>
-            <span class="meta">3 channels × 5 regions × 2 ICPs</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Objection Playbook</span>
-            <span class="meta">15 objections • counters • scripts</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Landing Page + Demo</span>
-            <span class="meta">Self-contained HTML • Netlify live</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon pending">⏳</div>
-          <div class="sprint-info">
-            <span class="name">Phase 2: Intake Ecosystem</span>
-            <span class="meta">Activepieces flows • Reingest pipeline</span>
-          </div>
-          <span class="sprint-badge pending">WIP</span>
-        </div>
-      </div>
-      
-      <div class="mission-links">
-        <a href="https://jic-gw-leads-website.netlify.app" target="_blank">🌐 Lead Gen Site →</a>
-        <a href="https://jic-marketing-website.netlify.app" target="_blank">🏛️ Institutional Site →</a>
-        <a href="https://jic-gw-ecosystem-website.netlify.app" target="_blank">⚡ Ecosystem Site →</a>
-        <a href="https://github.com/siyaida/jic-gw-leads-website" target="_blank">📁 Repo →</a>
-        <a href="https://github.com/siyaida/dali-mission-control/issues/1" target="_blank">🔑 Blockers →</a>
-      </div>
-    </div>
-
-    <!-- Mission 03 -->
-    <div class="mission-card reveal reveal-delay-3">
-      <div class="mission-header">
-        <span class="mission-number">Mission 03</span>
-        <span class="mission-status active">● BOOTSTRAP</span>
-      </div>
-      <h2>Cross-Agent Operations</h2>
-      <p class="desc">Documentation + tooling so any KimiClaw instance can operate the full Dali system end-to-end without asking "what do I do?"</p>
-      
-      <div class="progress-section">
-        <div class="progress-header">
-          <span class="progress-label">Bootstrap Progress</span>
-          <span class="progress-value">6/7 sprints</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width:86%"></div>
-        </div>
-      </div>
-      
-      <div class="sprint-board">
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Boot Sequence</span>
-            <span class="meta">AGENT-BOOT.md • 10-min protocol</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">State Machine</span>
-            <span class="meta">Root STATE.md • Mission lifecycle</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Sprint Templates</span>
-            <span class="meta">Standardized 6-section template</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Blocker Protocol</span>
-            <span class="meta">Escalation flow • 30-min rule</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Communication Standard</span>
-            <span class="meta">Terse updates • State tags</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">Dashboard Integration</span>
-            <span class="meta">Mission card • Auto-stats</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon pending">⏳</div>
-          <div class="sprint-info">
-            <span class="name">Test Flight</span>
-            <span class="meta">Fresh clone • 10-min validation</span>
-          </div>
-          <span class="sprint-badge pending">QUEUED</span>
-        </div>
-      </div>
-      
-      <div class="mission-links">
-        <a href="https://github.com/siyaida/dali-mission-control/tree/main/missions/cross-agent-operations" target="_blank">📁 Repo →</a>
-        <a href="https://github.com/siyaida/dali-mission-control/issues/3" target="_blank">🔑 Blockers →</a>
-      </div>
-    </div>
-
-    <!-- Mission 02 -->
-    <div class="mission-card reveal reveal-delay-2">
-      <div class="mission-header">
-        <span class="mission-number">Mission 02</span>
-        <span class="mission-status active">● BOOTSTRAP</span>
-      </div>
-      <h2>Program Launchpad</h2>
-      <p class="desc">Multi-tenant engine where any (School × Program) plugs in via intake portal and gets their full ecosystem auto-generated. Tenant 0 = JIC × GW.</p>
-      
-      <div class="progress-section">
-        <div class="progress-header">
-          <span class="progress-label">Bootstrap Progress</span>
-          <span class="progress-value">5/13 sprints</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width:38%"></div>
-        </div>
-      </div>
-      
-      <div class="sprint-board">
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">M2-A: Repo Bootstrap</span>
-            <span class="meta">Monorepo • GH Actions • Pages config</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">M2-B: Tenant Config Schema</span>
-            <span class="meta">JSON Schema • Validation • _template/</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon done">✓</div>
-          <div class="sprint-info">
-            <span class="name">M2-C/D/E: Template Lift</span>
-            <span class="meta">Handlebars/MDX • {{tenant.*}} bindings</span>
-          </div>
-          <span class="sprint-badge done">DONE</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon pending">⏳</div>
-          <div class="sprint-info">
-            <span class="name">M2-F: Renderer Engine</span>
-            <span class="meta">Template engine • Idempotency tests</span>
-          </div>
-          <span class="sprint-badge pending">QUEUED</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon pending">⏳</div>
-          <div class="sprint-info">
-            <span class="name">M2-G: Activepieces Stack</span>
-            <span class="meta">docker-compose • 5 core workflows</span>
-          </div>
-          <span class="sprint-badge pending">QUEUED</span>
-        </div>
-        <div class="sprint-item">
-          <div class="sprint-icon pending">⏳</div>
-          <div class="sprint-info">
-            <span class="name">M2-I: Operator Console</span>
-            <span class="meta">Multi-tenant UI • Tenant switcher</span>
-          </div>
-          <span class="sprint-badge pending">QUEUED</span>
-        </div>
-      </div>
-      
-      <div class="mission-links">
-        <a href="https://program-launchpad.netlify.app/" target="_blank">🌐 Site Live →</a>
-        <a href="https://github.com/siyaida/program-launchpad" target="_blank">📁 Repo →</a>
-        <a href="https://github.com/siyaida/program-launchpad/issues" target="_blank">🔑 Blockers →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- How It Works -->
-  <div class="section-header reveal">
-    <h2>⚙️ How It Works</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="how-it-works">
-    <div class="step-card reveal reveal-delay-1">
-      <span class="step-num">01</span>
-      <h3>You Drop the Mission</h3>
-      <p>Goal, constraints, success criteria. One brief. Context carries across sessions.</p>
-    </div>
-    <div class="step-card reveal reveal-delay-2">
-      <span class="step-num">02</span>
-      <h3>I Execute Autonomously</h3>
-      <p>Open-source first. Documented in real-time. Sub-agents for parallel tracks.</p>
-    </div>
-    <div class="step-card reveal reveal-delay-3">
-      <span class="step-num">03</span>
-      <h3>Progress Is Live</h3>
-      <p>This dashboard updates automatically. Every commit is a status update.</p>
-    </div>
-    <div class="step-card reveal reveal-delay-4">
-      <span class="step-num">04</span>
-      <h3>Escalate Blockers Only</h3>
-      <p>Decisions, credentials, legal. Everything else ships without asking.</p>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div>
-      Built by JIC Washington (OpenClaw, kimi/k2p6) · 
-      <a href="https://github.com/siyaida/dali-mission-control">dali-mission-control</a> ·
-      <a href="https://github.com/siyaida/program-launchpad">program-launchpad</a> ·
-      <a href="https://github.com/siyaida/jic-marketing-website">marketing</a> ·
-      <a href="https://github.com/siyaida/jic-gw-leads-website">leads</a> ·
-      <a href="https://github.com/siyaida/jic-gw-ecosystem-website">ecosystem</a>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;">
-      <span style="color:var(--success)">●</span> Agent Online · 
-      <span style="color:var(--accent)">●</span> 3 Missions Active
-    </div>
-  </footer>
-
 </div>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/siyaida/dali-mission-control">GitHub</a>
+      <a href="https://build.siyada-cybersecurity.com">The Build</a>
+      <a href="https://process.siyada-cybersecurity.com">Process</a>
+      <a href="https://github.com/siyaida/dali-mission-control/blob/main/AUDIT.md">Audit</a>
+      <a href="https://github.com/siyaida/dali-mission-control/blob/main/missions/cross-agent-operations/HUMAN-GATES.md">Human Gates</a>
+    </div>
+    <div style="font-size:12px; color:var(--text-muted);">
+      Built by <a href="https://github.com/siyaida">@siyaida</a> · Agent: JIC Washington · Open source
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

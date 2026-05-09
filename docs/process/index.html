@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Acquisition & Transformation Machine — Dali Mission Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg-elevated: #111118;
+    --bg-card: #14141c;
+    --bg-hover: #1a1a24;
+    --border: #1f1f2e;
+    --border-hover: #2a2a3e;
+    --text-primary: #f0f0f5;
+    --text-secondary: #8b8b9e;
+    --text-muted: #5a5a6e;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --accent-glow: rgba(99,102,241,0.15);
+    --success: #10b981;
+    --success-glow: rgba(16,185,129,0.15);
+    --warning: #f59e0b;
+    --warning-glow: rgba(245,158,11,0.15);
+    --danger: #ef4444;
+    --danger-glow: rgba(239,68,68,0.15);
+    --info: #3b82f6;
+    --info-glow: rgba(59,130,246,0.15);
+    --human-gate: #ec4899;
+    --human-glow: rgba(236,72,153,0.15);
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  ::selection { background: var(--accent); color:#fff; }
+  ::-webkit-scrollbar { width:6px; }
+  ::-webkit-scrollbar-track { background:var(--bg); }
+  ::-webkit-scrollbar-thumb { background:var(--border-hover); border-radius:3px; }
+  a { color:var(--accent-light); text-decoration:none; transition:color 0.2s; }
+  a:hover { color:var(--text-primary); }
+  .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+  /* Header */
+  header {
+    position:sticky; top:0; z-index:100;
+    background:rgba(10,10,15,0.85);
+    backdrop-filter:blur(20px) saturate(1.5);
+    border-bottom:1px solid var(--border);
+  }
+  header .container {
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px; padding:0 24px;
+  }
+  .logo { display:flex; align-items:center; gap:12px; }
+  .logo-mark {
+    width:36px; height:36px; border-radius:10px;
+    background:linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-weight:700; font-size:14px; color:#fff;
+    box-shadow:0 0 20px var(--accent-glow);
+  }
+  .logo-text { font-weight:800; font-size:18px; letter-spacing:-0.02em; }
+  .logo-text span { color:var(--text-secondary); font-weight:400; font-size:13px; display:block; margin-top:-4px; }
+  nav { display:flex; gap:6px; }
+  nav a {
+    padding:8px 14px; border-radius:8px; font-size:13px; font-weight:500;
+    color:var(--text-secondary); transition:all 0.2s;
+  }
+  nav a:hover, nav a.active { background:var(--bg-card); color:var(--text-primary); }
+
+  /* Hero */
+  .hero {
+    padding:64px 0 48px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg) 100%);
+  }
+  .hero h1 {
+    font-size:clamp(32px, 4vw, 52px); font-weight:800; line-height:1.1;
+    letter-spacing:-0.03em; margin-bottom:16px;
+  }
+  .hero h1 .highlight { color:var(--accent-light); }
+  .hero p {
+    color:var(--text-secondary); font-size:16px; max-width:640px; margin:0 auto 32px;
+  }
+  .hero .subtitle {
+    font-family:var(--font-mono); font-size:13px; color:var(--text-muted);
+    letter-spacing:0.05em; text-transform:uppercase;
+  }
+
+  /* Phase Flow */
+  .phases-section { padding:48px 0; }
+  .phase-flow {
+    display:flex; align-items:stretch; gap:0;
+    margin-bottom:48px; overflow-x:auto; padding-bottom:16px;
+  }
+  .phase-node {
+    flex:1; min-width:140px; text-align:center; position:relative;
+    padding:20px 8px;
+  }
+  .phase-node:not(:last-child)::after {
+    content:''; position:absolute; right:-12px; top:50%; transform:translateY(-50%);
+    width:24px; height:2px; background:var(--border-hover);
+  }
+  .phase-node .phase-num {
+    font-family:var(--font-mono); font-size:11px; font-weight:600;
+    color:var(--text-muted); margin-bottom:8px;
+  }
+  .phase-node .phase-icon {
+    width:48px; height:48px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:24px; margin:0 auto 10px;
+    background:var(--bg-card); border:2px solid var(--border);
+    transition:all 0.3s;
+  }
+  .phase-node:hover .phase-icon { border-color:var(--accent); box-shadow:0 0 24px var(--accent-glow); transform:translateY(-2px); }
+  .phase-node .phase-name {
+    font-size:13px; font-weight:600; line-height:1.3;
+  }
+  .phase-node .phase-status {
+    font-size:11px; margin-top:6px; font-weight:500;
+  }
+  .phase-node.agent .phase-status { color:var(--success); }
+  .phase-node.human .phase-status { color:var(--human-gate); }
+  .phase-node.agent .phase-icon { border-color:rgba(16,185,129,0.3); }
+  .phase-node.human .phase-icon { border-color:rgba(236,72,153,0.3); }
+
+  /* Phase Cards */
+  .phase-card {
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:16px; padding:32px; margin-bottom:24px;
+    transition:all 0.3s;
+  }
+  .phase-card:hover { border-color:var(--border-hover); }
+  .phase-card.human-gate {
+    border-color:rgba(236,72,153,0.2);
+    background:linear-gradient(135deg, rgba(236,72,153,0.03) 0%, var(--bg-card) 100%);
+  }
+  .phase-card.human-gate:hover { border-color:rgba(236,72,153,0.4); }
+  .phase-header {
+    display:flex; align-items:center; gap:16px; margin-bottom:24px;
+  }
+  .phase-header .phase-badge {
+    width:48px; height:48px; border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:24px; flex-shrink:0;
+  }
+  .phase-header .phase-badge.agent { background:var(--success-glow); border:2px solid rgba(16,185,129,0.3); }
+  .phase-header .phase-badge.human { background:var(--human-glow); border:2px solid rgba(236,72,153,0.3); }
+  .phase-header .phase-title {
+    font-size:22px; font-weight:700; line-height:1.2;
+  }
+  .phase-header .phase-subtitle {
+    font-size:13px; color:var(--text-secondary); margin-top:2px;
+  }
+  .phase-header .gate-tag {
+    margin-left:auto; font-family:var(--font-mono); font-size:11px; font-weight:600;
+    padding:6px 14px; border-radius:8px; text-transform:uppercase; letter-spacing:0.04em;
+    white-space:nowrap;
+  }
+  .gate-tag.agent { background:var(--success-glow); color:var(--success); border:1px solid rgba(16,185,129,0.3); }
+  .gate-tag.human { background:var(--human-glow); color:var(--human-gate); border:1px solid rgba(236,72,153,0.3); }
+
+  .phase-grid {
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
+  }
+  .phase-detail {
+    background:var(--bg-hover); border-radius:12px; padding:20px;
+    border:1px solid var(--border);
+  }
+  .phase-detail:hover { border-color:var(--border-hover); }
+  .phase-detail .detail-label {
+    font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;
+    color:var(--text-muted); margin-bottom:12px;
+  }
+  .phase-detail ul { list-style:none; }
+  .phase-detail li {
+    font-size:13px; color:var(--text-secondary); padding:4px 0;
+    display:flex; align-items:center; gap:8px;
+  }
+  .phase-detail li::before {
+    content:''; width:6px; height:6px; border-radius:50%;
+    background:var(--accent); flex-shrink:0;
+  }
+  .phase-detail .output-box {
+    background:rgba(99,102,241,0.06); border:1px solid rgba(99,102,241,0.15);
+    border-radius:10px; padding:16px; font-size:13px;
+    color:var(--text-primary); line-height:1.7;
+  }
+  .phase-detail .output-box strong { color:var(--accent-light); }
+
+  /* Human Gate Section */
+  .human-gate-section {
+    background:linear-gradient(135deg, rgba(236,72,153,0.04) 0%, var(--bg-card) 100%);
+    border:1px solid rgba(236,72,153,0.15); border-radius:16px;
+    padding:24px 32px; margin:20px 0;
+  }
+  .human-gate-section .gate-title {
+    font-size:15px; font-weight:600; color:var(--human-gate); margin-bottom:12px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .human-gate-section .gate-options {
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;
+  }
+  .gate-option {
+    background:var(--bg-hover); border:1px solid var(--border);
+    border-radius:10px; padding:14px; font-size:12px;
+    transition:all 0.2s;
+  }
+  .gate-option:hover { border-color:var(--human-gate); background:rgba(236,72,153,0.04); }
+  .gate-option .opt-name { font-weight:600; color:var(--text-primary); margin-bottom:4px; }
+  .gate-option .opt-desc { color:var(--text-secondary); line-height:1.5; }
+
+  /* Run This Playbook */
+  .playbook-section {
+    padding:64px 0; border-top:1px solid var(--border);
+    background:var(--bg-elevated);
+  }
+  .playbook-section h2 {
+    text-align:center; font-size:clamp(28px, 3vw, 40px); font-weight:800;
+    margin-bottom:16px; letter-spacing:-0.02em;
+  }
+  .playbook-section .playbook-sub {
+    text-align:center; color:var(--text-secondary); font-size:15px; max-width:560px; margin:0 auto 48px;
+  }
+  .playbook-flow {
+    display:flex; align-items:stretch; gap:0; justify-content:center;
+    flex-wrap:wrap; max-width:900px; margin:0 auto;
+  }
+  .playbook-step {
+    flex:1; min-width:160px; text-align:center; padding:24px 16px; position:relative;
+  }
+  .playbook-step:not(:last-child)::after {
+    content:''; position:absolute; right:-12px; top:40%;
+    width:24px; height:2px; background:var(--accent); opacity:0.3;
+  }
+  .playbook-step .step-num {
+    width:40px; height:40px; border-radius:50%;
+    background:var(--accent); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-weight:700; font-size:16px;
+    margin:0 auto 12px; box-shadow:0 0 20px var(--accent-glow);
+  }
+  .playbook-step .step-name { font-size:15px; font-weight:600; margin-bottom:6px; }
+  .playbook-step .step-desc { font-size:12px; color:var(--text-secondary); line-height:1.5; }
+
+  /* Files Section */
+  .files-section { padding:48px 0; border-top:1px solid var(--border); }
+  .files-section h2 { font-size:28px; font-weight:800; margin-bottom:32px; text-align:center; }
+  .files-grid {
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
+  }
+  .file-card {
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:12px; padding:20px; transition:all 0.2s;
+  }
+  .file-card:hover { border-color:var(--accent); }
+  .file-card .file-name {
+    font-family:var(--font-mono); font-size:13px; font-weight:600;
+    color:var(--accent-light); margin-bottom:8px;
+  }
+  .file-card .file-desc { font-size:13px; color:var(--text-secondary); line-height:1.5; }
+  .file-card .file-priority {
+    margin-top:12px; font-size:11px; font-weight:600;
+    padding:4px 10px; border-radius:5px; display:inline-block;
+  }
+  .priority-required { background:var(--accent-glow); color:var(--accent-light); }
+  .priority-optional { background:var(--bg-hover); color:var(--text-muted); }
+
+  /* Expected Results Matrix */
+  .results-section { padding:48px 0; border-top:1px solid var(--border); }
+  .results-section h2 { font-size:28px; font-weight:800; margin-bottom:32px; text-align:center; }
+  .results-grid {
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
+  }
+  .result-card {
+    background:var(--bg-card); border:1px solid var(--border);
+    border-radius:16px; padding:28px; text-align:center;
+    transition:all 0.3s;
+  }
+  .result-card:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+  .result-card .result-icon { font-size:40px; margin-bottom:16px; }
+  .result-card .result-title { font-size:18px; font-weight:700; margin-bottom:8px; }
+  .result-card .result-desc { font-size:13px; color:var(--text-secondary); line-height:1.6; }
+
+  /* Footer */
+  footer {
+    border-top:1px solid var(--border); padding:32px 0;
+    background:var(--bg-elevated);
+  }
+  footer .container {
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  footer .footer-links { display:flex; gap:24px; }
+  footer .footer-links a { font-size:13px; color:var(--text-secondary); }
+  footer .footer-links a:hover { color:var(--text-primary); }
+
+  /* Responsive */
+  @media (max-width:1024px) {
+    .phase-grid { grid-template-columns:1fr; }
+    .files-grid { grid-template-columns:1fr; }
+    .results-grid { grid-template-columns:1fr; }
+    .gate-options { grid-template-columns:1fr 1fr !important; }
+  }
+  @media (max-width:768px) {
+    header .container { flex-direction:column; height:auto; padding:12px 16px; gap:12px; }
+    nav { flex-wrap:wrap; justify-content:center; }
+    .phase-flow { gap:8px; }
+    .phase-node { min-width:100px; padding:12px 4px; }
+    .phase-node:not(:last-child)::after { display:none; }
+    .playbook-step { min-width:140px; }
+    .playbook-step:not(:last-child)::after { display:none; }
+    footer .container { flex-direction:column; gap:16px; text-align:center; }
+    .gate-options { grid-template-columns:1fr !important; }
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity:0; transform:translateY(16px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+  .animate-in { animation:fadeInUp 0.6s cubic-bezier(0.4,0,0.2,1) forwards; opacity:0; }
+  .delay-1 { animation-delay:0.1s; }
+  .delay-2 { animation-delay:0.2s; }
+  .delay-3 { animation-delay:0.3s; }
+  .delay-4 { animation-delay:0.4s; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">DC</div>
+      <div class="logo-text">Dali Mission Control<span>Acquisition & Transformation Machine</span></div>
+    </div>
+    <nav>
+      <a href="https://siyada-cybersecurity.com">← Dashboard</a>
+      <a href="#phases" class="active">Phases</a>
+      <a href="#playbook">Playbook</a>
+      <a href="#files">Files</a>
+      <a href="#results">Results</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="subtitle animate-in">The Operating System</div>
+    <h1 class="animate-in delay-1">From Lead to <span class="highlight">Enrolled Student</span></h1>
+    <p class="animate-in delay-2">A 7-phase acquisition engine. Agent runs autonomously through 5 phases. Human steps in only at consultation booking and final close. Everything else is automated, tracked, and documented.</p>
+  </div>
+</section>
+
+<section class="phases-section" id="phases">
+  <div class="container">
+
+    <!-- Flow Overview -->
+    <div class="phase-flow">
+      <div class="phase-node agent">
+        <div class="phase-num">01</div>
+        <div class="phase-icon">🎯</div>
+        <div class="phase-name">Attract</div>
+        <div class="phase-status">AGENT</div>
+      </div>
+      <div class="phase-node agent">
+        <div class="phase-num">02</div>
+        <div class="phase-icon">🪝</div>
+        <div class="phase-name">Capture</div>
+        <div class="phase-status">AGENT</div>
+      </div>
+      <div class="phase-node agent">
+        <div class="phase-num">03</div>
+        <div class="phase-icon">⚖️</div>
+        <div class="phase-name">Qualify</div>
+        <div class="phase-status">AGENT</div>
+      </div>
+      <div class="phase-node agent">
+        <div class="phase-num">04</div>
+        <div class="phase-icon">🔄</div>
+        <div class="phase-name">Nurture</div>
+        <div class="phase-status">AGENT</div>
+      </div>
+      <div class="phase-node human">
+        <div class="phase-num">05</div>
+        <div class="phase-icon">🤝</div>
+        <div class="phase-name">Consult</div>
+        <div class="phase-status">HUMAN</div>
+      </div>
+      <div class="phase-node human">
+        <div class="phase-num">06</div>
+        <div class="phase-icon">✍️</div>
+        <div class="phase-name">Close</div>
+        <div class="phase-status">HUMAN</div>
+      </div>
+      <div class="phase-node agent">
+        <div class="phase-num">07</div>
+        <div class="phase-icon">🎓</div>
+        <div class="phase-name">Transform</div>
+        <div class="phase-status">AGENT</div>
+      </div>
+    </div>
+
+    <!-- Phase 1: ATTRACT -->
+    <div class="phase-card animate-in" id="phase-attract">
+      <div class="phase-header">
+        <div class="phase-badge agent">🎯</div>
+        <div>
+          <div class="phase-title">Phase 01 — Attract</div>
+          <div class="phase-subtitle">Landing pages, ads, content, SEO — generate inbound interest</div>
+        </div>
+        <div class="gate-tag agent">AGENT AUTONOMOUS</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does</div>
+          <ul>
+            <li>Deploys landing pages (Astro + Tailwind)</li>
+            <li>Writes ad copy for Meta, Google, TikTok</li>
+            <li>Creates SEO content and blog posts</li>
+            <li>Builds lead magnets (reports, guides)</li>
+            <li>A/B tests headlines and CTAs</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>GitHub (deploy to VPS)</li>
+            <li>Caddy (reverse proxy + SSL)</li>
+            <li>Plausible (analytics tracking)</li>
+            <li>Canva / Figma (creative assets)</li>
+            <li>Google Ads / Meta Ads Manager</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Files Read</div>
+          <ul>
+            <li><code>missions/{mission}/battle-card.md</code></li>
+            <li><code>missions/{mission}/ad-creative-brief.md</code></li>
+            <li><code>missions/{mission}/landing/</code></li>
+            <li><code>SOUL.md</code> (brand voice)</li>
+            <li><code>USER.md</code> (Dali's context)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-grid" style="margin-top:20px;">
+        <div class="phase-detail" style="grid-column:span 3;">
+          <div class="detail-label">Expected Output</div>
+          <div class="output-box">
+            <strong>Visitors</strong> → Tracked via Plausible. <strong>Leads</strong> → Form submissions captured in Chatwoot + EspoCRM. <strong>Cost per lead</strong> → Optimized through A/B testing. Agent reports weekly: "X visitors, Y leads, Z cost per lead."
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2: CAPTURE -->
+    <div class="phase-card animate-in delay-1" id="phase-capture">
+      <div class="phase-header">
+        <div class="phase-badge agent">🪝</div>
+        <div>
+          <div class="phase-title">Phase 02 — Capture</div>
+          <div class="phase-subtitle">Forms, chat, calendar, CRM intake — collect and store lead data</div>
+        </div>
+        <div class="gate-tag agent">AGENT AUTONOMOUS</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does</div>
+          <ul>
+            <li>Configures Chatwoot chat widget on all sites</li>
+            <li>Builds intake forms (EspoCRM custom fields)</li>
+            <li>Sets up Cal.com embed for booking</li>
+            <li>Creates CRM lead records automatically</li>
+            <li>Validates phone/email with regex + API</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>Chatwoot (live chat + inbox)</li>
+            <li>EspoCRM (lead database)</li>
+            <li>ActivePieces (form → CRM automation)</li>
+            <li>Cal.com (scheduling widget)</li>
+            <li>MinIO (form attachment storage)</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Files Read</div>
+          <ul>
+            <li><code>missions/{mission}/crm-schema/</code></li>
+            <li><code>missions/{mission}/n8n-workflows/</code></li>
+            <li><code>AGENT-SPRINT-TEMPLATE.md</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-grid" style="margin-top:20px;">
+        <div class="phase-detail" style="grid-column:span 3;">
+          <div class="detail-label">Expected Output</div>
+          <div class="output-box">
+            <strong>Lead record</strong> → Created in EspoCRM with: name, email, phone, company, role, interest level, source URL, timestamp. <strong>Chat transcript</strong> → Logged in Chatwoot. <strong>Booking intent</strong> → Flagged for Phase 5 review.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3: QUALIFY -->
+    <div class="phase-card animate-in delay-2" id="phase-qualify">
+      <div class="phase-header">
+        <div class="phase-badge agent">⚖️</div>
+        <div>
+          <div class="phase-title">Phase 03 — Qualify</div>
+          <div class="phase-subtitle">Scoring, segmentation, enrichment — separate hot leads from cold</div>
+        </div>
+        <div class="gate-tag agent">AGENT AUTONOMOUS</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does</div>
+          <ul>
+            <li>Scores leads by engagement (page views, time on site)</li>
+            <li>Segments by company size, region, role</li>
+            <li>Enriches with LinkedIn / Clearbit data</li>
+            <li>Flags B2B vs B2C intent</li>
+            <li>Calculates lead score 0-100</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>ActivePieces (scoring workflow)</li>
+            <li>Plausible (behavioral data)</li>
+            <li>EspoCRM (lead tags + custom fields)</li>
+            <li>LinkedIn API (enrichment)</li>
+            <li>PostHog (funnel analysis)</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Files Read</div>
+          <ul>
+            <li><code>missions/{mission}/anchor-employers.csv</code></li>
+            <li><code>missions/{mission}/objection-playbook.md</code></li>
+            <li><code>AGENT-OPERATIONS.md</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-grid" style="margin-top:20px;">
+        <div class="phase-detail" style="grid-column:span 3;">
+          <div class="detail-label">Expected Output</div>
+          <div class="output-box">
+            <strong>Lead score</strong> → 0-100 with breakdown (engagement 40, company fit 30, role relevance 30). <strong>Segment</strong> → "Hot B2B — Aramco Engineer — Score 78". <strong>Action</strong> → Hot leads → Phase 4 nurture. Warm leads → Extended nurture. Cold → Archive with 90-day re-engagement.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4: NURTURE -->
+    <div class="phase-card animate-in delay-3" id="phase-nurture">
+      <div class="phase-header">
+        <div class="phase-badge agent">🔄</div>
+        <div>
+          <div class="phase-title">Phase 04 — Nurture</div>
+          <div class="phase-subtitle">ActivePieces workflows, email, WhatsApp — warm leads until ready</div>
+        </div>
+        <div class="gate-tag agent">AGENT AUTONOMOUS</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does</div>
+          <ul>
+            <li>Builds multi-touch nurture sequences</li>
+            <li>Drafts personalized emails (120 templates)</li>
+            <li>Sends WhatsApp follow-ups (when API ready)</li>
+            <li>Tracks opens, clicks, replies</li>
+            <li>Escalates to human when lead replies</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>ActivePieces (workflow engine)</li>
+            <li>EspoCRM (activity tracking)</li>
+            <li>Chatwoot (inbound response)</li>
+            <li>WhatsApp Business API (when unblocked)</li>
+            <li>n8n (legacy workflows)</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Files Read</div>
+          <ul>
+            <li><code>missions/{mission}/message-templates.md</code></li>
+            <li><code>missions/{mission}/objection-playbook.md</code></li>
+            <li><code>missions/{mission}/info-session-script.md</code></li>
+            <li><code>HUMAN-GATES.md</code> (escalation rules)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-grid" style="margin-top:20px;">
+        <div class="phase-detail" style="grid-column:span 3;">
+          <div class="detail-label">Expected Output</div>
+          <div class="output-box">
+            <strong>Touchpoints delivered</strong> → 5-7 emails over 14 days + 2 WhatsApp nudges. <strong>Engagement score</strong> → Updated in CRM. <strong>Booking signal</strong> → When lead clicks "Book Consultation" or replies to email, trigger Phase 5 human gate.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 5: CONSULT — HUMAN GATE -->
+    <div class="phase-card human-gate animate-in" id="phase-consult">
+      <div class="phase-header">
+        <div class="phase-badge human">🤝</div>
+        <div>
+          <div class="phase-title">Phase 05 — Consult</div>
+          <div class="phase-subtitle">Cal.com booking, pre-consult prep, human-led call</div>
+        </div>
+        <div class="gate-tag human">🚪 HUMAN GATE</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does (Before Gate)</div>
+          <ul>
+            <li>Prepares lead dossier (full profile, pain points)</li>
+            <li>Suggests 3 Cal.com time slots</li>
+            <li>Drafts pre-consult email in lead's language</li>
+            <li>Researches lead's company context</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>Cal.com (scheduling)</li>
+            <li>EspoCRM (dossier + history)</li>
+            <li>Chatwoot (pre-consult chat)</li>
+            <li>Google Meet / Zoom (call platform)</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Expected Output</div>
+          <div class="output-box">
+            <strong>Lead dossier</strong> → One-page summary: who they are, what they want, what to say. <strong>Booking</strong> → Confirmed Cal.com slot. <strong>Prep</strong> → Objection playbook open, pricing ready, program details loaded.
+          </div>
+        </div>
+      </div>
+      <div class="human-gate-section">
+        <div class="gate-title">🚪 HUMAN DECISION REQUIRED — Consultation Booking</div>
+        <div class="gate-options">
+          <div class="gate-option">
+            <div class="opt-name">APPROVE</div>
+            <div class="opt-desc">Book consultation. Send confirmation. Calendar invite created.</div>
+          </div>
+          <div class="gate-option">
+            <div class="opt-name">MODIFY</div>
+            <div class="opt-desc">Change time slots, add notes, cc team member, send custom message.</div>
+          </div>
+          <div class="gate-option">
+            <div class="opt-name">REJECT</div>
+            <div class="opt-desc">Disqualify lead. Document reason. Send polite decline with alternative.</div>
+          </div>
+          <div class="gate-option">
+            <div class="opt-name">PASS</div>
+            <div class="opt-desc">Not ready yet. Extend nurture by 7 days with new sequence.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 6: CLOSE — HUMAN GATE -->
+    <div class="phase-card human-gate animate-in delay-1" id="phase-close">
+      <div class="phase-header">
+        <div class="phase-badge human">✍️</div>
+        <div>
+          <div class="phase-title">Phase 06 — Close</div>
+          <div class="phase-subtitle">MOU signing, payment, enrollment — the finish line</div>
+        </div>
+        <div class="gate-tag human">🚪 HUMAN GATE</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does (Before Gate)</div>
+          <ul>
+            <li>Prepares enrollment agreement / MOU</li>
+            <li>Calculates pricing (standard vs custom)</li>
+            <li>Generates payment link / invoice</li>
+            <li>Sets up student portal credentials</li>
+            <li>Drafts follow-up sequence if delayed</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>EspoCRM (deal tracking)</li>
+            <li>ActivePieces (enrollment workflow)</li>
+            <li>MinIO (document storage)</li>
+            <li>WhatsApp / Email (final nudge)</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Files Read</div>
+          <ul>
+            <li><code>missions/{mission}/mou-template.md</code></li>
+            <li><code>missions/{mission}/battle-card.md</code> (pricing)</li>
+            <li><code>HUMAN-GATES.md</code> (authority rules)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="human-gate-section">
+        <div class="gate-title">🚪 HUMAN DECISION REQUIRED — Final Close</div>
+        <div class="gate-options">
+          <div class="gate-option">
+            <div class="opt-name">APPROVE</div>
+            <div class="opt-desc">Send final docs. Process payment. Enroll student. Welcome sequence triggered.</div>
+          </div>
+          <div class="gate-option">
+            <div class="opt-name">CONDITIONAL</div>
+            <div class="opt-desc">Payment plan. Deferral. Partial scholarship. Custom terms.</div>
+          </div>
+          <div class="gate-option">
+            <div class="opt-name">REJECT</div>
+            <div class="opt-desc">Lost deal. Document why. Note competitor. 30-day follow-up scheduled.</div>
+          </div>
+          <div class="gate-option">
+            <div class="opt-name">FOLLOW-UP</div>
+            <div class="opt-desc">Not ready. Keep warm with content. Re-engage in 30 days.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 7: TRANSFORM -->
+    <div class="phase-card animate-in delay-2" id="phase-transform">
+      <div class="phase-header">
+        <div class="phase-badge agent">🎓</div>
+        <div>
+          <div class="phase-title">Phase 07 — Transform</div>
+          <div class="phase-subtitle">Onboarding, community, alumni — turn student into advocate</div>
+        </div>
+        <div class="gate-tag agent">AGENT AUTONOMOUS</div>
+      </div>
+      <div class="phase-grid">
+        <div class="phase-detail">
+          <div class="detail-label">What Agent Does</div>
+          <ul>
+            <li>Sends onboarding sequence (week 1-4)</li>
+            <li>Creates student Slack/Discord invite</li>
+            <li>Tracks progress and engagement</li>
+            <li>Requests testimonial at graduation</li>
+            <li>Alumni nurture for referrals</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Tools Used</div>
+          <ul>
+            <li>ActivePieces (onboarding workflow)</li>
+            <li>EspoCRM (student lifecycle)</li>
+            <li>Chatwoot (student support)</li>
+            <li>Plausible (portal engagement)</li>
+          </ul>
+        </div>
+        <div class="phase-detail">
+          <div class="detail-label">Expected Output</div>
+          <div class="output-box">
+            <strong>Student onboarded</strong> → Portal active, community joined, Week 1 materials delivered. <strong>Advocate created</strong> → Testimonial collected, referral program activated. <strong>Alumni</strong> → Annual check-in, new program announcements, upsell opportunities.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RUN THIS PLAYBOOK -->
+<section class="playbook-section" id="playbook">
+  <div class="container">
+    <h2 class="animate-in">Run This Playbook</h2>
+    <p class="playbook-sub animate-in">The exact sequence to deploy this acquisition machine for any new mission.</p>
+    <div class="playbook-flow">
+      <div class="playbook-step animate-in">
+        <div class="step-num">1</div>
+        <div class="step-name">Create Claw</div>
+        <div class="step-desc">Spawn an agent with OpenClaw. Give it this workspace as its home directory.</div>
+      </div>
+      <div class="playbook-step animate-in delay-1">
+        <div class="step-num">2</div>
+        <div class="step-name">Give Tools</div>
+        <div class="step-desc">GitHub push/pull. Docker compose. SSH to VPS. Web fetch. Message notify.</div>
+      </div>
+      <div class="playbook-step animate-in delay-2">
+        <div class="step-num">3</div>
+        <div class="step-name">Point to Files</div>
+        <div class="step-desc">SOUL.md, STATE.md, AGENT-BOOT.md, HUMAN-GATES.md, AUDIT.md.</div>
+      </div>
+      <div class="playbook-step animate-in delay-3">
+        <div class="step-num">4</div>
+        <div class="step-name">Agent Executes</div>
+        <div class="step-desc">Autonomous through Attract→Capture→Qualify→Nurture. Updates STATE.md. Pushes to GitHub.</div>
+      </div>
+      <div class="playbook-step animate-in delay-4">
+        <div class="step-num">5</div>
+        <div class="step-name">Human Reviews</div>
+        <div class="step-desc">At Consult gate and Close gate only. Approve, modify, reject, or pass.</div>
+      </div>
+      <div class="playbook-step animate-in delay-4">
+        <div class="step-num">6</div>
+        <div class="step-name">Get Results</div>
+        <div class="step-desc">Closed deal → enrollment. Follow-up → re-engagement. Pass → archive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILES -->
+<section class="files-section" id="files">
+  <div class="container">
+    <h2>Files the Agent Reads</h2>
+    <div class="files-grid">
+      <div class="file-card">
+        <div class="file-name">SOUL.md</div>
+        <div class="file-desc">Who the agent is. Identity, tone, boundaries. Read first, every session.</div>
+        <span class="file-priority priority-required">REQUIRED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">USER.md</div>
+        <div class="file-desc">Who Dali is. Preferences, communication style, mission context.</div>
+        <span class="file-priority priority-required">REQUIRED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">STATE.md</div>
+        <div class="file-desc">What to build. Mission tracker, sprint status, blockers. Source of truth.</div>
+        <span class="file-priority priority-required">REQUIRED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">AGENT-BOOT.md</div>
+        <div class="file-desc">How to start. 10-minute onboarding for any new agent.</div>
+        <span class="file-priority priority-required">REQUIRED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">AGENT-SPRINT-TEMPLATE.md</div>
+        <div class="file-desc">How to execute. Sprint template with sections, acceptance criteria.</div>
+        <span class="file-priority priority-required">REQUIRED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">HUMAN-GATES.md</div>
+        <div class="file-desc">When to escalate. Decision matrix for consultation, pricing, close.</div>
+        <span class="file-priority priority-required">REQUIRED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">AUDIT.md</div>
+        <div class="file-desc">What's broken. Security issues, infrastructure debt, fixes needed.</div>
+        <span class="file-priority priority-optional">RECOMMENDED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">AGENT-BLOCKER-PROTOCOL.md</div>
+        <div class="file-desc">How to handle blockers. Decision tree for credential, legal, budget, technical.</div>
+        <span class="file-priority priority-optional">RECOMMENDED</span>
+      </div>
+      <div class="file-card">
+        <div class="file-name">AGENT-COMMUNICATION.md</div>
+        <div class="file-desc">How to talk to humans. Terse updates, no ceremony, deliver URLs.</div>
+        <span class="file-priority priority-optional">RECOMMENDED</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPECTED RESULTS -->
+<section class="results-section" id="results">
+  <div class="container">
+    <h2>Expected Results</h2>
+    <div class="results-grid">
+      <div class="result-card animate-in">
+        <div class="result-icon">✅</div>
+        <div class="result-title">CLOSED</div>
+        <div class="result-desc">Signed contract. Payment processed. Student enrolled in Cohort 1. Welcome sequence triggered. Portal credentials sent.</div>
+      </div>
+      <div class="result-card animate-in delay-1">
+        <div class="result-icon">📅</div>
+        <div class="result-title">FOLLOW-UP</div>
+        <div class="result-desc">Qualified lead. Scheduled consultation. Objection handled. Pricing discussed. 30-day re-engagement sequence active.</div>
+      </div>
+      <div class="result-card animate-in delay-2">
+        <div class="result-icon">📦</div>
+        <div class="result-title">ARCHIVED</div>
+        <div class="result-desc">Disqualified lead. Reason documented (budget, timing, competitor). 90-day re-engagement queued. No further agent action.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://siyada-cybersecurity.com">← Dashboard</a>
+      <a href="https://github.com/siyaida/dali-mission-control">GitHub</a>
+      <a href="https://build.siyada-cybersecurity.com">The Build</a>
+      <a href="https://github.com/siyaida/dali-mission-control/blob/main/AUDIT.md">Audit</a>
+    </div>
+    <div style="font-size:12px; color:var(--text-muted);">
+      Built by <a href="https://github.com/siyaida">@siyaida</a> · Agent: JIC Washington · Open source
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
