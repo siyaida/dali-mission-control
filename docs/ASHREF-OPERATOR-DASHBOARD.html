@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashref Operator Dashboard — System Trace</title>
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg-card: #12121a;
+  --bg-hover: #1a1a25;
+  --border: #2a2a35;
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --accent: #C9A227;
+  --accent-glow: rgba(201,162,39,0.15);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  padding: 60px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), #e8d46b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+.hero .subtitle { color: var(--text-dim); font-size: 1.1rem; }
+.hero .meta { color: var(--text-muted); font-size: 0.9rem; margin-top: 16px; font-family: monospace; }
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(10,10,15,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+.nav a {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: all 0.2s;
+}
+.nav a:hover { background: var(--bg-hover); color: var(--text); text-decoration: none; }
+.nav a.active { background: var(--accent-glow); color: var(--accent); }
+
+/* Sections */
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.section { margin-bottom: 60px; }
+.section h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section h3 {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 24px 0 12px;
+}
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--accent); }
+.card .card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.card .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge.success { background: rgba(16,185,129,0.15); color: var(--success); }
+.badge.warning { background: rgba(245,158,11,0.15); color: var(--warning); }
+.badge.danger { background: rgba(239,68,68,0.15); color: var(--danger); }
+.badge.info { background: rgba(59,130,246,0.15); color: var(--info); }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--accent); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+td { color: var(--text-dim); }
+tr:hover td { color: var(--text); }
+td a { word-break: break-all; }
+
+/* Code */
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: #0d0d14;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+code { padding: 2px 6px; }
+pre { padding: 16px; overflow-x: auto; margin: 12px 0; }
+
+/* Lists */
+ul { margin-left: 20px; color: var(--text-dim); }
+li { margin: 6px 0; }
+
+/* Checklist */
+.checklist { list-style: none; margin-left: 0; }
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.checklist li::before {
+  content: "☐";
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Incident */
+.incident {
+  background: linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(239,68,68,0.03) 100%);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 10px;
+  padding: 24px;
+  margin: 20px 0;
+}
+.incident h3 { color: var(--danger); margin-top: 0; }
+
+/* Mission cards */
+.mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.mission-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+.mission-card .mission-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.mission-card .mission-role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.mission-card ul { font-size: 0.9rem; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.8rem; }
+  .nav { gap: 4px; }
+  .nav a { padding: 5px 10px; font-size: 0.8rem; }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="hero">
+  <h1>🗺️ Ashref Operator Dashboard</h1>
+  <p class="subtitle">Full System Trace — Acquisition &amp; Transformation Machine</p>
+  <p class="meta">VPS: 62.171.171.112 | Domain: siyada-cybersecurity.com | Owner: Dali (siyaida)</p>
+</div>
+
+<nav class="nav">
+  <a href="#sites" class="active">Sites</a>
+  <a href="#missions">Missions</a>
+  <a href="#containers">Containers</a>
+  <a href="#config">Config</a>
+  <a href="#repos">Repos</a>
+  <a href="#ssh">SSH</a>
+  <a href="#incident">Incident</a>
+  <a href="#first48">First 48h</a>
+  <a href="#roadmap">Roadmap</a>
+</nav>
+
+<div class="container">
+
+<!-- SITES -->
+<section class="section" id="sites">
+  <h2>📡 All Live Sites (15 Domains)</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Domain</th><th>Purpose</th><th>Status</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><a href="https://siyada-cybersecurity.com" target="_blank">siyada-cybersecurity.com</a></td>
+        <td><strong>Mission Control</strong> — Central hub, sprint boards, STATE.md</td>
+        <td><span class="badge success">● Live</span></td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="https://jic.siyada-cybersecurity.com" target="_blank">jic.siyada-cybersecurity.com</a></td>
+        <td><strong>JIC Marketing</strong> — GW × JIC partnership, programs, employers</td>
+        <td><span class="badge danger">● Destroyed</span></td>
+        <td><strong>RESTORE</strong></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="https://leads.siyada-cybersecurity.com" target="_blank">leads.siyada-cybersecurity.com</a></td>
+        <td><strong>JIC GW Leads</strong> — Multipage (index, program, employers, why-gw, consultation, EN)</td>
+        <td><span class="badge success">● Safe</span></td>
+        <td>None — Safe on <code>enhancement-pass</code></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><a href="https://ecosystem.siyada-cybersecurity.com" target="_blank">ecosystem.siyada-cybersecurity.com</a></td>
+        <td><strong>JIC GW Ecosystem</strong> — Multipage (index, sprints, stack, content, dashboard)</td>
+        <td><span class="badge success">● Safe</span></td>
+        <td>None — Safe on <code>enhancement-pass</code></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><a href="https://launchpad.siyada-cybersecurity.com" target="_blank">launchpad.siyada-cybersecurity.com</a></td>
+        <td><strong>Program Launchpad</strong> — Tenant architecture, intake portal, onboarding</td>
+        <td><span class="badge danger">● Destroyed</span></td>
+        <td><strong>RESTORE</strong></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><a href="https://build.siyada-cybersecurity.com" target="_blank">build.siyada-cybersecurity.com</a></td>
+        <td><strong>Build Story</strong> — Documented journey of system construction</td>
+        <td><span class="badge success">● Safe</span></td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><a href="https://process.siyada-cybersecurity.com" target="_blank">process.siyada-cybersecurity.com</a></td>
+        <td><strong>Process Website</strong> — North Star methodology, operating manual</td>
+        <td><span class="badge warning">● Partial</span></td>
+        <td>Add <code>404.html</code> + <code>ENHANCEMENT-LOG.md</code></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><a href="https://siyadatech.siyada-cybersecurity.com" target="_blank">siyadatech.siyada-cybersecurity.com</a></td>
+        <td><strong>SiyadaTech Pitch Deck</strong> — Agent-powered academic growth</td>
+        <td><span class="badge success">● Safe</span></td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><a href="https://flows.siyada-cybersecurity.com" target="_blank">flows.siyada-cybersecurity.com</a></td>
+        <td><strong>ActivePieces</strong> — Workflow automation engine</td>
+        <td><span class="badge warning">● Unhealthy</span></td>
+        <td><strong>INVESTIGATE</strong> — Check logs, restart</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><a href="https://contacts.siyada-cybersecurity.com" target="_blank">contacts.siyada-cybersecurity.com</a></td>
+        <td><strong>EspoCRM</strong> — Contact/lead management CRM</td>
+        <td><span class="badge info">● Unknown</span></td>
+        <td><strong>VERIFY</strong> — Check container response</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><a href="https://chat.siyada-cybersecurity.com" target="_blank">chat.siyada-cybersecurity.com</a></td>
+        <td><strong>Chatwoot</strong> — Live chat + customer support</td>
+        <td><span class="badge info">● Unknown</span></td>
+        <td><strong>VERIFY</strong> — Check container response</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><a href="https://analytics.siyada-cybersecurity.com" target="_blank">analytics.siyada-cybersecurity.com</a></td>
+        <td><strong>Plausible Analytics</strong> — Privacy-focused web analytics</td>
+        <td><span class="badge info">● Unknown</span></td>
+        <td><strong>VERIFY</strong> — May not be deployed yet</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><a href="https://storage.siyada-cybersecurity.com" target="_blank">storage.siyada-cybersecurity.com</a></td>
+        <td><strong>MinIO S3</strong> — Object storage (uploads, backups)</td>
+        <td><span class="badge success">● Running</span></td>
+        <td><strong>CONFIGURE</strong> — Create buckets, set policies</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><a href="https://console.storage.siyada-cybersecurity.com" target="_blank">console.storage.siyada-cybersecurity.com</a></td>
+        <td><strong>MinIO Console</strong> — Web UI for MinIO management</td>
+        <td><span class="badge success">● Running</span></td>
+        <td><strong>CONFIGURE</strong> — Set admin password, access keys</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><a href="https://status.siyada-cybersecurity.com" target="_blank">status.siyada-cybersecurity.com</a></td>
+        <td><strong>Uptime Kuma</strong> — Site monitoring + alerts</td>
+        <td><span class="badge success">● Running</span></td>
+        <td><strong>CONFIGURE</strong> — Add all domains, set alerts</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- MISSIONS -->
+<section class="section" id="missions">
+  <h2>🏗️ The Three Missions</h2>
+  <div class="mission-grid">
+    <div class="mission-card">
+      <div class="mission-title">Mission 01: JIC × GW Engineering</div>
+      <div class="mission-role">Revenue Proof — "Shows the machine closes real deals"</div>
+      <ul>
+        <li>✅ 120 outbound templates</li>
+        <li>✅ Objection playbook + battle card</li>
+        <li>✅ MOU + lead magnet + demo tour</li>
+        <li>✅ SiyadaTech pitch deck</li>
+        <li>❌ <strong>Competitive research</strong> — "Special sauce" UVP</li>
+      </ul>
+    </div>
+    <div class="mission-card">
+      <div class="mission-title">Mission 02: Program Launchpad</div>
+      <div class="mission-role">Infrastructure Factory — "Repeatable scaffolding for any program"</div>
+      <ul>
+        <li>✅ Landing page (single file)</li>
+        <li>✅ Tenant schema + i18n</li>
+        <li>✅ deploy.sh + Caddyfile</li>
+        <li>❌ <strong>Multipage restore</strong> — intake, onboarding, console</li>
+        <li>❌ <strong>Arabic content</strong></li>
+      </ul>
+    </div>
+    <div class="mission-card">
+      <div class="mission-title">Mission 03: Cross-Agent Ops</div>
+      <div class="mission-role">Scale Multiplier — "One human becomes a fleet commander"</div>
+      <ul>
+        <li>✅ Agent boot protocol</li>
+        <li>✅ Coordination docs</li>
+        <li>✅ Agent state template</li>
+        <li>⚠️ Subagent orchestration (12+ tasks, some lost)</li>
+        <li>❌ <strong>Automated spawning</strong></li>
+        <li>❌ <strong>Agent health monitoring</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:40px;">The Flywheel</h3>
+  <pre>Human drops mission idea
+    ↓
+Mission 03 spawns 4 parallel agents (research, content, outreach, ops)
+    ↓
+Mission 02 scaffolds tenant + intake + i18n
+    ↓
+Mission 01 pattern generates employers + templates + battle card
+    ↓
+All write to STATE.md
+    ↓
+48-hour rule: counter-ready from idea to live
+    ↓
+Deploy via deploy.sh
+    ↓
+Insights feed back into next sprint</pre>
+</section>
+
+<!-- CONTAINERS -->
+<section class="section" id="containers">
+  <h2>🐳 Docker Containers</h2>
+  <table>
+    <thead>
+      <tr><th>Container</th><th>Image</th><th>Status</th><th>Purpose</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>vps-caddy-1</code></td><td><code>caddy:2-alpine</code></td><td><span class="badge success">● Healthy</span></td><td>Reverse proxy + static files</td><td>None</td></tr>
+      <tr><td><code>vps-twenty-1</code></td><td><code>twentycrm/twenty:latest</code></td><td><span class="badge success">● Healthy</span></td><td>CRM (Twenty)</td><td><strong>Onboard</strong></td></tr>
+      <tr><td><code>vps-chatwoot-1</code></td><td><code>chatwoot/chatwoot:latest</code></td><td><span class="badge info">● Running</span></td><td>Live chat</td><td><strong>Onboard</strong></td></tr>
+      <tr><td><code>vps-activepieces-1</code></td><td><code>activepieces/activepieces:latest</code></td><td><span class="badge warning">● Unhealthy</span></td><td>Workflow automation</td><td><strong>Investigate</strong></td></tr>
+      <tr><td><code>vps-postgres-1</code></td><td><code>pgvector/pgvector:pg15</code></td><td><span class="badge success">● Healthy</span></td><td>PostgreSQL + pgvector</td><td>None</td></tr>
+      <tr><td><code>vps-redis-1</code></td><td><code>redis:7-alpine</code></td><td><span class="badge success">● Healthy</span></td><td>Cache / queue</td><td>None</td></tr>
+      <tr><td><code>vps-minio-1</code></td><td><code>minio/minio:latest</code></td><td><span class="badge info">● Running</span></td><td>S3 object storage</td><td><strong>Configure</strong></td></tr>
+      <tr><td><code>vps-uptime-kuma-1</code></td><td><code>louislam/uptime-kuma:latest</code></td><td><span class="badge success">● Healthy</span></td><td>Site monitoring</td><td><strong>Configure</strong></td></tr>
+      <tr><td><code>vps-posthog-proxy-1</code></td><td><code>python:3.11-slim</code></td><td><span class="badge warning">● Unhealthy</span></td><td>PostHog proxy</td><td><strong>Investigate</strong></td></tr>
+      <tr><td><code>vps-watchtower-1</code></td><td><code>containrrr/watchtower:latest</code></td><td><span class="badge danger">● Restart loop</span></td><td>Auto-updates</td><td><strong>Investigate</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:12px;color:var(--text-muted);font-size:0.85rem;">
+    Compose file: <code>/home/jicwashington/projects/program-launchpad/infra/vps/docker-compose.yml</code>
+  </p>
+</section>
+
+<!-- CONFIG -->
+<section class="section" id="config">
+  <h2>🔧 Configuration Checklist</h2>
+
+  <h3>🔴 Immediate (Do First)</h3>
+  <table>
+    <thead><tr><th>#</th><th>Task</th><th>Why</th><th>How</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>Add PostHog API Key</strong></td>
+        <td>Track user behavior, understand conversions</td>
+        <td>Sign up at <a href="https://posthog.com" target="_blank">posthog.com</a> → create project → copy API key → add to <code>program-launchpad/infra/vps/.env</code> → restart proxy</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Configure Uptime Kuma</strong></td>
+        <td>Know immediately if any site goes down</td>
+        <td>Visit <code>status.siyada-cybersecurity.com</code> → add all 15 domains → set alert (Telegram/email)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Fix ActivePieces</strong></td>
+        <td>Workflow automation core to the machine</td>
+        <td><code>docker logs vps-activepieces-1</code> → identify error → fix → restart</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Configure MinIO</strong></td>
+        <td>File storage for uploads, backups, assets</td>
+        <td>Visit console → set password → create bucket <code>siyada-uploads</code> → create access key → add to <code>.env</code></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Fix Watchtower</strong></td>
+        <td>Auto-updates keep containers secure</td>
+        <td><code>docker logs vps-watchtower-1</code> → likely Docker Hub auth issue → fix or disable</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Onboard Twenty CRM</strong></td>
+        <td>Dali needs CRM to track leads</td>
+        <td>Visit <code>contacts.siyada-cybersecurity.com</code> → create workspace → invite Dali</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Onboard Chatwoot</strong></td>
+        <td>Live chat for site visitors</td>
+        <td>Visit <code>chat.siyada-cybersecurity.com</code> → create inbox → connect to JIC site</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>🟡 Short Term (This Week)</h3>
+  <ul>
+    <li>Restore JIC Marketing multipage (use jic-gw-leads as design reference)</li>
+    <li>Restore Program Launchpad multipage (intake-portal, onboarding-kit, operator-console)</li>
+    <li>Add <code>404.html</code> + <code>ENHANCEMENT-LOG.md</code> to process site</li>
+    <li>Populate Arabic content placeholders in all sites</li>
+    <li>Complete competitive research for Mission 01 ("special sauce" UVP)</li>
+    <li>Set up automated backups (restic to MinIO)</li>
+    <li>Add cron job for weekly health checks</li>
+  </ul>
+
+  <h3>🟢 Medium Term (This Month)</h3>
+  <ul>
+    <li>Build agent health monitoring (heartbeat system)</li>
+    <li>Automated agent spawning from mission templates</li>
+    <li>Email integration (SMTP/SendGrid in ActivePieces)</li>
+    <li>SSL expiry monitoring</li>
+    <li>VPS cost tracking + billing alerts</li>
+  </ul>
+</section>
+
+<!-- REPOS -->
+<section class="section" id="repos">
+  <h2>📁 Repository Map</h2>
+  <table>
+    <thead><tr><th>Repo</th><th>GitHub</th><th>Contains</th><th>Last Commit</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>dali-mission-control</code></td>
+        <td><code>github.com/siyaida/dali-mission-control</code></td>
+        <td>Mission 01 dashboard, JIC landing, SiyadaTech, process docs, NORTH_STAR.md</td>
+        <td>NORTH_STAR.md v1.2</td>
+      </tr>
+      <tr>
+        <td><code>program-launchpad</code></td>
+        <td><code>github.com/siyaida/program-launchpad</code></td>
+        <td>Mission 02 infrastructure, deploy.sh, Caddyfile, tenant engine</td>
+        <td>deploy.sh v2</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top:12px;color:var(--text-muted);font-size:0.85rem;">
+    GitHub Token: Available as <code>GITHUB_TOKEN</code> environment variable (used by agents for push).
+  </p>
+</section>
+
+<!-- SSH -->
+<section class="section" id="ssh">
+  <h2>🔐 SSH Access & Paths</h2>
+  <pre>ssh -i /root/.openclaw/workspace/.ssh/vps_key jicwashington@62.171.171.112</pre>
+  <h3>Important Directories</h3>
+  <table>
+    <thead><tr><th>Path</th><th>What It Is</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><code>/home/jicwashington/projects/dali-mission-control/</code></td><td>Mission Control source</td><td>Has uncommitted changes</td></tr>
+      <tr><td><code>/home/jicwashington/projects/program-launchpad/</code></td><td>Launchpad + deploy.sh + Caddyfile</td><td>Current</td></tr>
+      <tr><td><code>/home/jicwashington/projects/jic-marketing-website/</code></td><td>JIC Marketing site</td><td><span class="badge danger">DESTROYED</span></td></tr>
+      <tr><td><code>/home/jicwashington/projects/jic-gw-leads-website/</code></td><td>JIC Leads (multipage)</td><td><span class="badge success">SAFE</span></td></tr>
+      <tr><td><code>/home/jicwashington/projects/jic-gw-ecosystem-website/</code></td><td>JIC Ecosystem (multipage)</td><td><span class="badge success">SAFE</span></td></tr>
+      <tr><td><code>/home/jicwashington/projects/process/</code></td><td>Process website</td><td><span class="badge warning">Partial</span></td></tr>
+      <tr><td><code>/home/jicwashington/projects/siyadatech/</code></td><td>SiyadaTech pitch</td><td><span class="badge success">SAFE</span></td></tr>
+      <tr><td><code>/home/jicwashington/projects/build-story/</code></td><td>Build documentation</td><td><span class="badge success">SAFE</span></td></tr>
+      <tr><td><code>/srv/</code></td><td>LIVE web root (Caddy serves from here)</td><td>All sites symlinked/copied here</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- INCIDENT -->
+<section class="section" id="incident">
+  <h2>🚨 Critical Incident Log</h2>
+  <div class="incident">
+    <h3>2026-05-10 — The Destruction</h3>
+    <p><strong>What happened:</strong> An agent (JIC Washington) deployed sites using <code>deploy.sh</code> without running the preservation checklist. This overwrote enhanced multipage sites with single-file placeholders.</p>
+    <p><strong>Sites affected:</strong></p>
+    <ul>
+      <li><code>jic-marketing-website</code> — Multipage → Single Astro build</li>
+      <li><code>program-launchpad</code> — Multipage with intake-portal, onboarding-kit, operator-console → Single index.html</li>
+      <li><code>process</code> — Missing <code>404.html</code> and <code>ENHANCEMENT-LOG.md</code></li>
+    </ul>
+    <p><strong>Sites preserved (safe):</strong></p>
+    <ul>
+      <li><code>jic-gw-leads-website</code> — Full multipage with <code>ENHANCEMENT-LOG.md</code> + <code>DESIGN-SYSTEM.md</code></li>
+      <li><code>jic-gw-ecosystem-website</code> — Full multipage with <code>ENHANCEMENT-LOG.md</code> + <code>DESIGN-SYSTEM.md</code></li>
+      <li><code>siyadatech</code> — Single page but complete</li>
+      <li><code>build-story</code> — Single page but complete</li>
+    </ul>
+    <p><strong>Resolution:</strong> CLI restoration prompt provided to Dali. Two safe sites serve as design system references.</p>
+    <p><strong>Prevention rules:</strong></p>
+    <ol>
+      <li>Always run preservation checklist before deploying</li>
+      <li>Always backup before overwriting</li>
+      <li>Always verify after deploy (check for <code>404.html</code>, <code>ENHANCEMENT-LOG.md</code>)</li>
+      <li>Never deploy to <code>/srv/</code> without checking <code>/projects/</code> first</li>
+    </ol>
+  </div>
+</section>
+
+<!-- FIRST 48 -->
+<section class="section" id="first48">
+  <h2>✅ Your First 48 Hours</h2>
+
+  <h3>Day 1 — First 6 Hours</h3>
+  <ul class="checklist">
+    <li>Read this entire document</li>
+    <li>SSH into VPS, run <code>docker ps</code>, verify all containers</li>
+    <li>Visit all 15 domains, confirm which respond</li>
+    <li>Check <code>status.siyada-cybersecurity.com</code> — configure monitors</li>
+    <li>Fix ActivePieces: <code>docker logs vps-activepieces-1</code></li>
+    <li>Add PostHog API key</li>
+  </ul>
+
+  <h3>Day 1-2 — Next 18 Hours</h3>
+  <ul class="checklist">
+    <li>Run CLI restoration for jic-marketing-website and program-launchpad</li>
+    <li>Add <code>404.html</code> + <code>ENHANCEMENT-LOG.md</code> to process</li>
+    <li>Configure MinIO (buckets, access keys)</li>
+    <li>Onboard Twenty CRM (create workspace)</li>
+    <li>Onboard Chatwoot (create inbox, connect to JIC site)</li>
+  </ul>
+
+  <h3>Day 2 — Remaining 24 Hours</h3>
+  <ul class="checklist">
+    <li>Verify all restored sites have enhancement markers</li>
+    <li>Run HTTP verification on all domains</li>
+    <li>Set up backup script (restic to MinIO)</li>
+    <li>Write your own notes — what's working, what's broken, what's next</li>
+  </ul>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" id="roadmap">
+  <h2>🛠️ Deployment Reference</h2>
+
+  <h3>One-Command Deploy</h3>
+  <pre>cd /root/.openclaw/workspace/program-launchpad/infra/vps
+./deploy.sh all</pre>
+
+  <h3>Deploy Specific Site</h3>
+  <pre>./deploy.sh dashboard     # dali-mission-control
+./deploy.sh jic           # jic-marketing-website
+./deploy.sh leads         # jic-gw-leads-website
+./deploy.sh ecosystem     # jic-gw-ecosystem-website
+./deploy.sh launchpad     # program-launchpad
+./deploy.sh process       # process website
+./deploy.sh siyadatech    # siyadatech
+./deploy.sh buildstory    # build-story</pre>
+
+  <h3>What deploy.sh Does</h3>
+  <ol>
+    <li>Syncs files from local repo to VPS temp via <code>rsync</code></li>
+    <li><code>sudo</code> moves from temp to <code>/home/jicwashington/projects/[site]</code></li>
+    <li>Reloads Caddy Docker container</li>
+  </ol>
+
+  <h3>Caddyfile</h3>
+  <p>Local: <code>/root/.openclaw/workspace/program-launchpad/infra/vps/Caddyfile</code></p>
+  <p>VPS: <code>/home/jicwashington/projects/program-launchpad/infra/vps/Caddyfile</code> (bind-mounted to container)</p>
+
+  <h3>Operating Principles</h3>
+  <ul>
+    <li><strong>VPS-Only</strong> — No Netlify, no external static hosts</li>
+    <li><strong>OSS-First</strong> — MIT licensed, portable, forkable</li>
+    <li><strong>Bilingual by Default</strong> — EN+AR scaffolding on every public artifact</li>
+    <li><strong>Saudi-Context Native</strong> — Not translated, born in the context</li>
+    <li><strong>Human-in-the-Loop</strong> — Agents execute, Dali decides</li>
+    <li><strong>Deploy Beats Perfect</strong> — Live and flawed > theoretical and polished</li>
+    <li><strong>STATE.md Is the Dashboard</strong> — If it's not in STATE.md, it didn't happen</li>
+    <li><strong>One VPS, Infinite Subdomains</strong> — Scale without multiplying cost</li>
+  </ul>
+</section>
+
+<!-- NOTES -->
+<section class="section">
+  <h2>📝 Notes for Future Ashref</h2>
+  <p style="color:var(--text-muted);font-style:italic;">Add your observations here as you work. This becomes living documentation.</p>
+  <ul>
+    <li>_</li>
+    <li>_</li>
+    <li>_</li>
+  </ul>
+</section>
+
+</div>
+
+<div class="footer">
+  <p>Built by JIC Washington for Dali (siyaida) · 2026-05-10 · MIT Licensed</p>
+  <p style="margin-top:8px;font-size:0.85rem;">
+    <a href="ASHREF-ROADMAP.md">📄 Download Markdown Version</a>
+  </p>
+</div>
+
+</body>
+</html>
