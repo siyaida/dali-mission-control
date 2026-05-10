@@ -102,7 +102,7 @@ program-launchpad/              ← Mission 02 infrastructure factory
 | Tool | What It Does For The North Star |
 |------|--------------------------------|
 | **GitHub** | Source of truth, versioned everything, deploy trigger |
-| **VPS + Caddy** | **Static file server + reverse proxy + SSL — sole hosting layer** |
+| **VPS + Caddy (Docker)** | **Static file server + reverse proxy + SSL — sole hosting layer** |
 | **OpenClaw Agents** | Parallel execution, subagent orchestration, 24/7 operation |
 | **Feishu/QQ/Discord** | Human-in-the-loop when judgment is needed |
 | **STATE.md** | Living document — every sprint writes here, every morning reads from here |
