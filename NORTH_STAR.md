@@ -1,6 +1,6 @@
 # 🎯 NORTH STAR STRATEGY — The Acquisition & Transformation Machine
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** 2026-05-10  
 **Owner:** Dali (siyaida)  
 **Architect:** JIC Washington  
@@ -66,8 +66,9 @@ This is not a tech stack. This is a **commercial engine** disguised as infrastru
 | `siyada-cybersecurity.com` | Brand anchor + process portal | 01, 02, 03 |
 | `jic.siyada-cybersecurity.com` | JIC public landing + enrollment | 01 |
 | `process.siyada-cybersecurity.com` | Program Launchpad intake | 02 |
-| Netlify (2 repos) | Static site hosting + CI/CD | 01, 02 |
-| VPS (62.171.171.112) | Caddy reverse proxy + dynamic routing | 01, 02, 03 |
+| **VPS (62.171.171.112)** | **Caddy reverse proxy + static file server — sole hosting layer** | **01, 02, 03** |
+
+**Principle:** One VPS. One Caddyfile. All sites served directly from `/var/www/` on the VPS. No external hosting dependency.
 
 ### Repo Architecture
 ```
@@ -90,7 +91,7 @@ program-launchpad/              ← Mission 02 infrastructure factory
 │   └── css/                               ← Shared design system
 ├── infra/
 │   ├── vps/Caddyfile                      ← Routing logic
-│   └── netlify.toml                       ← Build config
+│   └── deploy.sh                          ← VPS deployment script
 ├── src/
 │   ├── tenant-schema.md                   ← Reusable architecture
 │   └── i18n/                              ← EN+AR scaffolding
@@ -101,8 +102,7 @@ program-launchpad/              ← Mission 02 infrastructure factory
 | Tool | What It Does For The North Star |
 |------|--------------------------------|
 | **GitHub** | Source of truth, versioned everything, deploy trigger |
-| **Netlify** | Zero-config hosting, branch previews, instant deploy |
-| **VPS + Caddy** | Custom domain routing, SSL, reverse proxy, single entry point |
+| **VPS + Caddy** | **Static file server + reverse proxy + SSL — sole hosting layer** |
 | **OpenClaw Agents** | Parallel execution, subagent orchestration, 24/7 operation |
 | **Feishu/QQ/Discord** | Human-in-the-loop when judgment is needed |
 | **STATE.md** | Living document — every sprint writes here, every morning reads from here |
@@ -195,13 +195,14 @@ Every new mission must be **counter-ready** within 48 hours of launch. This mean
 
 ## The Operating Principles (Non-Negotiable)
 
-1. **OSS-First** — Everything is MIT licensed, portable, forkable. No vendor lock-in.
-2. **Bilingual by Default** — Every public artifact has EN+AR scaffolding.
-3. **Saudi-Context Native** — Not translated. Born in the context.
-4. **Human-in-the-Loop for Judgment** — Agents execute, Dali decides.
-5. **Deploy Beats Perfect** — Live and flawed beats theoretical and polished.
-6. **STATE.md Is the Dashboard** — If it's not in STATE.md, it didn't happen.
-7. **One VPS, One Caddyfile, Infinite Subdomains** — Scale horizontally without multiplying infrastructure cost.
+1. **VPS-Only Hosting** — No Netlify, no external static hosts. One VPS serves everything via Caddy.
+2. **OSS-First** — Everything is MIT licensed, portable, forkable. No vendor lock-in.
+3. **Bilingual by Default** — Every public artifact has EN+AR scaffolding.
+4. **Saudi-Context Native** — Not translated. Born in the context.
+5. **Human-in-the-Loop for Judgment** — Agents execute, Dali decides.
+6. **Deploy Beats Perfect** — Live and flawed beats theoretical and polished.
+7. **STATE.md Is the Dashboard** — If it's not in STATE.md, it didn't happen.
+8. **One VPS, One Caddyfile, Infinite Subdomains** — Scale horizontally without multiplying infrastructure cost.
 
 ---
 
@@ -225,11 +226,13 @@ The North Star is not "build cool tech." The North Star is **"turn every idea in
 
 | # | Action | Owner | When |
 |---|--------|-------|------|
-| 1 | Commit this strategy to `dali-mission-control/NORTH_STAR.md` | JIC | Now |
-| 2 | Update all three STATE.md files to reference this strategy | JIC | Now |
-| 3 | Create `MISSION_TEMPLATE.md` in program-launchpad for future spawns | JIC | Next |
-| 4 | Design the "Process Website" — public methodology documentation | JIC | Sprint |
-| 5 | Build health check automation (cron) for all 3 sites | JIC | Sprint |
+| 1 | ✅ Commit this strategy to `dali-mission-control/NORTH_STAR.md` | JIC | Done |
+| 2 | Update Caddyfile to serve all sites directly from VPS | JIC | Now |
+| 3 | Create `deploy.sh` script for one-command VPS deployment | JIC | Now |
+| 4 | Update all three STATE.md files to reference this strategy | JIC | Next |
+| 5 | Create `MISSION_TEMPLATE.md` in program-launchpad for future spawns | JIC | Next |
+| 6 | Design the "Process Website" — public methodology documentation | JIC | Sprint |
+| 7 | Build health check automation (cron) for all 3 sites | JIC | Sprint |
 
 ---
 
